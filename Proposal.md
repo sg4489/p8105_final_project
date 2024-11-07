@@ -39,11 +39,10 @@ inform evidence-based public health strategies.
 
 ### The intended final products
 
-We will create a webpage including an interactive dashboard (if time
-permits) that allows users to explore the data by year, state, and cause
-of death, a detailed report with data analysis and visualizations
-highlighting significant findings in mortality trends. And we will
-present our outcomes in a video.
+The final product will be an interactive website featuring data
+summaries, comparisons, and visualizations, making it easier for
+policymakers and the public to grasp the implications of these trends
+and prepare for future health challenge.
 
 We will create a webpage including an interactive dashboard (if time
 permits) that allows users to explore the data by year, state, and cause
