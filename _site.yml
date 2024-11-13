@@ -1,0 +1,33 @@
+name: "project-website"
+output_dir: "_site"
+navbar:
+#  title: "Project Name"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Data Processing"
+      href: data-processing.html
+    - text: "Analyses"
+      menu:
+        - text: "Analysis 1"
+          href: analysis1.html
+        - text: "Analysis 2"
+          href: analysis2.html
+    - text: "Shiny"
+      menu:
+        - text: "Shiny App 1"
+          href: shiny-app1.html
+        - text: "Shiny App 2"
+          href: shiny-app2.html
+    - text: "Project Report"
+      href: project-report.html
+  right:
+    - text: "About the Team"
+      href: about-team.html
+    - icon: "fa-github"
+      href: "https://github.com/sg4489/p8105_final_project"
+
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
