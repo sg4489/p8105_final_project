@@ -13,6 +13,8 @@ navbar:
           href: analysis1.html
         - text: "Analysis 2"
           href: analysis2.html
+        - text: "Analysis yyc"
+          href: analysis_yyc.html
     - text: "Shiny"
       menu:
         - text: "Shiny App 1"
