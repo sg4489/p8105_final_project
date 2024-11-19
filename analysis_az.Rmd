@@ -1,0 +1,88 @@
+---
+title: "analysis_az"
+author: "Alice Zhou"
+date: "2024-11-18"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+# EDA
+## data overview
+
+The original dataset (10,476 rows and 35 columns) contains weekly counts of death by cause, week and geographical location.
+
+Date Range: Weekly data from 2020 to 2023.
+
+Geographic Scope: Includes state-level data and "United States" as an aggregated entry.
+
+
+### Key Variables:
+* Date Variables: Data As Of, Week Ending Date, MMWR Year, MMWR Week.
+* Mortality Data: Includes counts for "All Cause", "Natural Cause", and specific causes like:
+  * Septicemia (A40-A41)
+  * Malignant neoplasms (C00-C97)
+  * Diabetes mellitus (E10-E14)
+  * Alzheimer disease (G30)
+  * Influenza and pneumonia (J09-J18)
+  * Chronic lower respiratory diseases (J40-J47)
+  * COVID-19 (U071, Multiple Cause of Death) and COVID-19 (U071, Underlying Cause of Death).
+  * Flags: Columns starting with flag_indicate potential data quality issues for specific cause counts.
+
+### Observations:
+Due to privacy protection, cells with count under 10 has been supressed and shown as blank. We will generate a random whole number between 1-10 for those cells for further analyses.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(lubridate)
+library(viridis)
+```
+
+Import data and do some inital cleaning
+```{r}
+data = read_csv("data/weekly_deaths_by_state_and_causes.csv") %>% 
+  janitor::clean_names() %>% 
+  mutate(data_as_of = mdy(`data_as_of`))
+
+data
+```
+
+How many people died from covid in 2020, 2021, 2022, and 2023?
+```{r}
+subset_df = data %>%
+  filter(jurisdiction_of_occurrence %in% c( "South Dakota",
+ "Tennessee",
+ "Texas",
+ "Utah",
+ "Vermont",
+ "Virginia",
+ "Washington",
+ "West Virginia",
+ "Wisconsin",
+ "Wyoming")) %>% 
+  mutate(year = year(week_ending_date))
+  
+# Summarize COVID-19 deaths by year (both multiple and underlying cause)
+covid_deaths_by_year = subset_df %>%
+  group_by(year) %>%
+  summarise(
+    covid_deaths_multiple = sum(covid_19_u071_multiple_cause_of_death, na.rm = TRUE),
+    covid_deaths_underlying = sum(covid_19_u071_underlying_cause_of_death, na.rm = TRUE)
+  ) %>%
+  filter(year %in% c(2020, 2021, 2022, 2023))
+
+# Reshape the data for easier plotting
+covid_deaths_long = covid_deaths_by_year %>%
+  pivot_longer(cols = c(covid_deaths_multiple, covid_deaths_underlying),
+               names_to = "cause_type", values_to = "deaths")
+
+# Create the bar plot
+ggplot(covid_deaths_long, aes(x = factor(year), y = deaths, fill = cause_type)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "COVID-19 Deaths by Year (2020-2023)",
+       x = "Year", y = "Number of Deaths", fill = "Cause Type") +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal()
+```
+
