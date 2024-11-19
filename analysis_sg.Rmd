@@ -1,0 +1,96 @@
+---
+title: "Analysis_szg"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(ggplot2)
+```
+
+### Some observations from the data
+
+```{r}
+weekly_deaths_data <- read_csv("data/weekly_deaths_by_state_and_causes.csv") %>% 
+  select(-1)
+
+# Get the data I need to analysis 
+data_sg <- weekly_deaths_data %>%
+  filter(`Jurisdiction of Occurrence` %in% c("Massachusetts", "Michigan", "Minnesota", 
+                                             "Mississippi", "Missouri", "Montana", 
+                                             "Nebraska", "Nevada", "New Hampshire", 
+                                             "New Jersey")) %>% 
+  select(1:19) %>% 
+  rename(
+    `Septicemia` = `Septicemia (A40-A41)`, 
+    `Malignant neoplasms` = `Malignant neoplasms (C00-C97)`, 
+    `Diabetes mellitus` = `Diabetes mellitus (E10-E14)`, 
+    `Alzheimer disease` = `Alzheimer disease (G30)`, 
+    `Influenza and pneumonia` = `Influenza and pneumonia (J09-J18)`, 
+    `Chronic lower respiratory diseases` = `Chronic lower respiratory diseases (J40-J47)`, 
+    `Other respiratory diseases` = `Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)`, 
+    `Kidney Disease` = `Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)`, 
+    `Other Symptoms` = `Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)`, 
+    `Diseases of heart` = `Diseases of heart (I00-I09,I11,I13,I20-I51)`, 
+    `Cerebrovascular diseases` = `Cerebrovascular diseases (I60-I69)`, 
+    `COVID-19 (Multiple)` = `COVID-19 (U071, Multiple Cause of Death)`, 
+    `COVID-19 (Underlying)` = `COVID-19 (U071, Underlying Cause of Death)`
+  )
+state_data_list <- split(data_sg, data_sg %>% pull(`Jurisdiction of Occurrence`))
+#summary(data_sg[ ,5:19])
+```
+
+Overall, the columns with fewer missing values are Malignant neoplasms, Diabetes mellitus, Alzheimer disease, Chronic lower respiratory diseases, Diseases of heart, Cerebrovascular diseases, COVID-19 (Multiple), and COVID-19 (Underlying).  
+
+ 
+
+```{r, message = FALSE, results = "hide"}
+data_ma <- state_data_list[["Massachusetts"]]
+summary(data_ma[ ,5:19])
+
+data_mi <- state_data_list[["Michigan"]]
+summary(data_mi[ ,5:19])
+
+data_mn <- state_data_list[["Minnesota"]]
+summary(data_mn[ ,5:19])
+
+data_ms <- state_data_list[["Mississippi"]]
+summary(data_ms[ ,5:19])
+
+data_mo <- state_data_list[["Missouri"]]
+summary(data_mo[ ,5:19])
+
+data_mt <- state_data_list[["Montana"]]
+summary(data_mt[ ,5:19])
+
+data_ne <- state_data_list[["Nebraska"]]
+summary(data_ne[ ,5:19])
+
+data_nv <- state_data_list[["Nevada"]]
+summary(data_nv[ ,5:19])
+
+data_nh <- state_data_list[["New Hampshire"]]
+summary(data_nh[ ,5:19])
+
+data_nj <- state_data_list[["New Jersey"]]
+summary(data_nj[ ,5:19])
+```
+
+Distribution of NAs:  
+*Massachusetts*: nice!  
+*Minnesota*: Septicemia.  
+*Mississippi*: Septicemia, Other respiratory diseases, Other Symptoms  
+*Missouri*: Other Symptoms  
+*Montana*: Septicemia, Diabetes mellitus, Alzheimer disease, Influenza and pneumonia, Other respiratory diseases, Kidney Disease, Other Symptoms, Cerebrovascular diseases.   
+*Nebraska*: Septicemia, Influenza and pneumonia, Other respiratory diseases, Kidney Disease, Other Symptoms, Diseases of heart   
+*Nevada*: Septicemia, Other respiratory diseases, Kidney Disease, Other Symptoms   
+*New Hampshire*: Septicemia, Diabetes mellitus, Alzheimer disease, Influenza and pneumonia,Other respiratory diseases, Kidney Disease, Other Symptoms, COVID-19 (Underlying)   
+*New Jersey*: nice!  
+
+Montana, Nebraska and New Hampshire have a severe data missing problem. 
+
+### Perform some time series analysis on selected state 
+

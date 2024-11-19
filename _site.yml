@@ -9,10 +9,12 @@ navbar:
       href: data-processing.html
     - text: "Analyses"
       menu:
-        - text: "Analysis 1"
-          href: analysis1.html
-        - text: "Analysis 2"
-          href: analysis2.html
+        - text: "Analysis yyc"
+          href: analysis_yyc.html
+        - text: "Analysis az"
+          href: analysis_az.html
+        - text: "Analysis sg"
+          href: analysis_sg.html
     - text: "Shiny"
       menu:
         - text: "Shiny App 1"

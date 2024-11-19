@@ -11,7 +11,7 @@
 
 
 
-<title>about-team</title>
+<title>Analysis_szg</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -258,16 +258,13 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="analysis1.html">Analysis 1</a>
-    </li>
-    <li>
-      <a href="analysis2.html">Analysis 2</a>
-    </li>
-    <li>
       <a href="analysis_yyc.html">Analysis yyc</a>
     </li>
     <li>
       <a href="analysis_az.html">Analysis az</a>
+    </li>
+    <li>
+      <a href="analysis_sg.html">Analysis sg</a>
     </li>
   </ul>
 </li>
@@ -309,12 +306,111 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">about-team</h1>
+<h1 class="title toc-ignore">Analysis_szg</h1>
 
 </div>
 
 
-<p>teammates.</p>
+<div id="some-observations-from-the-data" class="section level3">
+<h3>Some observations from the data</h3>
+<pre class="r"><code>weekly_deaths_data &lt;- read_csv(&quot;data/weekly_deaths_by_state_and_causes.csv&quot;) %&gt;% 
+  select(-1)</code></pre>
+<pre><code>## Warning: One or more parsing issues, call `problems()` on your data frame for details,
+## e.g.:
+##   dat &lt;- vroom(...)
+##   problems(dat)</code></pre>
+<pre><code>## Rows: 10476 Columns: 35
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
+## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...
+## lgl   (3): flag_allcause, flag_natcause, flag_neopl
+## date  (1): Week Ending Date
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code># Get the data I need to analysis 
+data_sg &lt;- weekly_deaths_data %&gt;%
+  filter(`Jurisdiction of Occurrence` %in% c(&quot;Massachusetts&quot;, &quot;Michigan&quot;, &quot;Minnesota&quot;, 
+                                             &quot;Mississippi&quot;, &quot;Missouri&quot;, &quot;Montana&quot;, 
+                                             &quot;Nebraska&quot;, &quot;Nevada&quot;, &quot;New Hampshire&quot;, 
+                                             &quot;New Jersey&quot;)) %&gt;% 
+  select(1:19) %&gt;% 
+  rename(
+    `Septicemia` = `Septicemia (A40-A41)`, 
+    `Malignant neoplasms` = `Malignant neoplasms (C00-C97)`, 
+    `Diabetes mellitus` = `Diabetes mellitus (E10-E14)`, 
+    `Alzheimer disease` = `Alzheimer disease (G30)`, 
+    `Influenza and pneumonia` = `Influenza and pneumonia (J09-J18)`, 
+    `Chronic lower respiratory diseases` = `Chronic lower respiratory diseases (J40-J47)`, 
+    `Other respiratory diseases` = `Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)`, 
+    `Kidney Disease` = `Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)`, 
+    `Other Symptoms` = `Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)`, 
+    `Diseases of heart` = `Diseases of heart (I00-I09,I11,I13,I20-I51)`, 
+    `Cerebrovascular diseases` = `Cerebrovascular diseases (I60-I69)`, 
+    `COVID-19 (Multiple)` = `COVID-19 (U071, Multiple Cause of Death)`, 
+    `COVID-19 (Underlying)` = `COVID-19 (U071, Underlying Cause of Death)`
+  )
+state_data_list &lt;- split(data_sg, data_sg %&gt;% pull(`Jurisdiction of Occurrence`))
+#summary(data_sg[ ,5:19])</code></pre>
+<p>Overall, the columns with fewer missing values are Malignant
+neoplasms, Diabetes mellitus, Alzheimer disease, Chronic lower
+respiratory diseases, Diseases of heart, Cerebrovascular diseases,
+COVID-19 (Multiple), and COVID-19 (Underlying).</p>
+<pre class="r"><code>data_ma &lt;- state_data_list[[&quot;Massachusetts&quot;]]
+summary(data_ma[ ,5:19])
+
+data_mi &lt;- state_data_list[[&quot;Michigan&quot;]]
+summary(data_mi[ ,5:19])
+
+data_mn &lt;- state_data_list[[&quot;Minnesota&quot;]]
+summary(data_mn[ ,5:19])
+
+data_ms &lt;- state_data_list[[&quot;Mississippi&quot;]]
+summary(data_ms[ ,5:19])
+
+data_mo &lt;- state_data_list[[&quot;Missouri&quot;]]
+summary(data_mo[ ,5:19])
+
+data_mt &lt;- state_data_list[[&quot;Montana&quot;]]
+summary(data_mt[ ,5:19])
+
+data_ne &lt;- state_data_list[[&quot;Nebraska&quot;]]
+summary(data_ne[ ,5:19])
+
+data_nv &lt;- state_data_list[[&quot;Nevada&quot;]]
+summary(data_nv[ ,5:19])
+
+data_nh &lt;- state_data_list[[&quot;New Hampshire&quot;]]
+summary(data_nh[ ,5:19])
+
+data_nj &lt;- state_data_list[[&quot;New Jersey&quot;]]
+summary(data_nj[ ,5:19])</code></pre>
+<p>Distribution of NAs:<br />
+<em>Massachusetts</em>: nice!<br />
+<em>Minnesota</em>: Septicemia.<br />
+<em>Mississippi</em>: Septicemia, Other respiratory diseases, Other
+Symptoms<br />
+<em>Missouri</em>: Other Symptoms<br />
+<em>Montana</em>: Septicemia, Diabetes mellitus, Alzheimer disease,
+Influenza and pneumonia, Other respiratory diseases, Kidney Disease,
+Other Symptoms, Cerebrovascular diseases.<br />
+<em>Nebraska</em>: Septicemia, Influenza and pneumonia, Other
+respiratory diseases, Kidney Disease, Other Symptoms, Diseases of
+heart<br />
+<em>Nevada</em>: Septicemia, Other respiratory diseases, Kidney Disease,
+Other Symptoms<br />
+<em>New Hampshire</em>: Septicemia, Diabetes mellitus, Alzheimer
+disease, Influenza and pneumonia,Other respiratory diseases, Kidney
+Disease, Other Symptoms, COVID-19 (Underlying)<br />
+<em>New Jersey</em>: nice!</p>
+<p>Montana, Nebraska and New Hampshire have a severe data missing
+problem.</p>
+</div>
+<div id="perform-some-time-series-analysis-on-selected-state"
+class="section level3">
+<h3>Perform some time series analysis on selected state</h3>
+</div>
 
 
 
