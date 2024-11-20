@@ -36,4 +36,181 @@ yh_data <- data |>
   )  |>
   mutate(month = month(week_ending_date)) 
 ```
+## Visualize the extent of missing data
+```{r fig.width=18, fig.height=10}
+data_missing = yh_data |>
+  pivot_longer(cols = 6:20, names_to = "disease", values_to = "value") |>
+  mutate(missing = ifelse(is.na(value), 1, 0))  |> # 1 as missing
+  group_by(jurisdiction_of_occurrence, disease) |>
+  summarize(missing_rate = mean(is.na(value)), .groups = "drop")
+
+missing_plot=
+ggplot(data_missing, aes(x = jurisdiction_of_occurrence, y = disease, fill = missing_rate)) +
+  geom_tile(color = "white") +  
+  scale_fill_gradient(
+    low = "white",    # no missing as white
+    high = "red",     # all missing as red
+    na.value = "gray" 
+  ) +
+  labs(
+    title = "Missing Data Heatmap",
+    x = "State",
+    y = "Disease",
+    fill = "Missing Rate"
+  ) +theme(
+    axis.text.y = element_text(size = 10, angle = 45),
+    plot.title = element_text(hjust = 0.5)
+  )
+
+
+
+missing_plot
+```
+It can be observed that the states with relatively complete data are Alabama, Arizona, California, Florida, Georgia, Illinois, Indiana, Kentucky, and Louisiana.
+##Week with the Highest Mortality in the Past Four Years
+```{r fig.width=18, fig.height=10}
+total_weekly_deaths = yh_data |>
+  group_by(mmwr_week) |>
+  summarize(total_deaths = sum(natural_cause, na.rm = TRUE)) |>
+  ungroup()
+
+total_weekly_deaths_plot=
+ggplot(total_weekly_deaths, aes(x = factor(mmwr_week), 
+                                y = total_deaths, fill = factor(mmwr_week))) +
+  geom_bar(stat = "identity") +
+  theme_minimal() +
+  labs(
+    title = "Total Mortality for Each Week Over the Past Four Years",
+    x = "Week",
+    y = "Total Death Count"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+
+total_weekly_deaths_plot
+```
+##Mortality Trends Over Time for Different Causes of Death
+```{r fig.width=18, fig.height=10}
+mortality_trends_data = yh_data |>
+  select(
+    week_ending_date, 
+    jurisdiction_of_occurrence, 
+    mmwr_year,
+    septicemia,
+    malignant_neoplasms,
+    diabetes_mellitus,
+    alzheimer_disease,
+    influenza_and_pneumonia,
+    chronic_lower_respiratory_diseases,
+    other_diseases_of_respiratory_system,
+    nephritis_nephrotic_syndrome_and_nephrosis,
+    symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+    diseases_of_heart,
+    cerebrovascular_diseases,
+    covid,
+    covid.1
+  ) |>
+  gather(key = "cause_of_death", value = "death_count", 
+         septicemia,
+         malignant_neoplasms,
+         diabetes_mellitus,
+         alzheimer_disease,
+         influenza_and_pneumonia,
+         chronic_lower_respiratory_diseases,
+         other_diseases_of_respiratory_system,
+         nephritis_nephrotic_syndrome_and_nephrosis,
+         symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+         diseases_of_heart,
+         cerebrovascular_diseases,
+         covid,
+         covid.1) |>
+  group_by(week_ending_date, cause_of_death) |>
+  summarize(total_deaths = sum(death_count, na.rm = TRUE)) |>
+  ungroup()
+
+mortality_trends_plot=
+ggplot(mortality_trends_data, aes(x = week_ending_date, 
+                                  y = total_deaths,
+                                  color = cause_of_death, 
+                                  group = cause_of_death)) +
+  geom_line(alpha=0.6) +
+  geom_point(alpha=0.6) +
+  theme_minimal() +
+  labs(
+    title = "Mortality Trends Over Time for Different Causes of Death",
+    x = "Week Ending Date",
+    y = "Total Deaths",
+    color = "Cause of Death"
+  ) +
+theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+mortality_trends_plot
+```
+##Changes in the Proportion of Each Cause of Death in Total Mortality Over Four Years
+```{r fig.width=18, fig.height=10}
+mortality_data <- yh_data |>
+  select(
+    week_ending_date, 
+    jurisdiction_of_occurrence, 
+    mmwr_year,
+    septicemia,
+    malignant_neoplasms,
+    diabetes_mellitus,
+    alzheimer_disease,
+    influenza_and_pneumonia,
+    chronic_lower_respiratory_diseases,
+    other_diseases_of_respiratory_system,
+    nephritis_nephrotic_syndrome_and_nephrosis,
+    symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+    diseases_of_heart,
+    cerebrovascular_diseases,
+    covid,
+    covid.1
+  ) |>
+  gather(key = "cause_of_death", value = "death_count", 
+         septicemia,
+         malignant_neoplasms,
+         diabetes_mellitus,
+         alzheimer_disease,
+         influenza_and_pneumonia,
+         chronic_lower_respiratory_diseases,
+         other_diseases_of_respiratory_system,
+         nephritis_nephrotic_syndrome_and_nephrosis,
+         symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+         diseases_of_heart,
+         cerebrovascular_diseases,
+         covid,
+         covid.1) |>
+  group_by(week_ending_date, mmwr_year, cause_of_death) |>
+  summarize(death_count = sum(death_count, na.rm = TRUE)) |>
+  group_by(week_ending_date, mmwr_year) |>
+  mutate(total_deaths = sum(death_count, na.rm = TRUE)) |>
+  mutate(proportion = death_count / total_deaths) |>
+  ungroup()
+
+mortality_plot=
+ggplot(mortality_data, aes(x = week_ending_date, y = proportion, fill = cause_of_death)) +
+  geom_bar(stat = "identity", position = "stack") +
+  labs(
+    title = "Changes in the Proportion of Each Cause of Death in Total Mortality Over Four Years",
+    x = "Week Ending Date",
+    y = "Proportion of Total Deaths",
+    fill = "Cause of Death"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom"
+  ) +
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
+  theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+
+mortality_plot
+
+
+```
 
