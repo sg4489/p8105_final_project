@@ -549,9 +549,8 @@ print(glimpse(filtered_data))</code></pre>
 ## #   other_diseases_of_respiratory_system_j00_j06_j30_j39_j67_j70_j98 &lt;dbl&gt;,
 ## #   nephritis_nephrotic_syndrome_and_nephrosis_n00_n07_n17_n19_n25_n27 &lt;dbl&gt;, …</code></pre>
 </div>
-<div id="visualization-the-total-death-cases-by-each-state"
-class="section level1">
-<h1>visualization the total death cases by each state</h1>
+<div id="the-total-death-cases-by-each-state" class="section level1">
+<h1>The total death cases by each state</h1>
 <pre class="r"><code># Data cleaning and aggregation
 barplot_data &lt;- filtered_data %&gt;%
   select(state, all_cause, natural_cause) %&gt;% # Select relevant columns

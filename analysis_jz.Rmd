@@ -55,7 +55,7 @@ filtered_data <- filtered_data %>%
 print(glimpse(filtered_data))
 ```
 
-# visualization the total death cases by each state
+# The total death cases by each state
 ```{r}
 # Data cleaning and aggregation
 barplot_data <- filtered_data %>%
