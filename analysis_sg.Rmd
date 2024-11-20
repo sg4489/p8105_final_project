@@ -8,7 +8,7 @@ output:
 
 ```{r, echo=FALSE, message=FALSE}
 library(tidyverse)
-library(ggplot2)
+library(plotly)
 ```
 
 ### Some observations from the data
@@ -94,3 +94,37 @@ Montana, Nebraska and New Hampshire have a severe data missing problem.
 
 ### Perform some time series analysis on selected state 
 
+```{r, warning=FALSE}
+# Prepare the data
+data_ma_long <- data_ma %>%
+  select(`Week Ending Date`,
+         `Septicemia`, `Malignant neoplasms`, `Diabetes mellitus`, `Alzheimer disease`,
+         `Influenza and pneumonia`, `Chronic lower respiratory diseases`, `Other respiratory diseases`,
+         `Kidney Disease`, `Other Symptoms`,
+         `Diseases of heart`, `Cerebrovascular diseases`,
+         `COVID-19 (Multiple)`, `COVID-19 (Underlying)`) %>%
+  pivot_longer(
+    cols = -`Week Ending Date`,
+    names_to = "Disease",
+    values_to = "Deaths"
+  )
+
+# Create the interactive plot using plotly
+plot_ma <- plot_ly(
+  data_ma_long,
+  x = ~`Week Ending Date`,
+  y = ~Deaths,
+  color = ~Disease,
+  type = 'scatter',
+  mode = 'lines'
+) %>%
+  layout(
+    title = "Trends in Death Counts Over Time by Disease in MA",
+    xaxis = list(title = "Week Ending Date"),
+    yaxis = list(title = "Number of Deaths"),
+    legend = list(title = list(text = "Disease"))
+  )
+
+# Display the plot
+plot_ma
+```
