@@ -1,0 +1,39 @@
+---
+title: "Analysis_yhc"
+output: html_document
+date: "2024-11-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE}
+library(readr)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(lubridate)
+library(tidyr)
+
+```
+## Import and clean data
+```{r}
+data=read_csv("./data/weekly_deaths_by_state_and_causes.csv") 
+states <- c("Alabama", "Alaska", "Arizona", "Arkansas", "California", 
+            "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", 
+            "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", 
+            "Kentucky", "Louisiana", "Maine", "Maryland")
+
+yh_data <- data |>
+  janitor::clean_names() |>
+  rename_with(~ str_replace_all(., " ", "_")) |>
+  filter(jurisdiction_of_occurrence %in% states) |>
+  rename_with(~ make.unique(str_replace(., "_\\w\\d.*", ""))) |>
+  mutate(
+    across(where(is.character), ~ ifelse(. == "Suppressed (counts 1-9)", 
+                                         as.character(sample(1:9, 1)), .))
+  )  |>
+  mutate(month = month(week_ending_date)) 
+```
+
