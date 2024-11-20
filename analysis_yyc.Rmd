@@ -10,5 +10,635 @@ output:
 ---
 
 ```{r setup}
+library(tidyverse)
+library(usmap)
+library(plotly)
+
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.asp = .6,
+  out.width = "90%"
+)
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+```
+
+
+# Here are some steps about cleaning data and generate table
+```{r clean data, echo=TRUE, results='hide', warning=FALSE}
+
+death_by_state_and_causes_df_clean =
+  read_csv("data/yyc/weekly_deaths_by_state_and_causes.csv", show_col_types = FALSE) |> 
+  janitor::clean_names() |> 
+  select(jurisdiction_of_occurrence:covid_19_u071_underlying_cause_of_death) |> 
+  rename(residence_state = jurisdiction_of_occurrence) |>
+  rename(year = mmwr_year) |> 
+  rename(week = mmwr_week)
+
+# generate random number 1-9 to suppressed cells
+death_by_state_and_causes_df_clean[] = lapply(death_by_state_and_causes_df_clean, function(col) {
+  if (is.numeric(col)) { 
+    col[is.na(col)] <- sample(1:9, sum(is.na(col)), replace = TRUE)
+  }
+  return(col)
+})
+  
+# if we change the observation period from week to month, that would decrease a lot of NA data.
+
+# below are all monthly death by 131 causes
+cause131_df1 = 
+  read.table(file = "data/yyc/131_1.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+cause131_df2 = 
+  read.table(file = "data/yyc/131_2.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+
+cause131_df3 = 
+  read.table(file = "data/yyc/131_3.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+
+cause131_df4 = 
+  read.table(file = "data/yyc/131_4.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+
+combined_113_month_df =
+  bind_rows(cause131_df1, cause131_df2, cause131_df3, cause131_df4)
+
+#clean the data and select the columns we want
+combined_113_month_df_cleaned = 
+  combined_113_month_df |> 
+  janitor::clean_names() |> 
+  rename(cause_list = ucd_icd_10_113_cause_list) |> 
+  rename(cause_list_code = ucd_icd_10_113_cause_list_code) |> 
+  separate(month_code, into = c("year", "month"), sep = "/") |> 
+  select(-c(note, notes, population, crude_rate))
+  
+# we could select some items like 15 leading causes in request page 
+# first it is the chart pertaining to the 15 leading causes of death in the United States and the death place of the 15 causes
+
+cause15_deathplace_only = 
+  read.table(file = "data/yyc/all_15_deathplace_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+
+cause15_deathplace_only_cleaned =
+  cause15_deathplace_only |>
+  janitor::clean_names() |>
+  rename(cause_list = ucd_icd_10_113_cause_list) |>
+  rename(cause_list_code = ucd_icd_10_113_cause_list_code) |>
+  select(-c(notes, population, crude_rate))
+
+# chart pertaining to 15 causes and devided by gender and month/year
+cause15_gender_month_only_cleaned = 
+  read.table(file = "data/yyc/cause15_gender_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  rename(cause_list = ucd_icd_10_113_cause_list) |>
+  rename(cause_list_code = ucd_icd_10_113_cause_list_code) |>
+  separate(month_code, into = c("year", "month"), sep = "/") |> 
+  select(-c(notes, population, crude_rate))
+
+cause15_gender_year_only_cleaned = 
+  read.table(file = "data/yyc/cause15_gender_year.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  rename(cause_list = ucd_icd_10_113_cause_list) |>
+  rename(cause_list_code = ucd_icd_10_113_cause_list_code) |>
+  select(-notes)
+
+
+#chart pertaining to 15 causes and devided by 4 regions and month
+cause15_region_month_only_cleaned = 
+  read.table(file = "data/yyc/all_15_regin_month_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  rename(cause_list = ucd_icd_10_113_cause_list) |>
+  rename(cause_list_code = ucd_icd_10_113_cause_list_code) |>
+  separate(month_code, into = c("year", "month"), sep = "/") |> 
+  select(-c(notes, population, crude_rate))
+
+#chart pertaining to drug or alchohol use and devided by month
+cause_drug_month_only_cleaned = 
+  read.table(file = "data/yyc/all_drug_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  separate(month_code, into = c("year", "month"), sep = "/") |> 
+  select(-c(notes, population, crude_rate))
+
+
+#chart pertaining to system devided by month
+cause_system_month_only_cleaned = 
+  read.table(file = "data/yyc/all_ICDsystem_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  separate(month_code, into = c("year", "month"), sep = "/") |> 
+  select(-c(notes, population, crude_rate))
+
+#chart pertaining to system devided by month and region
+cause_system_region_month_only_cleaned = 
+  read.table(file = "data/yyc/all_ICDsystem_region_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  separate(month_code, into = c("year", "month"), sep = "/") |> 
+  select(-c(notes, population, crude_rate))
+
+#chart pertaining to injury devided by month
+cause_injury_month_only_cleaned = 
+  read.table(file = "data/yyc/all_UCDinjury_intent_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  separate(month_code, into = c("year", "month"), sep = "/") |> 
+  select(-c(notes, population, crude_rate))
+
+
+#chart pertaining to 15 and subgroups divided by 1 year
+cause15_1year_full_cleaned1 = 
+  read.table(file = "data/yyc/Hawaii_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  select(-notes)
+
+cause15_1year_full_cleaned1$single_year_ages_code <- as.character(cause15_1year_full_cleaned1$single_year_ages_code)
+
+
+
+cause15_1year_full_cleaned2 = 
+  read.table(file = "data/yyc/Idaho_Illinois_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  select(-notes)
+cause15_1year_full_cleaned2$single_year_ages_code <- as.character(cause15_1year_full_cleaned2$single_year_ages_code)
+
+cause15_1year_full_cleaned3 = 
+  read.table(file = "data/yyc/Indiana_Iowa_Kansas_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  select(-notes)
+cause15_1year_full_cleaned3$single_year_ages_code <- as.character(cause15_1year_full_cleaned3$single_year_ages_code)
+
+cause15_1year_full_cleaned4 = 
+  read.table(file = "data/yyc/Kentucky-Maryland_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  select(-notes)
+cause15_1year_full_cleaned4$single_year_ages_code <- as.character(cause15_1year_full_cleaned4$single_year_ages_code)
+
+cause15_1year_full_cleaned_combined =
+  bind_rows(cause15_1year_full_cleaned1, cause15_1year_full_cleaned2, cause15_1year_full_cleaned3, cause15_1year_full_cleaned4)
+
+# cause15_month only
+cause15_month_only = 
+  read.table(file = "data/yyc/cause15_month_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |>
+  separate(month_code, into = c("year", "month"), sep = "/") |>
+  rename(cause_list = ucd_icd_10_113_cause_list) |>
+  rename(cause_list_code = ucd_icd_10_113_cause_list_code) |>
+  select(-c(notes, population, crude_rate)) |> 
+  filter(year >= 2020)
+  
 
 ```
+
+
+# Data Analysis
+
+## I use the female and male number in chart cause15_gender_year_only_cleaned to calculate the total number of population in year 2020-2024. Here are the full chart including total population in states.
+```{r clean the data, echo=TRUE, results='hide', warning=FALSE}
+total_population = 
+  cause15_gender_year_only_cleaned |> 
+  select(residence_state, gender, year, population) |> 
+  group_by(residence_state, gender, year, population) |>
+  summarise() 
+
+total_population_year_aftercalculation = 
+  total_population |> 
+  group_by(residence_state, year) |> 
+  mutate(total_population_per_year = sum(population, na.rm = TRUE)) |> 
+  ungroup()
+
+
+# join the total population into this table
+df_population_summary = 
+  total_population_year_aftercalculation |> 
+  select(residence_state, year, total_population_per_year) |> 
+  distinct() |> 
+    mutate(
+    year = str_replace(year, "2023 \\(provisional\\)", "2023"),
+    year = str_replace(year, "2024 \\(provisional and partial\\)", "2024"))
+
+cause15_month_only_combined_population = 
+  cause15_month_only |> 
+  left_join(df_population_summary, by = c("residence_state", "year"))
+
+```
+
+## Plot the trends in different states across months from 2020 to 2024 using line and point plots 
+```{r by states and months using line and point plots}
+trend_for_GR113_010_in_Hawaii_2020_2024 =
+cause15_month_only_combined_population |> 
+  mutate(
+    month_year = factor(paste(year, month, sep = "-"), levels = unique(paste(year, month, sep = "-")))
+  ) |>
+  filter(cause_list_code == "GR113-010") |> 
+  filter(residence_state == "Hawaii") |> 
+  ggplot(aes(x = month_year, y = deaths, group = 1)) +
+  geom_line(size = 0.8, color = "blue", alpha = 0.7) +    
+  geom_point(size = 1.5, color = "black") +
+  geom_smooth(method = "loess", span = 0.3, se = FALSE, color = "red", size = 1) +
+  labs(
+    title = "Trends of Deaths for GR113-010 in Hawaii (2020-2024)",
+    x = "Month-Year",
+    y = "Number of Deaths"
+  ) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+  )
+
+trend_for_GR113_010_in_Hawaii_2020_2024
+
+# there are other disease for different states, we need to see their trends (15 X 9)
+```
+
+## For same disease, we calculate the mortality rate in different states at the same year, and compare the mortality rate in different states at the same year using box plot, violin plot and density plot.
+
+*box plot*
+```{r mortality rate in different states at the same year}
+# year 3 plots --- box and violin and density plot
+
+data_with_rate_2020_cause15_GR113_010_boxplot =
+  cause15_month_only_combined_population |> 
+  mutate(mortality_rate = deaths / total_population_per_year) |> 
+  filter(!is.na(mortality_rate)) |> 
+  filter(cause_list_code == "GR113-010") |> 
+  filter(year == 2020) |>
+  mutate(residence_state = reorder(residence_state, mortality_rate, FUN = median)) |> 
+  ggplot(aes(x = residence_state, y = mortality_rate, fill = residence_state)) +
+  geom_boxplot() +
+  labs(
+    title = "Mortality Rate for GR113-010 Across States in 2020",
+    x = "State",
+    y = "Mortality Rate"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+data_with_rate_2020_cause15_GR113_010_boxplot
+```
+
+
+*Violin Plot*
+```{r violin plot}
+data_with_rate_2020_cause15_GR113_010_violinplot = 
+  cause15_month_only_combined_population |> 
+  mutate(mortality_rate = deaths / total_population_per_year) |> 
+  filter(!is.na(mortality_rate)) |> 
+  filter(cause_list_code == "GR113-010") |> 
+  filter(year == 2020) |>
+  mutate(residence_state = reorder(residence_state, mortality_rate, FUN = median)) |>   
+  ggplot(aes(x = residence_state, y = mortality_rate, fill = residence_state)) +
+  geom_violin(trim = FALSE) +
+  geom_point(position = position_jitter(width = 0.2), alpha = 0.5) + 
+  labs(
+    title = "Distribution of Mortality Rate for GR113-010 Across States",
+    x = "State",
+    y = "Mortality Rate"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+data_with_rate_2020_cause15_GR113_010_violinplot
+```
+
+
+*Density Plot*
+```{r density plot}
+data_with_rate_2020_cause15_GR113_010_densityplot = 
+  cause15_month_only_combined_population |> 
+  mutate(mortality_rate = deaths / total_population_per_year) |> 
+  filter(!is.na(mortality_rate)) |> 
+  filter(cause_list_code == "GR113-010") |> 
+  filter(year == 2020) |>
+  mutate(residence_state = reorder(residence_state, mortality_rate, FUN = median)) |> 
+  ggplot(aes(x = mortality_rate, fill = residence_state)) +
+  geom_density(alpha = 0.6) +
+  labs(
+    title = "Density of Mortality Rate for GR113-010 Across States",
+    x = "Mortality Rate",
+    y = "Density"
+  ) 
+
+data_with_rate_2020_cause15_GR113_010_densityplot
+```
+# Here is the box plot analyzing the mortality rate in different states at the same month from 2020 to 2024
+```{r box plot by month}
+data_with_rate_2020_2024bymonth_cause15_GR113_010_boxplot =
+  cause15_month_only_combined_population |> 
+  mutate(mortality_rate = deaths / total_population_per_year) |> 
+  filter(!is.na(mortality_rate)) |> 
+  filter(cause_list_code == "GR113-010") |> 
+  mutate(residence_state = reorder(residence_state, mortality_rate, FUN = median)) |> 
+  ggplot(aes(x = residence_state, y = mortality_rate, fill = residence_state)) +
+  geom_boxplot() +
+  facet_wrap(~ month) +
+  labs(
+    title = "Mortality Rate for GR113-010 Across States by Month",
+    x = "State",
+    y = "Mortality Rate"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+data_with_rate_2020_2024bymonth_cause15_GR113_010_boxplot
+
+
+# still need to plot the mortality rate for other disease and other years
+
+
+# death 15 actually 12
+```
+
+# Now we will make the map and bubble map to show the death rate in different states in US map but only 2020-2023, however, for specific disease we could use cause15_month_only_combined_population to calculate.
+
+*map*
+```{r death rate in different states in US map}
+death_by_state_and_causes_df_clean_population =
+  death_by_state_and_causes_df_clean |> 
+  filter(
+    residence_state == "Hawaii" |
+    residence_state == "Idaho" |
+    residence_state == "Illinois" |
+    residence_state == "Indiana" |
+    residence_state == "Iowa" |
+    residence_state == "Kansas" |
+    residence_state == "Kentucky" |
+    residence_state == "Maryland" |
+    residence_state == "Louisiana"
+  ) |> 
+  mutate(year = as.character(year)) |>
+  left_join(df_population_summary, by = c("residence_state", "year"))
+  
+data_with_death_rate_map =
+  death_by_state_and_causes_df_clean_population |> 
+  group_by(residence_state, year) |> 
+  summarise(
+    total_deaths = sum(all_cause, na.rm = TRUE),
+    total_population = first(total_population_per_year),
+    death_rate = total_deaths / total_population * 1000
+  ) |> 
+  ungroup()
+  
+
+us_map_data = usmap::us_map()
+
+data_with_death_rate_map_with_location =
+  left_join(data_with_death_rate_map, us_map_data, by = c("residence_state" = "full")) |> 
+  rename("full" = "residence_state") |> 
+  filter(year == "2020")
+
+# here we cuold change filter year to 2021, 2022, 2023, 2024 to see the death rate in different states in different years
+
+# map
+plotly_map_deathrate =
+  plot_ly(
+  data = data_with_death_rate_map_with_location,
+  type = 'choropleth',
+  locations = ~abbr,
+  locationmode = 'USA-states',
+  z = ~death_rate,
+  text = ~paste("State:", full, "<br>Death Rate:", death_rate),
+  colorscale = 'Blues'
+) |> 
+  layout(
+    title = "Death Rate by State in the USA",
+    geo = list(scope = 'usa')
+  )
+
+plotly_map_deathrate
+```
+
+
+*bubble map*
+```{r bubble map}
+
+# bubble map
+bubble_map_deathrate =
+  plot_ly(
+  data = data_with_death_rate_map_with_location,
+  type = 'scattergeo',
+  locationmode = 'USA-states',
+  locations = ~abbr,
+  marker = list(
+    size = ~death_rate * 1.5, 
+    color = ~death_rate,
+    colorscale = 'Blues',
+    showscale = TRUE
+  ),
+  text = ~paste("State:", full, "<br>Death Rate:", death_rate)
+) |> 
+  layout(
+    title = "Death Rate by State in the USA",
+    geo = list(scope = 'usa')
+  )
+
+bubble_map_deathrate
+```
+
+
+# The relationship between the mortality rate of COVID-19 and other diseases --- correlation heatmap or bubble chart (third variable --- state population or the budget? Or the life expectancy in the example paper) or faceted scatter plot 
+
+## first, we should generate the data for the mortality rate of COVID-19 and other diseases in different states at the same year 
+```{r death rate for other disease and COVID-19}
+rate_comparison_df_year =   
+  cause15_month_only_combined_population |>  
+  group_by(residence_state, year, cause_list, cause_list_code) |> 
+  summarise(total_deaths = sum(deaths, na.rm = TRUE)) |> 
+  left_join(df_population_summary, by = c("residence_state", "year")) |> 
+  mutate(mortality_rate_per_10000 = total_deaths / total_population_per_year * 10000) 
+
+covid_data =
+  rate_comparison_df_year |> 
+  filter(cause_list_code == "GR113-137") 
+
+non_covid_data =
+  rate_comparison_df_year |> 
+  filter(cause_list_code != "GR113-137")
+```
+
+
+## Covid trend with time in each state using line plot
+```{r line plot}
+
+covid_trend_with_time =
+  covid_data |> 
+  ggplot(aes(x = year, y = mortality_rate_per_10000, group = residence_state, color = residence_state)) +
+  geom_point() +
+  geom_line() +
+  labs(
+    title = "COVID-19 Mortality Rate Trend by State",
+    x = "Year",
+    y = "Mortality Rate per 10000"
+  ) +
+  theme(legend.position = "bottom")
+
+covid_trend_with_time
+```
+
+
+## If we want to see the trend of covid in 12 months in 2021 in these states, we could use the following code:
+```{r covid trend with time in 2021}
+comparison_df_month =   
+  cause15_month_only_combined_population |> 
+  mutate(mortality_rate_per_100000 = deaths / total_population_per_year * 100000) 
+
+
+covid_trend_with_time_2021 =
+  comparison_df_month |> 
+  filter(year == "2021") |>
+  filter(cause_list_code == "GR113-137") |>
+  ggplot(aes(x = month, y = mortality_rate_per_100000, group = residence_state, color = residence_state)) +
+  geom_line(size = 0.8, alpha = 0.7) +    
+  geom_point(size = 1.5) +
+  labs(
+    title = "COVID-19 Mortality Rate Trend by State in 2021",
+    x = "Month",
+    y = "Mortality Rate per 100000"
+  ) +
+  theme(legend.position = "bottom")
+
+covid_trend_with_time_2021
+```
+
+
+
+## If we want to see the trend of covid in 12 months from 2020 to 2024 in these states, we could use the following code:
+```{r covid trend with time in 2020-2024}
+covid_trend_with_time_2020_2024 =
+  comparison_df_month |> 
+  filter(cause_list_code == "GR113-137") |>
+  ggplot(aes(x = month, y = mortality_rate_per_100000, group = residence_state, color = residence_state)) +
+  geom_line(size = 0.8, alpha = 0.7) +    
+  geom_point(size = 1.5) +
+  facet_wrap(~ year) +
+  labs(
+    title = "COVID-19 Mortality Rate Trend by State from 2020 to 2024",
+    x = "Month",
+    y = "Mortality Rate per 100000"
+  ) +
+  theme(legend.position = "bottom")
+
+covid_trend_with_time_2020_2024
+
+# we could also see the trend of other disease in 12 months in 2021 in these states
+```
+
+## Now we will make correlation heatmap
+```{r correlation heatmap}
+wide_data_states2020 =
+  rate_comparison_df_year %>%
+  ungroup() %>%
+  select(residence_state, year, cause_list, mortality_rate_per_10000) %>%
+  pivot_wider(names_from = cause_list, values_from = mortality_rate_per_10000) %>%
+  filter(year == "2020") |> 
+  select(-residence_state, -year)
+
+cor_matrix <- cor(wide_data_states2020, use = "pairwise.complete.obs") 
+
+cor_long <- as.data.frame(cor_matrix) %>%
+  rownames_to_column(var = "cause_list") %>%
+  pivot_longer(cols = -cause_list, names_to = "cause_list2", values_to = "correlation")
+
+correlation_heatmap_2020 =
+ggplot(cor_long, aes(x = cause_list, y = cause_list2, fill = correlation)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
+  labs(
+    title = "Correlation Heatmap of Mortality Rate by Cause List in 2020",
+    x = "Cause List",
+    y = "Cause List",
+    fill = "Correlation"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.text.y = element_text(size = 8),
+    legend.position = "bottom"
+  )
+
+correlation_heatmap_2020
+# need to change disease name and year to see the correlation heatmap in different years
+
+
+```
+
+# Finally, we classified by system in body, analyze which impact most in U.S. and in every states --- bar / histo / pie and covid affect which system most
+```{r system impact in U.S. and in every states}
+cause_system_month_only_cleaned_population =
+  cause_system_month_only_cleaned |> 
+  left_join(df_population_summary, by = c("residence_state", "year"))
+
+cause_system_month_only_cleaned_population_A00_B99 =
+  cause_system_month_only_cleaned_population |>
+  filter(ucd_icd_chapter_code == "A00-B99") |> 
+  group_by(residence_state, year, total_population_per_year) |>
+  summarise(total_deaths = sum(deaths, na.rm = TRUE)) |> 
+  mutate(mortality_rate = total_deaths / total_population_per_year * 10000) |> 
+  ggplot(aes(x = residence_state, y = mortality_rate, fill = residence_state)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ year) +
+  labs(
+    title = "Mortality Rate for System A00-B99 Across States",
+    x = "State",
+    y = "Mortality Rate"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+
+cause_system_month_only_cleaned_population_A00_B99
+
+# we could see other system use this code
+```
+
+
+```{r same state different system}
+cause_system_month_only_cleaned_population_Hawaii =
+  cause_system_month_only_cleaned_population |>
+  filter(residence_state == "Hawaii") |> 
+  group_by(ucd_icd_chapter, year, total_population_per_year) |>
+  summarise(total_deaths = sum(deaths, na.rm = TRUE)) |> 
+  mutate(mortality_rate = total_deaths / total_population_per_year * 10000)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Certain infectious and parasitic diseases", "Infectious", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Codes for special purposes", "Special", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Data not shown due to 6 month lag to account for delays in death certificate completion for certain causes of death.", "Not shown", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism", "Blood and immune", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Diseases of the circulatory system", "Circulatory", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Diseases of the digestive system", "Digestive", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Diseases of the genitourinary system", "Genitourinary", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Diseases of the musculoskeletal system and connective tissue",  "Connective", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Diseases of the nervous system", "Nervous", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Diseases of the respiratory system", "Respiratory", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Diseases of the skin and subcutaneous tissue", "Skin tissue", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Endocrine, nutritional and metabolic diseases", "ENM", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("External causes of morbidity and mortality", "External", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified", "Not classified", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub("Mental and behavioural disorders", "Mental", cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
+
+plot_system_Hawaii_2022 =
+  cause_system_month_only_cleaned_population_Hawaii |> 
+  filter(year == "2022") |>
+  ggplot(aes(x = ucd_icd_chapter, y = mortality_rate, fill = ucd_icd_chapter)) +
+  geom_bar(stat = "identity") +
+  labs(
+    title = "Mortality Rate for Systems in Hawaii 2022",
+    x = "ucd_icd_chapter",
+    y = "Mortality Rate"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+plot_system_Hawaii_2022
+# other year could do the same 
+```
+
