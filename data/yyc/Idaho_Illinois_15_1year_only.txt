@@ -1,0 +1,1518 @@
+"Notes"	"Residence State"	"Residence State Code"	"Single-Year Ages"	"Single-Year Ages Code"	"UCD - ICD-10 113 Cause List"	"UCD - ICD-10 113 Cause List Code"	Deaths	Population	Crude Rate
+	"Idaho"	"16"	"< 1 year"	"0"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	70	109854	63.7
+	"Idaho"	"16"	"28 years"	"28"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	11	123959	Unreliable
+	"Idaho"	"16"	"30 years"	"30"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	11	126930	Unreliable
+	"Idaho"	"16"	"31 years"	"31"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	13	126808	Unreliable
+	"Idaho"	"16"	"31 years"	"31"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	14	126808	Unreliable
+	"Idaho"	"16"	"33 years"	"33"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	17	122822	Unreliable
+	"Idaho"	"16"	"33 years"	"33"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	15	122822	Unreliable
+	"Idaho"	"16"	"34 years"	"34"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	14	122640	Unreliable
+	"Idaho"	"16"	"34 years"	"34"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	10	122640	Unreliable
+	"Idaho"	"16"	"35 years"	"35"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	18	123570	Unreliable
+	"Idaho"	"16"	"35 years"	"35"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	15	123570	Unreliable
+	"Idaho"	"16"	"36 years"	"36"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	16	124910	Unreliable
+	"Idaho"	"16"	"36 years"	"36"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	14	124910	Unreliable
+	"Idaho"	"16"	"37 years"	"37"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	16	125020	Unreliable
+	"Idaho"	"16"	"37 years"	"37"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	11	125020	Unreliable
+	"Idaho"	"16"	"38 years"	"38"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	12	125126	Unreliable
+	"Idaho"	"16"	"38 years"	"38"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	20	125126	16.0
+	"Idaho"	"16"	"38 years"	"38"	"#COVID-19 (U07.1)"	"GR113-137"	10	125126	Unreliable
+	"Idaho"	"16"	"39 years"	"39"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	24	126832	18.9
+	"Idaho"	"16"	"39 years"	"39"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	18	126832	Unreliable
+	"Idaho"	"16"	"40 years"	"40"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	27	127671	21.1
+	"Idaho"	"16"	"40 years"	"40"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	18	127671	Unreliable
+	"Idaho"	"16"	"40 years"	"40"	"#COVID-19 (U07.1)"	"GR113-137"	16	127671	Unreliable
+	"Idaho"	"16"	"41 years"	"41"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	21	125823	16.7
+	"Idaho"	"16"	"41 years"	"41"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	32	125823	25.4
+	"Idaho"	"16"	"42 years"	"42"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	26	124520	20.9
+	"Idaho"	"16"	"42 years"	"42"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	10	124520	Unreliable
+	"Idaho"	"16"	"42 years"	"42"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	33	124520	26.5
+	"Idaho"	"16"	"42 years"	"42"	"#COVID-19 (U07.1)"	"GR113-137"	10	124520	Unreliable
+	"Idaho"	"16"	"43 years"	"43"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	42	120549	34.8
+	"Idaho"	"16"	"43 years"	"43"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	31	120549	25.7
+	"Idaho"	"16"	"43 years"	"43"	"#COVID-19 (U07.1)"	"GR113-137"	18	120549	Unreliable
+	"Idaho"	"16"	"44 years"	"44"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	43	116687	36.9
+	"Idaho"	"16"	"44 years"	"44"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	29	116687	24.9
+	"Idaho"	"16"	"44 years"	"44"	"#COVID-19 (U07.1)"	"GR113-137"	14	116687	Unreliable
+	"Idaho"	"16"	"45 years"	"45"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	37	114015	32.5
+	"Idaho"	"16"	"45 years"	"45"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	10	114015	Unreliable
+	"Idaho"	"16"	"45 years"	"45"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	44	114015	38.6
+	"Idaho"	"16"	"45 years"	"45"	"#COVID-19 (U07.1)"	"GR113-137"	15	114015	Unreliable
+	"Idaho"	"16"	"46 years"	"46"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	47	109256	43.0
+	"Idaho"	"16"	"46 years"	"46"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	29	109256	26.5
+	"Idaho"	"16"	"46 years"	"46"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	13	109256	Unreliable
+	"Idaho"	"16"	"46 years"	"46"	"#COVID-19 (U07.1)"	"GR113-137"	17	109256	Unreliable
+	"Idaho"	"16"	"47 years"	"47"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	60	108122	55.5
+	"Idaho"	"16"	"47 years"	"47"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	12	108122	Unreliable
+	"Idaho"	"16"	"47 years"	"47"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	40	108122	37.0
+	"Idaho"	"16"	"47 years"	"47"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	11	108122	Unreliable
+	"Idaho"	"16"	"47 years"	"47"	"#COVID-19 (U07.1)"	"GR113-137"	21	108122	19.4
+	"Idaho"	"16"	"48 years"	"48"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	50	105764	47.3
+	"Idaho"	"16"	"48 years"	"48"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	13	105764	Unreliable
+	"Idaho"	"16"	"48 years"	"48"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	44	105764	41.6
+	"Idaho"	"16"	"48 years"	"48"	"#COVID-19 (U07.1)"	"GR113-137"	30	105764	28.4
+	"Idaho"	"16"	"49 years"	"49"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	65	106030	61.3
+	"Idaho"	"16"	"49 years"	"49"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	13	106030	Unreliable
+	"Idaho"	"16"	"49 years"	"49"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	52	106030	49.0
+	"Idaho"	"16"	"49 years"	"49"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	13	106030	Unreliable
+	"Idaho"	"16"	"49 years"	"49"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	10	106030	Unreliable
+	"Idaho"	"16"	"49 years"	"49"	"#COVID-19 (U07.1)"	"GR113-137"	33	106030	31.1
+	"Idaho"	"16"	"50 years"	"50"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	67	109414	61.2
+	"Idaho"	"16"	"50 years"	"50"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	58	109414	53.0
+	"Idaho"	"16"	"50 years"	"50"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	11	109414	Unreliable
+	"Idaho"	"16"	"50 years"	"50"	"#COVID-19 (U07.1)"	"GR113-137"	27	109414	24.7
+	"Idaho"	"16"	"51 years"	"51"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	90	111280	80.9
+	"Idaho"	"16"	"51 years"	"51"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	14	111280	Unreliable
+	"Idaho"	"16"	"51 years"	"51"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	66	111280	59.3
+	"Idaho"	"16"	"51 years"	"51"	"#COVID-19 (U07.1)"	"GR113-137"	32	111280	28.8
+	"Idaho"	"16"	"52 years"	"52"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	91	108189	84.1
+	"Idaho"	"16"	"52 years"	"52"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	16	108189	Unreliable
+	"Idaho"	"16"	"52 years"	"52"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	70	108189	64.7
+	"Idaho"	"16"	"52 years"	"52"	"#COVID-19 (U07.1)"	"GR113-137"	42	108189	38.8
+	"Idaho"	"16"	"53 years"	"53"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	102	105052	97.1
+	"Idaho"	"16"	"53 years"	"53"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	13	105052	Unreliable
+	"Idaho"	"16"	"53 years"	"53"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	76	105052	72.3
+	"Idaho"	"16"	"53 years"	"53"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	14	105052	Unreliable
+	"Idaho"	"16"	"53 years"	"53"	"#COVID-19 (U07.1)"	"GR113-137"	32	105052	30.5
+	"Idaho"	"16"	"54 years"	"54"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	105	103101	101.8
+	"Idaho"	"16"	"54 years"	"54"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	28	103101	27.2
+	"Idaho"	"16"	"54 years"	"54"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	91	103101	88.3
+	"Idaho"	"16"	"54 years"	"54"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	15	103101	Unreliable
+	"Idaho"	"16"	"54 years"	"54"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	12	103101	Unreliable
+	"Idaho"	"16"	"54 years"	"54"	"#COVID-19 (U07.1)"	"GR113-137"	36	103101	34.9
+	"Idaho"	"16"	"55 years"	"55"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	125	103733	120.5
+	"Idaho"	"16"	"55 years"	"55"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	27	103733	26.0
+	"Idaho"	"16"	"55 years"	"55"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	95	103733	91.6
+	"Idaho"	"16"	"55 years"	"55"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	12	103733	Unreliable
+	"Idaho"	"16"	"55 years"	"55"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	12	103733	Unreliable
+	"Idaho"	"16"	"55 years"	"55"	"#COVID-19 (U07.1)"	"GR113-137"	36	103733	34.7
+	"Idaho"	"16"	"56 years"	"56"	"#Septicemia (A40-A41)"	"GR113-010"	13	105430	Unreliable
+	"Idaho"	"16"	"56 years"	"56"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	154	105430	146.1
+	"Idaho"	"16"	"56 years"	"56"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	19	105430	Unreliable
+	"Idaho"	"16"	"56 years"	"56"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	96	105430	91.1
+	"Idaho"	"16"	"56 years"	"56"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	13	105430	Unreliable
+	"Idaho"	"16"	"56 years"	"56"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	26	105430	24.7
+	"Idaho"	"16"	"56 years"	"56"	"#COVID-19 (U07.1)"	"GR113-137"	45	105430	42.7
+	"Idaho"	"16"	"57 years"	"57"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	180	108893	165.3
+	"Idaho"	"16"	"57 years"	"57"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	22	108893	20.2
+	"Idaho"	"16"	"57 years"	"57"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	115	108893	105.6
+	"Idaho"	"16"	"57 years"	"57"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	19	108893	Unreliable
+	"Idaho"	"16"	"57 years"	"57"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	27	108893	24.8
+	"Idaho"	"16"	"57 years"	"57"	"#COVID-19 (U07.1)"	"GR113-137"	42	108893	38.6
+	"Idaho"	"16"	"58 years"	"58"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	167	112556	148.4
+	"Idaho"	"16"	"58 years"	"58"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	35	112556	31.1
+	"Idaho"	"16"	"58 years"	"58"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	143	112556	127.0
+	"Idaho"	"16"	"58 years"	"58"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	17	112556	Unreliable
+	"Idaho"	"16"	"58 years"	"58"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	32	112556	28.4
+	"Idaho"	"16"	"58 years"	"58"	"#COVID-19 (U07.1)"	"GR113-137"	42	112556	37.3
+	"Idaho"	"16"	"59 years"	"59"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	221	115840	190.8
+	"Idaho"	"16"	"59 years"	"59"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	26	115840	22.4
+	"Idaho"	"16"	"59 years"	"59"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	140	115840	120.9
+	"Idaho"	"16"	"59 years"	"59"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	26	115840	22.4
+	"Idaho"	"16"	"59 years"	"59"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	57	115840	49.2
+	"Idaho"	"16"	"59 years"	"59"	"#COVID-19 (U07.1)"	"GR113-137"	55	115840	47.5
+	"Idaho"	"16"	"60 years"	"60"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	240	117832	203.7
+	"Idaho"	"16"	"60 years"	"60"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	47	117832	39.9
+	"Idaho"	"16"	"60 years"	"60"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	154	117832	130.7
+	"Idaho"	"16"	"60 years"	"60"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	28	117832	23.8
+	"Idaho"	"16"	"60 years"	"60"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	46	117832	39.0
+	"Idaho"	"16"	"60 years"	"60"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	10	117832	Unreliable
+	"Idaho"	"16"	"60 years"	"60"	"#COVID-19 (U07.1)"	"GR113-137"	68	117832	57.7
+	"Idaho"	"16"	"61 years"	"61"	"#Septicemia (A40-A41)"	"GR113-010"	10	117277	Unreliable
+	"Idaho"	"16"	"61 years"	"61"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	268	117277	228.5
+	"Idaho"	"16"	"61 years"	"61"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	42	117277	35.8
+	"Idaho"	"16"	"61 years"	"61"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	171	117277	145.8
+	"Idaho"	"16"	"61 years"	"61"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	34	117277	29.0
+	"Idaho"	"16"	"61 years"	"61"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	49	117277	41.8
+	"Idaho"	"16"	"61 years"	"61"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	16	117277	Unreliable
+	"Idaho"	"16"	"61 years"	"61"	"#COVID-19 (U07.1)"	"GR113-137"	65	117277	55.4
+	"Idaho"	"16"	"62 years"	"62"	"#Septicemia (A40-A41)"	"GR113-010"	11	115707	Unreliable
+	"Idaho"	"16"	"62 years"	"62"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	301	115707	260.1
+	"Idaho"	"16"	"62 years"	"62"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	48	115707	41.5
+	"Idaho"	"16"	"62 years"	"62"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	183	115707	158.2
+	"Idaho"	"16"	"62 years"	"62"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	42	115707	36.3
+	"Idaho"	"16"	"62 years"	"62"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	12	115707	Unreliable
+	"Idaho"	"16"	"62 years"	"62"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	73	115707	63.1
+	"Idaho"	"16"	"62 years"	"62"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	11	115707	Unreliable
+	"Idaho"	"16"	"62 years"	"62"	"#COVID-19 (U07.1)"	"GR113-137"	79	115707	68.3
+	"Idaho"	"16"	"63 years"	"63"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	341	115274	295.8
+	"Idaho"	"16"	"63 years"	"63"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	44	115274	38.2
+	"Idaho"	"16"	"63 years"	"63"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	223	115274	193.5
+	"Idaho"	"16"	"63 years"	"63"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	38	115274	33.0
+	"Idaho"	"16"	"63 years"	"63"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	13	115274	Unreliable
+	"Idaho"	"16"	"63 years"	"63"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	62	115274	53.8
+	"Idaho"	"16"	"63 years"	"63"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	13	115274	Unreliable
+	"Idaho"	"16"	"63 years"	"63"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	115274	Unreliable
+	"Idaho"	"16"	"63 years"	"63"	"#COVID-19 (U07.1)"	"GR113-137"	87	115274	75.5
+	"Idaho"	"16"	"64 years"	"64"	"#Septicemia (A40-A41)"	"GR113-010"	13	115197	Unreliable
+	"Idaho"	"16"	"64 years"	"64"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	351	115197	304.7
+	"Idaho"	"16"	"64 years"	"64"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	46	115197	39.9
+	"Idaho"	"16"	"64 years"	"64"	"#Alzheimer disease (G30)"	"GR113-052"	10	115197	Unreliable
+	"Idaho"	"16"	"64 years"	"64"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	225	115197	195.3
+	"Idaho"	"16"	"64 years"	"64"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	35	115197	30.4
+	"Idaho"	"16"	"64 years"	"64"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	10	115197	Unreliable
+	"Idaho"	"16"	"64 years"	"64"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	70	115197	60.8
+	"Idaho"	"16"	"64 years"	"64"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	17	115197	Unreliable
+	"Idaho"	"16"	"64 years"	"64"	"#COVID-19 (U07.1)"	"GR113-137"	94	115197	81.6
+	"Idaho"	"16"	"65 years"	"65"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	358	114727	312.0
+	"Idaho"	"16"	"65 years"	"65"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	49	114727	42.7
+	"Idaho"	"16"	"65 years"	"65"	"#Alzheimer disease (G30)"	"GR113-052"	11	114727	Unreliable
+	"Idaho"	"16"	"65 years"	"65"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	235	114727	204.8
+	"Idaho"	"16"	"65 years"	"65"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	42	114727	36.6
+	"Idaho"	"16"	"65 years"	"65"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	15	114727	Unreliable
+	"Idaho"	"16"	"65 years"	"65"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	91	114727	79.3
+	"Idaho"	"16"	"65 years"	"65"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	16	114727	Unreliable
+	"Idaho"	"16"	"65 years"	"65"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	18	114727	Unreliable
+	"Idaho"	"16"	"65 years"	"65"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	114727	Unreliable
+	"Idaho"	"16"	"65 years"	"65"	"#COVID-19 (U07.1)"	"GR113-137"	93	114727	81.1
+	"Idaho"	"16"	"66 years"	"66"	"#Septicemia (A40-A41)"	"GR113-010"	12	110359	Unreliable
+	"Idaho"	"16"	"66 years"	"66"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	365	110359	330.7
+	"Idaho"	"16"	"66 years"	"66"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	56	110359	50.7
+	"Idaho"	"16"	"66 years"	"66"	"#Alzheimer disease (G30)"	"GR113-052"	16	110359	Unreliable
+	"Idaho"	"16"	"66 years"	"66"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	252	110359	228.3
+	"Idaho"	"16"	"66 years"	"66"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	40	110359	36.2
+	"Idaho"	"16"	"66 years"	"66"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	106	110359	96.1
+	"Idaho"	"16"	"66 years"	"66"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	27	110359	24.5
+	"Idaho"	"16"	"66 years"	"66"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	14	110359	Unreliable
+	"Idaho"	"16"	"66 years"	"66"	"#COVID-19 (U07.1)"	"GR113-137"	89	110359	80.6
+	"Idaho"	"16"	"67 years"	"67"	"#Septicemia (A40-A41)"	"GR113-010"	13	107873	Unreliable
+	"Idaho"	"16"	"67 years"	"67"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	437	107873	405.1
+	"Idaho"	"16"	"67 years"	"67"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	62	107873	57.5
+	"Idaho"	"16"	"67 years"	"67"	"#Alzheimer disease (G30)"	"GR113-052"	18	107873	Unreliable
+	"Idaho"	"16"	"67 years"	"67"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	273	107873	253.1
+	"Idaho"	"16"	"67 years"	"67"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	36	107873	33.4
+	"Idaho"	"16"	"67 years"	"67"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	14	107873	Unreliable
+	"Idaho"	"16"	"67 years"	"67"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	106	107873	98.3
+	"Idaho"	"16"	"67 years"	"67"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	20	107873	18.5
+	"Idaho"	"16"	"67 years"	"67"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	12	107873	Unreliable
+	"Idaho"	"16"	"67 years"	"67"	"#COVID-19 (U07.1)"	"GR113-137"	81	107873	75.1
+	"Idaho"	"16"	"68 years"	"68"	"#Septicemia (A40-A41)"	"GR113-010"	16	104912	Unreliable
+	"Idaho"	"16"	"68 years"	"68"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	434	104912	413.7
+	"Idaho"	"16"	"68 years"	"68"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	63	104912	60.1
+	"Idaho"	"16"	"68 years"	"68"	"#Alzheimer disease (G30)"	"GR113-052"	22	104912	21.0
+	"Idaho"	"16"	"68 years"	"68"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	286	104912	272.6
+	"Idaho"	"16"	"68 years"	"68"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	60	104912	57.2
+	"Idaho"	"16"	"68 years"	"68"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	13	104912	Unreliable
+	"Idaho"	"16"	"68 years"	"68"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	102	104912	97.2
+	"Idaho"	"16"	"68 years"	"68"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	24	104912	22.9
+	"Idaho"	"16"	"68 years"	"68"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	10	104912	Unreliable
+	"Idaho"	"16"	"68 years"	"68"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	12	104912	Unreliable
+	"Idaho"	"16"	"68 years"	"68"	"#COVID-19 (U07.1)"	"GR113-137"	105	104912	100.1
+	"Idaho"	"16"	"69 years"	"69"	"#Septicemia (A40-A41)"	"GR113-010"	16	101844	Unreliable
+	"Idaho"	"16"	"69 years"	"69"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	441	101844	433.0
+	"Idaho"	"16"	"69 years"	"69"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	49	101844	48.1
+	"Idaho"	"16"	"69 years"	"69"	"#Alzheimer disease (G30)"	"GR113-052"	29	101844	28.5
+	"Idaho"	"16"	"69 years"	"69"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	278	101844	273.0
+	"Idaho"	"16"	"69 years"	"69"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	46	101844	45.2
+	"Idaho"	"16"	"69 years"	"69"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	24	101844	23.6
+	"Idaho"	"16"	"69 years"	"69"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	117	101844	114.9
+	"Idaho"	"16"	"69 years"	"69"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	28	101844	27.5
+	"Idaho"	"16"	"69 years"	"69"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	17	101844	Unreliable
+	"Idaho"	"16"	"69 years"	"69"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	101844	Unreliable
+	"Idaho"	"16"	"69 years"	"69"	"#COVID-19 (U07.1)"	"GR113-137"	106	101844	104.1
+	"Idaho"	"16"	"70 years"	"70"	"#Septicemia (A40-A41)"	"GR113-010"	15	97341	Unreliable
+	"Idaho"	"16"	"70 years"	"70"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	487	97341	500.3
+	"Idaho"	"16"	"70 years"	"70"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	71	97341	72.9
+	"Idaho"	"16"	"70 years"	"70"	"#Alzheimer disease (G30)"	"GR113-052"	29	97341	29.8
+	"Idaho"	"16"	"70 years"	"70"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	298	97341	306.1
+	"Idaho"	"16"	"70 years"	"70"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	58	97341	59.6
+	"Idaho"	"16"	"70 years"	"70"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	16	97341	Unreliable
+	"Idaho"	"16"	"70 years"	"70"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	120	97341	123.3
+	"Idaho"	"16"	"70 years"	"70"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	29	97341	29.8
+	"Idaho"	"16"	"70 years"	"70"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	18	97341	Unreliable
+	"Idaho"	"16"	"70 years"	"70"	"#COVID-19 (U07.1)"	"GR113-137"	110	97341	113.0
+	"Idaho"	"16"	"71 years"	"71"	"#Septicemia (A40-A41)"	"GR113-010"	19	91398	Unreliable
+	"Idaho"	"16"	"71 years"	"71"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	529	91398	578.8
+	"Idaho"	"16"	"71 years"	"71"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	66	91398	72.2
+	"Idaho"	"16"	"71 years"	"71"	"#Alzheimer disease (G30)"	"GR113-052"	44	91398	48.1
+	"Idaho"	"16"	"71 years"	"71"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	345	91398	377.5
+	"Idaho"	"16"	"71 years"	"71"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	61	91398	66.7
+	"Idaho"	"16"	"71 years"	"71"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	17	91398	Unreliable
+	"Idaho"	"16"	"71 years"	"71"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	144	91398	157.6
+	"Idaho"	"16"	"71 years"	"71"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	41	91398	44.9
+	"Idaho"	"16"	"71 years"	"71"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	17	91398	Unreliable
+	"Idaho"	"16"	"71 years"	"71"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	91398	Unreliable
+	"Idaho"	"16"	"71 years"	"71"	"#COVID-19 (U07.1)"	"GR113-137"	121	91398	132.4
+	"Idaho"	"16"	"72 years"	"72"	"#Septicemia (A40-A41)"	"GR113-010"	21	87272	24.1
+	"Idaho"	"16"	"72 years"	"72"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	481	87272	551.2
+	"Idaho"	"16"	"72 years"	"72"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	72	87272	82.5
+	"Idaho"	"16"	"72 years"	"72"	"#Alzheimer disease (G30)"	"GR113-052"	47	87272	53.9
+	"Idaho"	"16"	"72 years"	"72"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	304	87272	348.3
+	"Idaho"	"16"	"72 years"	"72"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	72	87272	82.5
+	"Idaho"	"16"	"72 years"	"72"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	15	87272	Unreliable
+	"Idaho"	"16"	"72 years"	"72"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	148	87272	169.6
+	"Idaho"	"16"	"72 years"	"72"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	27	87272	30.9
+	"Idaho"	"16"	"72 years"	"72"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	29	87272	33.2
+	"Idaho"	"16"	"72 years"	"72"	"#COVID-19 (U07.1)"	"GR113-137"	144	87272	165.0
+	"Idaho"	"16"	"73 years"	"73"	"#Septicemia (A40-A41)"	"GR113-010"	16	85752	Unreliable
+	"Idaho"	"16"	"73 years"	"73"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	518	85752	604.1
+	"Idaho"	"16"	"73 years"	"73"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	80	85752	93.3
+	"Idaho"	"16"	"73 years"	"73"	"#Alzheimer disease (G30)"	"GR113-052"	66	85752	77.0
+	"Idaho"	"16"	"73 years"	"73"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	381	85752	444.3
+	"Idaho"	"16"	"73 years"	"73"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	86	85752	100.3
+	"Idaho"	"16"	"73 years"	"73"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	17	85752	Unreliable
+	"Idaho"	"16"	"73 years"	"73"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	143	85752	166.8
+	"Idaho"	"16"	"73 years"	"73"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	40	85752	46.6
+	"Idaho"	"16"	"73 years"	"73"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	29	85752	33.8
+	"Idaho"	"16"	"73 years"	"73"	"#COVID-19 (U07.1)"	"GR113-137"	143	85752	166.8
+	"Idaho"	"16"	"74 years"	"74"	"#Septicemia (A40-A41)"	"GR113-010"	13	80265	Unreliable
+	"Idaho"	"16"	"74 years"	"74"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	497	80265	619.2
+	"Idaho"	"16"	"74 years"	"74"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	77	80265	95.9
+	"Idaho"	"16"	"74 years"	"74"	"#Alzheimer disease (G30)"	"GR113-052"	74	80265	92.2
+	"Idaho"	"16"	"74 years"	"74"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	387	80265	482.2
+	"Idaho"	"16"	"74 years"	"74"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	94	80265	117.1
+	"Idaho"	"16"	"74 years"	"74"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	17	80265	Unreliable
+	"Idaho"	"16"	"74 years"	"74"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	152	80265	189.4
+	"Idaho"	"16"	"74 years"	"74"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	31	80265	38.6
+	"Idaho"	"16"	"74 years"	"74"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	18	80265	Unreliable
+	"Idaho"	"16"	"74 years"	"74"	"#COVID-19 (U07.1)"	"GR113-137"	153	80265	190.6
+	"Idaho"	"16"	"75 years"	"75"	"#Septicemia (A40-A41)"	"GR113-010"	37	77320	47.9
+	"Idaho"	"16"	"75 years"	"75"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	539	77320	697.1
+	"Idaho"	"16"	"75 years"	"75"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	64	77320	82.8
+	"Idaho"	"16"	"75 years"	"75"	"#Alzheimer disease (G30)"	"GR113-052"	72	77320	93.1
+	"Idaho"	"16"	"75 years"	"75"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	404	77320	522.5
+	"Idaho"	"16"	"75 years"	"75"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	78	77320	100.9
+	"Idaho"	"16"	"75 years"	"75"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	21	77320	27.2
+	"Idaho"	"16"	"75 years"	"75"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	149	77320	192.7
+	"Idaho"	"16"	"75 years"	"75"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	41	77320	53.0
+	"Idaho"	"16"	"75 years"	"75"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	23	77320	29.7
+	"Idaho"	"16"	"75 years"	"75"	"#COVID-19 (U07.1)"	"GR113-137"	143	77320	184.9
+	"Idaho"	"16"	"76 years"	"76"	"#Septicemia (A40-A41)"	"GR113-010"	17	59651	Unreliable
+	"Idaho"	"16"	"76 years"	"76"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	528	59651	885.1
+	"Idaho"	"16"	"76 years"	"76"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	73	59651	122.4
+	"Idaho"	"16"	"76 years"	"76"	"#Alzheimer disease (G30)"	"GR113-052"	87	59651	145.8
+	"Idaho"	"16"	"76 years"	"76"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	406	59651	680.6
+	"Idaho"	"16"	"76 years"	"76"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	114	59651	191.1
+	"Idaho"	"16"	"76 years"	"76"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	22	59651	36.9
+	"Idaho"	"16"	"76 years"	"76"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	162	59651	271.6
+	"Idaho"	"16"	"76 years"	"76"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	44	59651	73.8
+	"Idaho"	"16"	"76 years"	"76"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	22	59651	36.9
+	"Idaho"	"16"	"76 years"	"76"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	10	59651	Unreliable
+	"Idaho"	"16"	"76 years"	"76"	"#COVID-19 (U07.1)"	"GR113-137"	119	59651	199.5
+	"Idaho"	"16"	"77 years"	"77"	"#Septicemia (A40-A41)"	"GR113-010"	14	57606	Unreliable
+	"Idaho"	"16"	"77 years"	"77"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	481	57606	835.0
+	"Idaho"	"16"	"77 years"	"77"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	72	57606	125.0
+	"Idaho"	"16"	"77 years"	"77"	"#Alzheimer disease (G30)"	"GR113-052"	98	57606	170.1
+	"Idaho"	"16"	"77 years"	"77"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	421	57606	730.8
+	"Idaho"	"16"	"77 years"	"77"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	113	57606	196.2
+	"Idaho"	"16"	"77 years"	"77"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	20	57606	34.7
+	"Idaho"	"16"	"77 years"	"77"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	166	57606	288.2
+	"Idaho"	"16"	"77 years"	"77"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	31	57606	53.8
+	"Idaho"	"16"	"77 years"	"77"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	26	57606	45.1
+	"Idaho"	"16"	"77 years"	"77"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	57606	Unreliable
+	"Idaho"	"16"	"77 years"	"77"	"#COVID-19 (U07.1)"	"GR113-137"	154	57606	267.3
+	"Idaho"	"16"	"78 years"	"78"	"#Septicemia (A40-A41)"	"GR113-010"	15	55085	Unreliable
+	"Idaho"	"16"	"78 years"	"78"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	505	55085	916.8
+	"Idaho"	"16"	"78 years"	"78"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	50	55085	90.8
+	"Idaho"	"16"	"78 years"	"78"	"#Alzheimer disease (G30)"	"GR113-052"	118	55085	214.2
+	"Idaho"	"16"	"78 years"	"78"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	423	55085	767.9
+	"Idaho"	"16"	"78 years"	"78"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	122	55085	221.5
+	"Idaho"	"16"	"78 years"	"78"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	23	55085	41.8
+	"Idaho"	"16"	"78 years"	"78"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	160	55085	290.5
+	"Idaho"	"16"	"78 years"	"78"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	35	55085	63.5
+	"Idaho"	"16"	"78 years"	"78"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	27	55085	49.0
+	"Idaho"	"16"	"78 years"	"78"	"#COVID-19 (U07.1)"	"GR113-137"	144	55085	261.4
+	"Idaho"	"16"	"79 years"	"79"	"#Septicemia (A40-A41)"	"GR113-010"	13	51440	Unreliable
+	"Idaho"	"16"	"79 years"	"79"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	470	51440	913.7
+	"Idaho"	"16"	"79 years"	"79"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	64	51440	124.4
+	"Idaho"	"16"	"79 years"	"79"	"#Alzheimer disease (G30)"	"GR113-052"	112	51440	217.7
+	"Idaho"	"16"	"79 years"	"79"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	450	51440	874.8
+	"Idaho"	"16"	"79 years"	"79"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	116	51440	225.5
+	"Idaho"	"16"	"79 years"	"79"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	21	51440	40.8
+	"Idaho"	"16"	"79 years"	"79"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	180	51440	349.9
+	"Idaho"	"16"	"79 years"	"79"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	41	51440	79.7
+	"Idaho"	"16"	"79 years"	"79"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	22	51440	42.8
+	"Idaho"	"16"	"79 years"	"79"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	51440	Unreliable
+	"Idaho"	"16"	"79 years"	"79"	"#COVID-19 (U07.1)"	"GR113-137"	149	51440	289.7
+	"Idaho"	"16"	"80 years"	"80"	"#Septicemia (A40-A41)"	"GR113-010"	13	44197	Unreliable
+	"Idaho"	"16"	"80 years"	"80"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	467	44197	1056.6
+	"Idaho"	"16"	"80 years"	"80"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	64	44197	144.8
+	"Idaho"	"16"	"80 years"	"80"	"#Alzheimer disease (G30)"	"GR113-052"	129	44197	291.9
+	"Idaho"	"16"	"80 years"	"80"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	467	44197	1056.6
+	"Idaho"	"16"	"80 years"	"80"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	113	44197	255.7
+	"Idaho"	"16"	"80 years"	"80"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	25	44197	56.6
+	"Idaho"	"16"	"80 years"	"80"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	191	44197	432.2
+	"Idaho"	"16"	"80 years"	"80"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	42	44197	95.0
+	"Idaho"	"16"	"80 years"	"80"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	28	44197	63.4
+	"Idaho"	"16"	"80 years"	"80"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	15	44197	Unreliable
+	"Idaho"	"16"	"80 years"	"80"	"#COVID-19 (U07.1)"	"GR113-137"	142	44197	321.3
+	"Idaho"	"16"	"81 years"	"81"	"#Septicemia (A40-A41)"	"GR113-010"	25	39126	63.9
+	"Idaho"	"16"	"81 years"	"81"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	483	39126	1234.5
+	"Idaho"	"16"	"81 years"	"81"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	74	39126	189.1
+	"Idaho"	"16"	"81 years"	"81"	"#Alzheimer disease (G30)"	"GR113-052"	159	39126	406.4
+	"Idaho"	"16"	"81 years"	"81"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	463	39126	1183.4
+	"Idaho"	"16"	"81 years"	"81"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	126	39126	322.0
+	"Idaho"	"16"	"81 years"	"81"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	28	39126	71.6
+	"Idaho"	"16"	"81 years"	"81"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	166	39126	424.3
+	"Idaho"	"16"	"81 years"	"81"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	42	39126	107.3
+	"Idaho"	"16"	"81 years"	"81"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	28	39126	71.6
+	"Idaho"	"16"	"81 years"	"81"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	15	39126	Unreliable
+	"Idaho"	"16"	"81 years"	"81"	"#COVID-19 (U07.1)"	"GR113-137"	147	39126	375.7
+	"Idaho"	"16"	"82 years"	"82"	"#Septicemia (A40-A41)"	"GR113-010"	17	35306	Unreliable
+	"Idaho"	"16"	"82 years"	"82"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	445	35306	1260.4
+	"Idaho"	"16"	"82 years"	"82"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	59	35306	167.1
+	"Idaho"	"16"	"82 years"	"82"	"#Alzheimer disease (G30)"	"GR113-052"	170	35306	481.5
+	"Idaho"	"16"	"82 years"	"82"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	464	35306	1314.2
+	"Idaho"	"16"	"82 years"	"82"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	122	35306	345.6
+	"Idaho"	"16"	"82 years"	"82"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	24	35306	68.0
+	"Idaho"	"16"	"82 years"	"82"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	137	35306	388.0
+	"Idaho"	"16"	"82 years"	"82"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	43	35306	121.8
+	"Idaho"	"16"	"82 years"	"82"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	25	35306	70.8
+	"Idaho"	"16"	"82 years"	"82"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	14	35306	Unreliable
+	"Idaho"	"16"	"82 years"	"82"	"#COVID-19 (U07.1)"	"GR113-137"	141	35306	399.4
+	"Idaho"	"16"	"83 years"	"83"	"#Septicemia (A40-A41)"	"GR113-010"	12	31424	Unreliable
+	"Idaho"	"16"	"83 years"	"83"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	402	31424	1279.3
+	"Idaho"	"16"	"83 years"	"83"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	57	31424	181.4
+	"Idaho"	"16"	"83 years"	"83"	"#Alzheimer disease (G30)"	"GR113-052"	193	31424	614.2
+	"Idaho"	"16"	"83 years"	"83"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	497	31424	1581.6
+	"Idaho"	"16"	"83 years"	"83"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	137	31424	436.0
+	"Idaho"	"16"	"83 years"	"83"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	23	31424	73.2
+	"Idaho"	"16"	"83 years"	"83"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	157	31424	499.6
+	"Idaho"	"16"	"83 years"	"83"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	39	31424	124.1
+	"Idaho"	"16"	"83 years"	"83"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	39	31424	124.1
+	"Idaho"	"16"	"83 years"	"83"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	12	31424	Unreliable
+	"Idaho"	"16"	"83 years"	"83"	"#COVID-19 (U07.1)"	"GR113-137"	152	31424	483.7
+	"Idaho"	"16"	"84 years"	"84"	"#Septicemia (A40-A41)"	"GR113-010"	17	27975	Unreliable
+	"Idaho"	"16"	"84 years"	"84"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	372	27975	1329.8
+	"Idaho"	"16"	"84 years"	"84"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	68	27975	243.1
+	"Idaho"	"16"	"84 years"	"84"	"#Alzheimer disease (G30)"	"GR113-052"	177	27975	632.7
+	"Idaho"	"16"	"84 years"	"84"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	491	27975	1755.1
+	"Idaho"	"16"	"84 years"	"84"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	145	27975	518.3
+	"Idaho"	"16"	"84 years"	"84"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	21	27975	75.1
+	"Idaho"	"16"	"84 years"	"84"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	132	27975	471.8
+	"Idaho"	"16"	"84 years"	"84"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	30	27975	107.2
+	"Idaho"	"16"	"84 years"	"84"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	29	27975	103.7
+	"Idaho"	"16"	"84 years"	"84"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	13	27975	Unreliable
+	"Idaho"	"16"	"84 years"	"84"	"#COVID-19 (U07.1)"	"GR113-137"	117	27975	418.2
+	"Idaho"	"16"	"85 years"	"85"	"#Septicemia (A40-A41)"	"GR113-010"	14	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	371	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	45	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"#Alzheimer disease (G30)"	"GR113-052"	176	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	514	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	136	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	26	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	135	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	34	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	20	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	16	Not Applicable	Not Applicable
+	"Idaho"	"16"	"85 years"	"85"	"#COVID-19 (U07.1)"	"GR113-137"	137	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#Septicemia (A40-A41)"	"GR113-010"	18	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	334	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	48	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#Alzheimer disease (G30)"	"GR113-052"	172	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	509	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	145	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	21	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	120	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	25	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	22	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	17	Not Applicable	Not Applicable
+	"Idaho"	"16"	"86 years"	"86"	"#COVID-19 (U07.1)"	"GR113-137"	120	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#Septicemia (A40-A41)"	"GR113-010"	10	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	315	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	57	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#Alzheimer disease (G30)"	"GR113-052"	194	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	512	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	161	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	22	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	118	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	30	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	23	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	21	Not Applicable	Not Applicable
+	"Idaho"	"16"	"87 years"	"87"	"#COVID-19 (U07.1)"	"GR113-137"	124	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#Septicemia (A40-A41)"	"GR113-010"	19	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	289	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	55	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#Alzheimer disease (G30)"	"GR113-052"	210	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	519	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	140	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	19	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	99	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	27	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	31	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	21	Not Applicable	Not Applicable
+	"Idaho"	"16"	"88 years"	"88"	"#COVID-19 (U07.1)"	"GR113-137"	135	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#Septicemia (A40-A41)"	"GR113-010"	10	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	249	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	37	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#Alzheimer disease (G30)"	"GR113-052"	200	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	504	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	140	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	25	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	106	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	29	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	28	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	17	Not Applicable	Not Applicable
+	"Idaho"	"16"	"89 years"	"89"	"#COVID-19 (U07.1)"	"GR113-137"	112	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#Septicemia (A40-A41)"	"GR113-010"	12	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	239	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	34	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#Alzheimer disease (G30)"	"GR113-052"	195	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	526	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	135	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	20	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	80	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	29	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	19	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	28	Not Applicable	Not Applicable
+	"Idaho"	"16"	"90 years"	"90"	"#COVID-19 (U07.1)"	"GR113-137"	109	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#Septicemia (A40-A41)"	"GR113-010"	17	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	197	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	28	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#Alzheimer disease (G30)"	"GR113-052"	164	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	501	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	108	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	27	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	67	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	21	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	16	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	16	Not Applicable	Not Applicable
+	"Idaho"	"16"	"91 years"	"91"	"#COVID-19 (U07.1)"	"GR113-137"	114	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	178	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	20	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"#Alzheimer disease (G30)"	"GR113-052"	134	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	512	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	113	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	23	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	71	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	26	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	16	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	32	Not Applicable	Not Applicable
+	"Idaho"	"16"	"92 years"	"92"	"#COVID-19 (U07.1)"	"GR113-137"	84	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	149	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	15	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"#Alzheimer disease (G30)"	"GR113-052"	146	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	443	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	99	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	18	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	56	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	22	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	18	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	29	Not Applicable	Not Applicable
+	"Idaho"	"16"	"93 years"	"93"	"#COVID-19 (U07.1)"	"GR113-137"	79	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	116	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	19	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"#Alzheimer disease (G30)"	"GR113-052"	122	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	347	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	105	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	27	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	42	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	17	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	14	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	28	Not Applicable	Not Applicable
+	"Idaho"	"16"	"94 years"	"94"	"#COVID-19 (U07.1)"	"GR113-137"	56	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	79	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	21	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"#Alzheimer disease (G30)"	"GR113-052"	100	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	371	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	87	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	14	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	33	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	12	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	15	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	32	Not Applicable	Not Applicable
+	"Idaho"	"16"	"95 years"	"95"	"#COVID-19 (U07.1)"	"GR113-137"	66	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	64	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	17	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"#Alzheimer disease (G30)"	"GR113-052"	80	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	291	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	65	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	12	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	28	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	17	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	10	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	23	Not Applicable	Not Applicable
+	"Idaho"	"16"	"96 years"	"96"	"#COVID-19 (U07.1)"	"GR113-137"	51	Not Applicable	Not Applicable
+	"Idaho"	"16"	"97 years"	"97"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	48	Not Applicable	Not Applicable
+	"Idaho"	"16"	"97 years"	"97"	"#Alzheimer disease (G30)"	"GR113-052"	63	Not Applicable	Not Applicable
+	"Idaho"	"16"	"97 years"	"97"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	206	Not Applicable	Not Applicable
+	"Idaho"	"16"	"97 years"	"97"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	51	Not Applicable	Not Applicable
+	"Idaho"	"16"	"97 years"	"97"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	11	Not Applicable	Not Applicable
+	"Idaho"	"16"	"97 years"	"97"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	23	Not Applicable	Not Applicable
+	"Idaho"	"16"	"97 years"	"97"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	24	Not Applicable	Not Applicable
+	"Idaho"	"16"	"97 years"	"97"	"#COVID-19 (U07.1)"	"GR113-137"	39	Not Applicable	Not Applicable
+	"Idaho"	"16"	"98 years"	"98"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	42	Not Applicable	Not Applicable
+	"Idaho"	"16"	"98 years"	"98"	"#Alzheimer disease (G30)"	"GR113-052"	50	Not Applicable	Not Applicable
+	"Idaho"	"16"	"98 years"	"98"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	146	Not Applicable	Not Applicable
+	"Idaho"	"16"	"98 years"	"98"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	31	Not Applicable	Not Applicable
+	"Idaho"	"16"	"98 years"	"98"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	17	Not Applicable	Not Applicable
+	"Idaho"	"16"	"98 years"	"98"	"#COVID-19 (U07.1)"	"GR113-137"	24	Not Applicable	Not Applicable
+	"Idaho"	"16"	"99 years"	"99"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	22	Not Applicable	Not Applicable
+	"Idaho"	"16"	"99 years"	"99"	"#Alzheimer disease (G30)"	"GR113-052"	56	Not Applicable	Not Applicable
+	"Idaho"	"16"	"99 years"	"99"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	124	Not Applicable	Not Applicable
+	"Idaho"	"16"	"99 years"	"99"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	37	Not Applicable	Not Applicable
+	"Idaho"	"16"	"99 years"	"99"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	13	Not Applicable	Not Applicable
+	"Idaho"	"16"	"99 years"	"99"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	14	Not Applicable	Not Applicable
+	"Idaho"	"16"	"99 years"	"99"	"#COVID-19 (U07.1)"	"GR113-137"	23	Not Applicable	Not Applicable
+	"Idaho"	"16"	"100+ years"	"100"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	34	Not Applicable	Not Applicable
+	"Idaho"	"16"	"100+ years"	"100"	"#Alzheimer disease (G30)"	"GR113-052"	52	Not Applicable	Not Applicable
+	"Idaho"	"16"	"100+ years"	"100"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	212	Not Applicable	Not Applicable
+	"Idaho"	"16"	"100+ years"	"100"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	46	Not Applicable	Not Applicable
+	"Idaho"	"16"	"100+ years"	"100"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	15	Not Applicable	Not Applicable
+	"Idaho"	"16"	"100+ years"	"100"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	10	Not Applicable	Not Applicable
+	"Idaho"	"16"	"100+ years"	"100"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	44	Not Applicable	Not Applicable
+	"Idaho"	"16"	"100+ years"	"100"	"#COVID-19 (U07.1)"	"GR113-137"	39	Not Applicable	Not Applicable
+	"Illinois"	"17"	"< 1 year"	"0"	"#Septicemia (A40-A41)"	"GR113-010"	14	665573	Unreliable
+	"Illinois"	"17"	"< 1 year"	"0"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	44	665573	6.6
+	"Illinois"	"17"	"< 1 year"	"0"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	15	665573	Unreliable
+	"Illinois"	"17"	"< 1 year"	"0"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	40	665573	6.0
+	"Illinois"	"17"	"< 1 year"	"0"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	37	665573	5.6
+	"Illinois"	"17"	"< 1 year"	"0"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	375	665573	56.3
+	"Illinois"	"17"	"1 year"	"1"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	29	671521	4.3
+	"Illinois"	"17"	"2 years"	"2"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	12	696721	Unreliable
+	"Illinois"	"17"	"3 years"	"3"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	16	710665	Unreliable
+	"Illinois"	"17"	"4 years"	"4"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	19	730683	Unreliable
+	"Illinois"	"17"	"6 years"	"6"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	20	756314	2.6
+	"Illinois"	"17"	"7 years"	"7"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	15	757975	Unreliable
+	"Illinois"	"17"	"8 years"	"8"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	13	753627	Unreliable
+	"Illinois"	"17"	"9 years"	"9"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	16	755625	Unreliable
+	"Illinois"	"17"	"10 years"	"10"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	12	764196	Unreliable
+	"Illinois"	"17"	"11 years"	"11"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	14	775814	Unreliable
+	"Illinois"	"17"	"12 years"	"12"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	17	797198	Unreliable
+	"Illinois"	"17"	"13 years"	"13"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	18	815760	Unreliable
+	"Illinois"	"17"	"14 years"	"14"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	18	836361	Unreliable
+	"Illinois"	"17"	"15 years"	"15"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	18	836569	Unreliable
+	"Illinois"	"17"	"15 years"	"15"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	12	836569	Unreliable
+	"Illinois"	"17"	"16 years"	"16"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	23	833953	2.8
+	"Illinois"	"17"	"16 years"	"16"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	10	833953	Unreliable
+	"Illinois"	"17"	"17 years"	"17"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	22	837171	2.6
+	"Illinois"	"17"	"17 years"	"17"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	13	837171	Unreliable
+	"Illinois"	"17"	"17 years"	"17"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	14	837171	Unreliable
+	"Illinois"	"17"	"18 years"	"18"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	17	811689	Unreliable
+	"Illinois"	"17"	"18 years"	"18"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	13	811689	Unreliable
+	"Illinois"	"17"	"18 years"	"18"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	26	811689	3.2
+	"Illinois"	"17"	"19 years"	"19"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	16	793640	Unreliable
+	"Illinois"	"17"	"19 years"	"19"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	23	793640	2.9
+	"Illinois"	"17"	"19 years"	"19"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	29	793640	3.7
+	"Illinois"	"17"	"20 years"	"20"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	31	827696	3.7
+	"Illinois"	"17"	"20 years"	"20"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	22	827696	2.7
+	"Illinois"	"17"	"20 years"	"20"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	28	827696	3.4
+	"Illinois"	"17"	"20 years"	"20"	"#COVID-19 (U07.1)"	"GR113-137"	12	827696	Unreliable
+	"Illinois"	"17"	"21 years"	"21"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	29	857679	3.4
+	"Illinois"	"17"	"21 years"	"21"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	17	857679	Unreliable
+	"Illinois"	"17"	"21 years"	"21"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	25	857679	2.9
+	"Illinois"	"17"	"22 years"	"22"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	20	848139	2.4
+	"Illinois"	"17"	"22 years"	"22"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	11	848139	Unreliable
+	"Illinois"	"17"	"22 years"	"22"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	12	848139	Unreliable
+	"Illinois"	"17"	"22 years"	"22"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	38	848139	4.5
+	"Illinois"	"17"	"22 years"	"22"	"#COVID-19 (U07.1)"	"GR113-137"	12	848139	Unreliable
+	"Illinois"	"17"	"23 years"	"23"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	22	827310	2.7
+	"Illinois"	"17"	"23 years"	"23"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	28	827310	3.4
+	"Illinois"	"17"	"23 years"	"23"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	21	827310	2.5
+	"Illinois"	"17"	"23 years"	"23"	"#COVID-19 (U07.1)"	"GR113-137"	13	827310	Unreliable
+	"Illinois"	"17"	"24 years"	"24"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	33	822676	4.0
+	"Illinois"	"17"	"24 years"	"24"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	22	822676	2.7
+	"Illinois"	"17"	"24 years"	"24"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	22	822676	2.7
+	"Illinois"	"17"	"25 years"	"25"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	32	824822	3.9
+	"Illinois"	"17"	"25 years"	"25"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	10	824822	Unreliable
+	"Illinois"	"17"	"25 years"	"25"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	27	824822	3.3
+	"Illinois"	"17"	"25 years"	"25"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	34	824822	4.1
+	"Illinois"	"17"	"25 years"	"25"	"#COVID-19 (U07.1)"	"GR113-137"	17	824822	Unreliable
+	"Illinois"	"17"	"26 years"	"26"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	31	834686	3.7
+	"Illinois"	"17"	"26 years"	"26"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	10	834686	Unreliable
+	"Illinois"	"17"	"26 years"	"26"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	39	834686	4.7
+	"Illinois"	"17"	"26 years"	"26"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	10	834686	Unreliable
+	"Illinois"	"17"	"26 years"	"26"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	32	834686	3.8
+	"Illinois"	"17"	"26 years"	"26"	"#COVID-19 (U07.1)"	"GR113-137"	23	834686	2.8
+	"Illinois"	"17"	"27 years"	"27"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	47	850397	5.5
+	"Illinois"	"17"	"27 years"	"27"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	18	850397	Unreliable
+	"Illinois"	"17"	"27 years"	"27"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	38	850397	4.5
+	"Illinois"	"17"	"27 years"	"27"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	41	850397	4.8
+	"Illinois"	"17"	"27 years"	"27"	"#COVID-19 (U07.1)"	"GR113-137"	20	850397	2.4
+	"Illinois"	"17"	"28 years"	"28"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	54	863426	6.3
+	"Illinois"	"17"	"28 years"	"28"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	14	863426	Unreliable
+	"Illinois"	"17"	"28 years"	"28"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	48	863426	5.6
+	"Illinois"	"17"	"28 years"	"28"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	12	863426	Unreliable
+	"Illinois"	"17"	"28 years"	"28"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	12	863426	Unreliable
+	"Illinois"	"17"	"28 years"	"28"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	39	863426	4.5
+	"Illinois"	"17"	"28 years"	"28"	"#COVID-19 (U07.1)"	"GR113-137"	31	863426	3.6
+	"Illinois"	"17"	"29 years"	"29"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	62	871390	7.1
+	"Illinois"	"17"	"29 years"	"29"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	23	871390	2.6
+	"Illinois"	"17"	"29 years"	"29"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	60	871390	6.9
+	"Illinois"	"17"	"29 years"	"29"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	10	871390	Unreliable
+	"Illinois"	"17"	"29 years"	"29"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	35	871390	4.0
+	"Illinois"	"17"	"29 years"	"29"	"#COVID-19 (U07.1)"	"GR113-137"	23	871390	2.6
+	"Illinois"	"17"	"30 years"	"30"	"#Septicemia (A40-A41)"	"GR113-010"	11	877865	Unreliable
+	"Illinois"	"17"	"30 years"	"30"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	65	877865	7.4
+	"Illinois"	"17"	"30 years"	"30"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	21	877865	2.4
+	"Illinois"	"17"	"30 years"	"30"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	68	877865	7.7
+	"Illinois"	"17"	"30 years"	"30"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	14	877865	Unreliable
+	"Illinois"	"17"	"30 years"	"30"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	11	877865	Unreliable
+	"Illinois"	"17"	"30 years"	"30"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	11	877865	Unreliable
+	"Illinois"	"17"	"30 years"	"30"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	36	877865	4.1
+	"Illinois"	"17"	"30 years"	"30"	"#COVID-19 (U07.1)"	"GR113-137"	39	877865	4.4
+	"Illinois"	"17"	"31 years"	"31"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	62	871752	7.1
+	"Illinois"	"17"	"31 years"	"31"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	30	871752	3.4
+	"Illinois"	"17"	"31 years"	"31"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	62	871752	7.1
+	"Illinois"	"17"	"31 years"	"31"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	11	871752	Unreliable
+	"Illinois"	"17"	"31 years"	"31"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	14	871752	Unreliable
+	"Illinois"	"17"	"31 years"	"31"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	12	871752	Unreliable
+	"Illinois"	"17"	"31 years"	"31"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	10	871752	Unreliable
+	"Illinois"	"17"	"31 years"	"31"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	43	871752	4.9
+	"Illinois"	"17"	"31 years"	"31"	"#COVID-19 (U07.1)"	"GR113-137"	38	871752	4.4
+	"Illinois"	"17"	"32 years"	"32"	"#Septicemia (A40-A41)"	"GR113-010"	11	863457	Unreliable
+	"Illinois"	"17"	"32 years"	"32"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	75	863457	8.7
+	"Illinois"	"17"	"32 years"	"32"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	25	863457	2.9
+	"Illinois"	"17"	"32 years"	"32"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	90	863457	10.4
+	"Illinois"	"17"	"32 years"	"32"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	13	863457	Unreliable
+	"Illinois"	"17"	"32 years"	"32"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	12	863457	Unreliable
+	"Illinois"	"17"	"32 years"	"32"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	39	863457	4.5
+	"Illinois"	"17"	"32 years"	"32"	"#COVID-19 (U07.1)"	"GR113-137"	53	863457	6.1
+	"Illinois"	"17"	"33 years"	"33"	"#Septicemia (A40-A41)"	"GR113-010"	11	844967	Unreliable
+	"Illinois"	"17"	"33 years"	"33"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	82	844967	9.7
+	"Illinois"	"17"	"33 years"	"33"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	20	844967	2.4
+	"Illinois"	"17"	"33 years"	"33"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	86	844967	10.2
+	"Illinois"	"17"	"33 years"	"33"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	24	844967	2.8
+	"Illinois"	"17"	"33 years"	"33"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	11	844967	Unreliable
+	"Illinois"	"17"	"33 years"	"33"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	10	844967	Unreliable
+	"Illinois"	"17"	"33 years"	"33"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	10	844967	Unreliable
+	"Illinois"	"17"	"33 years"	"33"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	31	844967	3.7
+	"Illinois"	"17"	"33 years"	"33"	"#COVID-19 (U07.1)"	"GR113-137"	30	844967	3.6
+	"Illinois"	"17"	"34 years"	"34"	"#Septicemia (A40-A41)"	"GR113-010"	16	842368	Unreliable
+	"Illinois"	"17"	"34 years"	"34"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	102	842368	12.1
+	"Illinois"	"17"	"34 years"	"34"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	22	842368	2.6
+	"Illinois"	"17"	"34 years"	"34"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	121	842368	14.4
+	"Illinois"	"17"	"34 years"	"34"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	21	842368	2.5
+	"Illinois"	"17"	"34 years"	"34"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	11	842368	Unreliable
+	"Illinois"	"17"	"34 years"	"34"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	10	842368	Unreliable
+	"Illinois"	"17"	"34 years"	"34"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	15	842368	Unreliable
+	"Illinois"	"17"	"34 years"	"34"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	41	842368	4.9
+	"Illinois"	"17"	"34 years"	"34"	"#COVID-19 (U07.1)"	"GR113-137"	52	842368	6.2
+	"Illinois"	"17"	"35 years"	"35"	"#Septicemia (A40-A41)"	"GR113-010"	19	844383	Unreliable
+	"Illinois"	"17"	"35 years"	"35"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	107	844383	12.7
+	"Illinois"	"17"	"35 years"	"35"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	22	844383	2.6
+	"Illinois"	"17"	"35 years"	"35"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	122	844383	14.4
+	"Illinois"	"17"	"35 years"	"35"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	19	844383	Unreliable
+	"Illinois"	"17"	"35 years"	"35"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	15	844383	Unreliable
+	"Illinois"	"17"	"35 years"	"35"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	18	844383	Unreliable
+	"Illinois"	"17"	"35 years"	"35"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	13	844383	Unreliable
+	"Illinois"	"17"	"35 years"	"35"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	43	844383	5.1
+	"Illinois"	"17"	"35 years"	"35"	"#COVID-19 (U07.1)"	"GR113-137"	59	844383	7.0
+	"Illinois"	"17"	"36 years"	"36"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	116	844724	13.7
+	"Illinois"	"17"	"36 years"	"36"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	21	844724	2.5
+	"Illinois"	"17"	"36 years"	"36"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	143	844724	16.9
+	"Illinois"	"17"	"36 years"	"36"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	24	844724	2.8
+	"Illinois"	"17"	"36 years"	"36"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	11	844724	Unreliable
+	"Illinois"	"17"	"36 years"	"36"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	44	844724	5.2
+	"Illinois"	"17"	"36 years"	"36"	"#COVID-19 (U07.1)"	"GR113-137"	47	844724	5.6
+	"Illinois"	"17"	"37 years"	"37"	"#Septicemia (A40-A41)"	"GR113-010"	15	847396	Unreliable
+	"Illinois"	"17"	"37 years"	"37"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	152	847396	17.9
+	"Illinois"	"17"	"37 years"	"37"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	39	847396	4.6
+	"Illinois"	"17"	"37 years"	"37"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	163	847396	19.2
+	"Illinois"	"17"	"37 years"	"37"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	21	847396	2.5
+	"Illinois"	"17"	"37 years"	"37"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	15	847396	Unreliable
+	"Illinois"	"17"	"37 years"	"37"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	15	847396	Unreliable
+	"Illinois"	"17"	"37 years"	"37"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	49	847396	5.8
+	"Illinois"	"17"	"37 years"	"37"	"#COVID-19 (U07.1)"	"GR113-137"	67	847396	7.9
+	"Illinois"	"17"	"38 years"	"38"	"#Septicemia (A40-A41)"	"GR113-010"	13	840702	Unreliable
+	"Illinois"	"17"	"38 years"	"38"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	153	840702	18.2
+	"Illinois"	"17"	"38 years"	"38"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	44	840702	5.2
+	"Illinois"	"17"	"38 years"	"38"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	165	840702	19.6
+	"Illinois"	"17"	"38 years"	"38"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	14	840702	Unreliable
+	"Illinois"	"17"	"38 years"	"38"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	16	840702	Unreliable
+	"Illinois"	"17"	"38 years"	"38"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	10	840702	Unreliable
+	"Illinois"	"17"	"38 years"	"38"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	15	840702	Unreliable
+	"Illinois"	"17"	"38 years"	"38"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	48	840702	5.7
+	"Illinois"	"17"	"38 years"	"38"	"#COVID-19 (U07.1)"	"GR113-137"	67	840702	8.0
+	"Illinois"	"17"	"39 years"	"39"	"#Septicemia (A40-A41)"	"GR113-010"	21	846552	2.5
+	"Illinois"	"17"	"39 years"	"39"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	195	846552	23.0
+	"Illinois"	"17"	"39 years"	"39"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	47	846552	5.6
+	"Illinois"	"17"	"39 years"	"39"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	180	846552	21.3
+	"Illinois"	"17"	"39 years"	"39"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	26	846552	3.1
+	"Illinois"	"17"	"39 years"	"39"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	17	846552	Unreliable
+	"Illinois"	"17"	"39 years"	"39"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	12	846552	Unreliable
+	"Illinois"	"17"	"39 years"	"39"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	16	846552	Unreliable
+	"Illinois"	"17"	"39 years"	"39"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	67	846552	7.9
+	"Illinois"	"17"	"39 years"	"39"	"#COVID-19 (U07.1)"	"GR113-137"	61	846552	7.2
+	"Illinois"	"17"	"40 years"	"40"	"#Septicemia (A40-A41)"	"GR113-010"	18	850423	Unreliable
+	"Illinois"	"17"	"40 years"	"40"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	221	850423	26.0
+	"Illinois"	"17"	"40 years"	"40"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	50	850423	5.9
+	"Illinois"	"17"	"40 years"	"40"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	215	850423	25.3
+	"Illinois"	"17"	"40 years"	"40"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	30	850423	3.5
+	"Illinois"	"17"	"40 years"	"40"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	16	850423	Unreliable
+	"Illinois"	"17"	"40 years"	"40"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	16	850423	Unreliable
+	"Illinois"	"17"	"40 years"	"40"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	17	850423	Unreliable
+	"Illinois"	"17"	"40 years"	"40"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	54	850423	6.3
+	"Illinois"	"17"	"40 years"	"40"	"#COVID-19 (U07.1)"	"GR113-137"	87	850423	10.2
+	"Illinois"	"17"	"41 years"	"41"	"#Septicemia (A40-A41)"	"GR113-010"	24	833856	2.9
+	"Illinois"	"17"	"41 years"	"41"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	231	833856	27.7
+	"Illinois"	"17"	"41 years"	"41"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	72	833856	8.6
+	"Illinois"	"17"	"41 years"	"41"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	241	833856	28.9
+	"Illinois"	"17"	"41 years"	"41"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	37	833856	4.4
+	"Illinois"	"17"	"41 years"	"41"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	22	833856	2.6
+	"Illinois"	"17"	"41 years"	"41"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	15	833856	Unreliable
+	"Illinois"	"17"	"41 years"	"41"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	23	833856	2.8
+	"Illinois"	"17"	"41 years"	"41"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	43	833856	5.2
+	"Illinois"	"17"	"41 years"	"41"	"#COVID-19 (U07.1)"	"GR113-137"	96	833856	11.5
+	"Illinois"	"17"	"42 years"	"42"	"#Septicemia (A40-A41)"	"GR113-010"	17	826644	Unreliable
+	"Illinois"	"17"	"42 years"	"42"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	238	826644	28.8
+	"Illinois"	"17"	"42 years"	"42"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	61	826644	7.4
+	"Illinois"	"17"	"42 years"	"42"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	273	826644	33.0
+	"Illinois"	"17"	"42 years"	"42"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	44	826644	5.3
+	"Illinois"	"17"	"42 years"	"42"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	17	826644	Unreliable
+	"Illinois"	"17"	"42 years"	"42"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	15	826644	Unreliable
+	"Illinois"	"17"	"42 years"	"42"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	14	826644	Unreliable
+	"Illinois"	"17"	"42 years"	"42"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	19	826644	Unreliable
+	"Illinois"	"17"	"42 years"	"42"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	50	826644	6.0
+	"Illinois"	"17"	"42 years"	"42"	"#COVID-19 (U07.1)"	"GR113-137"	105	826644	12.7
+	"Illinois"	"17"	"43 years"	"43"	"#Septicemia (A40-A41)"	"GR113-010"	26	801505	3.2
+	"Illinois"	"17"	"43 years"	"43"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	286	801505	35.7
+	"Illinois"	"17"	"43 years"	"43"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	51	801505	6.4
+	"Illinois"	"17"	"43 years"	"43"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	305	801505	38.1
+	"Illinois"	"17"	"43 years"	"43"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	43	801505	5.4
+	"Illinois"	"17"	"43 years"	"43"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	20	801505	2.5
+	"Illinois"	"17"	"43 years"	"43"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	22	801505	2.7
+	"Illinois"	"17"	"43 years"	"43"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	10	801505	Unreliable
+	"Illinois"	"17"	"43 years"	"43"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	25	801505	3.1
+	"Illinois"	"17"	"43 years"	"43"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	47	801505	5.9
+	"Illinois"	"17"	"43 years"	"43"	"#COVID-19 (U07.1)"	"GR113-137"	80	801505	10.0
+	"Illinois"	"17"	"44 years"	"44"	"#Septicemia (A40-A41)"	"GR113-010"	18	784391	Unreliable
+	"Illinois"	"17"	"44 years"	"44"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	305	784391	38.9
+	"Illinois"	"17"	"44 years"	"44"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	57	784391	7.3
+	"Illinois"	"17"	"44 years"	"44"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	298	784391	38.0
+	"Illinois"	"17"	"44 years"	"44"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	41	784391	5.2
+	"Illinois"	"17"	"44 years"	"44"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	23	784391	2.9
+	"Illinois"	"17"	"44 years"	"44"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	19	784391	Unreliable
+	"Illinois"	"17"	"44 years"	"44"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	17	784391	Unreliable
+	"Illinois"	"17"	"44 years"	"44"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	25	784391	3.2
+	"Illinois"	"17"	"44 years"	"44"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	46	784391	5.9
+	"Illinois"	"17"	"44 years"	"44"	"#COVID-19 (U07.1)"	"GR113-137"	116	784391	14.8
+	"Illinois"	"17"	"45 years"	"45"	"#Septicemia (A40-A41)"	"GR113-010"	26	776316	3.3
+	"Illinois"	"17"	"45 years"	"45"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	341	776316	43.9
+	"Illinois"	"17"	"45 years"	"45"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	63	776316	8.1
+	"Illinois"	"17"	"45 years"	"45"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	347	776316	44.7
+	"Illinois"	"17"	"45 years"	"45"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	58	776316	7.5
+	"Illinois"	"17"	"45 years"	"45"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	31	776316	4.0
+	"Illinois"	"17"	"45 years"	"45"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	16	776316	Unreliable
+	"Illinois"	"17"	"45 years"	"45"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	27	776316	3.5
+	"Illinois"	"17"	"45 years"	"45"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	56	776316	7.2
+	"Illinois"	"17"	"45 years"	"45"	"#COVID-19 (U07.1)"	"GR113-137"	131	776316	16.9
+	"Illinois"	"17"	"46 years"	"46"	"#Septicemia (A40-A41)"	"GR113-010"	37	756739	4.9
+	"Illinois"	"17"	"46 years"	"46"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	387	756739	51.1
+	"Illinois"	"17"	"46 years"	"46"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	65	756739	8.6
+	"Illinois"	"17"	"46 years"	"46"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	353	756739	46.6
+	"Illinois"	"17"	"46 years"	"46"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	76	756739	10.0
+	"Illinois"	"17"	"46 years"	"46"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	18	756739	Unreliable
+	"Illinois"	"17"	"46 years"	"46"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	24	756739	3.2
+	"Illinois"	"17"	"46 years"	"46"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	21	756739	2.8
+	"Illinois"	"17"	"46 years"	"46"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	28	756739	3.7
+	"Illinois"	"17"	"46 years"	"46"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	37	756739	4.9
+	"Illinois"	"17"	"46 years"	"46"	"#COVID-19 (U07.1)"	"GR113-137"	157	756739	20.7
+	"Illinois"	"17"	"47 years"	"47"	"#Septicemia (A40-A41)"	"GR113-010"	23	758471	3.0
+	"Illinois"	"17"	"47 years"	"47"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	426	758471	56.2
+	"Illinois"	"17"	"47 years"	"47"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	84	758471	11.1
+	"Illinois"	"17"	"47 years"	"47"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	419	758471	55.2
+	"Illinois"	"17"	"47 years"	"47"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	56	758471	7.4
+	"Illinois"	"17"	"47 years"	"47"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	27	758471	3.6
+	"Illinois"	"17"	"47 years"	"47"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	31	758471	4.1
+	"Illinois"	"17"	"47 years"	"47"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	16	758471	Unreliable
+	"Illinois"	"17"	"47 years"	"47"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	36	758471	4.7
+	"Illinois"	"17"	"47 years"	"47"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	54	758471	7.1
+	"Illinois"	"17"	"47 years"	"47"	"#COVID-19 (U07.1)"	"GR113-137"	147	758471	19.4
+	"Illinois"	"17"	"48 years"	"48"	"#Septicemia (A40-A41)"	"GR113-010"	27	757958	3.6
+	"Illinois"	"17"	"48 years"	"48"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	483	757958	63.7
+	"Illinois"	"17"	"48 years"	"48"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	90	757958	11.9
+	"Illinois"	"17"	"48 years"	"48"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	470	757958	62.0
+	"Illinois"	"17"	"48 years"	"48"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	68	757958	9.0
+	"Illinois"	"17"	"48 years"	"48"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	21	757958	2.8
+	"Illinois"	"17"	"48 years"	"48"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	37	757958	4.9
+	"Illinois"	"17"	"48 years"	"48"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	23	757958	3.0
+	"Illinois"	"17"	"48 years"	"48"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	37	757958	4.9
+	"Illinois"	"17"	"48 years"	"48"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	58	757958	7.7
+	"Illinois"	"17"	"48 years"	"48"	"#COVID-19 (U07.1)"	"GR113-137"	195	757958	25.7
+	"Illinois"	"17"	"49 years"	"49"	"#Septicemia (A40-A41)"	"GR113-010"	36	778453	4.6
+	"Illinois"	"17"	"49 years"	"49"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	535	778453	68.7
+	"Illinois"	"17"	"49 years"	"49"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	110	778453	14.1
+	"Illinois"	"17"	"49 years"	"49"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	541	778453	69.5
+	"Illinois"	"17"	"49 years"	"49"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	96	778453	12.3
+	"Illinois"	"17"	"49 years"	"49"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	37	778453	4.8
+	"Illinois"	"17"	"49 years"	"49"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	27	778453	3.5
+	"Illinois"	"17"	"49 years"	"49"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	25	778453	3.2
+	"Illinois"	"17"	"49 years"	"49"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	46	778453	5.9
+	"Illinois"	"17"	"49 years"	"49"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	52	778453	6.7
+	"Illinois"	"17"	"49 years"	"49"	"#COVID-19 (U07.1)"	"GR113-137"	187	778453	24.0
+	"Illinois"	"17"	"50 years"	"50"	"#Septicemia (A40-A41)"	"GR113-010"	47	808400	5.8
+	"Illinois"	"17"	"50 years"	"50"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	612	808400	75.7
+	"Illinois"	"17"	"50 years"	"50"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	110	808400	13.6
+	"Illinois"	"17"	"50 years"	"50"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	668	808400	82.6
+	"Illinois"	"17"	"50 years"	"50"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	100	808400	12.4
+	"Illinois"	"17"	"50 years"	"50"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	37	808400	4.6
+	"Illinois"	"17"	"50 years"	"50"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	45	808400	5.6
+	"Illinois"	"17"	"50 years"	"50"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	21	808400	2.6
+	"Illinois"	"17"	"50 years"	"50"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	68	808400	8.4
+	"Illinois"	"17"	"50 years"	"50"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	60	808400	7.4
+	"Illinois"	"17"	"50 years"	"50"	"#COVID-19 (U07.1)"	"GR113-137"	216	808400	26.7
+	"Illinois"	"17"	"51 years"	"51"	"#Septicemia (A40-A41)"	"GR113-010"	53	823235	6.4
+	"Illinois"	"17"	"51 years"	"51"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	730	823235	88.7
+	"Illinois"	"17"	"51 years"	"51"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	120	823235	14.6
+	"Illinois"	"17"	"51 years"	"51"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	694	823235	84.3
+	"Illinois"	"17"	"51 years"	"51"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	98	823235	11.9
+	"Illinois"	"17"	"51 years"	"51"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	38	823235	4.6
+	"Illinois"	"17"	"51 years"	"51"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	65	823235	7.9
+	"Illinois"	"17"	"51 years"	"51"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	32	823235	3.9
+	"Illinois"	"17"	"51 years"	"51"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	51	823235	6.2
+	"Illinois"	"17"	"51 years"	"51"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	58	823235	7.0
+	"Illinois"	"17"	"51 years"	"51"	"#COVID-19 (U07.1)"	"GR113-137"	213	823235	25.9
+	"Illinois"	"17"	"52 years"	"52"	"#Septicemia (A40-A41)"	"GR113-010"	71	803816	8.8
+	"Illinois"	"17"	"52 years"	"52"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	784	803816	97.5
+	"Illinois"	"17"	"52 years"	"52"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	134	803816	16.7
+	"Illinois"	"17"	"52 years"	"52"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	766	803816	95.3
+	"Illinois"	"17"	"52 years"	"52"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	108	803816	13.4
+	"Illinois"	"17"	"52 years"	"52"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	52	803816	6.5
+	"Illinois"	"17"	"52 years"	"52"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	71	803816	8.8
+	"Illinois"	"17"	"52 years"	"52"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	37	803816	4.6
+	"Illinois"	"17"	"52 years"	"52"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	70	803816	8.7
+	"Illinois"	"17"	"52 years"	"52"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	46	803816	5.7
+	"Illinois"	"17"	"52 years"	"52"	"#COVID-19 (U07.1)"	"GR113-137"	262	803816	32.6
+	"Illinois"	"17"	"53 years"	"53"	"#Septicemia (A40-A41)"	"GR113-010"	58	781228	7.4
+	"Illinois"	"17"	"53 years"	"53"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	886	781228	113.4
+	"Illinois"	"17"	"53 years"	"53"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	148	781228	18.9
+	"Illinois"	"17"	"53 years"	"53"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	813	781228	104.1
+	"Illinois"	"17"	"53 years"	"53"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	136	781228	17.4
+	"Illinois"	"17"	"53 years"	"53"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	50	781228	6.4
+	"Illinois"	"17"	"53 years"	"53"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	66	781228	8.4
+	"Illinois"	"17"	"53 years"	"53"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	32	781228	4.1
+	"Illinois"	"17"	"53 years"	"53"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	81	781228	10.4
+	"Illinois"	"17"	"53 years"	"53"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	80	781228	10.2
+	"Illinois"	"17"	"53 years"	"53"	"#COVID-19 (U07.1)"	"GR113-137"	224	781228	28.7
+	"Illinois"	"17"	"54 years"	"54"	"#Septicemia (A40-A41)"	"GR113-010"	60	775812	7.7
+	"Illinois"	"17"	"54 years"	"54"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	986	775812	127.1
+	"Illinois"	"17"	"54 years"	"54"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	147	775812	18.9
+	"Illinois"	"17"	"54 years"	"54"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	831	775812	107.1
+	"Illinois"	"17"	"54 years"	"54"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	128	775812	16.5
+	"Illinois"	"17"	"54 years"	"54"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	52	775812	6.7
+	"Illinois"	"17"	"54 years"	"54"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	106	775812	13.7
+	"Illinois"	"17"	"54 years"	"54"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	45	775812	5.8
+	"Illinois"	"17"	"54 years"	"54"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	72	775812	9.3
+	"Illinois"	"17"	"54 years"	"54"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	68	775812	8.8
+	"Illinois"	"17"	"54 years"	"54"	"#COVID-19 (U07.1)"	"GR113-137"	275	775812	35.4
+	"Illinois"	"17"	"55 years"	"55"	"#Septicemia (A40-A41)"	"GR113-010"	67	786690	8.5
+	"Illinois"	"17"	"55 years"	"55"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1144	786690	145.4
+	"Illinois"	"17"	"55 years"	"55"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	206	786690	26.2
+	"Illinois"	"17"	"55 years"	"55"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	949	786690	120.6
+	"Illinois"	"17"	"55 years"	"55"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	149	786690	18.9
+	"Illinois"	"17"	"55 years"	"55"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	61	786690	7.8
+	"Illinois"	"17"	"55 years"	"55"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	117	786690	14.9
+	"Illinois"	"17"	"55 years"	"55"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	50	786690	6.4
+	"Illinois"	"17"	"55 years"	"55"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	70	786690	8.9
+	"Illinois"	"17"	"55 years"	"55"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	52	786690	6.6
+	"Illinois"	"17"	"55 years"	"55"	"#COVID-19 (U07.1)"	"GR113-137"	288	786690	36.6
+	"Illinois"	"17"	"56 years"	"56"	"#Septicemia (A40-A41)"	"GR113-010"	70	799143	8.8
+	"Illinois"	"17"	"56 years"	"56"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1203	799143	150.5
+	"Illinois"	"17"	"56 years"	"56"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	177	799143	22.1
+	"Illinois"	"17"	"56 years"	"56"	"#Alzheimer disease (G30)"	"GR113-052"	13	799143	Unreliable
+	"Illinois"	"17"	"56 years"	"56"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1055	799143	132.0
+	"Illinois"	"17"	"56 years"	"56"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	169	799143	21.1
+	"Illinois"	"17"	"56 years"	"56"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	70	799143	8.8
+	"Illinois"	"17"	"56 years"	"56"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	151	799143	18.9
+	"Illinois"	"17"	"56 years"	"56"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	34	799143	4.3
+	"Illinois"	"17"	"56 years"	"56"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	90	799143	11.3
+	"Illinois"	"17"	"56 years"	"56"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	65	799143	8.1
+	"Illinois"	"17"	"56 years"	"56"	"#COVID-19 (U07.1)"	"GR113-137"	319	799143	39.9
+	"Illinois"	"17"	"57 years"	"57"	"#Septicemia (A40-A41)"	"GR113-010"	95	818377	11.6
+	"Illinois"	"17"	"57 years"	"57"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1429	818377	174.6
+	"Illinois"	"17"	"57 years"	"57"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	205	818377	25.0
+	"Illinois"	"17"	"57 years"	"57"	"#Alzheimer disease (G30)"	"GR113-052"	11	818377	Unreliable
+	"Illinois"	"17"	"57 years"	"57"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1231	818377	150.4
+	"Illinois"	"17"	"57 years"	"57"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	199	818377	24.3
+	"Illinois"	"17"	"57 years"	"57"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	70	818377	8.6
+	"Illinois"	"17"	"57 years"	"57"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	175	818377	21.4
+	"Illinois"	"17"	"57 years"	"57"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	52	818377	6.4
+	"Illinois"	"17"	"57 years"	"57"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	104	818377	12.7
+	"Illinois"	"17"	"57 years"	"57"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	59	818377	7.2
+	"Illinois"	"17"	"57 years"	"57"	"#COVID-19 (U07.1)"	"GR113-137"	355	818377	43.4
+	"Illinois"	"17"	"58 years"	"58"	"#Septicemia (A40-A41)"	"GR113-010"	108	826358	13.1
+	"Illinois"	"17"	"58 years"	"58"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1596	826358	193.1
+	"Illinois"	"17"	"58 years"	"58"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	279	826358	33.8
+	"Illinois"	"17"	"58 years"	"58"	"#Alzheimer disease (G30)"	"GR113-052"	16	826358	Unreliable
+	"Illinois"	"17"	"58 years"	"58"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1312	826358	158.8
+	"Illinois"	"17"	"58 years"	"58"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	219	826358	26.5
+	"Illinois"	"17"	"58 years"	"58"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	81	826358	9.8
+	"Illinois"	"17"	"58 years"	"58"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	203	826358	24.6
+	"Illinois"	"17"	"58 years"	"58"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	73	826358	8.8
+	"Illinois"	"17"	"58 years"	"58"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	119	826358	14.4
+	"Illinois"	"17"	"58 years"	"58"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	65	826358	7.9
+	"Illinois"	"17"	"58 years"	"58"	"#COVID-19 (U07.1)"	"GR113-137"	445	826358	53.9
+	"Illinois"	"17"	"59 years"	"59"	"#Septicemia (A40-A41)"	"GR113-010"	104	830505	12.5
+	"Illinois"	"17"	"59 years"	"59"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1760	830505	211.9
+	"Illinois"	"17"	"59 years"	"59"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	261	830505	31.4
+	"Illinois"	"17"	"59 years"	"59"	"#Alzheimer disease (G30)"	"GR113-052"	20	830505	2.4
+	"Illinois"	"17"	"59 years"	"59"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1534	830505	184.7
+	"Illinois"	"17"	"59 years"	"59"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	241	830505	29.0
+	"Illinois"	"17"	"59 years"	"59"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	91	830505	11.0
+	"Illinois"	"17"	"59 years"	"59"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	254	830505	30.6
+	"Illinois"	"17"	"59 years"	"59"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	85	830505	10.2
+	"Illinois"	"17"	"59 years"	"59"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	136	830505	16.4
+	"Illinois"	"17"	"59 years"	"59"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	74	830505	8.9
+	"Illinois"	"17"	"59 years"	"59"	"#COVID-19 (U07.1)"	"GR113-137"	475	830505	57.2
+	"Illinois"	"17"	"60 years"	"60"	"#Septicemia (A40-A41)"	"GR113-010"	118	834123	14.1
+	"Illinois"	"17"	"60 years"	"60"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2045	834123	245.2
+	"Illinois"	"17"	"60 years"	"60"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	312	834123	37.4
+	"Illinois"	"17"	"60 years"	"60"	"#Alzheimer disease (G30)"	"GR113-052"	30	834123	3.6
+	"Illinois"	"17"	"60 years"	"60"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1652	834123	198.1
+	"Illinois"	"17"	"60 years"	"60"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	262	834123	31.4
+	"Illinois"	"17"	"60 years"	"60"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	100	834123	12.0
+	"Illinois"	"17"	"60 years"	"60"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	328	834123	39.3
+	"Illinois"	"17"	"60 years"	"60"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	83	834123	10.0
+	"Illinois"	"17"	"60 years"	"60"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	138	834123	16.5
+	"Illinois"	"17"	"60 years"	"60"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	83	834123	10.0
+	"Illinois"	"17"	"60 years"	"60"	"#COVID-19 (U07.1)"	"GR113-137"	512	834123	61.4
+	"Illinois"	"17"	"61 years"	"61"	"#Septicemia (A40-A41)"	"GR113-010"	112	826178	13.6
+	"Illinois"	"17"	"61 years"	"61"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2332	826178	282.3
+	"Illinois"	"17"	"61 years"	"61"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	292	826178	35.3
+	"Illinois"	"17"	"61 years"	"61"	"#Alzheimer disease (G30)"	"GR113-052"	27	826178	3.3
+	"Illinois"	"17"	"61 years"	"61"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1871	826178	226.5
+	"Illinois"	"17"	"61 years"	"61"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	301	826178	36.4
+	"Illinois"	"17"	"61 years"	"61"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	124	826178	15.0
+	"Illinois"	"17"	"61 years"	"61"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	350	826178	42.4
+	"Illinois"	"17"	"61 years"	"61"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	104	826178	12.6
+	"Illinois"	"17"	"61 years"	"61"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	153	826178	18.5
+	"Illinois"	"17"	"61 years"	"61"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	77	826178	9.3
+	"Illinois"	"17"	"61 years"	"61"	"#COVID-19 (U07.1)"	"GR113-137"	519	826178	62.8
+	"Illinois"	"17"	"62 years"	"62"	"#Septicemia (A40-A41)"	"GR113-010"	144	812204	17.7
+	"Illinois"	"17"	"62 years"	"62"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2426	812204	298.7
+	"Illinois"	"17"	"62 years"	"62"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	299	812204	36.8
+	"Illinois"	"17"	"62 years"	"62"	"#Alzheimer disease (G30)"	"GR113-052"	45	812204	5.5
+	"Illinois"	"17"	"62 years"	"62"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1968	812204	242.3
+	"Illinois"	"17"	"62 years"	"62"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	297	812204	36.6
+	"Illinois"	"17"	"62 years"	"62"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	121	812204	14.9
+	"Illinois"	"17"	"62 years"	"62"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	383	812204	47.2
+	"Illinois"	"17"	"62 years"	"62"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	101	812204	12.4
+	"Illinois"	"17"	"62 years"	"62"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	151	812204	18.6
+	"Illinois"	"17"	"62 years"	"62"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	82	812204	10.1
+	"Illinois"	"17"	"62 years"	"62"	"#COVID-19 (U07.1)"	"GR113-137"	596	812204	73.4
+	"Illinois"	"17"	"63 years"	"63"	"#Septicemia (A40-A41)"	"GR113-010"	141	795618	17.7
+	"Illinois"	"17"	"63 years"	"63"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2701	795618	339.5
+	"Illinois"	"17"	"63 years"	"63"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	342	795618	43.0
+	"Illinois"	"17"	"63 years"	"63"	"#Alzheimer disease (G30)"	"GR113-052"	42	795618	5.3
+	"Illinois"	"17"	"63 years"	"63"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2106	795618	264.7
+	"Illinois"	"17"	"63 years"	"63"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	363	795618	45.6
+	"Illinois"	"17"	"63 years"	"63"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	137	795618	17.2
+	"Illinois"	"17"	"63 years"	"63"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	418	795618	52.5
+	"Illinois"	"17"	"63 years"	"63"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	125	795618	15.7
+	"Illinois"	"17"	"63 years"	"63"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	207	795618	26.0
+	"Illinois"	"17"	"63 years"	"63"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	82	795618	10.3
+	"Illinois"	"17"	"63 years"	"63"	"#COVID-19 (U07.1)"	"GR113-137"	631	795618	79.3
+	"Illinois"	"17"	"64 years"	"64"	"#Septicemia (A40-A41)"	"GR113-010"	162	778764	20.8
+	"Illinois"	"17"	"64 years"	"64"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2781	778764	357.1
+	"Illinois"	"17"	"64 years"	"64"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	378	778764	48.5
+	"Illinois"	"17"	"64 years"	"64"	"#Alzheimer disease (G30)"	"GR113-052"	44	778764	5.6
+	"Illinois"	"17"	"64 years"	"64"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2189	778764	281.1
+	"Illinois"	"17"	"64 years"	"64"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	356	778764	45.7
+	"Illinois"	"17"	"64 years"	"64"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	137	778764	17.6
+	"Illinois"	"17"	"64 years"	"64"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	433	778764	55.6
+	"Illinois"	"17"	"64 years"	"64"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	109	778764	14.0
+	"Illinois"	"17"	"64 years"	"64"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	199	778764	25.6
+	"Illinois"	"17"	"64 years"	"64"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	105	778764	13.5
+	"Illinois"	"17"	"64 years"	"64"	"#COVID-19 (U07.1)"	"GR113-137"	697	778764	89.5
+	"Illinois"	"17"	"65 years"	"65"	"#Septicemia (A40-A41)"	"GR113-010"	160	757771	21.1
+	"Illinois"	"17"	"65 years"	"65"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3007	757771	396.8
+	"Illinois"	"17"	"65 years"	"65"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	400	757771	52.8
+	"Illinois"	"17"	"65 years"	"65"	"#Alzheimer disease (G30)"	"GR113-052"	70	757771	9.2
+	"Illinois"	"17"	"65 years"	"65"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2311	757771	305.0
+	"Illinois"	"17"	"65 years"	"65"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	394	757771	52.0
+	"Illinois"	"17"	"65 years"	"65"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	131	757771	17.3
+	"Illinois"	"17"	"65 years"	"65"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	523	757771	69.0
+	"Illinois"	"17"	"65 years"	"65"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	124	757771	16.4
+	"Illinois"	"17"	"65 years"	"65"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	222	757771	29.3
+	"Illinois"	"17"	"65 years"	"65"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	80	757771	10.6
+	"Illinois"	"17"	"65 years"	"65"	"#COVID-19 (U07.1)"	"GR113-137"	675	757771	89.1
+	"Illinois"	"17"	"66 years"	"66"	"#Septicemia (A40-A41)"	"GR113-010"	164	722187	22.7
+	"Illinois"	"17"	"66 years"	"66"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3108	722187	430.4
+	"Illinois"	"17"	"66 years"	"66"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	360	722187	49.8
+	"Illinois"	"17"	"66 years"	"66"	"#Alzheimer disease (G30)"	"GR113-052"	46	722187	6.4
+	"Illinois"	"17"	"66 years"	"66"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2406	722187	333.2
+	"Illinois"	"17"	"66 years"	"66"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	440	722187	60.9
+	"Illinois"	"17"	"66 years"	"66"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	150	722187	20.8
+	"Illinois"	"17"	"66 years"	"66"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	523	722187	72.4
+	"Illinois"	"17"	"66 years"	"66"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	135	722187	18.7
+	"Illinois"	"17"	"66 years"	"66"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	216	722187	29.9
+	"Illinois"	"17"	"66 years"	"66"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	93	722187	12.9
+	"Illinois"	"17"	"66 years"	"66"	"#COVID-19 (U07.1)"	"GR113-137"	661	722187	91.5
+	"Illinois"	"17"	"67 years"	"67"	"#Septicemia (A40-A41)"	"GR113-010"	187	697726	26.8
+	"Illinois"	"17"	"67 years"	"67"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3152	697726	451.8
+	"Illinois"	"17"	"67 years"	"67"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	389	697726	55.8
+	"Illinois"	"17"	"67 years"	"67"	"#Alzheimer disease (G30)"	"GR113-052"	84	697726	12.0
+	"Illinois"	"17"	"67 years"	"67"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2384	697726	341.7
+	"Illinois"	"17"	"67 years"	"67"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	459	697726	65.8
+	"Illinois"	"17"	"67 years"	"67"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	155	697726	22.2
+	"Illinois"	"17"	"67 years"	"67"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	575	697726	82.4
+	"Illinois"	"17"	"67 years"	"67"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	168	697726	24.1
+	"Illinois"	"17"	"67 years"	"67"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	248	697726	35.5
+	"Illinois"	"17"	"67 years"	"67"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	94	697726	13.5
+	"Illinois"	"17"	"67 years"	"67"	"#COVID-19 (U07.1)"	"GR113-137"	735	697726	105.3
+	"Illinois"	"17"	"68 years"	"68"	"#Septicemia (A40-A41)"	"GR113-010"	210	664852	31.6
+	"Illinois"	"17"	"68 years"	"68"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3190	664852	479.8
+	"Illinois"	"17"	"68 years"	"68"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	394	664852	59.3
+	"Illinois"	"17"	"68 years"	"68"	"#Alzheimer disease (G30)"	"GR113-052"	82	664852	12.3
+	"Illinois"	"17"	"68 years"	"68"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2473	664852	372.0
+	"Illinois"	"17"	"68 years"	"68"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	408	664852	61.4
+	"Illinois"	"17"	"68 years"	"68"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	187	664852	28.1
+	"Illinois"	"17"	"68 years"	"68"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	557	664852	83.8
+	"Illinois"	"17"	"68 years"	"68"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	149	664852	22.4
+	"Illinois"	"17"	"68 years"	"68"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	246	664852	37.0
+	"Illinois"	"17"	"68 years"	"68"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	86	664852	12.9
+	"Illinois"	"17"	"68 years"	"68"	"#COVID-19 (U07.1)"	"GR113-137"	755	664852	113.6
+	"Illinois"	"17"	"69 years"	"69"	"#Septicemia (A40-A41)"	"GR113-010"	211	636342	33.2
+	"Illinois"	"17"	"69 years"	"69"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3310	636342	520.2
+	"Illinois"	"17"	"69 years"	"69"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	415	636342	65.2
+	"Illinois"	"17"	"69 years"	"69"	"#Alzheimer disease (G30)"	"GR113-052"	92	636342	14.5
+	"Illinois"	"17"	"69 years"	"69"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2409	636342	378.6
+	"Illinois"	"17"	"69 years"	"69"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	483	636342	75.9
+	"Illinois"	"17"	"69 years"	"69"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	185	636342	29.1
+	"Illinois"	"17"	"69 years"	"69"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	579	636342	91.0
+	"Illinois"	"17"	"69 years"	"69"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	170	636342	26.7
+	"Illinois"	"17"	"69 years"	"69"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	269	636342	42.3
+	"Illinois"	"17"	"69 years"	"69"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	73	636342	11.5
+	"Illinois"	"17"	"69 years"	"69"	"#COVID-19 (U07.1)"	"GR113-137"	777	636342	122.1
+	"Illinois"	"17"	"70 years"	"70"	"#Septicemia (A40-A41)"	"GR113-010"	214	608145	35.2
+	"Illinois"	"17"	"70 years"	"70"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3391	608145	557.6
+	"Illinois"	"17"	"70 years"	"70"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	427	608145	70.2
+	"Illinois"	"17"	"70 years"	"70"	"#Alzheimer disease (G30)"	"GR113-052"	137	608145	22.5
+	"Illinois"	"17"	"70 years"	"70"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2540	608145	417.7
+	"Illinois"	"17"	"70 years"	"70"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	520	608145	85.5
+	"Illinois"	"17"	"70 years"	"70"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	162	608145	26.6
+	"Illinois"	"17"	"70 years"	"70"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	633	608145	104.1
+	"Illinois"	"17"	"70 years"	"70"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	185	608145	30.4
+	"Illinois"	"17"	"70 years"	"70"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	302	608145	49.7
+	"Illinois"	"17"	"70 years"	"70"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	99	608145	16.3
+	"Illinois"	"17"	"70 years"	"70"	"#COVID-19 (U07.1)"	"GR113-137"	814	608145	133.8
+	"Illinois"	"17"	"71 years"	"71"	"#Septicemia (A40-A41)"	"GR113-010"	215	577321	37.2
+	"Illinois"	"17"	"71 years"	"71"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3439	577321	595.7
+	"Illinois"	"17"	"71 years"	"71"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	456	577321	79.0
+	"Illinois"	"17"	"71 years"	"71"	"#Alzheimer disease (G30)"	"GR113-052"	170	577321	29.4
+	"Illinois"	"17"	"71 years"	"71"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2579	577321	446.7
+	"Illinois"	"17"	"71 years"	"71"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	564	577321	97.7
+	"Illinois"	"17"	"71 years"	"71"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	201	577321	34.8
+	"Illinois"	"17"	"71 years"	"71"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	657	577321	113.8
+	"Illinois"	"17"	"71 years"	"71"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	188	577321	32.6
+	"Illinois"	"17"	"71 years"	"71"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	312	577321	54.0
+	"Illinois"	"17"	"71 years"	"71"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	113	577321	19.6
+	"Illinois"	"17"	"71 years"	"71"	"#COVID-19 (U07.1)"	"GR113-137"	879	577321	152.3
+	"Illinois"	"17"	"72 years"	"72"	"#Septicemia (A40-A41)"	"GR113-010"	223	551375	40.4
+	"Illinois"	"17"	"72 years"	"72"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3579	551375	649.1
+	"Illinois"	"17"	"72 years"	"72"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	405	551375	73.5
+	"Illinois"	"17"	"72 years"	"72"	"#Alzheimer disease (G30)"	"GR113-052"	205	551375	37.2
+	"Illinois"	"17"	"72 years"	"72"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2764	551375	501.3
+	"Illinois"	"17"	"72 years"	"72"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	614	551375	111.4
+	"Illinois"	"17"	"72 years"	"72"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	190	551375	34.5
+	"Illinois"	"17"	"72 years"	"72"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	707	551375	128.2
+	"Illinois"	"17"	"72 years"	"72"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	208	551375	37.7
+	"Illinois"	"17"	"72 years"	"72"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	328	551375	59.5
+	"Illinois"	"17"	"72 years"	"72"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	104	551375	18.9
+	"Illinois"	"17"	"72 years"	"72"	"#COVID-19 (U07.1)"	"GR113-137"	865	551375	156.9
+	"Illinois"	"17"	"73 years"	"73"	"#Septicemia (A40-A41)"	"GR113-010"	262	537757	48.7
+	"Illinois"	"17"	"73 years"	"73"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3655	537757	679.7
+	"Illinois"	"17"	"73 years"	"73"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	490	537757	91.1
+	"Illinois"	"17"	"73 years"	"73"	"#Alzheimer disease (G30)"	"GR113-052"	241	537757	44.8
+	"Illinois"	"17"	"73 years"	"73"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2873	537757	534.3
+	"Illinois"	"17"	"73 years"	"73"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	679	537757	126.3
+	"Illinois"	"17"	"73 years"	"73"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	214	537757	39.8
+	"Illinois"	"17"	"73 years"	"73"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	722	537757	134.3
+	"Illinois"	"17"	"73 years"	"73"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	209	537757	38.9
+	"Illinois"	"17"	"73 years"	"73"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	345	537757	64.2
+	"Illinois"	"17"	"73 years"	"73"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	118	537757	21.9
+	"Illinois"	"17"	"73 years"	"73"	"#COVID-19 (U07.1)"	"GR113-137"	999	537757	185.8
+	"Illinois"	"17"	"74 years"	"74"	"#Septicemia (A40-A41)"	"GR113-010"	232	501900	46.2
+	"Illinois"	"17"	"74 years"	"74"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3479	501900	693.2
+	"Illinois"	"17"	"74 years"	"74"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	428	501900	85.3
+	"Illinois"	"17"	"74 years"	"74"	"#Alzheimer disease (G30)"	"GR113-052"	259	501900	51.6
+	"Illinois"	"17"	"74 years"	"74"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2857	501900	569.2
+	"Illinois"	"17"	"74 years"	"74"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	702	501900	139.9
+	"Illinois"	"17"	"74 years"	"74"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	222	501900	44.2
+	"Illinois"	"17"	"74 years"	"74"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	774	501900	154.2
+	"Illinois"	"17"	"74 years"	"74"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	237	501900	47.2
+	"Illinois"	"17"	"74 years"	"74"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	353	501900	70.3
+	"Illinois"	"17"	"74 years"	"74"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	103	501900	20.5
+	"Illinois"	"17"	"74 years"	"74"	"#COVID-19 (U07.1)"	"GR113-137"	950	501900	189.3
+	"Illinois"	"17"	"75 years"	"75"	"#Septicemia (A40-A41)"	"GR113-010"	234	479369	48.8
+	"Illinois"	"17"	"75 years"	"75"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3485	479369	727.0
+	"Illinois"	"17"	"75 years"	"75"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	433	479369	90.3
+	"Illinois"	"17"	"75 years"	"75"	"#Alzheimer disease (G30)"	"GR113-052"	315	479369	65.7
+	"Illinois"	"17"	"75 years"	"75"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2821	479369	588.5
+	"Illinois"	"17"	"75 years"	"75"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	696	479369	145.2
+	"Illinois"	"17"	"75 years"	"75"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	246	479369	51.3
+	"Illinois"	"17"	"75 years"	"75"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	831	479369	173.4
+	"Illinois"	"17"	"75 years"	"75"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	240	479369	50.1
+	"Illinois"	"17"	"75 years"	"75"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	390	479369	81.4
+	"Illinois"	"17"	"75 years"	"75"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	109	479369	22.7
+	"Illinois"	"17"	"75 years"	"75"	"#COVID-19 (U07.1)"	"GR113-137"	863	479369	180.0
+	"Illinois"	"17"	"76 years"	"76"	"#Septicemia (A40-A41)"	"GR113-010"	254	378457	67.1
+	"Illinois"	"17"	"76 years"	"76"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3462	378457	914.8
+	"Illinois"	"17"	"76 years"	"76"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	432	378457	114.1
+	"Illinois"	"17"	"76 years"	"76"	"#Alzheimer disease (G30)"	"GR113-052"	356	378457	94.1
+	"Illinois"	"17"	"76 years"	"76"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2928	378457	773.7
+	"Illinois"	"17"	"76 years"	"76"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	736	378457	194.5
+	"Illinois"	"17"	"76 years"	"76"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	231	378457	61.0
+	"Illinois"	"17"	"76 years"	"76"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	772	378457	204.0
+	"Illinois"	"17"	"76 years"	"76"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	247	378457	65.3
+	"Illinois"	"17"	"76 years"	"76"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	376	378457	99.4
+	"Illinois"	"17"	"76 years"	"76"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	100	378457	26.4
+	"Illinois"	"17"	"76 years"	"76"	"#COVID-19 (U07.1)"	"GR113-137"	894	378457	236.2
+	"Illinois"	"17"	"77 years"	"77"	"#Septicemia (A40-A41)"	"GR113-010"	269	366898	73.3
+	"Illinois"	"17"	"77 years"	"77"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3400	366898	926.7
+	"Illinois"	"17"	"77 years"	"77"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	394	366898	107.4
+	"Illinois"	"17"	"77 years"	"77"	"#Alzheimer disease (G30)"	"GR113-052"	396	366898	107.9
+	"Illinois"	"17"	"77 years"	"77"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2942	366898	801.9
+	"Illinois"	"17"	"77 years"	"77"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	776	366898	211.5
+	"Illinois"	"17"	"77 years"	"77"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	249	366898	67.9
+	"Illinois"	"17"	"77 years"	"77"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	778	366898	212.0
+	"Illinois"	"17"	"77 years"	"77"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	265	366898	72.2
+	"Illinois"	"17"	"77 years"	"77"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	387	366898	105.5
+	"Illinois"	"17"	"77 years"	"77"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	117	366898	31.9
+	"Illinois"	"17"	"77 years"	"77"	"#COVID-19 (U07.1)"	"GR113-137"	956	366898	260.6
+	"Illinois"	"17"	"78 years"	"78"	"#Septicemia (A40-A41)"	"GR113-010"	241	352032	68.5
+	"Illinois"	"17"	"78 years"	"78"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3202	352032	909.6
+	"Illinois"	"17"	"78 years"	"78"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	430	352032	122.1
+	"Illinois"	"17"	"78 years"	"78"	"#Alzheimer disease (G30)"	"GR113-052"	474	352032	134.6
+	"Illinois"	"17"	"78 years"	"78"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2971	352032	844.0
+	"Illinois"	"17"	"78 years"	"78"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	828	352032	235.2
+	"Illinois"	"17"	"78 years"	"78"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	226	352032	64.2
+	"Illinois"	"17"	"78 years"	"78"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	833	352032	236.6
+	"Illinois"	"17"	"78 years"	"78"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	242	352032	68.7
+	"Illinois"	"17"	"78 years"	"78"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	385	352032	109.4
+	"Illinois"	"17"	"78 years"	"78"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	105	352032	29.8
+	"Illinois"	"17"	"78 years"	"78"	"#COVID-19 (U07.1)"	"GR113-137"	1031	352032	292.9
+	"Illinois"	"17"	"79 years"	"79"	"#Septicemia (A40-A41)"	"GR113-010"	245	337588	72.6
+	"Illinois"	"17"	"79 years"	"79"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3377	337588	1000.3
+	"Illinois"	"17"	"79 years"	"79"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	375	337588	111.1
+	"Illinois"	"17"	"79 years"	"79"	"#Alzheimer disease (G30)"	"GR113-052"	509	337588	150.8
+	"Illinois"	"17"	"79 years"	"79"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2962	337588	877.4
+	"Illinois"	"17"	"79 years"	"79"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	915	337588	271.0
+	"Illinois"	"17"	"79 years"	"79"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	284	337588	84.1
+	"Illinois"	"17"	"79 years"	"79"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	874	337588	258.9
+	"Illinois"	"17"	"79 years"	"79"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	260	337588	77.0
+	"Illinois"	"17"	"79 years"	"79"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	406	337588	120.3
+	"Illinois"	"17"	"79 years"	"79"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	131	337588	38.8
+	"Illinois"	"17"	"79 years"	"79"	"#COVID-19 (U07.1)"	"GR113-137"	983	337588	291.2
+	"Illinois"	"17"	"80 years"	"80"	"#Septicemia (A40-A41)"	"GR113-010"	259	295497	87.6
+	"Illinois"	"17"	"80 years"	"80"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3324	295497	1124.9
+	"Illinois"	"17"	"80 years"	"80"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	440	295497	148.9
+	"Illinois"	"17"	"80 years"	"80"	"#Alzheimer disease (G30)"	"GR113-052"	578	295497	195.6
+	"Illinois"	"17"	"80 years"	"80"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3084	295497	1043.7
+	"Illinois"	"17"	"80 years"	"80"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	886	295497	299.8
+	"Illinois"	"17"	"80 years"	"80"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	266	295497	90.0
+	"Illinois"	"17"	"80 years"	"80"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	821	295497	277.8
+	"Illinois"	"17"	"80 years"	"80"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	268	295497	90.7
+	"Illinois"	"17"	"80 years"	"80"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	423	295497	143.1
+	"Illinois"	"17"	"80 years"	"80"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	137	295497	46.4
+	"Illinois"	"17"	"80 years"	"80"	"#COVID-19 (U07.1)"	"GR113-137"	990	295497	335.0
+	"Illinois"	"17"	"81 years"	"81"	"#Septicemia (A40-A41)"	"GR113-010"	231	265130	87.1
+	"Illinois"	"17"	"81 years"	"81"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3129	265130	1180.2
+	"Illinois"	"17"	"81 years"	"81"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	365	265130	137.7
+	"Illinois"	"17"	"81 years"	"81"	"#Alzheimer disease (G30)"	"GR113-052"	640	265130	241.4
+	"Illinois"	"17"	"81 years"	"81"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3160	265130	1191.9
+	"Illinois"	"17"	"81 years"	"81"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	939	265130	354.2
+	"Illinois"	"17"	"81 years"	"81"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	257	265130	96.9
+	"Illinois"	"17"	"81 years"	"81"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	807	265130	304.4
+	"Illinois"	"17"	"81 years"	"81"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	295	265130	111.3
+	"Illinois"	"17"	"81 years"	"81"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	437	265130	164.8
+	"Illinois"	"17"	"81 years"	"81"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	128	265130	48.3
+	"Illinois"	"17"	"81 years"	"81"	"#COVID-19 (U07.1)"	"GR113-137"	947	265130	357.2
+	"Illinois"	"17"	"82 years"	"82"	"#Septicemia (A40-A41)"	"GR113-010"	254	242342	104.8
+	"Illinois"	"17"	"82 years"	"82"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2996	242342	1236.3
+	"Illinois"	"17"	"82 years"	"82"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	366	242342	151.0
+	"Illinois"	"17"	"82 years"	"82"	"#Alzheimer disease (G30)"	"GR113-052"	678	242342	279.8
+	"Illinois"	"17"	"82 years"	"82"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3195	242342	1318.4
+	"Illinois"	"17"	"82 years"	"82"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	980	242342	404.4
+	"Illinois"	"17"	"82 years"	"82"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	277	242342	114.3
+	"Illinois"	"17"	"82 years"	"82"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	777	242342	320.6
+	"Illinois"	"17"	"82 years"	"82"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	263	242342	108.5
+	"Illinois"	"17"	"82 years"	"82"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	397	242342	163.8
+	"Illinois"	"17"	"82 years"	"82"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	135	242342	55.7
+	"Illinois"	"17"	"82 years"	"82"	"#COVID-19 (U07.1)"	"GR113-137"	993	242342	409.8
+	"Illinois"	"17"	"83 years"	"83"	"#Septicemia (A40-A41)"	"GR113-010"	252	223622	112.7
+	"Illinois"	"17"	"83 years"	"83"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2857	223622	1277.6
+	"Illinois"	"17"	"83 years"	"83"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	366	223622	163.7
+	"Illinois"	"17"	"83 years"	"83"	"#Alzheimer disease (G30)"	"GR113-052"	751	223622	335.8
+	"Illinois"	"17"	"83 years"	"83"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3244	223622	1450.7
+	"Illinois"	"17"	"83 years"	"83"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1045	223622	467.3
+	"Illinois"	"17"	"83 years"	"83"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	265	223622	118.5
+	"Illinois"	"17"	"83 years"	"83"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	751	223622	335.8
+	"Illinois"	"17"	"83 years"	"83"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	273	223622	122.1
+	"Illinois"	"17"	"83 years"	"83"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	415	223622	185.6
+	"Illinois"	"17"	"83 years"	"83"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	142	223622	63.5
+	"Illinois"	"17"	"83 years"	"83"	"#COVID-19 (U07.1)"	"GR113-137"	1016	223622	454.3
+	"Illinois"	"17"	"84 years"	"84"	"#Septicemia (A40-A41)"	"GR113-010"	243	205920	118.0
+	"Illinois"	"17"	"84 years"	"84"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2759	205920	1339.8
+	"Illinois"	"17"	"84 years"	"84"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	366	205920	177.7
+	"Illinois"	"17"	"84 years"	"84"	"#Alzheimer disease (G30)"	"GR113-052"	797	205920	387.0
+	"Illinois"	"17"	"84 years"	"84"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3296	205920	1600.6
+	"Illinois"	"17"	"84 years"	"84"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1064	205920	516.7
+	"Illinois"	"17"	"84 years"	"84"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	268	205920	130.1
+	"Illinois"	"17"	"84 years"	"84"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	779	205920	378.3
+	"Illinois"	"17"	"84 years"	"84"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	248	205920	120.4
+	"Illinois"	"17"	"84 years"	"84"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	406	205920	197.2
+	"Illinois"	"17"	"84 years"	"84"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	143	205920	69.4
+	"Illinois"	"17"	"84 years"	"84"	"#COVID-19 (U07.1)"	"GR113-137"	1014	205920	492.4
+	"Illinois"	"17"	"85 years"	"85"	"#Septicemia (A40-A41)"	"GR113-010"	257	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2623	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	341	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"#Alzheimer disease (G30)"	"GR113-052"	828	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3361	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1099	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	261	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	709	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	232	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	418	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	153	Not Applicable	Not Applicable
+	"Illinois"	"17"	"85 years"	"85"	"#COVID-19 (U07.1)"	"GR113-137"	1023	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#Septicemia (A40-A41)"	"GR113-010"	233	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2349	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	315	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#Alzheimer disease (G30)"	"GR113-052"	900	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3530	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1139	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	319	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	723	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	247	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	379	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	146	Not Applicable	Not Applicable
+	"Illinois"	"17"	"86 years"	"86"	"#COVID-19 (U07.1)"	"GR113-137"	992	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#Septicemia (A40-A41)"	"GR113-010"	208	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2276	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	318	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#Alzheimer disease (G30)"	"GR113-052"	867	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3576	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1166	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	259	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	674	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	249	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	429	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	152	Not Applicable	Not Applicable
+	"Illinois"	"17"	"87 years"	"87"	"#COVID-19 (U07.1)"	"GR113-137"	984	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#Septicemia (A40-A41)"	"GR113-010"	183	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1981	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	249	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#Alzheimer disease (G30)"	"GR113-052"	991	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3540	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1176	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	274	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	624	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	227	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	427	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	161	Not Applicable	Not Applicable
+	"Illinois"	"17"	"88 years"	"88"	"#COVID-19 (U07.1)"	"GR113-137"	1001	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#Septicemia (A40-A41)"	"GR113-010"	182	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1865	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	249	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#Alzheimer disease (G30)"	"GR113-052"	983	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3661	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1205	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	284	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	606	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	196	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	381	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	172	Not Applicable	Not Applicable
+	"Illinois"	"17"	"89 years"	"89"	"#COVID-19 (U07.1)"	"GR113-137"	925	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#Septicemia (A40-A41)"	"GR113-010"	186	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1677	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	244	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#Alzheimer disease (G30)"	"GR113-052"	994	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3624	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1212	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	260	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	564	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	170	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	379	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	173	Not Applicable	Not Applicable
+	"Illinois"	"17"	"90 years"	"90"	"#COVID-19 (U07.1)"	"GR113-137"	944	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#Septicemia (A40-A41)"	"GR113-010"	156	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1528	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	208	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#Alzheimer disease (G30)"	"GR113-052"	976	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3616	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1167	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	282	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	487	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	185	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	337	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	176	Not Applicable	Not Applicable
+	"Illinois"	"17"	"91 years"	"91"	"#COVID-19 (U07.1)"	"GR113-137"	866	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#Septicemia (A40-A41)"	"GR113-010"	124	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1316	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	193	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#Alzheimer disease (G30)"	"GR113-052"	968	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3390	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1134	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	248	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	438	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	158	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	309	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	151	Not Applicable	Not Applicable
+	"Illinois"	"17"	"92 years"	"92"	"#COVID-19 (U07.1)"	"GR113-137"	760	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#Septicemia (A40-A41)"	"GR113-010"	142	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1056	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	171	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#Alzheimer disease (G30)"	"GR113-052"	940	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3193	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1044	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	239	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	380	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	134	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	266	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	167	Not Applicable	Not Applicable
+	"Illinois"	"17"	"93 years"	"93"	"#COVID-19 (U07.1)"	"GR113-137"	730	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#Septicemia (A40-A41)"	"GR113-010"	126	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	858	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	140	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#Alzheimer disease (G30)"	"GR113-052"	815	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2884	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	936	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	203	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	332	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	104	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	241	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	153	Not Applicable	Not Applicable
+	"Illinois"	"17"	"94 years"	"94"	"#COVID-19 (U07.1)"	"GR113-137"	613	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#Septicemia (A40-A41)"	"GR113-010"	86	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	698	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	123	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#Alzheimer disease (G30)"	"GR113-052"	751	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2670	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	818	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	175	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	271	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	87	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	201	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	140	Not Applicable	Not Applicable
+	"Illinois"	"17"	"95 years"	"95"	"#COVID-19 (U07.1)"	"GR113-137"	534	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#Septicemia (A40-A41)"	"GR113-010"	84	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	509	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	103	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#Alzheimer disease (G30)"	"GR113-052"	623	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2189	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	724	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	159	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	207	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	88	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	177	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	142	Not Applicable	Not Applicable
+	"Illinois"	"17"	"96 years"	"96"	"#COVID-19 (U07.1)"	"GR113-137"	421	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#Septicemia (A40-A41)"	"GR113-010"	61	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	413	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	92	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#Alzheimer disease (G30)"	"GR113-052"	489	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1734	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	602	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	115	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	166	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	47	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	139	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	122	Not Applicable	Not Applicable
+	"Illinois"	"17"	"97 years"	"97"	"#COVID-19 (U07.1)"	"GR113-137"	359	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#Septicemia (A40-A41)"	"GR113-010"	46	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	259	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	51	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#Alzheimer disease (G30)"	"GR113-052"	450	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1454	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	437	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	98	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	120	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	44	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	90	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	105	Not Applicable	Not Applicable
+	"Illinois"	"17"	"98 years"	"98"	"#COVID-19 (U07.1)"	"GR113-137"	281	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#Septicemia (A40-A41)"	"GR113-010"	38	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	166	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	31	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#Alzheimer disease (G30)"	"GR113-052"	303	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	998	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	377	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	76	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	91	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	35	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	59	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	82	Not Applicable	Not Applicable
+	"Illinois"	"17"	"99 years"	"99"	"#COVID-19 (U07.1)"	"GR113-137"	225	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#Septicemia (A40-A41)"	"GR113-010"	65	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	303	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	64	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#Alzheimer disease (G30)"	"GR113-052"	553	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2185	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	682	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	171	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	172	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	64	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	103	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	235	Not Applicable	Not Applicable
+	"Illinois"	"17"	"100+ years"	"100"	"#COVID-19 (U07.1)"	"GR113-137"	370	Not Applicable	Not Applicable
+	"Illinois"	"17"	"Not Stated"	"NS"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	14	Not Applicable	Not Applicable
+	"Illinois"	"17"	"Not Stated"	"NS"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	Not Applicable	Not Applicable
+"---"
+"Dataset: Provisional Mortality Statistics, 2018 through Last Week"
+"Query Parameters:"
+"Residence States: Idaho (16); Illinois (17)"
+"UCD - ICD-10 113 Cause List: #Septicemia (A40-A41); #Malignant neoplasms (C00-C97); #Diabetes mellitus (E10-E14); #Alzheimer"
+"disease (G30); #Diseases of heart (I00-I09,I11,I13,I20-I51); #Cerebrovascular diseases (I60-I69); #Influenza and pneumonia"
+"(J09-J18); #Chronic lower respiratory diseases (J40-J47); Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98);"
+"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27); Symptoms, signs and abnormal clinical and laboratory"
+"findings, not elsewhere classified (R00-R99); #COVID-19 (U07.1)"
+"Year/Month: 2020; 2021; 2022; 2023 (provisional); 2024 (provisional and partial)"
+"Group By: Residence State; Single-Year Ages; UCD - ICD-10 113 Cause List"
+"Show Totals: Disabled"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/mcd-provisional.html for more information."
+"---"
+"Query Date: Nov 15, 2024 2:08:10 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Provisional Mortality on CDC WONDER Online Database. Data are from the final Multiple Cause of Death Files, 2018-2022,"
+"and from provisional data for years 2023-2024, as compiled from data provided by the 57 vital statistics jurisdictions through"
+"the Vital Statistics Cooperative Program. Accessed at http://wonder.cdc.gov/mcd-icd10-provisional.html on Nov 15, 2024 2:08:10"
+"AM"
+"---"
+Messages:
+"1. Totals are not available for these results due to suppression constraints. More Information:"
+"http://wonder.cdc.gov/wonder/help/faq.html#Privacy."
+"2. Totals and Percent of Total are disabled when data are grouped by 113 or 130 Cause Lists. Check Caveats below for more"
+"information."
+"3. Rows with zero Deaths are hidden. Use Quick Options above to show zero rows."
+"4. Rows with suppressed Deaths are hidden. Use Quick Options above to show suppressed rows."
+"---"
+Caveats:
+"1. Totals and Percent of Total are disabled when data are grouped by a 113 or 130 Cause List because both aggregate and detailed"
+"values are displayed in the table. Also be aware that charts and maps containing both aggregate and detail data could be"
+"misleading."
+"2. Population and rates are labeled 'Not Applicable' when they include a subset of ages 85-100+ because populations are not"
+"available for those ages. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Ages 85-100."
+"3. Data are Suppressed when the data meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Assurance of Confidentiality."
+"4. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Unreliable."
+"5. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Not Stated."
+"6. The population figures for years 2022 and later are single-race estimates of the July 1 resident population, from the Vintage"
+"2022 postcensal series released by the Census Bureau on June 22, 2023. The 2022 series is based on the Modified Blended Base"
+"produced by the US Census Bureau in lieu of the April 1, 2020 decennial population count. The Modified Blended Base consists of"
+"the blend of Vintage 2020 postcensal population estimates for April 1, 2020, 2020 Demographic Analysis Estimates, and 2020"
+"Census data from the internal Census Edited File (CEF). The population figures for years 2021 are single-race estimates of the"
+"July 1 resident population, based on the Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial"
+"population count, from the Vintage 2021 postcensal series released by the Census Bureau on June 30, 2022. The population figures"
+"for year 2020 are single-race estimates of the July 1 resident population, from the Vintage 2020 postcensal series based on"
+"April 2010 Census, released by the Census Bureau on July 27, 2021. The population figures for year 2019 are single-race"
+"estimates of the July 1 resident population, from the Vintage 2019 postcensal series based on April 2010 Census, released by the"
+"Census Bureau on June 25, 2020. The population figures for year 2018 are single-race estimates of the July 1 resident"
+"population, from the Vintage 2018 postcensal series based on April 2010 Census, released by the Census Bureau on June 20, 2019."
+"More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Population Data."
+"7. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Age"
+"Group."
+"8. Beginning with the 2018 data, changes have been implemented that affect the counts for ICD-10 cause of death codes O00-O99"
+"compared to previous practice. In addition, data for the cause of death codes O00-O99 for 2003 through 2017 reflect differences"
+"in information available to individual states and probable errors. Deaths with the underlying cause classified with O00-O99 are"
+"subject to further processing before these deaths records are considered final. Provisional deaths have not undergone full"
+"processing and review and therefore should not be considered final for statistical purposes. Caution should be used in"
+"interpreting these data. More information can be found at: https://www.cdc.gov/nchs/maternal-mortality/."
+"9. Deaths related to external causes of injury or sudden death: In the provisional mortality data, causes of death classified as"
+"external causes of injury (ICD-10 codes V01-Y89), sudden deaths (ICD-10 codes R95 and R96), or drug poisoning (ICD-10 codes"
+"T36-T50), have the cause of death labeled as 'Data not shown due to 6 month lag to account for delays in death certificate"
+"completion for certain causes of death.' For these deaths occurring 24 weeks prior to the final date in the provisional data,"
+"the number of deaths and related statistics are not available by specific cause of death for ICD-10 codes V01-Y89, R95, R96, or"
+"T36-T50. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#999."
+"10. Deaths occurring through November 02, 2024 as of November 10, 2024."

@@ -1,0 +1,648 @@
+"Notes"	"Residence State"	"Residence State Code"	"Single-Year Ages"	"Single-Year Ages Code"	"UCD - ICD-10 113 Cause List"	"UCD - ICD-10 113 Cause List Code"	Deaths	Population	Crude Rate
+	"Hawaii"	"15"	"< 1 year"	"0"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	56	79466	70.5
+	"Hawaii"	"15"	"29 years"	"29"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	11	96876	Unreliable
+	"Hawaii"	"15"	"31 years"	"31"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	12	100379	Unreliable
+	"Hawaii"	"15"	"33 years"	"33"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	13	97850	Unreliable
+	"Hawaii"	"15"	"34 years"	"34"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	13	97178	Unreliable
+	"Hawaii"	"15"	"34 years"	"34"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	12	97178	Unreliable
+	"Hawaii"	"15"	"35 years"	"35"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	16	98393	Unreliable
+	"Hawaii"	"15"	"36 years"	"36"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	15	97797	Unreliable
+	"Hawaii"	"15"	"36 years"	"36"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	12	97797	Unreliable
+	"Hawaii"	"15"	"37 years"	"37"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	17	97740	Unreliable
+	"Hawaii"	"15"	"37 years"	"37"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	22	97740	22.5
+	"Hawaii"	"15"	"38 years"	"38"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	20	97547	20.5
+	"Hawaii"	"15"	"38 years"	"38"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	22	97547	22.6
+	"Hawaii"	"15"	"39 years"	"39"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	21	97821	21.5
+	"Hawaii"	"15"	"39 years"	"39"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	12	97821	Unreliable
+	"Hawaii"	"15"	"40 years"	"40"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	23	97848	23.5
+	"Hawaii"	"15"	"40 years"	"40"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	23	97848	23.5
+	"Hawaii"	"15"	"40 years"	"40"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	12	97848	Unreliable
+	"Hawaii"	"15"	"41 years"	"41"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	34	93913	36.2
+	"Hawaii"	"15"	"41 years"	"41"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	25	93913	26.6
+	"Hawaii"	"15"	"42 years"	"42"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	18	92378	Unreliable
+	"Hawaii"	"15"	"42 years"	"42"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	34	92378	36.8
+	"Hawaii"	"15"	"43 years"	"43"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	32	88111	36.3
+	"Hawaii"	"15"	"43 years"	"43"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	32	88111	36.3
+	"Hawaii"	"15"	"44 years"	"44"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	39	85405	45.7
+	"Hawaii"	"15"	"44 years"	"44"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	41	85405	48.0
+	"Hawaii"	"15"	"44 years"	"44"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	10	85405	Unreliable
+	"Hawaii"	"15"	"44 years"	"44"	"#COVID-19 (U07.1)"	"GR113-137"	10	85405	Unreliable
+	"Hawaii"	"15"	"45 years"	"45"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	39	84230	46.3
+	"Hawaii"	"15"	"45 years"	"45"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	42	84230	49.9
+	"Hawaii"	"15"	"45 years"	"45"	"#COVID-19 (U07.1)"	"GR113-137"	14	84230	Unreliable
+	"Hawaii"	"15"	"46 years"	"46"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	51	82196	62.0
+	"Hawaii"	"15"	"46 years"	"46"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	16	82196	Unreliable
+	"Hawaii"	"15"	"46 years"	"46"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	37	82196	45.0
+	"Hawaii"	"15"	"46 years"	"46"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	12	82196	Unreliable
+	"Hawaii"	"15"	"47 years"	"47"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	54	81721	66.1
+	"Hawaii"	"15"	"47 years"	"47"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	51	81721	62.4
+	"Hawaii"	"15"	"47 years"	"47"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	11	81721	Unreliable
+	"Hawaii"	"15"	"48 years"	"48"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	46	81314	56.6
+	"Hawaii"	"15"	"48 years"	"48"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	58	81314	71.3
+	"Hawaii"	"15"	"48 years"	"48"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	14	81314	Unreliable
+	"Hawaii"	"15"	"48 years"	"48"	"#COVID-19 (U07.1)"	"GR113-137"	15	81314	Unreliable
+	"Hawaii"	"15"	"49 years"	"49"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	46	82952	55.5
+	"Hawaii"	"15"	"49 years"	"49"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	55	82952	66.3
+	"Hawaii"	"15"	"49 years"	"49"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	13	82952	Unreliable
+	"Hawaii"	"15"	"50 years"	"50"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	84	86315	97.3
+	"Hawaii"	"15"	"50 years"	"50"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	16	86315	Unreliable
+	"Hawaii"	"15"	"50 years"	"50"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	62	86315	71.8
+	"Hawaii"	"15"	"50 years"	"50"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	15	86315	Unreliable
+	"Hawaii"	"15"	"50 years"	"50"	"#COVID-19 (U07.1)"	"GR113-137"	11	86315	Unreliable
+	"Hawaii"	"15"	"51 years"	"51"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	76	88018	86.3
+	"Hawaii"	"15"	"51 years"	"51"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	10	88018	Unreliable
+	"Hawaii"	"15"	"51 years"	"51"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	74	88018	84.1
+	"Hawaii"	"15"	"51 years"	"51"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	17	88018	Unreliable
+	"Hawaii"	"15"	"51 years"	"51"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	14	88018	Unreliable
+	"Hawaii"	"15"	"51 years"	"51"	"#COVID-19 (U07.1)"	"GR113-137"	17	88018	Unreliable
+	"Hawaii"	"15"	"52 years"	"52"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	77	87382	88.1
+	"Hawaii"	"15"	"52 years"	"52"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	12	87382	Unreliable
+	"Hawaii"	"15"	"52 years"	"52"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	66	87382	75.5
+	"Hawaii"	"15"	"52 years"	"52"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	17	87382	Unreliable
+	"Hawaii"	"15"	"52 years"	"52"	"#COVID-19 (U07.1)"	"GR113-137"	19	87382	Unreliable
+	"Hawaii"	"15"	"53 years"	"53"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	88	84209	104.5
+	"Hawaii"	"15"	"53 years"	"53"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	19	84209	Unreliable
+	"Hawaii"	"15"	"53 years"	"53"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	83	84209	98.6
+	"Hawaii"	"15"	"53 years"	"53"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	21	84209	24.9
+	"Hawaii"	"15"	"53 years"	"53"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	84209	Unreliable
+	"Hawaii"	"15"	"53 years"	"53"	"#COVID-19 (U07.1)"	"GR113-137"	15	84209	Unreliable
+	"Hawaii"	"15"	"54 years"	"54"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	99	83174	119.0
+	"Hawaii"	"15"	"54 years"	"54"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	28	83174	33.7
+	"Hawaii"	"15"	"54 years"	"54"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	79	83174	95.0
+	"Hawaii"	"15"	"54 years"	"54"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	26	83174	31.3
+	"Hawaii"	"15"	"54 years"	"54"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	10	83174	Unreliable
+	"Hawaii"	"15"	"54 years"	"54"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	19	83174	Unreliable
+	"Hawaii"	"15"	"54 years"	"54"	"#COVID-19 (U07.1)"	"GR113-137"	25	83174	30.1
+	"Hawaii"	"15"	"55 years"	"55"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	115	84201	136.6
+	"Hawaii"	"15"	"55 years"	"55"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	18	84201	Unreliable
+	"Hawaii"	"15"	"55 years"	"55"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	92	84201	109.3
+	"Hawaii"	"15"	"55 years"	"55"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	21	84201	24.9
+	"Hawaii"	"15"	"55 years"	"55"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	10	84201	Unreliable
+	"Hawaii"	"15"	"55 years"	"55"	"#COVID-19 (U07.1)"	"GR113-137"	20	84201	23.8
+	"Hawaii"	"15"	"56 years"	"56"	"#Septicemia (A40-A41)"	"GR113-010"	15	85989	Unreliable
+	"Hawaii"	"15"	"56 years"	"56"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	125	85989	145.4
+	"Hawaii"	"15"	"56 years"	"56"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	29	85989	33.7
+	"Hawaii"	"15"	"56 years"	"56"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	118	85989	137.2
+	"Hawaii"	"15"	"56 years"	"56"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	19	85989	Unreliable
+	"Hawaii"	"15"	"56 years"	"56"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	85989	Unreliable
+	"Hawaii"	"15"	"56 years"	"56"	"#COVID-19 (U07.1)"	"GR113-137"	27	85989	31.4
+	"Hawaii"	"15"	"57 years"	"57"	"#Septicemia (A40-A41)"	"GR113-010"	10	88305	Unreliable
+	"Hawaii"	"15"	"57 years"	"57"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	132	88305	149.5
+	"Hawaii"	"15"	"57 years"	"57"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	23	88305	26.0
+	"Hawaii"	"15"	"57 years"	"57"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	127	88305	143.8
+	"Hawaii"	"15"	"57 years"	"57"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	29	88305	32.8
+	"Hawaii"	"15"	"57 years"	"57"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	13	88305	Unreliable
+	"Hawaii"	"15"	"57 years"	"57"	"#COVID-19 (U07.1)"	"GR113-137"	19	88305	Unreliable
+	"Hawaii"	"15"	"58 years"	"58"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	154	89539	172.0
+	"Hawaii"	"15"	"58 years"	"58"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	23	89539	25.7
+	"Hawaii"	"15"	"58 years"	"58"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	136	89539	151.9
+	"Hawaii"	"15"	"58 years"	"58"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	32	89539	35.7
+	"Hawaii"	"15"	"58 years"	"58"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	10	89539	Unreliable
+	"Hawaii"	"15"	"58 years"	"58"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	10	89539	Unreliable
+	"Hawaii"	"15"	"58 years"	"58"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	11	89539	Unreliable
+	"Hawaii"	"15"	"58 years"	"58"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	14	89539	Unreliable
+	"Hawaii"	"15"	"58 years"	"58"	"#COVID-19 (U07.1)"	"GR113-137"	26	89539	29.0
+	"Hawaii"	"15"	"59 years"	"59"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	165	90330	182.7
+	"Hawaii"	"15"	"59 years"	"59"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	23	90330	25.5
+	"Hawaii"	"15"	"59 years"	"59"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	138	90330	152.8
+	"Hawaii"	"15"	"59 years"	"59"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	32	90330	35.4
+	"Hawaii"	"15"	"59 years"	"59"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	13	90330	Unreliable
+	"Hawaii"	"15"	"59 years"	"59"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	15	90330	Unreliable
+	"Hawaii"	"15"	"59 years"	"59"	"#COVID-19 (U07.1)"	"GR113-137"	22	90330	24.4
+	"Hawaii"	"15"	"60 years"	"60"	"#Septicemia (A40-A41)"	"GR113-010"	11	91269	Unreliable
+	"Hawaii"	"15"	"60 years"	"60"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	193	91269	211.5
+	"Hawaii"	"15"	"60 years"	"60"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	21	91269	23.0
+	"Hawaii"	"15"	"60 years"	"60"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	165	91269	180.8
+	"Hawaii"	"15"	"60 years"	"60"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	30	91269	32.9
+	"Hawaii"	"15"	"60 years"	"60"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	13	91269	Unreliable
+	"Hawaii"	"15"	"60 years"	"60"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	12	91269	Unreliable
+	"Hawaii"	"15"	"60 years"	"60"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	11	91269	Unreliable
+	"Hawaii"	"15"	"60 years"	"60"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	16	91269	Unreliable
+	"Hawaii"	"15"	"60 years"	"60"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	14	91269	Unreliable
+	"Hawaii"	"15"	"60 years"	"60"	"#COVID-19 (U07.1)"	"GR113-137"	23	91269	25.2
+	"Hawaii"	"15"	"61 years"	"61"	"#Septicemia (A40-A41)"	"GR113-010"	13	90354	Unreliable
+	"Hawaii"	"15"	"61 years"	"61"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	223	90354	246.8
+	"Hawaii"	"15"	"61 years"	"61"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	26	90354	28.8
+	"Hawaii"	"15"	"61 years"	"61"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	187	90354	207.0
+	"Hawaii"	"15"	"61 years"	"61"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	29	90354	32.1
+	"Hawaii"	"15"	"61 years"	"61"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	11	90354	Unreliable
+	"Hawaii"	"15"	"61 years"	"61"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	12	90354	Unreliable
+	"Hawaii"	"15"	"61 years"	"61"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	10	90354	Unreliable
+	"Hawaii"	"15"	"61 years"	"61"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	15	90354	Unreliable
+	"Hawaii"	"15"	"61 years"	"61"	"#COVID-19 (U07.1)"	"GR113-137"	28	90354	31.0
+	"Hawaii"	"15"	"62 years"	"62"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	221	90920	243.1
+	"Hawaii"	"15"	"62 years"	"62"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	23	90920	25.3
+	"Hawaii"	"15"	"62 years"	"62"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	192	90920	211.2
+	"Hawaii"	"15"	"62 years"	"62"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	37	90920	40.7
+	"Hawaii"	"15"	"62 years"	"62"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	11	90920	Unreliable
+	"Hawaii"	"15"	"62 years"	"62"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	20	90920	22.0
+	"Hawaii"	"15"	"62 years"	"62"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	16	90920	Unreliable
+	"Hawaii"	"15"	"62 years"	"62"	"#COVID-19 (U07.1)"	"GR113-137"	41	90920	45.1
+	"Hawaii"	"15"	"63 years"	"63"	"#Septicemia (A40-A41)"	"GR113-010"	15	89011	Unreliable
+	"Hawaii"	"15"	"63 years"	"63"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	245	89011	275.2
+	"Hawaii"	"15"	"63 years"	"63"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	35	89011	39.3
+	"Hawaii"	"15"	"63 years"	"63"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	196	89011	220.2
+	"Hawaii"	"15"	"63 years"	"63"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	49	89011	55.0
+	"Hawaii"	"15"	"63 years"	"63"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	11	89011	Unreliable
+	"Hawaii"	"15"	"63 years"	"63"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	29	89011	32.6
+	"Hawaii"	"15"	"63 years"	"63"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	13	89011	Unreliable
+	"Hawaii"	"15"	"63 years"	"63"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	16	89011	Unreliable
+	"Hawaii"	"15"	"63 years"	"63"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	24	89011	27.0
+	"Hawaii"	"15"	"63 years"	"63"	"#COVID-19 (U07.1)"	"GR113-137"	29	89011	32.6
+	"Hawaii"	"15"	"64 years"	"64"	"#Septicemia (A40-A41)"	"GR113-010"	15	89025	Unreliable
+	"Hawaii"	"15"	"64 years"	"64"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	288	89025	323.5
+	"Hawaii"	"15"	"64 years"	"64"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	33	89025	37.1
+	"Hawaii"	"15"	"64 years"	"64"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	209	89025	234.8
+	"Hawaii"	"15"	"64 years"	"64"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	39	89025	43.8
+	"Hawaii"	"15"	"64 years"	"64"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	25	89025	28.1
+	"Hawaii"	"15"	"64 years"	"64"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	20	89025	22.5
+	"Hawaii"	"15"	"64 years"	"64"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	18	89025	Unreliable
+	"Hawaii"	"15"	"64 years"	"64"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	14	89025	Unreliable
+	"Hawaii"	"15"	"64 years"	"64"	"#COVID-19 (U07.1)"	"GR113-137"	35	89025	39.3
+	"Hawaii"	"15"	"65 years"	"65"	"#Septicemia (A40-A41)"	"GR113-010"	14	88130	Unreliable
+	"Hawaii"	"15"	"65 years"	"65"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	314	88130	356.3
+	"Hawaii"	"15"	"65 years"	"65"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	29	88130	32.9
+	"Hawaii"	"15"	"65 years"	"65"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	251	88130	284.8
+	"Hawaii"	"15"	"65 years"	"65"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	42	88130	47.7
+	"Hawaii"	"15"	"65 years"	"65"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	13	88130	Unreliable
+	"Hawaii"	"15"	"65 years"	"65"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	34	88130	38.6
+	"Hawaii"	"15"	"65 years"	"65"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	17	88130	Unreliable
+	"Hawaii"	"15"	"65 years"	"65"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	15	88130	Unreliable
+	"Hawaii"	"15"	"65 years"	"65"	"#COVID-19 (U07.1)"	"GR113-137"	38	88130	43.1
+	"Hawaii"	"15"	"66 years"	"66"	"#Septicemia (A40-A41)"	"GR113-010"	10	86531	Unreliable
+	"Hawaii"	"15"	"66 years"	"66"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	295	86531	340.9
+	"Hawaii"	"15"	"66 years"	"66"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	38	86531	43.9
+	"Hawaii"	"15"	"66 years"	"66"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	275	86531	317.8
+	"Hawaii"	"15"	"66 years"	"66"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	45	86531	52.0
+	"Hawaii"	"15"	"66 years"	"66"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	30	86531	34.7
+	"Hawaii"	"15"	"66 years"	"66"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	12	86531	Unreliable
+	"Hawaii"	"15"	"66 years"	"66"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	29	86531	33.5
+	"Hawaii"	"15"	"66 years"	"66"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	20	86531	23.1
+	"Hawaii"	"15"	"66 years"	"66"	"#COVID-19 (U07.1)"	"GR113-137"	42	86531	48.5
+	"Hawaii"	"15"	"67 years"	"67"	"#Septicemia (A40-A41)"	"GR113-010"	13	86030	Unreliable
+	"Hawaii"	"15"	"67 years"	"67"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	338	86030	392.9
+	"Hawaii"	"15"	"67 years"	"67"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	41	86030	47.7
+	"Hawaii"	"15"	"67 years"	"67"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	233	86030	270.8
+	"Hawaii"	"15"	"67 years"	"67"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	53	86030	61.6
+	"Hawaii"	"15"	"67 years"	"67"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	11	86030	Unreliable
+	"Hawaii"	"15"	"67 years"	"67"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	34	86030	39.5
+	"Hawaii"	"15"	"67 years"	"67"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	14	86030	Unreliable
+	"Hawaii"	"15"	"67 years"	"67"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	21	86030	24.4
+	"Hawaii"	"15"	"67 years"	"67"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	18	86030	Unreliable
+	"Hawaii"	"15"	"67 years"	"67"	"#COVID-19 (U07.1)"	"GR113-137"	35	86030	40.7
+	"Hawaii"	"15"	"68 years"	"68"	"#Septicemia (A40-A41)"	"GR113-010"	16	84177	Unreliable
+	"Hawaii"	"15"	"68 years"	"68"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	325	84177	386.1
+	"Hawaii"	"15"	"68 years"	"68"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	40	84177	47.5
+	"Hawaii"	"15"	"68 years"	"68"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	273	84177	324.3
+	"Hawaii"	"15"	"68 years"	"68"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	42	84177	49.9
+	"Hawaii"	"15"	"68 years"	"68"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	13	84177	Unreliable
+	"Hawaii"	"15"	"68 years"	"68"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	38	84177	45.1
+	"Hawaii"	"15"	"68 years"	"68"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	24	84177	28.5
+	"Hawaii"	"15"	"68 years"	"68"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	28	84177	33.3
+	"Hawaii"	"15"	"68 years"	"68"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	20	84177	23.8
+	"Hawaii"	"15"	"68 years"	"68"	"#COVID-19 (U07.1)"	"GR113-137"	26	84177	30.9
+	"Hawaii"	"15"	"69 years"	"69"	"#Septicemia (A40-A41)"	"GR113-010"	15	82582	Unreliable
+	"Hawaii"	"15"	"69 years"	"69"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	375	82582	454.1
+	"Hawaii"	"15"	"69 years"	"69"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	36	82582	43.6
+	"Hawaii"	"15"	"69 years"	"69"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	248	82582	300.3
+	"Hawaii"	"15"	"69 years"	"69"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	54	82582	65.4
+	"Hawaii"	"15"	"69 years"	"69"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	22	82582	26.6
+	"Hawaii"	"15"	"69 years"	"69"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	39	82582	47.2
+	"Hawaii"	"15"	"69 years"	"69"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	29	82582	35.1
+	"Hawaii"	"15"	"69 years"	"69"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	20	82582	24.2
+	"Hawaii"	"15"	"69 years"	"69"	"#COVID-19 (U07.1)"	"GR113-137"	44	82582	53.3
+	"Hawaii"	"15"	"70 years"	"70"	"#Septicemia (A40-A41)"	"GR113-010"	15	80643	Unreliable
+	"Hawaii"	"15"	"70 years"	"70"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	368	80643	456.3
+	"Hawaii"	"15"	"70 years"	"70"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	43	80643	53.3
+	"Hawaii"	"15"	"70 years"	"70"	"#Alzheimer disease (G30)"	"GR113-052"	16	80643	Unreliable
+	"Hawaii"	"15"	"70 years"	"70"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	290	80643	359.6
+	"Hawaii"	"15"	"70 years"	"70"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	59	80643	73.2
+	"Hawaii"	"15"	"70 years"	"70"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	27	80643	33.5
+	"Hawaii"	"15"	"70 years"	"70"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	47	80643	58.3
+	"Hawaii"	"15"	"70 years"	"70"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	11	80643	Unreliable
+	"Hawaii"	"15"	"70 years"	"70"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	15	80643	Unreliable
+	"Hawaii"	"15"	"70 years"	"70"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	18	80643	Unreliable
+	"Hawaii"	"15"	"70 years"	"70"	"#COVID-19 (U07.1)"	"GR113-137"	46	80643	57.0
+	"Hawaii"	"15"	"71 years"	"71"	"#Septicemia (A40-A41)"	"GR113-010"	15	76970	Unreliable
+	"Hawaii"	"15"	"71 years"	"71"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	406	76970	527.5
+	"Hawaii"	"15"	"71 years"	"71"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	46	76970	59.8
+	"Hawaii"	"15"	"71 years"	"71"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	272	76970	353.4
+	"Hawaii"	"15"	"71 years"	"71"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	59	76970	76.7
+	"Hawaii"	"15"	"71 years"	"71"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	27	76970	35.1
+	"Hawaii"	"15"	"71 years"	"71"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	42	76970	54.6
+	"Hawaii"	"15"	"71 years"	"71"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	31	76970	40.3
+	"Hawaii"	"15"	"71 years"	"71"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	26	76970	33.8
+	"Hawaii"	"15"	"71 years"	"71"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	16	76970	Unreliable
+	"Hawaii"	"15"	"71 years"	"71"	"#COVID-19 (U07.1)"	"GR113-137"	31	76970	40.3
+	"Hawaii"	"15"	"72 years"	"72"	"#Septicemia (A40-A41)"	"GR113-010"	14	76273	Unreliable
+	"Hawaii"	"15"	"72 years"	"72"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	399	76273	523.1
+	"Hawaii"	"15"	"72 years"	"72"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	54	76273	70.8
+	"Hawaii"	"15"	"72 years"	"72"	"#Alzheimer disease (G30)"	"GR113-052"	13	76273	Unreliable
+	"Hawaii"	"15"	"72 years"	"72"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	307	76273	402.5
+	"Hawaii"	"15"	"72 years"	"72"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	72	76273	94.4
+	"Hawaii"	"15"	"72 years"	"72"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	27	76273	35.4
+	"Hawaii"	"15"	"72 years"	"72"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	53	76273	69.5
+	"Hawaii"	"15"	"72 years"	"72"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	28	76273	36.7
+	"Hawaii"	"15"	"72 years"	"72"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	28	76273	36.7
+	"Hawaii"	"15"	"72 years"	"72"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	19	76273	Unreliable
+	"Hawaii"	"15"	"72 years"	"72"	"#COVID-19 (U07.1)"	"GR113-137"	42	76273	55.1
+	"Hawaii"	"15"	"73 years"	"73"	"#Septicemia (A40-A41)"	"GR113-010"	18	73519	Unreliable
+	"Hawaii"	"15"	"73 years"	"73"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	397	73519	540.0
+	"Hawaii"	"15"	"73 years"	"73"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	46	73519	62.6
+	"Hawaii"	"15"	"73 years"	"73"	"#Alzheimer disease (G30)"	"GR113-052"	18	73519	Unreliable
+	"Hawaii"	"15"	"73 years"	"73"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	308	73519	418.9
+	"Hawaii"	"15"	"73 years"	"73"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	74	73519	100.7
+	"Hawaii"	"15"	"73 years"	"73"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	21	73519	28.6
+	"Hawaii"	"15"	"73 years"	"73"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	54	73519	73.5
+	"Hawaii"	"15"	"73 years"	"73"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	21	73519	28.6
+	"Hawaii"	"15"	"73 years"	"73"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	31	73519	42.2
+	"Hawaii"	"15"	"73 years"	"73"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	18	73519	Unreliable
+	"Hawaii"	"15"	"73 years"	"73"	"#COVID-19 (U07.1)"	"GR113-137"	46	73519	62.6
+	"Hawaii"	"15"	"74 years"	"74"	"#Septicemia (A40-A41)"	"GR113-010"	20	69178	28.9
+	"Hawaii"	"15"	"74 years"	"74"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	404	69178	584.0
+	"Hawaii"	"15"	"74 years"	"74"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	64	69178	92.5
+	"Hawaii"	"15"	"74 years"	"74"	"#Alzheimer disease (G30)"	"GR113-052"	21	69178	30.4
+	"Hawaii"	"15"	"74 years"	"74"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	287	69178	414.9
+	"Hawaii"	"15"	"74 years"	"74"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	88	69178	127.2
+	"Hawaii"	"15"	"74 years"	"74"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	13	69178	Unreliable
+	"Hawaii"	"15"	"74 years"	"74"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	59	69178	85.3
+	"Hawaii"	"15"	"74 years"	"74"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	26	69178	37.6
+	"Hawaii"	"15"	"74 years"	"74"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	41	69178	59.3
+	"Hawaii"	"15"	"74 years"	"74"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	16	69178	Unreliable
+	"Hawaii"	"15"	"74 years"	"74"	"#COVID-19 (U07.1)"	"GR113-137"	36	69178	52.0
+	"Hawaii"	"15"	"75 years"	"75"	"#Septicemia (A40-A41)"	"GR113-010"	21	65672	32.0
+	"Hawaii"	"15"	"75 years"	"75"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	393	65672	598.4
+	"Hawaii"	"15"	"75 years"	"75"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	39	65672	59.4
+	"Hawaii"	"15"	"75 years"	"75"	"#Alzheimer disease (G30)"	"GR113-052"	24	65672	36.5
+	"Hawaii"	"15"	"75 years"	"75"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	297	65672	452.2
+	"Hawaii"	"15"	"75 years"	"75"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	94	65672	143.1
+	"Hawaii"	"15"	"75 years"	"75"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	22	65672	33.5
+	"Hawaii"	"15"	"75 years"	"75"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	65	65672	99.0
+	"Hawaii"	"15"	"75 years"	"75"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	27	65672	41.1
+	"Hawaii"	"15"	"75 years"	"75"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	25	65672	38.1
+	"Hawaii"	"15"	"75 years"	"75"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	14	65672	Unreliable
+	"Hawaii"	"15"	"75 years"	"75"	"#COVID-19 (U07.1)"	"GR113-137"	37	65672	56.3
+	"Hawaii"	"15"	"76 years"	"76"	"#Septicemia (A40-A41)"	"GR113-010"	24	55022	43.6
+	"Hawaii"	"15"	"76 years"	"76"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	398	55022	723.3
+	"Hawaii"	"15"	"76 years"	"76"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	46	55022	83.6
+	"Hawaii"	"15"	"76 years"	"76"	"#Alzheimer disease (G30)"	"GR113-052"	22	55022	40.0
+	"Hawaii"	"15"	"76 years"	"76"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	326	55022	592.5
+	"Hawaii"	"15"	"76 years"	"76"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	91	55022	165.4
+	"Hawaii"	"15"	"76 years"	"76"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	24	55022	43.6
+	"Hawaii"	"15"	"76 years"	"76"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	71	55022	129.0
+	"Hawaii"	"15"	"76 years"	"76"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	18	55022	Unreliable
+	"Hawaii"	"15"	"76 years"	"76"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	32	55022	58.2
+	"Hawaii"	"15"	"76 years"	"76"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	28	55022	50.9
+	"Hawaii"	"15"	"76 years"	"76"	"#COVID-19 (U07.1)"	"GR113-137"	37	55022	67.2
+	"Hawaii"	"15"	"77 years"	"77"	"#Septicemia (A40-A41)"	"GR113-010"	24	52075	46.1
+	"Hawaii"	"15"	"77 years"	"77"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	382	52075	733.6
+	"Hawaii"	"15"	"77 years"	"77"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	28	52075	53.8
+	"Hawaii"	"15"	"77 years"	"77"	"#Alzheimer disease (G30)"	"GR113-052"	26	52075	49.9
+	"Hawaii"	"15"	"77 years"	"77"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	309	52075	593.4
+	"Hawaii"	"15"	"77 years"	"77"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	90	52075	172.8
+	"Hawaii"	"15"	"77 years"	"77"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	26	52075	49.9
+	"Hawaii"	"15"	"77 years"	"77"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	56	52075	107.5
+	"Hawaii"	"15"	"77 years"	"77"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	22	52075	42.2
+	"Hawaii"	"15"	"77 years"	"77"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	37	52075	71.1
+	"Hawaii"	"15"	"77 years"	"77"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	20	52075	38.4
+	"Hawaii"	"15"	"77 years"	"77"	"#COVID-19 (U07.1)"	"GR113-137"	33	52075	63.4
+	"Hawaii"	"15"	"78 years"	"78"	"#Septicemia (A40-A41)"	"GR113-010"	15	48320	Unreliable
+	"Hawaii"	"15"	"78 years"	"78"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	385	48320	796.8
+	"Hawaii"	"15"	"78 years"	"78"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	48	48320	99.3
+	"Hawaii"	"15"	"78 years"	"78"	"#Alzheimer disease (G30)"	"GR113-052"	32	48320	66.2
+	"Hawaii"	"15"	"78 years"	"78"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	285	48320	589.8
+	"Hawaii"	"15"	"78 years"	"78"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	103	48320	213.2
+	"Hawaii"	"15"	"78 years"	"78"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	28	48320	57.9
+	"Hawaii"	"15"	"78 years"	"78"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	56	48320	115.9
+	"Hawaii"	"15"	"78 years"	"78"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	32	48320	66.2
+	"Hawaii"	"15"	"78 years"	"78"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	34	48320	70.4
+	"Hawaii"	"15"	"78 years"	"78"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	17	48320	Unreliable
+	"Hawaii"	"15"	"78 years"	"78"	"#COVID-19 (U07.1)"	"GR113-137"	40	48320	82.8
+	"Hawaii"	"15"	"79 years"	"79"	"#Septicemia (A40-A41)"	"GR113-010"	17	43536	Unreliable
+	"Hawaii"	"15"	"79 years"	"79"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	320	43536	735.0
+	"Hawaii"	"15"	"79 years"	"79"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	30	43536	68.9
+	"Hawaii"	"15"	"79 years"	"79"	"#Alzheimer disease (G30)"	"GR113-052"	42	43536	96.5
+	"Hawaii"	"15"	"79 years"	"79"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	347	43536	797.0
+	"Hawaii"	"15"	"79 years"	"79"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	112	43536	257.3
+	"Hawaii"	"15"	"79 years"	"79"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	19	43536	Unreliable
+	"Hawaii"	"15"	"79 years"	"79"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	63	43536	144.7
+	"Hawaii"	"15"	"79 years"	"79"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	26	43536	59.7
+	"Hawaii"	"15"	"79 years"	"79"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	47	43536	108.0
+	"Hawaii"	"15"	"79 years"	"79"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	16	43536	Unreliable
+	"Hawaii"	"15"	"79 years"	"79"	"#COVID-19 (U07.1)"	"GR113-137"	26	43536	59.7
+	"Hawaii"	"15"	"80 years"	"80"	"#Septicemia (A40-A41)"	"GR113-010"	12	38893	Unreliable
+	"Hawaii"	"15"	"80 years"	"80"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	343	38893	881.9
+	"Hawaii"	"15"	"80 years"	"80"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	40	38893	102.8
+	"Hawaii"	"15"	"80 years"	"80"	"#Alzheimer disease (G30)"	"GR113-052"	45	38893	115.7
+	"Hawaii"	"15"	"80 years"	"80"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	290	38893	745.6
+	"Hawaii"	"15"	"80 years"	"80"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	122	38893	313.7
+	"Hawaii"	"15"	"80 years"	"80"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	28	38893	72.0
+	"Hawaii"	"15"	"80 years"	"80"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	72	38893	185.1
+	"Hawaii"	"15"	"80 years"	"80"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	42	38893	108.0
+	"Hawaii"	"15"	"80 years"	"80"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	43	38893	110.6
+	"Hawaii"	"15"	"80 years"	"80"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	26	38893	66.9
+	"Hawaii"	"15"	"80 years"	"80"	"#COVID-19 (U07.1)"	"GR113-137"	42	38893	108.0
+	"Hawaii"	"15"	"81 years"	"81"	"#Septicemia (A40-A41)"	"GR113-010"	10	34830	Unreliable
+	"Hawaii"	"15"	"81 years"	"81"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	311	34830	892.9
+	"Hawaii"	"15"	"81 years"	"81"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	48	34830	137.8
+	"Hawaii"	"15"	"81 years"	"81"	"#Alzheimer disease (G30)"	"GR113-052"	50	34830	143.6
+	"Hawaii"	"15"	"81 years"	"81"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	322	34830	924.5
+	"Hawaii"	"15"	"81 years"	"81"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	111	34830	318.7
+	"Hawaii"	"15"	"81 years"	"81"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	34	34830	97.6
+	"Hawaii"	"15"	"81 years"	"81"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	47	34830	134.9
+	"Hawaii"	"15"	"81 years"	"81"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	26	34830	74.6
+	"Hawaii"	"15"	"81 years"	"81"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	36	34830	103.4
+	"Hawaii"	"15"	"81 years"	"81"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	11	34830	Unreliable
+	"Hawaii"	"15"	"81 years"	"81"	"#COVID-19 (U07.1)"	"GR113-137"	29	34830	83.3
+	"Hawaii"	"15"	"82 years"	"82"	"#Septicemia (A40-A41)"	"GR113-010"	11	31790	Unreliable
+	"Hawaii"	"15"	"82 years"	"82"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	278	31790	874.5
+	"Hawaii"	"15"	"82 years"	"82"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	38	31790	119.5
+	"Hawaii"	"15"	"82 years"	"82"	"#Alzheimer disease (G30)"	"GR113-052"	57	31790	179.3
+	"Hawaii"	"15"	"82 years"	"82"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	276	31790	868.2
+	"Hawaii"	"15"	"82 years"	"82"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	104	31790	327.1
+	"Hawaii"	"15"	"82 years"	"82"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	26	31790	81.8
+	"Hawaii"	"15"	"82 years"	"82"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	41	31790	129.0
+	"Hawaii"	"15"	"82 years"	"82"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	30	31790	94.4
+	"Hawaii"	"15"	"82 years"	"82"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	23	31790	72.3
+	"Hawaii"	"15"	"82 years"	"82"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	20	31790	62.9
+	"Hawaii"	"15"	"82 years"	"82"	"#COVID-19 (U07.1)"	"GR113-137"	32	31790	100.7
+	"Hawaii"	"15"	"83 years"	"83"	"#Septicemia (A40-A41)"	"GR113-010"	16	28781	Unreliable
+	"Hawaii"	"15"	"83 years"	"83"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	298	28781	1035.4
+	"Hawaii"	"15"	"83 years"	"83"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	35	28781	121.6
+	"Hawaii"	"15"	"83 years"	"83"	"#Alzheimer disease (G30)"	"GR113-052"	73	28781	253.6
+	"Hawaii"	"15"	"83 years"	"83"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	331	28781	1150.1
+	"Hawaii"	"15"	"83 years"	"83"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	114	28781	396.1
+	"Hawaii"	"15"	"83 years"	"83"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	35	28781	121.6
+	"Hawaii"	"15"	"83 years"	"83"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	69	28781	239.7
+	"Hawaii"	"15"	"83 years"	"83"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	34	28781	118.1
+	"Hawaii"	"15"	"83 years"	"83"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	37	28781	128.6
+	"Hawaii"	"15"	"83 years"	"83"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	17	28781	Unreliable
+	"Hawaii"	"15"	"83 years"	"83"	"#COVID-19 (U07.1)"	"GR113-137"	26	28781	90.3
+	"Hawaii"	"15"	"84 years"	"84"	"#Septicemia (A40-A41)"	"GR113-010"	17	26377	Unreliable
+	"Hawaii"	"15"	"84 years"	"84"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	318	26377	1205.6
+	"Hawaii"	"15"	"84 years"	"84"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	38	26377	144.1
+	"Hawaii"	"15"	"84 years"	"84"	"#Alzheimer disease (G30)"	"GR113-052"	63	26377	238.8
+	"Hawaii"	"15"	"84 years"	"84"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	305	26377	1156.3
+	"Hawaii"	"15"	"84 years"	"84"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	115	26377	436.0
+	"Hawaii"	"15"	"84 years"	"84"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	31	26377	117.5
+	"Hawaii"	"15"	"84 years"	"84"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	59	26377	223.7
+	"Hawaii"	"15"	"84 years"	"84"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	27	26377	102.4
+	"Hawaii"	"15"	"84 years"	"84"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	36	26377	136.5
+	"Hawaii"	"15"	"84 years"	"84"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	18	26377	Unreliable
+	"Hawaii"	"15"	"84 years"	"84"	"#COVID-19 (U07.1)"	"GR113-137"	35	26377	132.7
+	"Hawaii"	"15"	"85 years"	"85"	"#Septicemia (A40-A41)"	"GR113-010"	10	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	281	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	41	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"#Alzheimer disease (G30)"	"GR113-052"	75	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	331	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	126	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	39	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	46	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	29	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	32	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	21	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"85 years"	"85"	"#COVID-19 (U07.1)"	"GR113-137"	41	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	243	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	43	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"#Alzheimer disease (G30)"	"GR113-052"	88	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	329	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	110	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	32	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	50	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	25	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	31	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	24	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"86 years"	"86"	"#COVID-19 (U07.1)"	"GR113-137"	37	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#Septicemia (A40-A41)"	"GR113-010"	14	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	257	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	21	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#Alzheimer disease (G30)"	"GR113-052"	99	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	361	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	138	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	41	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	42	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	25	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	31	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	17	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"87 years"	"87"	"#COVID-19 (U07.1)"	"GR113-137"	38	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#Septicemia (A40-A41)"	"GR113-010"	14	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	233	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	38	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#Alzheimer disease (G30)"	"GR113-052"	115	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	357	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	135	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	42	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	61	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	27	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	49	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	22	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"88 years"	"88"	"#COVID-19 (U07.1)"	"GR113-137"	41	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#Septicemia (A40-A41)"	"GR113-010"	12	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	231	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	27	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#Alzheimer disease (G30)"	"GR113-052"	136	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	353	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	158	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	37	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	52	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	20	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	36	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	25	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"89 years"	"89"	"#COVID-19 (U07.1)"	"GR113-137"	35	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#Septicemia (A40-A41)"	"GR113-010"	19	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	193	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	37	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#Alzheimer disease (G30)"	"GR113-052"	131	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	323	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	166	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	48	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	48	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	27	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	41	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	28	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"90 years"	"90"	"#COVID-19 (U07.1)"	"GR113-137"	50	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	184	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	37	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"#Alzheimer disease (G30)"	"GR113-052"	174	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	405	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	137	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	50	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	41	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	27	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	44	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	35	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"91 years"	"91"	"#COVID-19 (U07.1)"	"GR113-137"	47	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#Septicemia (A40-A41)"	"GR113-010"	11	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	186	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	30	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#Alzheimer disease (G30)"	"GR113-052"	160	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	358	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	179	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	50	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	40	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	24	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	29	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	17	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"92 years"	"92"	"#COVID-19 (U07.1)"	"GR113-137"	38	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#Septicemia (A40-A41)"	"GR113-010"	10	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	165	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	26	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#Alzheimer disease (G30)"	"GR113-052"	153	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	361	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	152	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	40	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	35	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	17	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	24	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	33	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"93 years"	"93"	"#COVID-19 (U07.1)"	"GR113-137"	47	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#Septicemia (A40-A41)"	"GR113-010"	12	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	110	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	20	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#Alzheimer disease (G30)"	"GR113-052"	152	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	320	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	149	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	56	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	42	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	24	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	33	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	33	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"94 years"	"94"	"#COVID-19 (U07.1)"	"GR113-137"	32	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	115	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	18	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"#Alzheimer disease (G30)"	"GR113-052"	150	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	298	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	117	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	40	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	26	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	19	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	29	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	42	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"95 years"	"95"	"#COVID-19 (U07.1)"	"GR113-137"	32	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	73	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	18	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"#Alzheimer disease (G30)"	"GR113-052"	156	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	258	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	109	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	16	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	25	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	19	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	32	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"96 years"	"96"	"#COVID-19 (U07.1)"	"GR113-137"	17	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	82	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"#Alzheimer disease (G30)"	"GR113-052"	129	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	235	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	107	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	23	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	25	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	10	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	15	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	24	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"97 years"	"97"	"#COVID-19 (U07.1)"	"GR113-137"	23	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	41	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	15	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"#Alzheimer disease (G30)"	"GR113-052"	121	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	179	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	88	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	17	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	25	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	14	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	27	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"98 years"	"98"	"#COVID-19 (U07.1)"	"GR113-137"	14	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"99 years"	"99"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	26	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"99 years"	"99"	"#Alzheimer disease (G30)"	"GR113-052"	85	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"99 years"	"99"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	140	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"99 years"	"99"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	75	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"99 years"	"99"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	16	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"99 years"	"99"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	14	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"99 years"	"99"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	10	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"99 years"	"99"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	26	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"99 years"	"99"	"#COVID-19 (U07.1)"	"GR113-137"	12	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	55	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	18	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"#Alzheimer disease (G30)"	"GR113-052"	221	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	296	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	128	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	38	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	16	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	17	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	21	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	81	Not Applicable	Not Applicable
+	"Hawaii"	"15"	"100+ years"	"100"	"#COVID-19 (U07.1)"	"GR113-137"	36	Not Applicable	Not Applicable
+"---"
+"Dataset: Provisional Mortality Statistics, 2018 through Last Week"
+"Query Parameters:"
+"Residence States: Hawaii (15)"
+"UCD - ICD-10 113 Cause List: #Septicemia (A40-A41); #Malignant neoplasms (C00-C97); #Diabetes mellitus (E10-E14); #Alzheimer"
+"disease (G30); #Diseases of heart (I00-I09,I11,I13,I20-I51); #Cerebrovascular diseases (I60-I69); #Influenza and pneumonia"
+"(J09-J18); #Chronic lower respiratory diseases (J40-J47); Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98);"
+"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27); Symptoms, signs and abnormal clinical and laboratory"
+"findings, not elsewhere classified (R00-R99); #COVID-19 (U07.1)"
+"Year/Month: 2020; 2021; 2022; 2023 (provisional); 2024 (provisional and partial)"
+"Group By: Residence State; Single-Year Ages; UCD - ICD-10 113 Cause List"
+"Show Totals: Disabled"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/mcd-provisional.html for more information."
+"---"
+"Query Date: Nov 15, 2024 2:06:22 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Provisional Mortality on CDC WONDER Online Database. Data are from the final Multiple Cause of Death Files, 2018-2022,"
+"and from provisional data for years 2023-2024, as compiled from data provided by the 57 vital statistics jurisdictions through"
+"the Vital Statistics Cooperative Program. Accessed at http://wonder.cdc.gov/mcd-icd10-provisional.html on Nov 15, 2024 2:06:22"
+"AM"
+"---"
+Messages:
+"1. Totals are not available for these results due to suppression constraints. More Information:"
+"http://wonder.cdc.gov/wonder/help/faq.html#Privacy."
+"2. Totals and Percent of Total are disabled when data are grouped by 113 or 130 Cause Lists. Check Caveats below for more"
+"information."
+"3. Rows with zero Deaths are hidden. Use Quick Options above to show zero rows."
+"4. Rows with suppressed Deaths are hidden. Use Quick Options above to show suppressed rows."
+"---"
+Caveats:
+"1. Totals and Percent of Total are disabled when data are grouped by a 113 or 130 Cause List because both aggregate and detailed"
+"values are displayed in the table. Also be aware that charts and maps containing both aggregate and detail data could be"
+"misleading."
+"2. Population and rates are labeled 'Not Applicable' when they include a subset of ages 85-100+ because populations are not"
+"available for those ages. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Ages 85-100."
+"3. Data are Suppressed when the data meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Assurance of Confidentiality."
+"4. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Unreliable."
+"5. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Not Stated."
+"6. The population figures for years 2022 and later are single-race estimates of the July 1 resident population, from the Vintage"
+"2022 postcensal series released by the Census Bureau on June 22, 2023. The 2022 series is based on the Modified Blended Base"
+"produced by the US Census Bureau in lieu of the April 1, 2020 decennial population count. The Modified Blended Base consists of"
+"the blend of Vintage 2020 postcensal population estimates for April 1, 2020, 2020 Demographic Analysis Estimates, and 2020"
+"Census data from the internal Census Edited File (CEF). The population figures for years 2021 are single-race estimates of the"
+"July 1 resident population, based on the Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial"
+"population count, from the Vintage 2021 postcensal series released by the Census Bureau on June 30, 2022. The population figures"
+"for year 2020 are single-race estimates of the July 1 resident population, from the Vintage 2020 postcensal series based on"
+"April 2010 Census, released by the Census Bureau on July 27, 2021. The population figures for year 2019 are single-race"
+"estimates of the July 1 resident population, from the Vintage 2019 postcensal series based on April 2010 Census, released by the"
+"Census Bureau on June 25, 2020. The population figures for year 2018 are single-race estimates of the July 1 resident"
+"population, from the Vintage 2018 postcensal series based on April 2010 Census, released by the Census Bureau on June 20, 2019."
+"More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Population Data."
+"7. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Age"
+"Group."
+"8. Beginning with the 2018 data, changes have been implemented that affect the counts for ICD-10 cause of death codes O00-O99"
+"compared to previous practice. In addition, data for the cause of death codes O00-O99 for 2003 through 2017 reflect differences"
+"in information available to individual states and probable errors. Deaths with the underlying cause classified with O00-O99 are"
+"subject to further processing before these deaths records are considered final. Provisional deaths have not undergone full"
+"processing and review and therefore should not be considered final for statistical purposes. Caution should be used in"
+"interpreting these data. More information can be found at: https://www.cdc.gov/nchs/maternal-mortality/."
+"9. Deaths related to external causes of injury or sudden death: In the provisional mortality data, causes of death classified as"
+"external causes of injury (ICD-10 codes V01-Y89), sudden deaths (ICD-10 codes R95 and R96), or drug poisoning (ICD-10 codes"
+"T36-T50), have the cause of death labeled as 'Data not shown due to 6 month lag to account for delays in death certificate"
+"completion for certain causes of death.' For these deaths occurring 24 weeks prior to the final date in the provisional data,"
+"the number of deaths and related statistics are not available by specific cause of death for ICD-10 codes V01-Y89, R95, R96, or"
+"T36-T50. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#999."
+"10. Deaths occurring through November 02, 2024 as of November 10, 2024."

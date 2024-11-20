@@ -340,16 +340,13 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="analysis1.html">Analysis 1</a>
-    </li>
-    <li>
-      <a href="analysis2.html">Analysis 2</a>
-    </li>
-    <li>
       <a href="analysis_yyc.html">Analysis yyc</a>
     </li>
     <li>
       <a href="analysis_az.html">Analysis az</a>
+    </li>
+    <li>
+      <a href="analysis_sg.html">Analysis sg</a>
     </li>
   </ul>
 </li>
@@ -406,6 +403,8 @@ div.tocify {
 </div>
 
 
+<p>TO DO 11/20/2024: -replace suppressed counts with random numbers -how
+do we deal with missing values?</p>
 <div id="eda" class="section level1">
 <h1>EDA</h1>
 <div id="data-overview" class="section level2">
@@ -443,17 +442,38 @@ supressed and shown as blank. We will generate a random whole number
 between 1-10 for those cells for further analyses.</p>
 <pre class="r"><code>library(tidyverse)
 library(lubridate)
-library(viridis)</code></pre>
+library(viridis)
+library(broom)</code></pre>
 <p>Import data and do some inital cleaning</p>
 <pre class="r"><code>data = read_csv(&quot;data/weekly_deaths_by_state_and_causes.csv&quot;) %&gt;% 
+  rename(
+    `Septicemia` = `Septicemia (A40-A41)`, 
+    `Malignant neoplasms` = `Malignant neoplasms (C00-C97)`, 
+    `Diabetes mellitus` = `Diabetes mellitus (E10-E14)`, 
+    `Alzheimer disease` = `Alzheimer disease (G30)`, 
+    `Influenza and pneumonia` = `Influenza and pneumonia (J09-J18)`, 
+    `Chronic lower respiratory diseases` = `Chronic lower respiratory diseases (J40-J47)`, 
+    `Other respiratory diseases` = `Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)`, 
+    `Kidney Disease` = `Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)`, 
+    `Other Symptoms` = `Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)`, 
+    `Diseases of heart` = `Diseases of heart (I00-I09,I11,I13,I20-I51)`, 
+    `Cerebrovascular diseases` = `Cerebrovascular diseases (I60-I69)`, 
+    `COVID-19 (Multiple)` = `COVID-19 (U071, Multiple Cause of Death)`, 
+    `COVID-19 (Underlying)` = `COVID-19 (U071, Underlying Cause of Death)`
+  ) %&gt;% 
   janitor::clean_names() %&gt;% 
-  mutate(data_as_of = mdy(`data_as_of`))</code></pre>
-<pre><code>## Warning: One or more parsing issues, call `problems()` on
-## your data frame for details, e.g.:
+  rename(state = jurisdiction_of_occurrence) %&gt;% 
+  mutate(data_as_of = mdy(`data_as_of`),
+         year = year(week_ending_date),
+         month = month(week_ending_date)
+         ) %&gt;%  
+  select(state, year, month, mmwr_week, all_cause: covid_19_underlying)</code></pre>
+<pre><code>## Warning: One or more parsing issues, call `problems()` on your data frame for details,
+## e.g.:
 ##   dat &lt;- vroom(...)
 ##   problems(dat)</code></pre>
 <pre><code>## Rows: 10476 Columns: 35
-## ── Column specification ──────────────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
 ## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...
@@ -463,29 +483,28 @@ library(viridis)</code></pre>
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>data</code></pre>
-<pre><code>## # A tibble: 10,476 × 35
-##    data_as_of jurisdiction_of_occurrence mmwr_year mmwr_week week_ending_date
-##    &lt;date&gt;     &lt;chr&gt;                          &lt;dbl&gt;     &lt;dbl&gt; &lt;date&gt;          
-##  1 2023-09-27 United States                   2020         1 2020-01-04      
-##  2 2023-09-27 United States                   2020         2 2020-01-11      
-##  3 2023-09-27 United States                   2020         3 2020-01-18      
-##  4 2023-09-27 United States                   2020         4 2020-01-25      
-##  5 2023-09-27 United States                   2020         5 2020-02-01      
-##  6 2023-09-27 United States                   2020         6 2020-02-08      
-##  7 2023-09-27 United States                   2020         7 2020-02-15      
-##  8 2023-09-27 United States                   2020         8 2020-02-22      
-##  9 2023-09-27 United States                   2020         9 2020-02-29      
-## 10 2023-09-27 United States                   2020        10 2020-03-07      
+<pre><code>## # A tibble: 10,476 × 19
+##    state          year month mmwr_week all_cause natural_cause septicemia
+##    &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;
+##  1 United States  2020     1         1     60179         55010        843
+##  2 United States  2020     1         2     60735         55755        861
+##  3 United States  2020     1         3     59363         54516        829
+##  4 United States  2020     1         4     59162         54401        828
+##  5 United States  2020     2         5     58834         54001        811
+##  6 United States  2020     2         6     59491         54416        806
+##  7 United States  2020     2         7     58815         53969        792
+##  8 United States  2020     2         8     58912         53987        779
+##  9 United States  2020     2         9     59334         54316        814
+## 10 United States  2020     3        10     59716         54401        811
 ## # ℹ 10,466 more rows
-## # ℹ 30 more variables: all_cause &lt;dbl&gt;, natural_cause &lt;dbl&gt;,
-## #   septicemia_a40_a41 &lt;dbl&gt;, malignant_neoplasms_c00_c97 &lt;dbl&gt;,
-## #   diabetes_mellitus_e10_e14 &lt;dbl&gt;, alzheimer_disease_g30 &lt;dbl&gt;,
-## #   influenza_and_pneumonia_j09_j18 &lt;dbl&gt;,
-## #   chronic_lower_respiratory_diseases_j40_j47 &lt;dbl&gt;,
-## #   other_diseases_of_respiratory_system_j00_j06_j30_j39_j67_j70_j98 &lt;dbl&gt;, …</code></pre>
-<p>How many people died from covid in 2020, 2021, 2022, and 2023?</p>
+## # ℹ 12 more variables: malignant_neoplasms &lt;dbl&gt;, diabetes_mellitus &lt;dbl&gt;,
+## #   alzheimer_disease &lt;dbl&gt;, influenza_and_pneumonia &lt;dbl&gt;,
+## #   chronic_lower_respiratory_diseases &lt;dbl&gt;, other_respiratory_diseases &lt;dbl&gt;,
+## #   kidney_disease &lt;dbl&gt;, other_symptoms &lt;dbl&gt;, diseases_of_heart &lt;dbl&gt;,
+## #   cerebrovascular_diseases &lt;dbl&gt;, covid_19_multiple &lt;dbl&gt;,
+## #   covid_19_underlying &lt;dbl&gt;</code></pre>
 <pre class="r"><code>subset_df = data %&gt;%
-  filter(jurisdiction_of_occurrence %in% c( &quot;South Dakota&quot;,
+  filter(state %in% c( &quot;South Dakota&quot;,
  &quot;Tennessee&quot;,
  &quot;Texas&quot;,
  &quot;Utah&quot;,
@@ -494,15 +513,166 @@ library(viridis)</code></pre>
  &quot;Washington&quot;,
  &quot;West Virginia&quot;,
  &quot;Wisconsin&quot;,
- &quot;Wyoming&quot;)) %&gt;% 
-  mutate(year = year(week_ending_date))
-  
-# Summarize COVID-19 deaths by year (both multiple and underlying cause)
+ &quot;Wyoming&quot;))
+
+#inspect missing values state by state
+count_na = function(df, state_name) {
+  out_df = df %&gt;% 
+  filter(state == state_name) %&gt;% 
+  summarize(across(everything(), ~ sum(is.na(.)))) %&gt;% 
+  select(-state, -year, -month, -mmwr_week) %&gt;% 
+  pivot_longer(
+    cols = everything(),
+    names_to = &quot;disease&quot;,
+    values_to = &quot;na&quot;
+  ) %&gt;% 
+    filter(na != 0)
+  return(out_df)
+
+}
+
+count_na(subset_df,&quot;South Dakota&quot;)</code></pre>
+<pre><code>## # A tibble: 13 × 2
+##    disease                               na
+##    &lt;chr&gt;                              &lt;int&gt;
+##  1 septicemia                           174
+##  2 malignant_neoplasms                    1
+##  3 diabetes_mellitus                    173
+##  4 alzheimer_disease                    130
+##  5 influenza_and_pneumonia              174
+##  6 chronic_lower_respiratory_diseases   129
+##  7 other_respiratory_diseases           169
+##  8 kidney_disease                       149
+##  9 other_symptoms                       102
+## 10 diseases_of_heart                      1
+## 11 cerebrovascular_diseases             138
+## 12 covid_19_multiple                     90
+## 13 covid_19_underlying                  104</code></pre>
+<pre class="r"><code>count_na(subset_df,&quot;Tennessee&quot;)</code></pre>
+<pre><code>## # A tibble: 4 × 2
+##   disease                       na
+##   &lt;chr&gt;                      &lt;int&gt;
+## 1 other_respiratory_diseases     1
+## 2 other_symptoms                 6
+## 3 covid_19_multiple              3
+## 4 covid_19_underlying            8</code></pre>
+<pre class="r"><code>count_na(subset_df,&quot;Texas&quot;)</code></pre>
+<pre><code>## # A tibble: 2 × 2
+##   disease                na
+##   &lt;chr&gt;               &lt;int&gt;
+## 1 covid_19_multiple       2
+## 2 covid_19_underlying     3</code></pre>
+<pre class="r"><code>count_na(subset_df,&quot;Utah&quot;)</code></pre>
+<pre><code>## # A tibble: 10 × 2
+##    disease                               na
+##    &lt;chr&gt;                              &lt;int&gt;
+##  1 septicemia                           183
+##  2 diabetes_mellitus                     15
+##  3 influenza_and_pneumonia              174
+##  4 chronic_lower_respiratory_diseases     1
+##  5 other_respiratory_diseases           170
+##  6 kidney_disease                       156
+##  7 other_symptoms                       175
+##  8 cerebrovascular_diseases               3
+##  9 covid_19_multiple                     50
+## 10 covid_19_underlying                   66</code></pre>
+<pre class="r"><code>count_na(subset_df,&quot;Vermont&quot;)</code></pre>
+<pre><code>## # A tibble: 11 × 2
+##    disease                               na
+##    &lt;chr&gt;                              &lt;int&gt;
+##  1 septicemia                            85
+##  2 diabetes_mellitus                    190
+##  3 alzheimer_disease                    177
+##  4 influenza_and_pneumonia               97
+##  5 chronic_lower_respiratory_diseases   172
+##  6 other_respiratory_diseases           146
+##  7 kidney_disease                        79
+##  8 other_symptoms                        90
+##  9 cerebrovascular_diseases             189
+## 10 covid_19_multiple                    120
+## 11 covid_19_underlying                  119</code></pre>
+<pre class="r"><code>count_na(subset_df,&quot;Virginia&quot;)</code></pre>
+<pre><code>## # A tibble: 5 × 2
+##   disease                    na
+##   &lt;chr&gt;                   &lt;int&gt;
+## 1 septicemia                  3
+## 2 influenza_and_pneumonia     8
+## 3 other_symptoms             14
+## 4 covid_19_multiple           4
+## 5 covid_19_underlying        12</code></pre>
+<pre class="r"><code>count_na(subset_df,&quot;Washington&quot;)</code></pre>
+<pre><code>## # A tibble: 7 × 2
+##   disease                       na
+##   &lt;chr&gt;                      &lt;int&gt;
+## 1 septicemia                    43
+## 2 influenza_and_pneumonia       66
+## 3 other_respiratory_diseases    10
+## 4 kidney_disease               106
+## 5 other_symptoms                39
+## 6 covid_19_multiple              3
+## 7 covid_19_underlying           10</code></pre>
+<pre class="r"><code>count_na(subset_df,&quot;West Virginia&quot;)</code></pre>
+<pre><code>## # A tibble: 9 × 2
+##   disease                       na
+##   &lt;chr&gt;                      &lt;int&gt;
+## 1 septicemia                   177
+## 2 diabetes_mellitus              1
+## 3 alzheimer_disease             23
+## 4 influenza_and_pneumonia      118
+## 5 other_respiratory_diseases   183
+## 6 kidney_disease                61
+## 7 other_symptoms                98
+## 8 covid_19_multiple             36
+## 9 covid_19_underlying           43</code></pre>
+<pre class="r"><code>count_na(subset_df,&quot;Wisconsin&quot;)</code></pre>
+<pre><code>## # A tibble: 7 × 2
+##   disease                       na
+##   &lt;chr&gt;                      &lt;int&gt;
+## 1 septicemia                    50
+## 2 influenza_and_pneumonia       78
+## 3 other_respiratory_diseases    26
+## 4 kidney_disease                 5
+## 5 other_symptoms               134
+## 6 covid_19_multiple             14
+## 7 covid_19_underlying           27</code></pre>
+<pre class="r"><code>count_na(subset_df,&quot;Wyoming&quot;)</code></pre>
+<pre><code>## # A tibble: 13 × 2
+##    disease                               na
+##    &lt;chr&gt;                              &lt;int&gt;
+##  1 septicemia                           115
+##  2 malignant_neoplasms                    3
+##  3 diabetes_mellitus                    181
+##  4 alzheimer_disease                    189
+##  5 influenza_and_pneumonia              148
+##  6 chronic_lower_respiratory_diseases   163
+##  7 other_respiratory_diseases           156
+##  8 kidney_disease                       134
+##  9 other_symptoms                       114
+## 10 diseases_of_heart                      1
+## 11 cerebrovascular_diseases             190
+## 12 covid_19_multiple                    114
+## 13 covid_19_underlying                  107</code></pre>
+<pre class="r"><code># significant missing was found in: South Dakota, Utah, Vermont, West Virginia, and Wyoming </code></pre>
+</div>
+</div>
+</div>
+<div id="some-general-questions" class="section level1">
+<h1>Some general questions</h1>
+<p>-how many people die each year from 2020-2023 (what’s the proportion
+of natural and non-natural causes?) -and, what’s the mortality rate of
+the general population?</p>
+<p>-which disease among the listed creates the most health burdens, that
+is, gives rise to the most deaths?</p>
+</div>
+<div id="time-seires-analyses" class="section level1">
+<h1>Time Seires Analyses</h1>
+<p>How many people died from covid in 2020, 2021, 2022, and 2023?</p>
+<pre class="r"><code># Summarize COVID-19 deaths by year (both multiple and underlying cause)
 covid_deaths_by_year = subset_df %&gt;%
   group_by(year) %&gt;%
   summarise(
-    covid_deaths_multiple = sum(covid_19_u071_multiple_cause_of_death, na.rm = TRUE),
-    covid_deaths_underlying = sum(covid_19_u071_underlying_cause_of_death, na.rm = TRUE)
+    covid_deaths_multiple = sum(covid_19_multiple, na.rm = TRUE),
+    covid_deaths_underlying = sum(covid_19_underlying, na.rm = TRUE)
   ) %&gt;%
   filter(year %in% c(2020, 2021, 2022, 2023))
 
@@ -518,9 +688,26 @@ ggplot(covid_deaths_long, aes(x = factor(year), y = deaths, fill = cause_type)) 
        x = &quot;Year&quot;, y = &quot;Number of Deaths&quot;, fill = &quot;Cause Type&quot;) +
   scale_fill_viridis(discrete = TRUE) +
   theme_minimal()</code></pre>
-<p><img src="analysis_az_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="analysis_az_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Which months have the highest mortality?</p>
+<p>How is deaths from specific diseases distribute across months? (which
+season will exacerbate what diseases?)</p>
+<p>How often was COVID-19 the primary versus a secondary contributor to
+mortality?</p>
 </div>
+<div id="correlational-analyses" class="section level1">
+<h1>Correlational Analyses</h1>
+<p>Does COVID exacerbate other diseases?</p>
+<p>Does specific conditions/diseases exacerbate covid?</p>
+<p>Is there any correlation between cardiovascular and respiratory
+diseases?</p>
+<p>Did the pandemic period affect mortality rates of non-COVID causes
+like heart disease or diabetes?</p>
 </div>
+<div id="geographical-variations" class="section level1">
+<h1>geographical variations</h1>
+<p>Which states had higher mortality rates from specific causes, such as
+COVID-19 or heart disease, and did these vary over time?</p>
 </div>
 
 

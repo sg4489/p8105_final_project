@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+<meta name="date" content="2024-11-20" />
+
+<title>Analysis_yhc</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="data-processing.html">Data Processing</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Analyses
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="analysis_yyc.html">Analysis yyc</a>
+    </li>
+    <li>
+      <a href="analysis_az.html">Analysis az</a>
+    </li>
+    <li>
+      <a href="analysis_sg.html">Analysis sg</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Shiny
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="shiny-app1.html">Shiny App 1</a>
+    </li>
+    <li>
+      <a href="shiny-app2.html">Shiny App 2</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="project-report.html">Project Report</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="about-team.html">About the Team</a>
+</li>
+<li>
+  <a href="https://github.com/sg4489/p8105_final_project">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Analysis_yhc</h1>
+<h4 class="date">2024-11-20</h4>
+
+</div>
+
+
+<pre class="r"><code>library(readr)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(lubridate)
+library(tidyr)</code></pre>
+<div id="import-and-clean-data" class="section level2">
+<h2>Import and clean data</h2>
+<pre class="r"><code>data=read_csv(&quot;./data/weekly_deaths_by_state_and_causes.csv&quot;) </code></pre>
+<pre><code>## Warning: One or more parsing issues, call `problems()` on your data frame for details,
+## e.g.:
+##   dat &lt;- vroom(...)
+##   problems(dat)</code></pre>
+<pre><code>## Rows: 10476 Columns: 35
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
+## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...
+## lgl   (3): flag_allcause, flag_natcause, flag_neopl
+## date  (1): Week Ending Date
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>states &lt;- c(&quot;Alabama&quot;, &quot;Alaska&quot;, &quot;Arizona&quot;, &quot;Arkansas&quot;, &quot;California&quot;, 
+            &quot;Colorado&quot;, &quot;Connecticut&quot;, &quot;Delaware&quot;, &quot;Florida&quot;, &quot;Georgia&quot;, 
+            &quot;Hawaii&quot;, &quot;Idaho&quot;, &quot;Illinois&quot;, &quot;Indiana&quot;, &quot;Iowa&quot;, &quot;Kansas&quot;, 
+            &quot;Kentucky&quot;, &quot;Louisiana&quot;, &quot;Maine&quot;, &quot;Maryland&quot;)
+
+yh_data &lt;- data |&gt;
+  janitor::clean_names() |&gt;
+  rename_with(~ str_replace_all(., &quot; &quot;, &quot;_&quot;)) |&gt;
+  filter(jurisdiction_of_occurrence %in% states) |&gt;
+  rename_with(~ make.unique(str_replace(., &quot;_\\w\\d.*&quot;, &quot;&quot;))) |&gt;
+  mutate(
+    across(where(is.character), ~ ifelse(. == &quot;Suppressed (counts 1-9)&quot;, 
+                                         as.character(sample(1:9, 1)), .))
+  )  |&gt;
+  mutate(month = month(week_ending_date)) </code></pre>
+</div>
+<div id="visualize-the-extent-of-missing-data" class="section level2">
+<h2>Visualize the extent of missing data</h2>
+<pre class="r"><code>data_missing = yh_data |&gt;
+  pivot_longer(cols = 6:20, names_to = &quot;disease&quot;, values_to = &quot;value&quot;) |&gt;
+  mutate(missing = ifelse(is.na(value), 1, 0))  |&gt; # 1 as missing
+  group_by(jurisdiction_of_occurrence, disease) |&gt;
+  summarize(missing_rate = mean(is.na(value)), .groups = &quot;drop&quot;)
+
+missing_plot=
+ggplot(data_missing, aes(x = jurisdiction_of_occurrence, y = disease, fill = missing_rate)) +
+  geom_tile(color = &quot;white&quot;) +  
+  scale_fill_gradient(
+    low = &quot;white&quot;,    # no missing as white
+    high = &quot;red&quot;,     # all missing as red
+    na.value = &quot;gray&quot; 
+  ) +
+  labs(
+    title = &quot;Missing Data Heatmap&quot;,
+    x = &quot;State&quot;,
+    y = &quot;Disease&quot;,
+    fill = &quot;Missing Rate&quot;
+  ) +theme(
+    axis.text.y = element_text(size = 10, angle = 45),
+    plot.title = element_text(hjust = 0.5)
+  )
+
+
+
+missing_plot</code></pre>
+<p><img src="analysis_yhc_files/figure-html/unnamed-chunk-3-1.png" width="1728" />
+It can be observed that the states with relatively complete data are
+Alabama, Arizona, California, Florida, Georgia, Illinois, Indiana,
+Kentucky, and Louisiana. ##Week with the Highest Mortality in the Past
+Four Years</p>
+<pre class="r"><code>total_weekly_deaths = yh_data |&gt;
+  group_by(mmwr_week) |&gt;
+  summarize(total_deaths = sum(natural_cause, na.rm = TRUE)) |&gt;
+  ungroup()
+
+total_weekly_deaths_plot=
+ggplot(total_weekly_deaths, aes(x = factor(mmwr_week), 
+                                y = total_deaths, fill = factor(mmwr_week))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  theme_minimal() +
+  labs(
+    title = &quot;Total Mortality for Each Week Over the Past Four Years&quot;,
+    x = &quot;Week&quot;,
+    y = &quot;Total Death Count&quot;
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+
+total_weekly_deaths_plot</code></pre>
+<p><img src="analysis_yhc_files/figure-html/unnamed-chunk-4-1.png" width="1728" />
+##Mortality Trends Over Time for Different Causes of Death</p>
+<pre class="r"><code>mortality_trends_data = yh_data |&gt;
+  select(
+    week_ending_date, 
+    jurisdiction_of_occurrence, 
+    mmwr_year,
+    septicemia,
+    malignant_neoplasms,
+    diabetes_mellitus,
+    alzheimer_disease,
+    influenza_and_pneumonia,
+    chronic_lower_respiratory_diseases,
+    other_diseases_of_respiratory_system,
+    nephritis_nephrotic_syndrome_and_nephrosis,
+    symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+    diseases_of_heart,
+    cerebrovascular_diseases,
+    covid,
+    covid.1
+  ) |&gt;
+  gather(key = &quot;cause_of_death&quot;, value = &quot;death_count&quot;, 
+         septicemia,
+         malignant_neoplasms,
+         diabetes_mellitus,
+         alzheimer_disease,
+         influenza_and_pneumonia,
+         chronic_lower_respiratory_diseases,
+         other_diseases_of_respiratory_system,
+         nephritis_nephrotic_syndrome_and_nephrosis,
+         symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+         diseases_of_heart,
+         cerebrovascular_diseases,
+         covid,
+         covid.1) |&gt;
+  group_by(week_ending_date, cause_of_death) |&gt;
+  summarize(total_deaths = sum(death_count, na.rm = TRUE)) |&gt;
+  ungroup()</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;week_ending_date&#39;. You can override using
+## the `.groups` argument.</code></pre>
+<pre class="r"><code>mortality_trends_plot=
+ggplot(mortality_trends_data, aes(x = week_ending_date, 
+                                  y = total_deaths,
+                                  color = cause_of_death, 
+                                  group = cause_of_death)) +
+  geom_line(alpha=0.6) +
+  geom_point(alpha=0.6) +
+  theme_minimal() +
+  labs(
+    title = &quot;Mortality Trends Over Time for Different Causes of Death&quot;,
+    x = &quot;Week Ending Date&quot;,
+    y = &quot;Total Deaths&quot;,
+    color = &quot;Cause of Death&quot;
+  ) +
+theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+mortality_trends_plot</code></pre>
+<p><img src="analysis_yhc_files/figure-html/unnamed-chunk-5-1.png" width="1728" />
+##Changes in the Proportion of Each Cause of Death in Total Mortality
+Over Four Years</p>
+<pre class="r"><code>mortality_data &lt;- yh_data |&gt;
+  select(
+    week_ending_date, 
+    jurisdiction_of_occurrence, 
+    mmwr_year,
+    septicemia,
+    malignant_neoplasms,
+    diabetes_mellitus,
+    alzheimer_disease,
+    influenza_and_pneumonia,
+    chronic_lower_respiratory_diseases,
+    other_diseases_of_respiratory_system,
+    nephritis_nephrotic_syndrome_and_nephrosis,
+    symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+    diseases_of_heart,
+    cerebrovascular_diseases,
+    covid,
+    covid.1
+  ) |&gt;
+  gather(key = &quot;cause_of_death&quot;, value = &quot;death_count&quot;, 
+         septicemia,
+         malignant_neoplasms,
+         diabetes_mellitus,
+         alzheimer_disease,
+         influenza_and_pneumonia,
+         chronic_lower_respiratory_diseases,
+         other_diseases_of_respiratory_system,
+         nephritis_nephrotic_syndrome_and_nephrosis,
+         symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+         diseases_of_heart,
+         cerebrovascular_diseases,
+         covid,
+         covid.1) |&gt;
+  group_by(week_ending_date, mmwr_year, cause_of_death) |&gt;
+  summarize(death_count = sum(death_count, na.rm = TRUE)) |&gt;
+  group_by(week_ending_date, mmwr_year) |&gt;
+  mutate(total_deaths = sum(death_count, na.rm = TRUE)) |&gt;
+  mutate(proportion = death_count / total_deaths) |&gt;
+  ungroup()</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;week_ending_date&#39;, &#39;mmwr_year&#39;. You can
+## override using the `.groups` argument.</code></pre>
+<pre class="r"><code>mortality_plot=
+ggplot(mortality_data, aes(x = week_ending_date, y = proportion, fill = cause_of_death)) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;) +
+  labs(
+    title = &quot;Changes in the Proportion of Each Cause of Death in Total Mortality Over Four Years&quot;,
+    x = &quot;Week Ending Date&quot;,
+    y = &quot;Proportion of Total Deaths&quot;,
+    fill = &quot;Cause of Death&quot;
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = &quot;bottom&quot;
+  ) +
+  scale_x_date(date_breaks = &quot;1 year&quot;, date_labels = &quot;%Y&quot;)+
+  theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+
+mortality_plot</code></pre>
+<p><img src="analysis_yhc_files/figure-html/unnamed-chunk-6-1.png" width="1728" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -8,6 +8,11 @@ output:
     toc_float: true
     code_folding: hide
 ---
+
+TO DO 11/20/2024: 
+-replace suppressed counts with random numbers
+-how do we deal with missing values?
+
 # EDA
 ## data overview
 
@@ -37,21 +42,41 @@ Due to privacy protection, cells with count under 10 has been supressed and show
 library(tidyverse)
 library(lubridate)
 library(viridis)
+library(broom)
 ```
 
 Import data and do some inital cleaning
 ```{r}
 data = read_csv("data/weekly_deaths_by_state_and_causes.csv") %>% 
+  rename(
+    `Septicemia` = `Septicemia (A40-A41)`, 
+    `Malignant neoplasms` = `Malignant neoplasms (C00-C97)`, 
+    `Diabetes mellitus` = `Diabetes mellitus (E10-E14)`, 
+    `Alzheimer disease` = `Alzheimer disease (G30)`, 
+    `Influenza and pneumonia` = `Influenza and pneumonia (J09-J18)`, 
+    `Chronic lower respiratory diseases` = `Chronic lower respiratory diseases (J40-J47)`, 
+    `Other respiratory diseases` = `Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)`, 
+    `Kidney Disease` = `Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)`, 
+    `Other Symptoms` = `Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)`, 
+    `Diseases of heart` = `Diseases of heart (I00-I09,I11,I13,I20-I51)`, 
+    `Cerebrovascular diseases` = `Cerebrovascular diseases (I60-I69)`, 
+    `COVID-19 (Multiple)` = `COVID-19 (U071, Multiple Cause of Death)`, 
+    `COVID-19 (Underlying)` = `COVID-19 (U071, Underlying Cause of Death)`
+  ) %>% 
   janitor::clean_names() %>% 
-  mutate(data_as_of = mdy(`data_as_of`))
+  rename(state = jurisdiction_of_occurrence) %>% 
+  mutate(data_as_of = mdy(`data_as_of`),
+         year = year(week_ending_date),
+         month = month(week_ending_date)
+         ) %>%  
+  select(state, year, month, mmwr_week, all_cause: covid_19_underlying)
 
 data
 ```
 
-How many people died from covid in 2020, 2021, 2022, and 2023?
 ```{r}
 subset_df = data %>%
-  filter(jurisdiction_of_occurrence %in% c( "South Dakota",
+  filter(state %in% c( "South Dakota",
  "Tennessee",
  "Texas",
  "Utah",
@@ -60,15 +85,55 @@ subset_df = data %>%
  "Washington",
  "West Virginia",
  "Wisconsin",
- "Wyoming")) %>% 
-  mutate(year = year(week_ending_date))
-  
+ "Wyoming"))
+
+#inspect missing values state by state
+count_na = function(df, state_name) {
+  out_df = df %>% 
+  filter(state == state_name) %>% 
+  summarize(across(everything(), ~ sum(is.na(.)))) %>% 
+  select(-state, -year, -month, -mmwr_week) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "disease",
+    values_to = "na"
+  ) %>% 
+    filter(na != 0)
+  return(out_df)
+
+}
+
+count_na(subset_df,"South Dakota")
+count_na(subset_df,"Tennessee")
+count_na(subset_df,"Texas")
+count_na(subset_df,"Utah")
+count_na(subset_df,"Vermont")
+count_na(subset_df,"Virginia")
+count_na(subset_df,"Washington")
+count_na(subset_df,"West Virginia")
+count_na(subset_df,"Wisconsin")
+count_na(subset_df,"Wyoming")
+
+# significant missing was found in: South Dakota, Utah, Vermont, West Virginia, and Wyoming 
+
+```
+# Some general questions
+
+-how many people die each year from 2020-2023 (what's the proportion of natural and non-natural causes?)
+  -and, what's the mortality rate of the general population?
+
+-which disease among the listed creates the most health burdens, that is, gives rise to the most deaths?
+
+# Time Seires Analyses
+How many people died from covid in 2020, 2021, 2022, and 2023?
+```{r}
+
 # Summarize COVID-19 deaths by year (both multiple and underlying cause)
 covid_deaths_by_year = subset_df %>%
   group_by(year) %>%
   summarise(
-    covid_deaths_multiple = sum(covid_19_u071_multiple_cause_of_death, na.rm = TRUE),
-    covid_deaths_underlying = sum(covid_19_u071_underlying_cause_of_death, na.rm = TRUE)
+    covid_deaths_multiple = sum(covid_19_multiple, na.rm = TRUE),
+    covid_deaths_underlying = sum(covid_19_underlying, na.rm = TRUE)
   ) %>%
   filter(year %in% c(2020, 2021, 2022, 2023))
 
@@ -85,4 +150,28 @@ ggplot(covid_deaths_long, aes(x = factor(year), y = deaths, fill = cause_type)) 
   scale_fill_viridis(discrete = TRUE) +
   theme_minimal()
 ```
+
+Which months have the highest mortality?
+
+How is deaths from specific diseases distribute across months? (which season will exacerbate what diseases?)
+
+How often was COVID-19 the primary versus a secondary contributor to mortality?
+
+# Correlational Analyses
+Does COVID exacerbate other diseases?
+
+Does specific conditions/diseases exacerbate covid?
+
+Is there any correlation between cardiovascular and respiratory diseases?
+
+Did the pandemic period affect mortality rates of non-COVID causes like heart disease or diabetes?
+
+# geographical variations
+Which states had higher mortality rates from specific causes, such as COVID-19 or heart disease, and did these vary over time?
+
+
+
+
+
+
 

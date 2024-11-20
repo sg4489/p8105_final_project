@@ -1,0 +1,1268 @@
+"Notes"	"Residence State"	"Residence State Code"	"Gender"	"Gender Code"	"Year"	"Year Code"	"UCD - ICD-10 113 Cause List"	"UCD - ICD-10 113 Cause List Code"	Deaths	Population	Crude Rate
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	55	702640	7.8
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1119	702640	159.3
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	154	702640	21.9
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	415	702640	59.1
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1055	702640	150.1
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	468	702640	66.6
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	102	702640	14.5
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	167	702640	23.8
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	80	702640	11.4
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	97	702640	13.8
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	76	702640	10.8
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	131	702640	18.6
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	65	716220	9.1
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1206	716220	168.4
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	152	716220	21.2
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	396	716220	55.3
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1072	716220	149.7
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	549	716220	76.7
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	88	716220	12.3
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	153	716220	21.4
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	74	716220	10.3
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	119	716220	16.6
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	68	716220	9.5
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	282	716220	39.4
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	62	715485	8.7
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1213	715485	169.5
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	177	715485	24.7
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	409	715485	57.2
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1161	715485	162.3
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	504	715485	70.4
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	143	715485	20.0
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	159	715485	22.2
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	93	715485	13.0
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	149	715485	20.8
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	92	715485	12.9
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	173	715485	24.2
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	74	715485	10.3
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1195	715485	167.0
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	157	715485	21.9
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	392	715485	54.8
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1082	715485	151.2
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	488	715485	68.2
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	120	715485	16.8
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	159	715485	22.2
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	82	715485	11.5
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	119	715485	16.6
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	101	715485	14.1
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	74	715485	10.3
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	38	715485	5.3
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	973	715485	136.0
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	123	715485	17.2
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	292	715485	40.8
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1019	715485	142.4
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	368	715485	51.4
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	93	715485	13.0
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	153	715485	21.4
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	81	715485	11.3
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	96	715485	13.4
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	256	715485	35.8
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	62	715485	8.7
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	74	704366	10.5
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1400	704366	198.8
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	185	704366	26.3
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	157	704366	22.3
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1568	704366	222.6
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	367	704366	52.1
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	139	704366	19.7
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	209	704366	29.7
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	82	704366	11.6
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	116	704366	16.5
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	63	704366	8.9
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	211	704366	30.0
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	73	725333	10.1
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1356	725333	186.9
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	203	725333	28.0
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	166	725333	22.9
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1579	725333	217.7
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	394	725333	54.3
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	122	725333	16.8
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	231	725333	31.8
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	100	725333	13.8
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	145	725333	20.0
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	75	725333	10.3
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	406	725333	56.0
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	79	724711	10.9
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1401	724711	193.3
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	186	724711	25.7
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	166	724711	22.9
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1701	724711	234.7
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	401	724711	55.3
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	138	724711	19.0
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	199	724711	27.5
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	108	724711	14.9
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	151	724711	20.8
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	120	724711	16.6
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	271	724711	37.4
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	84	724711	11.6
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1384	724711	191.0
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	171	724711	23.6
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	156	724711	21.5
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1686	724711	232.6
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	406	724711	56.0
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	152	724711	21.0
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	211	724711	29.1
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	114	724711	15.7
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	177	724711	24.4
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	100	724711	13.8
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	94	724711	13.0
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	51	724711	7.0
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1119	724711	154.4
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	164	724711	22.6
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	140	724711	19.3
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1343	724711	185.3
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	324	724711	44.7
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	107	724711	14.8
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	159	724711	21.9
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	86	724711	11.9
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	104	724711	14.4
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	314	724711	43.3
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	72	724711	9.9
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	58	910789	6.4
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1364	910789	149.8
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	209	910789	22.9
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	491	910789	53.9
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1394	910789	153.1
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	443	910789	48.6
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	85	910789	9.3
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	420	910789	46.1
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	94	910789	10.3
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	68	910789	7.5
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	91	910789	10.0
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	570	910789	62.6
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	62	942307	6.6
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1461	942307	155.0
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	226	942307	24.0
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	542	942307	57.5
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1471	942307	156.1
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	439	942307	46.6
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	82	942307	8.7
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	464	942307	49.2
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	107	942307	11.4
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	82	942307	8.7
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	97	942307	10.3
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	986	942307	104.6
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	76	961894	7.9
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1433	961894	149.0
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	201	961894	20.9
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	549	961894	57.1
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1532	961894	159.3
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	421	961894	43.8
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	110	961894	11.4
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	513	961894	53.3
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	107	961894	11.1
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	81	961894	8.4
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	90	961894	9.4
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	334	961894	34.7
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	69	961894	7.2
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1515	961894	157.5
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	174	961894	18.1
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	502	961894	52.2
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1428	961894	148.5
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	433	961894	45.0
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	76	961894	7.9
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	463	961894	48.1
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	117	961894	12.2
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	65	961894	6.8
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	61	961894	6.3
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	86	961894	8.9
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	66	961894	6.9
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1289	961894	134.0
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	125	961894	13.0
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	454	961894	47.2
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1205	961894	125.3
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	388	961894	40.3
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	71	961894	7.4
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	366	961894	38.0
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	88	961894	9.1
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	79	961894	8.2
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	122	961894	12.7
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	49	961894	5.1
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	51	916124	5.6
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1640	916124	179.0
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	279	916124	30.5
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	258	916124	28.2
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1797	916124	196.2
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	329	916124	35.9
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	94	916124	10.3
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	450	916124	49.1
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	107	916124	11.7
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	107	916124	11.7
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	75	916124	8.2
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	788	916124	86.0
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	59	958616	6.2
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1669	958616	174.1
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	315	958616	32.9
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	247	958616	25.8
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1958	958616	204.3
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	314	958616	32.8
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	79	958616	8.2
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	456	958616	47.6
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	137	958616	14.3
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	88	958616	9.2
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	76	958616	7.9
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	1421	958616	148.2
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	46	977139	4.7
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1704	977139	174.4
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	272	977139	27.8
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	299	977139	30.6
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1959	977139	200.5
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	344	977139	35.2
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	91	977139	9.3
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	473	977139	48.4
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	136	977139	13.9
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	95	977139	9.7
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	53	977139	5.4
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	489	977139	50.0
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	59	977139	6.0
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1825	977139	186.8
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	276	977139	28.2
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	273	977139	27.9
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1864	977139	190.8
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	371	977139	38.0
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	75	977139	7.7
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	433	977139	44.3
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	125	977139	12.8
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	73	977139	7.5
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	58	977139	5.9
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	114	977139	11.7
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	57	977139	5.8
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1533	977139	156.9
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	205	977139	21.0
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	223	977139	22.8
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1605	977139	164.3
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	298	977139	30.5
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	56	977139	5.7
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	361	977139	36.9
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	108	977139	11.1
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	75	977139	7.7
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	179	977139	18.3
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	78	977139	8.0
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	878	6402224	13.7
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	11590	6402224	181.0
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1546	6402224	24.1
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	3170	6402224	49.5
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	12555	6402224	196.1
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	3932	6402224	61.4
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	1219	6402224	19.0
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2887	6402224	45.1
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	726	6402224	11.3
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1245	6402224	19.4
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	714	6402224	11.2
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	7094	6402224	110.8
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	924	6406387	14.4
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	11475	6406387	179.1
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1501	6406387	23.4
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	2865	6406387	44.7
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	11923	6406387	186.1
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	3907	6406387	61.0
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	793	6406387	12.4
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2548	6406387	39.8
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	740	6406387	11.6
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1256	6406387	19.6
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	743	6406387	11.6
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	4862	6406387	75.9
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	979	6353298	15.4
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	11431	6353298	179.9
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1553	6353298	24.4
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	2870	6353298	45.2
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	12123	6353298	190.8
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	3834	6353298	60.3
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	1008	6353298	15.9
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2886	6353298	45.4
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	814	6353298	12.8
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1410	6353298	22.2
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	675	6353298	10.6
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	3235	6353298	50.9
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	955	6353298	15.0
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	11367	6353298	178.9
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1239	6353298	19.5
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	2677	6353298	42.1
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	11471	6353298	180.6
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	4044	6353298	63.7
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	821	6353298	12.9
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2631	6353298	41.4
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	859	6353298	13.5
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1348	6353298	21.2
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	671	6353298	10.6
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	780	6353298	12.3
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	684	6353298	10.8
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	9331	6353298	146.9
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	979	6353298	15.4
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	2021	6353298	31.8
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	9376	6353298	147.6
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	3360	6353298	52.9
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	750	6353298	11.8
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2074	6353298	32.6
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	691	6353298	10.9
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1122	6353298	17.7
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	892	6353298	14.0
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	425	6353298	6.7
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	818	6185306	13.2
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	12425	6185306	200.9
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1939	6185306	31.3
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	1466	6185306	23.7
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	14905	6185306	241.0
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	2830	6185306	45.8
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	1209	6185306	19.5
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2543	6185306	41.1
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	793	6185306	12.8
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1406	6185306	22.7
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	585	6185306	9.5
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	8641	6185306	139.7
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	831	6265082	13.3
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	12134	6265082	193.7
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1886	6265082	30.1
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	1160	6265082	18.5
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	14368	6265082	229.3
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	2859	6265082	45.6
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	888	6265082	14.2
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2383	6265082	38.0
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	840	6265082	13.4
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1392	6265082	22.2
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	610	6265082	9.7
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	6436	6265082	102.7
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	843	6228734	13.5
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	12025	6228734	193.1
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1910	6228734	30.7
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	1241	6228734	19.9
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	14658	6228734	235.3
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	2838	6228734	45.6
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	1003	6228734	16.1
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2365	6228734	38.0
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	912	6228734	14.6
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1506	6228734	24.2
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	599	6228734	9.6
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	4046	6228734	65.0
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	978	6228734	15.7
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	12106	6228734	194.4
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1674	6228734	26.9
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	1177	6228734	18.9
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	14163	6228734	227.4
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	2904	6228734	46.6
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	1003	6228734	16.1
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2262	6228734	36.3
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	829	6228734	13.3
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1429	6228734	22.9
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	648	6228734	10.4
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	884	6228734	14.2
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	724	6228734	11.6
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	9936	6228734	159.5
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1336	6228734	21.4
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	945	6228734	15.2
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	11049	6228734	177.4
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	2485	6228734	39.9
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	794	6228734	12.7
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1872	6228734	30.1
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	751	6228734	12.1
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	1235	6228734	19.8
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	1384	6228734	22.2
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	484	6228734	7.8
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	576	3422994	16.8
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	6469	3422994	189.0
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1065	3422994	31.1
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	1996	3422994	58.3
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6791	3422994	198.4
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1871	3422994	54.7
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	528	3422994	15.4
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2370	3422994	69.2
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	523	3422994	15.3
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	710	3422994	20.7
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	220	3422994	6.4
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	4187	3422994	122.3
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	472	3428315	13.8
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	6618	3428315	193.0
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1140	3428315	33.3
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	1578	3428315	46.0
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6875	3428315	200.5
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1945	3428315	56.7
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	337	3428315	9.8
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2212	3428315	64.5
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	556	3428315	16.2
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	710	3428315	20.7
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	231	3428315	6.7
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	3844	3428315	112.1
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	434	3437549	12.6
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	6495	3437549	188.9
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1079	3437549	31.4
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	1583	3437549	46.1
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6956	3437549	202.4
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1946	3437549	56.6
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	481	3437549	14.0
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2389	3437549	69.5
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	574	3437549	16.7
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	778	3437549	22.6
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	231	3437549	6.7
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	2059	3437549	59.9
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	453	3437549	13.2
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	6621	3437549	192.6
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1007	3437549	29.3
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	1509	3437549	43.9
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6701	3437549	194.9
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1996	3437549	58.1
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	411	3437549	12.0
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2388	3437549	69.5
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	614	3437549	17.9
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	731	3437549	21.3
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	193	3437549	5.6
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	554	3437549	16.1
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	368	3437549	10.7
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5230	3437549	152.1
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	801	3437549	23.3
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	1248	3437549	36.3
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5513	3437549	160.4
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1646	3437549	47.9
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	425	3437549	12.4
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1897	3437549	55.2
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	508	3437549	14.8
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	589	3437549	17.1
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	205	3437549	6.0
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	279	3437549	8.1
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	528	3331959	15.8
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	7195	3331959	215.9
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1381	3331959	41.4
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	807	3331959	24.2
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	8378	3331959	251.4
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1446	3331959	43.4
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	493	3331959	14.8
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2159	3331959	64.8
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	540	3331959	16.2
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	735	3331959	22.1
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	212	3331959	6.4
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	4340	3331959	130.3
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	436	3377670	12.9
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	7365	3377670	218.0
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1399	3377670	41.4
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	660	3377670	19.5
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	8334	3377670	246.7
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1480	3377670	43.8
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	391	3377670	11.6
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2021	3377670	59.8
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	615	3377670	18.2
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	708	3377670	21.0
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	217	3377670	6.4
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	4720	3377670	139.7
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	405	3395488	11.9
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	7378	3395488	217.3
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1414	3395488	41.6
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	676	3395488	19.9
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	8429	3395488	248.2
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1532	3395488	45.1
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	406	3395488	12.0
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2155	3395488	63.5
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	596	3395488	17.6
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	763	3395488	22.5
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	221	3395488	6.5
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	2518	3395488	74.2
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	411	3395488	12.1
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	7286	3395488	214.6
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1271	3395488	37.4
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	699	3395488	20.6
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	8460	3395488	249.2
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1466	3395488	43.2
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	429	3395488	12.6
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	2014	3395488	59.3
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	608	3395488	17.9
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	741	3395488	21.8
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	214	3395488	6.3
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	588	3395488	17.3
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	332	3395488	9.8
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5924	3395488	174.5
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	994	3395488	29.3
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	577	3395488	17.0
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6617	3395488	194.9
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1184	3395488	34.9
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	346	3395488	10.2
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1621	3395488	47.7
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	504	3395488	14.8
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	600	3395488	17.7
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	245	3395488	7.2
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	312	3395488	9.2
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	179	1587866	11.3
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2986	1587866	188.1
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	460	1587866	29.0
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	1062	1587866	66.9
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3440	1587866	216.6
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	822	1587866	51.8
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	275	1587866	17.3
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	825	1587866	52.0
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	257	1587866	16.2
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	235	1587866	14.8
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	258	1587866	16.2
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	2055	1587866	129.4
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	165	1591695	10.4
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2931	1591695	184.1
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	425	1591695	26.7
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	817	1591695	51.3
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3446	1591695	216.5
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	804	1591695	50.5
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	187	1591695	11.7
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	827	1591695	52.0
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	194	1591695	12.2
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	216	1591695	13.6
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	260	1591695	16.3
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	1338	1591695	84.1
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	189	1593780	11.9
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2946	1593780	184.8
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	434	1593780	27.2
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	919	1593780	57.7
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3582	1593780	224.7
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	760	1593780	47.7
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	276	1593780	17.3
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	865	1593780	54.3
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	242	1593780	15.2
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	248	1593780	15.6
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	233	1593780	14.6
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	799	1593780	50.1
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	212	1593780	13.3
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2969	1593780	186.3
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	431	1593780	27.0
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	948	1593780	59.5
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3514	1593780	220.5
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	778	1593780	48.8
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	234	1593780	14.7
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	873	1593780	54.8
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	248	1593780	15.6
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	259	1593780	16.3
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	221	1593780	13.9
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	259	1593780	16.3
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	159	1593780	10.0
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2574	1593780	161.5
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	343	1593780	21.5
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	743	1593780	46.6
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2846	1593780	178.6
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	667	1593780	41.9
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	232	1593780	14.6
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	726	1593780	45.6
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	210	1593780	13.2
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	192	1593780	12.0
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	165	1593780	10.4
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	156	1593780	9.8
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	188	1575695	11.9
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3318	1575695	210.6
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	587	1575695	37.3
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	405	1575695	25.7
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	4059	1575695	257.6
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	586	1575695	37.2
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	263	1575695	16.7
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	879	1575695	55.8
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	239	1575695	15.2
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	200	1575695	12.7
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	159	1575695	10.1
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	2281	1575695	144.8
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	180	1601384	11.2
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3327	1601384	207.8
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	600	1601384	37.5
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	368	1601384	23.0
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	4258	1601384	265.9
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	599	1601384	37.4
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	179	1601384	11.2
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	849	1601384	53.0
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	226	1601384	14.1
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	203	1601384	12.7
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	180	1601384	11.2
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	1760	1601384	109.9
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	187	1606737	11.6
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3339	1606737	207.8
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	575	1606737	35.8
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	429	1606737	26.7
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	4204	1606737	261.6
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	652	1606737	40.6
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	224	1606737	13.9
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	865	1606737	53.8
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	256	1606737	15.9
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	240	1606737	14.9
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	170	1606737	10.6
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	915	1606737	56.9
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	194	1606737	12.1
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3440	1606737	214.1
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	520	1606737	32.4
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	405	1606737	25.2
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	4130	1606737	257.0
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	610	1606737	38.0
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	224	1606737	13.9
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	849	1606737	52.8
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	263	1606737	16.4
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	259	1606737	16.1
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	181	1606737	11.3
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	266	1606737	16.6
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	155	1606737	9.6
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2929	1606737	182.3
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	417	1606737	26.0
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	360	1606737	22.4
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3331	1606737	207.3
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	482	1606737	30.0
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	215	1606737	13.4
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	701	1606737	43.6
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	199	1606737	12.4
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	215	1606737	13.4
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	133	1606737	8.3
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	156	1606737	9.7
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	160	1462265	10.9
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2566	1462265	175.5
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	465	1462265	31.8
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	665	1462265	45.5
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2859	1462265	195.5
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	790	1462265	54.0
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	269	1462265	18.4
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	852	1462265	58.3
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	212	1462265	14.5
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	268	1462265	18.3
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	240	1462265	16.4
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	1514	1462265	103.5
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	162	1464091	11.1
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2577	1464091	176.0
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	365	1464091	24.9
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	549	1464091	37.5
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2831	1464091	193.4
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	746	1464091	51.0
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	197	1464091	13.5
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	799	1464091	54.6
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	191	1464091	13.0
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	253	1464091	17.3
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	141	1464091	9.6
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	1563	1464091	106.8
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	165	1461695	11.3
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2640	1461695	180.6
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	424	1461695	29.0
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	652	1461695	44.6
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2946	1461695	201.5
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	751	1461695	51.4
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	250	1461695	17.1
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	908	1461695	62.1
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	230	1461695	15.7
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	299	1461695	20.5
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	149	1461695	10.2
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	888	1461695	60.8
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	170	1461695	11.6
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2546	1461695	174.2
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	386	1461695	26.4
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	558	1461695	38.2
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2819	1461695	192.9
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	704	1461695	48.2
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	232	1461695	15.9
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	835	1461695	57.1
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	239	1461695	16.4
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	288	1461695	19.7
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	154	1461695	10.5
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	241	1461695	16.5
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	147	1461695	10.1
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2239	1461695	153.2
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	329	1461695	22.5
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	485	1461695	33.2
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2287	1461695	156.5
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	601	1461695	41.1
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	212	1461695	14.5
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	701	1461695	48.0
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	215	1461695	14.7
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	226	1461695	15.5
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	229	1461695	15.7
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	111	1461695	7.6
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	158	1451540	10.9
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2972	1451540	204.7
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	576	1451540	39.7
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	314	1451540	21.6
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3405	1451540	234.6
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	593	1451540	40.9
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	248	1451540	17.1
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	790	1451540	54.4
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	210	1451540	14.5
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	261	1451540	18.0
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	178	1451540	12.3
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	1830	1451540	126.1
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	159	1470491	10.8
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2878	1470491	195.7
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	552	1470491	37.5
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	256	1470491	17.4
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3484	1470491	236.9
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	619	1470491	42.1
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	199	1470491	13.5
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	707	1470491	48.1
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	230	1470491	15.6
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	297	1470491	20.2
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	130	1470491	8.8
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	2060	1470491	140.1
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	176	1475455	11.9
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2872	1475455	194.7
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	539	1475455	36.5
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	292	1475455	19.8
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3494	1475455	236.8
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	573	1475455	38.8
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	236	1475455	16.0
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	768	1475455	52.1
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	225	1475455	15.2
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	345	1475455	23.4
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	130	1475455	8.8
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	1155	1475455	78.3
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	148	1475455	10.0
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3021	1475455	204.8
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	508	1475455	34.4
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	277	1475455	18.8
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	3380	1475455	229.1
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	633	1475455	42.9
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	188	1475455	12.7
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	736	1475455	49.9
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	228	1475455	15.5
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	277	1475455	18.8
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	140	1475455	9.5
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	255	1475455	17.3
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	123	1475455	8.3
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	2513	1475455	170.3
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	396	1475455	26.8
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	212	1475455	14.4
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	2615	1475455	177.2
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	532	1475455	36.1
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	158	1475455	10.7
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	585	1475455	39.6
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	205	1475455	13.9
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	245	1475455	16.6
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	300	1475455	20.3
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	152	1475455	10.3
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	504	2271906	22.2
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4811	2271906	211.8
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	699	2271906	30.8
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	1157	2271906	50.9
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	4966	2271906	218.6
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1271	2271906	55.9
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	421	2271906	18.5
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1679	2271906	73.9
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	412	2271906	18.1
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	460	2271906	20.2
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	440	2271906	19.4
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	2060	2271906	90.7
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	473	2275505	20.8
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4627	2275505	203.3
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	779	2275505	34.2
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	1120	2275505	49.2
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5188	2275505	228.0
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1357	2275505	59.6
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	381	2275505	16.7
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1757	2275505	77.2
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	458	2275505	20.1
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	564	2275505	24.8
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	402	2275505	17.7
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	3357	2275505	147.5
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	502	2271801	22.1
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4886	2271801	215.1
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	776	2271801	34.2
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	1057	2271801	46.5
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5171	2271801	227.6
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1322	2271801	58.2
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	447	2271801	19.7
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1763	2271801	77.6
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	484	2271801	21.3
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	575	2271801	25.3
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	394	2271801	17.3
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	1941	2271801	85.4
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	513	2271801	22.6
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4976	2271801	219.0
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	706	2271801	31.1
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	1001	2271801	44.1
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	4827	2271801	212.5
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1271	2271801	55.9
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	379	2271801	16.7
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1798	2271801	79.1
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	460	2271801	20.2
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	621	2271801	27.3
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	382	2271801	16.8
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	500	2271801	22.0
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	380	2271801	16.7
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3952	2271801	174.0
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	515	2271801	22.7
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	815	2271801	35.9
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	4038	2271801	177.7
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1014	2271801	44.6
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	319	2271801	14.0
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1478	2271801	65.1
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	393	2271801	17.3
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	469	2271801	20.6
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	296	2271801	13.0
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	256	2271801	11.3
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	447	2205345	20.3
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5370	2205345	243.5
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	850	2205345	38.5
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	562	2205345	25.5
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6379	2205345	289.3
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1057	2205345	47.9
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	477	2205345	21.6
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1557	2205345	70.6
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	439	2205345	19.9
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	448	2205345	20.3
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	305	2205345	13.8
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	2072	2205345	94.0
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	450	2233889	20.1
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5623	2233889	251.7
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	986	2233889	44.1
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	512	2233889	22.9
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6509	2233889	291.4
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1071	2233889	47.9
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	358	2233889	16.0
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1486	2233889	66.5
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	457	2233889	20.5
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	566	2233889	25.3
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	281	2233889	12.6
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	4102	2233889	183.6
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	513	2240509	22.9
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5414	2240509	241.6
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	892	2240509	39.8
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	452	2240509	20.2
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6483	2240509	289.4
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1044	2240509	46.6
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	441	2240509	19.7
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1497	2240509	66.8
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	442	2240509	19.7
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	652	2240509	29.1
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	304	2240509	13.6
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	2142	2240509	95.6
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	495	2240509	22.1
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5641	2240509	251.8
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	914	2240509	40.8
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	472	2240509	21.1
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6161	2240509	275.0
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	978	2240509	43.7
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	358	2240509	16.0
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1578	2240509	70.4
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	484	2240509	21.6
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	614	2240509	27.4
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	314	2240509	14.0
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	551	2240509	24.6
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	352	2240509	15.7
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4679	2240509	208.8
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	738	2240509	32.9
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	438	2240509	19.5
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5071	2240509	226.3
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	769	2240509	34.3
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	298	2240509	13.3
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1284	2240509	57.3
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	398	2240509	17.8
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	478	2240509	21.3
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	286	2240509	12.8
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	277	2240509	12.4
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	579	2381158	24.3
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4195	2381158	176.2
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	864	2381158	36.3
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	1729	2381158	72.6
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5448	2381158	228.8
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1400	2381158	58.8
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	393	2381158	16.5
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1246	2381158	52.3
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	582	2381158	24.4
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	555	2381158	23.3
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	365	2381158	15.3
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	3035	2381158	127.5
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	544	2358856	23.1
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4146	2358856	175.8
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	862	2358856	36.5
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	1461	2358856	61.9
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5475	2358856	232.1
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1513	2358856	64.1
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	301	2358856	12.8
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1126	2358856	47.7
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	539	2358856	22.9
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	538	2358856	22.8
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	311	2358856	13.2
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	2839	2358856	120.4
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	551	2342871	23.5
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4261	2342871	181.9
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	784	2342871	33.5
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	1383	2342871	59.0
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5551	2342871	236.9
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1536	2342871	65.6
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	283	2342871	12.1
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1171	2342871	50.0
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	502	2342871	21.4
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	556	2342871	23.7
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	315	2342871	13.4
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	1084	2342871	46.3
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	504	2342871	21.5
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4291	2342871	183.2
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	703	2342871	30.0
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	1314	2342871	56.1
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5307	2342871	226.5
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1410	2342871	60.2
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	284	2342871	12.1
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1225	2342871	52.3
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	528	2342871	22.5
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	551	2342871	23.5
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	299	2342871	12.8
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	266	2342871	11.4
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	449	2342871	19.2
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	3355	2342871	143.2
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	567	2342871	24.2
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	1147	2342871	49.0
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	4375	2342871	186.7
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1208	2342871	51.6
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	253	2342871	10.8
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	894	2342871	38.2
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	410	2342871	17.5
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	468	2342871	20.0
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	215	2342871	9.2
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	149	2342871	6.4
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	533	2264160	23.5
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5000	2264160	220.8
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	979	2264160	43.2
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	721	2264160	31.8
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6807	2264160	300.6
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1166	2264160	51.5
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	385	2264160	17.0
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1121	2264160	49.5
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	541	2264160	23.9
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	520	2264160	23.0
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	323	2264160	14.3
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	3498	2264160	154.5
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	508	2265191	22.4
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5100	2265191	225.1
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1081	2265191	47.7
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	660	2265191	29.1
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	7089	2265191	313.0
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1242	2265191	54.8
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	346	2265191	15.3
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1044	2265191	46.1
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	538	2265191	23.8
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	571	2265191	25.2
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	306	2265191	13.5
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	3490	2265191	154.1
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	557	2247370	24.8
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4932	2247370	219.5
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	871	2247370	38.8
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	711	2247370	31.6
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6733	2247370	299.6
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1188	2247370	52.9
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	303	2247370	13.5
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1030	2247370	45.8
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	489	2247370	21.8
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	516	2247370	23.0
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	285	2247370	12.7
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	1276	2247370	56.8
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	504	2247370	22.4
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5008	2247370	222.8
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	905	2247370	40.3
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	618	2247370	27.5
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6588	2247370	293.1
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1158	2247370	51.5
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	279	2247370	12.4
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	981	2247370	43.7
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	505	2247370	22.5
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	551	2247370	24.5
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	327	2247370	14.6
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	312	2247370	13.9
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	377	2247370	16.8
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4154	2247370	184.8
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	652	2247370	29.0
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	515	2247370	22.9
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5359	2247370	238.5
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1047	2247370	46.6
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	240	2247370	10.7
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	791	2247370	35.2
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	381	2247370	17.0
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	442	2247370	19.7
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	240	2247370	10.7
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	188	2247370	8.4
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	26	688840	3.8
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1567	688840	227.5
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	188	688840	27.3
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	389	688840	56.5
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1374	688840	199.5
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	421	688840	61.1
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	101	688840	14.7
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	441	688840	64.0
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	103	688840	15.0
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	118	688840	17.1
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	32	688840	4.6
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	215	688840	31.2
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	13	695754	Unreliable
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1524	695754	219.0
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	221	695754	31.8
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	380	695754	54.6
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1502	695754	215.9
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	361	695754	51.9
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	95	695754	13.7
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	436	695754	62.7
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	118	695754	17.0
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	122	695754	17.5
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	32	695754	4.6
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	603	695754	86.7
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	21	702108	3.0
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1599	702108	227.7
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	239	702108	34.0
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	376	702108	53.6
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1605	702108	228.6
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	368	702108	52.4
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	126	702108	17.9
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	456	702108	64.9
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	135	702108	19.2
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	107	702108	15.2
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	32	702108	4.6
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	362	702108	51.6
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	24	702108	3.4
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1614	702108	229.9
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	229	702108	32.6
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	367	702108	52.3
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1593	702108	226.9
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	386	702108	55.0
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	120	702108	17.1
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	500	702108	71.2
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	126	702108	17.9
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	126	702108	17.9
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	33	702108	4.7
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	161	702108	22.9
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	14	702108	Unreliable
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1327	702108	189.0
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	173	702108	24.6
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	307	702108	43.7
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1262	702108	179.7
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	332	702108	47.3
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	94	702108	13.4
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	415	702108	59.1
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	96	702108	13.7
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	95	702108	13.5
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	115	702108	16.4
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	83	702108	11.8
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	34	661301	5.1
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1865	661301	282.0
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	313	661301	47.3
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	198	661301	29.9
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1661	661301	251.2
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	273	661301	41.3
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	136	661301	20.6
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	447	661301	67.6
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	139	661301	21.0
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	117	661301	17.7
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	24	661301	3.6
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	205	661301	31.0
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	19	676493	Unreliable
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1861	676493	275.1
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	334	676493	49.4
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	159	676493	23.5
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1855	676493	274.2
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	289	676493	42.7
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	116	676493	17.1
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	459	676493	67.8
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	123	676493	18.2
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	128	676493	18.9
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	27	676493	4.0
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	728	676493	107.6
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	30	683232	4.4
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1829	683232	267.7
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	364	683232	53.3
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	167	683232	24.4
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1987	683232	290.8
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	271	683232	39.7
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	155	683232	22.7
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	445	683232	65.1
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	159	683232	23.3
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	136	683232	19.9
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	30	683232	4.4
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	436	683232	63.8
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	19	683232	Unreliable
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1824	683232	267.0
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	323	683232	47.3
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	179	683232	26.2
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1882	683232	275.5
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	284	683232	41.6
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	123	683232	18.0
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	431	683232	63.1
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	164	683232	24.0
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	111	683232	16.2
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	29	683232	4.2
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	155	683232	22.7
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	18	683232	Unreliable
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	1512	683232	221.3
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	278	683232	40.7
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	143	683232	20.9
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	1546	683232	226.3
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	296	683232	43.3
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	89	683232	13.0
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	382	683232	55.9
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	117	683232	17.1
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	114	683232	16.7
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	168	683232	24.6
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	101	683232	14.8
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	470	3123228	15.0
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5319	3123228	170.3
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	795	3123228	25.5
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	819	3123228	26.2
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5797	3123228	185.6
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1862	3123228	59.6
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	433	3123228	13.9
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1152	3123228	36.9
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	267	3123228	8.5
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	368	3123228	11.8
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	110	3123228	3.5
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	2823	3123228	90.4
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	494	3162705	15.6
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5186	3162705	164.0
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	797	3162705	25.2
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	805	3162705	25.5
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5597	3162705	177.0
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1991	3162705	63.0
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	288	3162705	9.1
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1009	3162705	31.9
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	312	3162705	9.9
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	348	3162705	11.0
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	123	3162705	3.9
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	2427	3162705	76.7
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	493	3162751	15.6
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5409	3162751	171.0
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	784	3162751	24.8
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	844	3162751	26.7
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5428	3162751	171.6
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1962	3162751	62.0
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	335	3162751	10.6
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1069	3162751	33.8
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	306	3162751	9.7
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	404	3162751	12.8
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	104	3162751	3.3
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	1391	3162751	44.0
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	475	3162751	15.0
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5367	3162751	169.7
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	788	3162751	24.9
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	786	3162751	24.9
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5306	3162751	167.8
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1922	3162751	60.8
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	321	3162751	10.1
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	1031	3162751	32.6
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	284	3162751	9.0
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	360	3162751	11.4
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	97	3162751	3.1
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	430	3162751	13.6
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	424	3162751	13.4
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4642	3162751	146.8
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	647	3162751	20.5
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	700	3162751	22.1
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	4177	3162751	132.1
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1653	3162751	52.3
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	297	3162751	9.4
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	849	3162751	26.8
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	253	3162751	8.0
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	277	3162751	8.8
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	165	3162751	5.2
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	262	3162751	8.3
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#Septicemia (A40-A41)"	"GR113-010"	452	2932574	15.4
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5480	2932574	186.9
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	989	2932574	33.7
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#Alzheimer disease (G30)"	"GR113-052"	353	2932574	12.0
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6827	2932574	232.8
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1305	2932574	44.5
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	474	2932574	16.2
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	932	2932574	31.8
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	295	2932574	10.1
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	372	2932574	12.7
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	107	2932574	3.6
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	"#COVID-19 (U07.1)"	"GR113-137"	3177	2932574	108.3
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#Septicemia (A40-A41)"	"GR113-010"	424	3002424	14.1
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5359	3002424	178.5
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	937	3002424	31.2
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#Alzheimer disease (G30)"	"GR113-052"	324	3002424	10.8
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6541	3002424	217.9
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1422	3002424	47.4
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	341	3002424	11.4
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	806	3002424	26.8
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	293	3002424	9.8
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	362	3002424	12.1
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	143	3002424	4.8
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	"#COVID-19 (U07.1)"	"GR113-137"	2829	3002424	94.2
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#Septicemia (A40-A41)"	"GR113-010"	493	3001909	16.4
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5410	3001909	180.2
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	1012	3001909	33.7
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#Alzheimer disease (G30)"	"GR113-052"	342	3001909	11.4
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6658	3001909	221.8
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1398	3001909	46.6
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	373	3001909	12.4
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	846	3001909	28.2
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	302	3001909	10.1
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	348	3001909	11.6
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	103	3001909	3.4
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	"#COVID-19 (U07.1)"	"GR113-137"	1697	3001909	56.5
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Septicemia (A40-A41)"	"GR113-010"	489	3001909	16.3
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	5578	3001909	185.8
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	992	3001909	33.0
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Alzheimer disease (G30)"	"GR113-052"	374	3001909	12.5
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	6225	3001909	207.4
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1393	3001909	46.4
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	372	3001909	12.4
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	868	3001909	28.9
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	375	3001909	12.5
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	399	3001909	13.3
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	124	3001909	4.1
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	"#COVID-19 (U07.1)"	"GR113-137"	484	3001909	16.1
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Septicemia (A40-A41)"	"GR113-010"	388	3001909	12.9
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Malignant neoplasms (C00-C97)"	"GR113-019"	4575	3001909	152.4
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diabetes mellitus (E10-E14)"	"GR113-046"	796	3001909	26.5
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Alzheimer disease (G30)"	"GR113-052"	341	3001909	11.4
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Diseases of heart (I00-I09,I11,I13,I20-I51)"	"GR113-054"	5147	3001909	171.5
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Cerebrovascular diseases (I60-I69)"	"GR113-070"	1173	3001909	39.1
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Influenza and pneumonia (J09-J18)"	"GR113-076"	303	3001909	10.1
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Chronic lower respiratory diseases (J40-J47)"	"GR113-082"	672	3001909	22.4
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98)"	"GR113-089"	268	3001909	8.9
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)"	"GR113-097"	321	3001909	10.7
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)"	"GR113-110"	321	3001909	10.7
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	"#COVID-19 (U07.1)"	"GR113-137"	244	3001909	8.1
+"---"
+"Dataset: Provisional Mortality Statistics, 2018 through Last Week"
+"Query Parameters:"
+"Residence States: Hawaii (15); Idaho (16); Illinois (17); Indiana (18); Iowa (19); Kansas (20); Kentucky (21); Louisiana (22);"
+"Maine (23); Maryland (24)"
+"UCD - ICD-10 113 Cause List: #Septicemia (A40-A41); #Malignant neoplasms (C00-C97); #Diabetes mellitus (E10-E14); #Alzheimer"
+"disease (G30); #Diseases of heart (I00-I09,I11,I13,I20-I51); #Cerebrovascular diseases (I60-I69); #Influenza and pneumonia"
+"(J09-J18); #Chronic lower respiratory diseases (J40-J47); Other diseases of respiratory system (J00-J06,J30- J39,J67,J70-J98);"
+"#Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27); Symptoms, signs and abnormal clinical and laboratory"
+"findings, not elsewhere classified (R00-R99); #COVID-19 (U07.1)"
+"Year/Month: 2020; 2021; 2022; 2023 (provisional); 2024 (provisional and partial)"
+"Group By: Residence State; Gender; Year; UCD - ICD-10 113 Cause List"
+"Show Totals: Disabled"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/mcd-provisional.html for more information."
+"---"
+"Query Date: Nov 17, 2024 12:14:22 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Provisional Mortality on CDC WONDER Online Database. Data are from the final Multiple Cause of Death Files, 2018-2022,"
+"and from provisional data for years 2023-2024, as compiled from data provided by the 57 vital statistics jurisdictions through"
+"the Vital Statistics Cooperative Program. Accessed at http://wonder.cdc.gov/mcd-icd10-provisional.html on Nov 17, 2024 12:14:22"
+"AM"
+"---"
+Messages:
+"1. Totals and Percent of Total are disabled when data are grouped by 113 or 130 Cause Lists. Check Caveats below for more"
+"information."
+"---"
+Caveats:
+"1. Totals and Percent of Total are disabled when data are grouped by a 113 or 130 Cause List because both aggregate and detailed"
+"values are displayed in the table. Also be aware that charts and maps containing both aggregate and detail data could be"
+"misleading."
+"2. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Unreliable."
+"3. The population figures for years 2022 and later are single-race estimates of the July 1 resident population, from the Vintage"
+"2022 postcensal series released by the Census Bureau on June 22, 2023. The 2022 series is based on the Modified Blended Base"
+"produced by the US Census Bureau in lieu of the April 1, 2020 decennial population count. The Modified Blended Base consists of"
+"the blend of Vintage 2020 postcensal population estimates for April 1, 2020, 2020 Demographic Analysis Estimates, and 2020"
+"Census data from the internal Census Edited File (CEF). The population figures for years 2021 are single-race estimates of the"
+"July 1 resident population, based on the Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial"
+"population count, from the Vintage 2021 postcensal series released by the Census Bureau on June 30, 2022. The population figures"
+"for year 2020 are single-race estimates of the July 1 resident population, from the Vintage 2020 postcensal series based on"
+"April 2010 Census, released by the Census Bureau on July 27, 2021. The population figures for year 2019 are single-race"
+"estimates of the July 1 resident population, from the Vintage 2019 postcensal series based on April 2010 Census, released by the"
+"Census Bureau on June 25, 2020. The population figures for year 2018 are single-race estimates of the July 1 resident"
+"population, from the Vintage 2018 postcensal series based on April 2010 Census, released by the Census Bureau on June 20, 2019."
+"More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Population Data."
+"4. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Age"
+"Group."
+"5. Beginning with the 2018 data, changes have been implemented that affect the counts for ICD-10 cause of death codes O00-O99"
+"compared to previous practice. In addition, data for the cause of death codes O00-O99 for 2003 through 2017 reflect differences"
+"in information available to individual states and probable errors. Deaths with the underlying cause classified with O00-O99 are"
+"subject to further processing before these deaths records are considered final. Provisional deaths have not undergone full"
+"processing and review and therefore should not be considered final for statistical purposes. Caution should be used in"
+"interpreting these data. More information can be found at: https://www.cdc.gov/nchs/maternal-mortality/."
+"6. Deaths related to external causes of injury or sudden death: In the provisional mortality data, causes of death classified as"
+"external causes of injury (ICD-10 codes V01-Y89), sudden deaths (ICD-10 codes R95 and R96), or drug poisoning (ICD-10 codes"
+"T36-T50), have the cause of death labeled as 'Data not shown due to 6 month lag to account for delays in death certificate"
+"completion for certain causes of death.' For these deaths occurring 24 weeks prior to the final date in the provisional data,"
+"the number of deaths and related statistics are not available by specific cause of death for ICD-10 codes V01-Y89, R95, R96, or"
+"T36-T50. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#999."
+"7. Deaths occurring through November 02, 2024 as of November 10, 2024."
