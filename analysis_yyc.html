@@ -411,12 +411,35 @@ div.tocify {
 </div>
 
 
-<pre class="r"><code>library(tidyverse)
-library(usmap)</code></pre>
-<pre><code>## Warning: package &#39;usmap&#39; was built under R version 4.4.2</code></pre>
-<pre class="r"><code>library(plotly)
-
-knitr::opts_chunk$set(
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.4     ✔ readr     2.1.5
+## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+## ✔ purrr     1.0.2     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code>library(usmap)</code></pre>
+<pre><code>## Warning: 程序包&#39;usmap&#39;是用R版本4.4.2 来建造的</code></pre>
+<pre class="r"><code>library(plotly)</code></pre>
+<pre><code>## 
+## 载入程序包：&#39;plotly&#39;
+## 
+## The following object is masked from &#39;package:ggplot2&#39;:
+## 
+##     last_plot
+## 
+## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter
+## 
+## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     layout</code></pre>
+<pre class="r"><code>knitr::opts_chunk$set(
   fig.width = 6,
   fig.asp = .6,
   out.width = &quot;90%&quot;
@@ -600,9 +623,8 @@ population in states.</h2>
   select(residence_state, gender, year, population) |&gt; 
   group_by(residence_state, gender, year, population) |&gt;
   summarise() </code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;residence_state&#39;,
-## &#39;gender&#39;, &#39;year&#39;. You can override using the `.groups`
-## argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;residence_state&#39;, &#39;gender&#39;, &#39;year&#39;. You
+## can override using the `.groups` argument.</code></pre>
 <pre class="r"><code>total_population_year_aftercalculation = 
   total_population |&gt; 
   group_by(residence_state, year) |&gt; 
@@ -647,12 +669,11 @@ cause15_month_only_combined_population |&gt;
   theme(
     axis.text.x = element_text(angle = 45, hjust = 1),
   )</code></pre>
-<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2
-## 3.4.0.
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
 ## ℹ Please use `linewidth` instead.
 ## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_lifecycle_warnings()` to see where
-## this warning was generated.</code></pre>
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
 <pre class="r"><code>trend_for_GR113_010_in_Hawaii_2020_2024</code></pre>
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="analysis_yyc_files/figure-html/by%20states%20and%20months%20using%20line%20and%20point%20plots-1.png" width="90%" /></p>
@@ -783,8 +804,8 @@ data_with_death_rate_map =
     death_rate = total_deaths / total_population * 1000
   ) |&gt; 
   ungroup()</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;residence_state&#39;. You
-## can override using the `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;residence_state&#39;. You can override using
+## the `.groups` argument.</code></pre>
 <pre class="r"><code>us_map_data = usmap::us_map()
 
 data_with_death_rate_map_with_location =
@@ -811,13 +832,8 @@ plotly_map_deathrate =
   )
 
 plotly_map_deathrate</code></pre>
-<<<<<<< HEAD:_site/analysis_yyc.html
-<div class="plotly html-widget html-fill-item" id="htmlwidget-2688634937c09b307f5d" style="width:90%;height:345.6px;"></div>
-<script type="application/json" data-for="htmlwidget-2688634937c09b307f5d">{"x":{"visdat":{"18c83a602e3":["function () ","plotlyVisDat"]},"cur_data":"18c83a602e3","attrs":{"18c83a602e3":{"locations":{},"locationmode":"USA-states","z":{},"text":{},"colorscale":"Blues","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"choropleth"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Death Rate by State in the USA","geo":{"scope":"usa"},"scene":{"zaxis":{"title":"death_rate"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"death_rate","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":"Blues","showscale":true,"locations":["HI","ID","IL","IN","IA","KS","KY","LA","MD"],"locationmode":"USA-states","z":[8.6815550182444134,9.135081966136319,10.365099427767005,11.894235237462052,11.43047344432429,10.839435034259328,12.631411551418493,12.393338841388255,9.9947125087643212],"text":["State: Hawaii <br>Death Rate: 8.68155501824441","State: Idaho <br>Death Rate: 9.13508196613632","State: Illinois <br>Death Rate: 10.365099427767","State: Indiana <br>Death Rate: 11.8942352374621","State: Iowa <br>Death Rate: 11.4304734443243","State: Kansas <br>Death Rate: 10.8394350342593","State: Kentucky <br>Death Rate: 12.6314115514185","State: Louisiana <br>Death Rate: 12.3933388413883","State: Maryland <br>Death Rate: 9.99471250876432"],"type":"choropleth","marker":{"line":{"color":"rgba(31,119,180,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-=======
-<div class="plotly html-widget html-fill-item" id="htmlwidget-a171fcebe70e0855c1df" style="width:90%;height:345.6px;"></div>
-<script type="application/json" data-for="htmlwidget-a171fcebe70e0855c1df">{"x":{"visdat":{"985427d66370":["function () ","plotlyVisDat"]},"cur_data":"985427d66370","attrs":{"985427d66370":{"locations":{},"locationmode":"USA-states","z":{},"text":{},"colorscale":"Blues","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"choropleth"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Death Rate by State in the USA","geo":{"scope":"usa"},"scene":{"zaxis":{"title":"death_rate"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"death_rate","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":"Blues","showscale":true,"locations":["HI","ID","IL","IN","IA","KS","KY","LA","MD"],"locationmode":"USA-states","z":[8.6815550182444134,9.135081966136319,10.365099427767005,11.894235237462052,11.43047344432429,10.839435034259328,12.631411551418493,12.393338841388255,9.9947125087643212],"text":["State: Hawaii <br>Death Rate: 8.68155501824441","State: Idaho <br>Death Rate: 9.13508196613632","State: Illinois <br>Death Rate: 10.365099427767","State: Indiana <br>Death Rate: 11.8942352374621","State: Iowa <br>Death Rate: 11.4304734443243","State: Kansas <br>Death Rate: 10.8394350342593","State: Kentucky <br>Death Rate: 12.6314115514185","State: Louisiana <br>Death Rate: 12.3933388413883","State: Maryland <br>Death Rate: 9.99471250876432"],"type":"choropleth","marker":{"line":{"color":"rgba(31,119,180,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
->>>>>>> 551308af9235a9ee5df2e91a03c6eb5de85b8189:analysis_yyc.html
+<div class="plotly html-widget html-fill-item" id="htmlwidget-0c4bf472121fbdba7977" style="width:90%;height:345.6px;"></div>
+<script type="application/json" data-for="htmlwidget-0c4bf472121fbdba7977">{"x":{"visdat":{"4e847cf355ae":["function () ","plotlyVisDat"]},"cur_data":"4e847cf355ae","attrs":{"4e847cf355ae":{"locations":{},"locationmode":"USA-states","z":{},"text":{},"colorscale":"Blues","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"choropleth"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Death Rate by State in the USA","geo":{"scope":"usa"},"scene":{"zaxis":{"title":"death_rate"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"death_rate","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":"Blues","showscale":true,"locations":["HI","ID","IL","IN","IA","KS","KY","LA","MD"],"locationmode":"USA-states","z":[8.6815550182444134,9.135081966136319,10.365099427767005,11.894235237462052,11.43047344432429,10.839435034259328,12.631411551418493,12.393338841388255,9.9947125087643212],"text":["State: Hawaii <br>Death Rate: 8.68155501824441","State: Idaho <br>Death Rate: 9.13508196613632","State: Illinois <br>Death Rate: 10.365099427767","State: Indiana <br>Death Rate: 11.8942352374621","State: Iowa <br>Death Rate: 11.4304734443243","State: Kansas <br>Death Rate: 10.8394350342593","State: Kentucky <br>Death Rate: 12.6314115514185","State: Louisiana <br>Death Rate: 12.3933388413883","State: Maryland <br>Death Rate: 9.99471250876432"],"type":"choropleth","marker":{"line":{"color":"rgba(31,119,180,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p><em>bubble map</em></p>
 <pre class="r"><code># bubble map
 bubble_map_deathrate =
@@ -843,13 +859,8 @@ bubble_map_deathrate</code></pre>
 <pre><code>## No scattergeo mode specifed:
 ##   Setting the mode to markers
 ##   Read more about this attribute -&gt; https://plotly.com/r/reference/#scatter-mode</code></pre>
-<<<<<<< HEAD:_site/analysis_yyc.html
-<div class="plotly html-widget html-fill-item" id="htmlwidget-077629bb68aee68a0489" style="width:90%;height:345.6px;"></div>
-<script type="application/json" data-for="htmlwidget-077629bb68aee68a0489">{"x":{"visdat":{"18c820c81438":["function () ","plotlyVisDat"]},"cur_data":"18c820c81438","attrs":{"18c820c81438":{"locationmode":"USA-states","locations":{},"marker":{"size":{},"color":{},"colorscale":"Blues","showscale":true},"text":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scattergeo"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Death Rate by State in the USA","geo":{"scope":"usa"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"locationmode":"USA-states","locations":["HI","ID","IL","IN","IA","KS","KY","LA","MD"],"marker":{"color":[8.6815550182444134,9.135081966136319,10.365099427767005,11.894235237462052,11.43047344432429,10.839435034259328,12.631411551418493,12.393338841388255,9.9947125087643212],"size":[13.02233252736662,13.702622949204478,15.547649141650506,17.841352856193076,17.145710166486435,16.259152551388993,18.947117327127739,18.590008262082382,14.992068763146481],"colorscale":"Blues","showscale":true,"line":{"color":"rgba(31,119,180,1)"}},"text":["State: Hawaii <br>Death Rate: 8.68155501824441","State: Idaho <br>Death Rate: 9.13508196613632","State: Illinois <br>Death Rate: 10.365099427767","State: Indiana <br>Death Rate: 11.8942352374621","State: Iowa <br>Death Rate: 11.4304734443243","State: Kansas <br>Death Rate: 10.8394350342593","State: Kentucky <br>Death Rate: 12.6314115514185","State: Louisiana <br>Death Rate: 12.3933388413883","State: Maryland <br>Death Rate: 9.99471250876432"],"type":"scattergeo","mode":"markers","line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-=======
-<div class="plotly html-widget html-fill-item" id="htmlwidget-05d2f585b4448049c379" style="width:90%;height:345.6px;"></div>
-<script type="application/json" data-for="htmlwidget-05d2f585b4448049c379">{"x":{"visdat":{"98547d37d39":["function () ","plotlyVisDat"]},"cur_data":"98547d37d39","attrs":{"98547d37d39":{"locationmode":"USA-states","locations":{},"marker":{"size":{},"color":{},"colorscale":"Blues","showscale":true},"text":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scattergeo"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Death Rate by State in the USA","geo":{"scope":"usa"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"locationmode":"USA-states","locations":["HI","ID","IL","IN","IA","KS","KY","LA","MD"],"marker":{"color":[8.6815550182444134,9.135081966136319,10.365099427767005,11.894235237462052,11.43047344432429,10.839435034259328,12.631411551418493,12.393338841388255,9.9947125087643212],"size":[13.02233252736662,13.702622949204478,15.547649141650506,17.841352856193076,17.145710166486435,16.259152551388993,18.947117327127739,18.590008262082382,14.992068763146481],"colorscale":"Blues","showscale":true,"line":{"color":"rgba(31,119,180,1)"}},"text":["State: Hawaii <br>Death Rate: 8.68155501824441","State: Idaho <br>Death Rate: 9.13508196613632","State: Illinois <br>Death Rate: 10.365099427767","State: Indiana <br>Death Rate: 11.8942352374621","State: Iowa <br>Death Rate: 11.4304734443243","State: Kansas <br>Death Rate: 10.8394350342593","State: Kentucky <br>Death Rate: 12.6314115514185","State: Louisiana <br>Death Rate: 12.3933388413883","State: Maryland <br>Death Rate: 9.99471250876432"],"type":"scattergeo","mode":"markers","line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
->>>>>>> 551308af9235a9ee5df2e91a03c6eb5de85b8189:analysis_yyc.html
+<div class="plotly html-widget html-fill-item" id="htmlwidget-fb2ad9a365958dfa9a0c" style="width:90%;height:345.6px;"></div>
+<script type="application/json" data-for="htmlwidget-fb2ad9a365958dfa9a0c">{"x":{"visdat":{"4e846c086779":["function () ","plotlyVisDat"]},"cur_data":"4e846c086779","attrs":{"4e846c086779":{"locationmode":"USA-states","locations":{},"marker":{"size":{},"color":{},"colorscale":"Blues","showscale":true},"text":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scattergeo"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Death Rate by State in the USA","geo":{"scope":"usa"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"locationmode":"USA-states","locations":["HI","ID","IL","IN","IA","KS","KY","LA","MD"],"marker":{"color":[8.6815550182444134,9.135081966136319,10.365099427767005,11.894235237462052,11.43047344432429,10.839435034259328,12.631411551418493,12.393338841388255,9.9947125087643212],"size":[13.02233252736662,13.702622949204478,15.547649141650506,17.841352856193076,17.145710166486435,16.259152551388993,18.947117327127739,18.590008262082382,14.992068763146481],"colorscale":"Blues","showscale":true,"line":{"color":"rgba(31,119,180,1)"}},"text":["State: Hawaii <br>Death Rate: 8.68155501824441","State: Idaho <br>Death Rate: 9.13508196613632","State: Illinois <br>Death Rate: 10.365099427767","State: Indiana <br>Death Rate: 11.8942352374621","State: Iowa <br>Death Rate: 11.4304734443243","State: Kansas <br>Death Rate: 10.8394350342593","State: Kentucky <br>Death Rate: 12.6314115514185","State: Louisiana <br>Death Rate: 12.3933388413883","State: Maryland <br>Death Rate: 9.99471250876432"],"type":"scattergeo","mode":"markers","line":{"color":"rgba(31,119,180,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div
 id="the-relationship-between-the-mortality-rate-of-covid-19-and-other-diseases-correlation-heatmap-or-bubble-chart-third-variable-state-population-or-the-budget-or-the-life-expectancy-in-the-example-paper-or-faceted-scatter-plot"
@@ -869,9 +880,8 @@ COVID-19 and other diseases in different states at the same year</h2>
   summarise(total_deaths = sum(deaths, na.rm = TRUE)) |&gt; 
   left_join(df_population_summary, by = c(&quot;residence_state&quot;, &quot;year&quot;)) |&gt; 
   mutate(mortality_rate_per_10000 = total_deaths / total_population_per_year * 10000) </code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;residence_state&#39;,
-## &#39;year&#39;, &#39;cause_list&#39;. You can override using the `.groups`
-## argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;residence_state&#39;, &#39;year&#39;, &#39;cause_list&#39;.
+## You can override using the `.groups` argument.</code></pre>
 <pre class="r"><code>covid_data =
   rate_comparison_df_year |&gt; 
   filter(cause_list_code == &quot;GR113-137&quot;) 
@@ -1011,8 +1021,8 @@ cause_system_month_only_cleaned_population_A00_B99 =
     y = &quot;Mortality Rate&quot;
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;residence_state&#39;,
-## &#39;year&#39;. You can override using the `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;residence_state&#39;, &#39;year&#39;. You can override
+## using the `.groups` argument.</code></pre>
 <pre class="r"><code>cause_system_month_only_cleaned_population_A00_B99</code></pre>
 <p><img src="analysis_yyc_files/figure-html/system%20impact%20in%20U.S.%20and%20in%20every%20states-1.png" width="90%" /></p>
 <pre class="r"><code># we could see other system use this code</code></pre>
@@ -1022,8 +1032,8 @@ cause_system_month_only_cleaned_population_A00_B99 =
   group_by(ucd_icd_chapter, year, total_population_per_year) |&gt;
   summarise(total_deaths = sum(deaths, na.rm = TRUE)) |&gt; 
   mutate(mortality_rate = total_deaths / total_population_per_year * 10000)</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;ucd_icd_chapter&#39;,
-## &#39;year&#39;. You can override using the `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;ucd_icd_chapter&#39;, &#39;year&#39;. You can override
+## using the `.groups` argument.</code></pre>
 <pre class="r"><code>cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub(&quot;Certain infectious and parasitic diseases&quot;, &quot;Infectious&quot;, cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
 
 cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter = gsub(&quot;Codes for special purposes&quot;, &quot;Special&quot;, cause_system_month_only_cleaned_population_Hawaii$ucd_icd_chapter)
