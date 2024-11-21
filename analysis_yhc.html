@@ -10,8 +10,9 @@
 
 
 
+<meta name="date" content="2024-11-20" />
 
-<title>Analysis_szg</title>
+<title>Analysis_yhc</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -306,21 +307,27 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Analysis_szg</h1>
+<h1 class="title toc-ignore">Analysis_yhc</h1>
+<h4 class="date">2024-11-20</h4>
 
 </div>
 
 
-<div id="some-observations-from-the-data" class="section level3">
-<h3>Some observations from the data</h3>
-<pre class="r"><code>weekly_deaths_data &lt;- read_csv(&quot;data/weekly_deaths_by_state_and_causes.csv&quot;) %&gt;% 
-  select(-1)</code></pre>
-<pre><code>## Warning: One or more parsing issues, call `problems()` on your data frame for details,
-## e.g.:
+<pre class="r"><code>library(readr)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(lubridate)
+library(tidyr)</code></pre>
+<div id="import-and-clean-data" class="section level2">
+<h2>Import and clean data</h2>
+<pre class="r"><code>data=read_csv(&quot;./data/weekly_deaths_by_state_and_causes.csv&quot;) </code></pre>
+<pre><code>## Warning: One or more parsing issues, call `problems()` on your data
+## frame for details, e.g.:
 ##   dat &lt;- vroom(...)
 ##   problems(dat)</code></pre>
 <pre><code>## Rows: 10476 Columns: 35
-## ── Column specification ────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
 ## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...
@@ -329,87 +336,199 @@ $(document).ready(function () {
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre class="r"><code># Get the data I need to analysis 
-data_sg &lt;- weekly_deaths_data %&gt;%
-  filter(`Jurisdiction of Occurrence` %in% c(&quot;Massachusetts&quot;, &quot;Michigan&quot;, &quot;Minnesota&quot;, 
-                                             &quot;Mississippi&quot;, &quot;Missouri&quot;, &quot;Montana&quot;, 
-                                             &quot;Nebraska&quot;, &quot;Nevada&quot;, &quot;New Hampshire&quot;, 
-                                             &quot;New Jersey&quot;)) %&gt;% 
-  select(1:19) %&gt;% 
-  rename(
-    `Septicemia` = `Septicemia (A40-A41)`, 
-    `Malignant neoplasms` = `Malignant neoplasms (C00-C97)`, 
-    `Diabetes mellitus` = `Diabetes mellitus (E10-E14)`, 
-    `Alzheimer disease` = `Alzheimer disease (G30)`, 
-    `Influenza and pneumonia` = `Influenza and pneumonia (J09-J18)`, 
-    `Chronic lower respiratory diseases` = `Chronic lower respiratory diseases (J40-J47)`, 
-    `Other respiratory diseases` = `Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)`, 
-    `Kidney Disease` = `Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)`, 
-    `Other Symptoms` = `Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)`, 
-    `Diseases of heart` = `Diseases of heart (I00-I09,I11,I13,I20-I51)`, 
-    `Cerebrovascular diseases` = `Cerebrovascular diseases (I60-I69)`, 
-    `COVID-19 (Multiple)` = `COVID-19 (U071, Multiple Cause of Death)`, 
-    `COVID-19 (Underlying)` = `COVID-19 (U071, Underlying Cause of Death)`
-  )
-state_data_list &lt;- split(data_sg, data_sg %&gt;% pull(`Jurisdiction of Occurrence`))
-#summary(data_sg[ ,5:19])</code></pre>
-<p>Overall, the columns with fewer missing values are Malignant
-neoplasms, Diabetes mellitus, Alzheimer disease, Chronic lower
-respiratory diseases, Diseases of heart, Cerebrovascular diseases,
-COVID-19 (Multiple), and COVID-19 (Underlying).</p>
-<pre class="r"><code>data_ma &lt;- state_data_list[[&quot;Massachusetts&quot;]]
-summary(data_ma[ ,5:19])
+<pre class="r"><code>states &lt;- c(&quot;Alabama&quot;, &quot;Alaska&quot;, &quot;Arizona&quot;, &quot;Arkansas&quot;, &quot;California&quot;, 
+            &quot;Colorado&quot;, &quot;Connecticut&quot;, &quot;Delaware&quot;, &quot;Florida&quot;, &quot;Georgia&quot;, 
+            &quot;Hawaii&quot;, &quot;Idaho&quot;, &quot;Illinois&quot;, &quot;Indiana&quot;, &quot;Iowa&quot;, &quot;Kansas&quot;, 
+            &quot;Kentucky&quot;, &quot;Louisiana&quot;, &quot;Maine&quot;, &quot;Maryland&quot;)
 
-data_mi &lt;- state_data_list[[&quot;Michigan&quot;]]
-summary(data_mi[ ,5:19])
-
-data_mn &lt;- state_data_list[[&quot;Minnesota&quot;]]
-summary(data_mn[ ,5:19])
-
-data_ms &lt;- state_data_list[[&quot;Mississippi&quot;]]
-summary(data_ms[ ,5:19])
-
-data_mo &lt;- state_data_list[[&quot;Missouri&quot;]]
-summary(data_mo[ ,5:19])
-
-data_mt &lt;- state_data_list[[&quot;Montana&quot;]]
-summary(data_mt[ ,5:19])
-
-data_ne &lt;- state_data_list[[&quot;Nebraska&quot;]]
-summary(data_ne[ ,5:19])
-
-data_nv &lt;- state_data_list[[&quot;Nevada&quot;]]
-summary(data_nv[ ,5:19])
-
-data_nh &lt;- state_data_list[[&quot;New Hampshire&quot;]]
-summary(data_nh[ ,5:19])
-
-data_nj &lt;- state_data_list[[&quot;New Jersey&quot;]]
-summary(data_nj[ ,5:19])</code></pre>
-<p>Distribution of NAs:<br />
-<em>Massachusetts</em>: nice!<br />
-<em>Minnesota</em>: Septicemia.<br />
-<em>Mississippi</em>: Septicemia, Other respiratory diseases, Other
-Symptoms<br />
-<em>Missouri</em>: Other Symptoms<br />
-<em>Montana</em>: Septicemia, Diabetes mellitus, Alzheimer disease,
-Influenza and pneumonia, Other respiratory diseases, Kidney Disease,
-Other Symptoms, Cerebrovascular diseases.<br />
-<em>Nebraska</em>: Septicemia, Influenza and pneumonia, Other
-respiratory diseases, Kidney Disease, Other Symptoms, Diseases of
-heart<br />
-<em>Nevada</em>: Septicemia, Other respiratory diseases, Kidney Disease,
-Other Symptoms<br />
-<em>New Hampshire</em>: Septicemia, Diabetes mellitus, Alzheimer
-disease, Influenza and pneumonia,Other respiratory diseases, Kidney
-Disease, Other Symptoms, COVID-19 (Underlying)<br />
-<em>New Jersey</em>: nice!</p>
-<p>Montana, Nebraska and New Hampshire have a severe data missing
-problem.</p>
+yh_data &lt;- data |&gt;
+  janitor::clean_names() |&gt;
+  rename_with(~ str_replace_all(., &quot; &quot;, &quot;_&quot;)) |&gt;
+  filter(jurisdiction_of_occurrence %in% states) |&gt;
+  rename_with(~ make.unique(str_replace(., &quot;_\\w\\d.*&quot;, &quot;&quot;))) |&gt;
+  mutate(
+    across(where(is.character), ~ ifelse(. == &quot;Suppressed (counts 1-9)&quot;, 
+                                         as.character(sample(1:9, 1)), .))
+  )  |&gt;
+  mutate(month = month(week_ending_date)) </code></pre>
 </div>
-<div id="perform-some-time-series-analysis-on-selected-state"
-class="section level3">
-<h3>Perform some time series analysis on selected state</h3>
+<div id="visualize-the-extent-of-missing-data" class="section level2">
+<h2>Visualize the extent of missing data</h2>
+<pre class="r"><code>data_missing = yh_data |&gt;
+  pivot_longer(cols = 6:20, names_to = &quot;disease&quot;, values_to = &quot;value&quot;) |&gt;
+  mutate(missing = ifelse(is.na(value), 1, 0))  |&gt; # 1 as missing
+  group_by(jurisdiction_of_occurrence, disease) |&gt;
+  summarize(missing_rate = mean(is.na(value)), .groups = &quot;drop&quot;)
+
+missing_plot=
+ggplot(data_missing, aes(x = jurisdiction_of_occurrence, y = disease, fill = missing_rate)) +
+  geom_tile(color = &quot;white&quot;) +  
+  scale_fill_gradient(
+    low = &quot;white&quot;,    # no missing as white
+    high = &quot;red&quot;,     # all missing as red
+    na.value = &quot;gray&quot; 
+  ) +
+  labs(
+    title = &quot;Missing Data Heatmap&quot;,
+    x = &quot;State&quot;,
+    y = &quot;Disease&quot;,
+    fill = &quot;Missing Rate&quot;
+  ) +theme(
+    axis.text.y = element_text(size = 10, angle = 45),
+    plot.title = element_text(hjust = 0.5)
+  )
+
+
+
+missing_plot</code></pre>
+<p><img src="analysis_yhc_files/figure-html/unnamed-chunk-3-1.png" width="1728" />
+It can be observed that the states with relatively complete data are
+Alabama, Arizona, California, Florida, Georgia, Illinois, Indiana,
+Kentucky, and Louisiana. ##Week with the Highest Mortality in the Past
+Four Years</p>
+<pre class="r"><code>total_weekly_deaths = yh_data |&gt;
+  group_by(mmwr_week) |&gt;
+  summarize(total_deaths = sum(natural_cause, na.rm = TRUE)) |&gt;
+  ungroup()
+
+total_weekly_deaths_plot=
+ggplot(total_weekly_deaths, aes(x = factor(mmwr_week), 
+                                y = total_deaths, fill = factor(mmwr_week))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  theme_minimal() +
+  labs(
+    title = &quot;Total Mortality for Each Week Over the Past Four Years&quot;,
+    x = &quot;Week&quot;,
+    y = &quot;Total Death Count&quot;
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+
+total_weekly_deaths_plot</code></pre>
+<p><img src="analysis_yhc_files/figure-html/unnamed-chunk-4-1.png" width="1728" />
+##Mortality Trends Over Time for Different Causes of Death</p>
+<pre class="r"><code>mortality_trends_data = yh_data |&gt;
+  select(
+    week_ending_date, 
+    jurisdiction_of_occurrence, 
+    mmwr_year,
+    septicemia,
+    malignant_neoplasms,
+    diabetes_mellitus,
+    alzheimer_disease,
+    influenza_and_pneumonia,
+    chronic_lower_respiratory_diseases,
+    other_diseases_of_respiratory_system,
+    nephritis_nephrotic_syndrome_and_nephrosis,
+    symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+    diseases_of_heart,
+    cerebrovascular_diseases,
+    covid,
+    covid.1
+  ) |&gt;
+  gather(key = &quot;cause_of_death&quot;, value = &quot;death_count&quot;, 
+         septicemia,
+         malignant_neoplasms,
+         diabetes_mellitus,
+         alzheimer_disease,
+         influenza_and_pneumonia,
+         chronic_lower_respiratory_diseases,
+         other_diseases_of_respiratory_system,
+         nephritis_nephrotic_syndrome_and_nephrosis,
+         symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+         diseases_of_heart,
+         cerebrovascular_diseases,
+         covid,
+         covid.1) |&gt;
+  group_by(week_ending_date, cause_of_death) |&gt;
+  summarize(total_deaths = sum(death_count, na.rm = TRUE)) |&gt;
+  ungroup()</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;week_ending_date&#39;. You
+## can override using the `.groups` argument.</code></pre>
+<pre class="r"><code>mortality_trends_plot=
+ggplot(mortality_trends_data, aes(x = week_ending_date, 
+                                  y = total_deaths,
+                                  color = cause_of_death, 
+                                  group = cause_of_death)) +
+  geom_line(alpha=0.6) +
+  geom_point(alpha=0.6) +
+  theme_minimal() +
+  labs(
+    title = &quot;Mortality Trends Over Time for Different Causes of Death&quot;,
+    x = &quot;Week Ending Date&quot;,
+    y = &quot;Total Deaths&quot;,
+    color = &quot;Cause of Death&quot;
+  ) +
+theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+mortality_trends_plot</code></pre>
+<p><img src="analysis_yhc_files/figure-html/unnamed-chunk-5-1.png" width="1728" />
+##Changes in the Proportion of Each Cause of Death in Total Mortality
+Over Four Years</p>
+<pre class="r"><code>mortality_data &lt;- yh_data |&gt;
+  select(
+    week_ending_date, 
+    jurisdiction_of_occurrence, 
+    mmwr_year,
+    septicemia,
+    malignant_neoplasms,
+    diabetes_mellitus,
+    alzheimer_disease,
+    influenza_and_pneumonia,
+    chronic_lower_respiratory_diseases,
+    other_diseases_of_respiratory_system,
+    nephritis_nephrotic_syndrome_and_nephrosis,
+    symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+    diseases_of_heart,
+    cerebrovascular_diseases,
+    covid,
+    covid.1
+  ) |&gt;
+  gather(key = &quot;cause_of_death&quot;, value = &quot;death_count&quot;, 
+         septicemia,
+         malignant_neoplasms,
+         diabetes_mellitus,
+         alzheimer_disease,
+         influenza_and_pneumonia,
+         chronic_lower_respiratory_diseases,
+         other_diseases_of_respiratory_system,
+         nephritis_nephrotic_syndrome_and_nephrosis,
+         symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+         diseases_of_heart,
+         cerebrovascular_diseases,
+         covid,
+         covid.1) |&gt;
+  group_by(week_ending_date, mmwr_year, cause_of_death) |&gt;
+  summarize(death_count = sum(death_count, na.rm = TRUE)) |&gt;
+  group_by(week_ending_date, mmwr_year) |&gt;
+  mutate(total_deaths = sum(death_count, na.rm = TRUE)) |&gt;
+  mutate(proportion = death_count / total_deaths) |&gt;
+  ungroup()</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;week_ending_date&#39;,
+## &#39;mmwr_year&#39;. You can override using the `.groups` argument.</code></pre>
+<pre class="r"><code>mortality_plot=
+ggplot(mortality_data, aes(x = week_ending_date, y = proportion, fill = cause_of_death)) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;) +
+  labs(
+    title = &quot;Changes in the Proportion of Each Cause of Death in Total Mortality Over Four Years&quot;,
+    x = &quot;Week Ending Date&quot;,
+    y = &quot;Proportion of Total Deaths&quot;,
+    fill = &quot;Cause of Death&quot;
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = &quot;bottom&quot;
+  ) +
+  scale_x_date(date_breaks = &quot;1 year&quot;, date_labels = &quot;%Y&quot;)+
+  theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+
+mortality_plot</code></pre>
+<p><img src="analysis_yhc_files/figure-html/unnamed-chunk-6-1.png" width="1728" /></p>
 </div>
 
 
