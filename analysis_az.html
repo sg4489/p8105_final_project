@@ -468,12 +468,12 @@ library(broom)</code></pre>
          month = month(week_ending_date)
          ) %&gt;%  
   select(state, year, month, mmwr_week, all_cause: covid_19_underlying)</code></pre>
-<pre><code>## Warning: One or more parsing issues, call `problems()` on your data frame for details,
-## e.g.:
+<pre><code>## Warning: One or more parsing issues, call `problems()` on your data
+## frame for details, e.g.:
 ##   dat &lt;- vroom(...)
 ##   problems(dat)</code></pre>
 <pre><code>## Rows: 10476 Columns: 35
-## ── Column specification ────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
 ## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...

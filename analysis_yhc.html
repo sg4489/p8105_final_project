@@ -322,12 +322,12 @@ library(tidyr)</code></pre>
 <div id="import-and-clean-data" class="section level2">
 <h2>Import and clean data</h2>
 <pre class="r"><code>data=read_csv(&quot;./data/weekly_deaths_by_state_and_causes.csv&quot;) </code></pre>
-<pre><code>## Warning: One or more parsing issues, call `problems()` on your data frame for details,
-## e.g.:
+<pre><code>## Warning: One or more parsing issues, call `problems()` on your data
+## frame for details, e.g.:
 ##   dat &lt;- vroom(...)
 ##   problems(dat)</code></pre>
 <pre><code>## Rows: 10476 Columns: 35
-## ── Column specification ────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
 ## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...
@@ -444,8 +444,8 @@ total_weekly_deaths_plot</code></pre>
   group_by(week_ending_date, cause_of_death) |&gt;
   summarize(total_deaths = sum(death_count, na.rm = TRUE)) |&gt;
   ungroup()</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;week_ending_date&#39;. You can override using
-## the `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;week_ending_date&#39;. You
+## can override using the `.groups` argument.</code></pre>
 <pre class="r"><code>mortality_trends_plot=
 ggplot(mortality_trends_data, aes(x = week_ending_date, 
                                   y = total_deaths,
@@ -506,8 +506,8 @@ Over Four Years</p>
   mutate(total_deaths = sum(death_count, na.rm = TRUE)) |&gt;
   mutate(proportion = death_count / total_deaths) |&gt;
   ungroup()</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;week_ending_date&#39;, &#39;mmwr_year&#39;. You can
-## override using the `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;week_ending_date&#39;,
+## &#39;mmwr_year&#39;. You can override using the `.groups` argument.</code></pre>
 <pre class="r"><code>mortality_plot=
 ggplot(mortality_data, aes(x = week_ending_date, y = proportion, fill = cause_of_death)) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;) +
