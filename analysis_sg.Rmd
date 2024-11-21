@@ -45,8 +45,6 @@ state_data_list <- split(data_sg, data_sg %>% pull(`Jurisdiction of Occurrence`)
 
 Overall, the columns with fewer missing values are Malignant neoplasms, Diabetes mellitus, Alzheimer disease, Chronic lower respiratory diseases, Diseases of heart, Cerebrovascular diseases, COVID-19 (Multiple), and COVID-19 (Underlying).  
 
- 
-
 ```{r, message = FALSE, results = "hide"}
 data_ma <- state_data_list[["Massachusetts"]]
 summary(data_ma[ ,5:19])
