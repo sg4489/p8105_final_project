@@ -1,0 +1,186 @@
+---
+title: "analysis_jz"
+author: "ELisajava"
+date: "2024-11-18"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# Load necessary libraries
+library(tidyverse)
+library(janitor)
+library(lubridate)
+
+```
+
+# Import and clean the data
+```{r}
+# Load the dataset
+data <- read_csv("./data/weekly_deaths_by_state_and_causes.csv")
+
+# Convert variable names to snake_case
+cleaned_data <- data %>%
+  clean_names()
+
+# Rename the column 'jurisdiction_of_occurrence' to 'state'
+cleaned_data <- cleaned_data %>%
+  rename(state = jurisdiction_of_occurrence)
+
+# Filter for relevant states
+states_of_interest <- c("New Mexico", "New York", "North Carolina", "North Dakota",
+                        "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina")
+filtered_data <- cleaned_data %>%
+  filter(state %in% states_of_interest)
+
+# Check for missing data
+missing_summary <- filtered_data %>%
+  summarize(across(everything(), ~ sum(is.na(.))))
+
+# Convert to data frame and display
+as.data.frame(missing_summary)
+
+# Remove duplicate rows
+filtered_data <- filtered_data %>%
+  distinct()
+
+# Check cleaned and filtered data
+print(glimpse(filtered_data))
+```
+
+# The total death cases by each state
+```{r}
+# Data cleaning and aggregation
+barplot_data <- filtered_data %>%
+  select(state, all_cause, natural_cause) %>% # Select relevant columns
+  group_by(state) %>% # Group by jurisdiction
+  summarise(
+    total_all_cause = sum(all_cause, na.rm = TRUE),
+    total_natural_cause = sum(natural_cause, na.rm = TRUE)
+  ) %>%
+  pivot_longer(
+    cols = c(total_all_cause, total_natural_cause),
+    names_to = "cause_type",
+    values_to = "count"
+  )
+
+# Create the plot
+ggplot(barplot_data, aes(x = state, y = count, fill = cause_type)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.9)) +
+  labs(
+    title = "Death Counts by State from 2020 to 2023",
+    x = "State",
+    y = "Number of Deaths",
+    fill = "Cause Type"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels for better readability
+```
+
+# Trend Analysis Over Time
+```{r}
+# Summarize deaths by week for each state
+weekly_trends <- filtered_data %>%
+  group_by(state, week_ending_date) %>%
+  summarise(total_deaths = sum(all_cause, na.rm = TRUE), .groups = "drop")
+
+# Plot trends over time
+ggplot(weekly_trends, aes(x = week_ending_date, y = total_deaths, color = state)) +
+  geom_line(size = 1) +
+  labs(
+    title = "Weekly Death Trends by State (2020-2023)",
+    x = "Week Ending Date",
+    y = "Total Deaths",
+    color = "State"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+
+# Seasonal Analysis of Deaths
+```{r}
+# Add a season column based on week ending date
+filtered_data <- filtered_data %>%
+  mutate(
+    season = case_when(
+      month(week_ending_date) %in% c(12, 1, 2) ~ "Winter",
+      month(week_ending_date) %in% c(3, 4, 5) ~ "Spring",
+      month(week_ending_date) %in% c(6, 7, 8) ~ "Summer",
+      month(week_ending_date) %in% c(9, 10, 11) ~ "Autumn"
+    )
+  )
+
+# Summarize deaths by season and state
+season_summary <- filtered_data %>%
+  group_by(state, season) %>%
+  summarise(total_deaths = sum(all_cause, na.rm = TRUE), .groups = "drop")
+
+# Plot seasonal deaths by state
+ggplot(season_summary, aes(x = season, y = total_deaths, group = state, color = state)) +
+  geom_bar(stat = "identity", aes(fill = state), position = "dodge", alpha = 0.7) + # Add bar plot
+  geom_line(aes(group = state), size = 1) + # Add line plot
+  labs(
+    title = "Seasonal Deaths by State",
+    x = "Season",
+    y = "Total Deaths",
+    fill = "State"
+  ) +
+  scale_fill_brewer(palette = "Paired") + # Change bar plot color palette
+  scale_color_brewer(palette = "Paired") + # Match line colors with bar colors
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold", color = "darkblue"), # Center and style title
+    axis.text.x = element_text(angle = 45, hjust = 1) # Rotate x-axis labels for readability
+  )
+```
+
+# Heatmap of Deaths by State and Causes
+```{r}
+# Aggregate data for heatmap
+heatmap_data <- filtered_data %>%
+  select(state, septicemia_a40_a41:covid_19_u071_underlying_cause_of_death) %>%
+  pivot_longer(
+    cols = -state,
+    names_to = "cause_of_death",
+    values_to = "death_count"
+  ) %>%
+  group_by(state, cause_of_death) %>%
+  summarise(total_deaths = sum(death_count, na.rm = TRUE), .groups = "drop") %>%
+  mutate(
+    cause_of_death = str_replace_all(cause_of_death, "_", " "), # Replace underscores with spaces
+    cause_of_death = str_trunc(cause_of_death, 30) # Truncate long names to 30 characters
+  )
+
+# Create heatmap
+ggplot(heatmap_data, aes(x = state, y = cause_of_death, fill = total_deaths)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "lightblue", high = "darkblue") +
+  labs(
+    title = "Heatmap of Deaths by State and Cause",
+    x = "State",
+    y = "Cause of Death",
+    fill = "Total Deaths"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 25, hjust = 1, size = 10), # Rotate and resize x-axis labels
+    axis.text.y = element_text(size = 10), # Adjust y-axis label size
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 16), # Center and bold the title
+    axis.title.x = element_text(size = 12), # Adjust x-axis title size
+    axis.title.y = element_text(size = 12) # Adjust y-axis title size
+  )
+```
+
+
+
+
