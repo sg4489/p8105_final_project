@@ -36,7 +36,7 @@ scale_fill_discrete = scale_fill_viridis_d
 ```{r clean data, echo=TRUE, results='hide', warning=FALSE}
 
 death_by_state_and_causes_df_clean =
-  read_csv("data/yyc/weekly_deaths_by_state_and_causes.csv", show_col_types = FALSE) |> 
+  read_csv("data/weekly_deaths_by_state_and_causes.csv", show_col_types = FALSE) |> 
   janitor::clean_names() |> 
   select(jurisdiction_of_occurrence:covid_19_u071_underlying_cause_of_death) |> 
   rename(residence_state = jurisdiction_of_occurrence) |>
@@ -55,15 +55,15 @@ death_by_state_and_causes_df_clean[] = lapply(death_by_state_and_causes_df_clean
 
 # below are all monthly death by 131 causes
 cause131_df1 = 
-  read.table(file = "data/yyc/131_1.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+  read.table(file = "data/131_1.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
 cause131_df2 = 
-  read.table(file = "data/yyc/131_2.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+  read.table(file = "data/131_2.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
 
 cause131_df3 = 
-  read.table(file = "data/yyc/131_3.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+  read.table(file = "data/131_3.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
 
 cause131_df4 = 
-  read.table(file = "data/yyc/131_4.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+  read.table(file = "data/131_4.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
 
 combined_113_month_df =
   bind_rows(cause131_df1, cause131_df2, cause131_df3, cause131_df4)
@@ -81,7 +81,7 @@ combined_113_month_df_cleaned =
 # first it is the chart pertaining to the 15 leading causes of death in the United States and the death place of the 15 causes
 
 cause15_deathplace_only = 
-  read.table(file = "data/yyc/all_15_deathplace_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+  read.table(file = "data/all_15_deathplace_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
 
 cause15_deathplace_only_cleaned =
   cause15_deathplace_only |>
@@ -92,7 +92,7 @@ cause15_deathplace_only_cleaned =
 
 # chart pertaining to 15 causes and devided by gender and month/year
 cause15_gender_month_only_cleaned = 
-  read.table(file = "data/yyc/cause15_gender_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/cause15_gender_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   rename(cause_list = ucd_icd_10_113_cause_list) |>
   rename(cause_list_code = ucd_icd_10_113_cause_list_code) |>
@@ -100,7 +100,7 @@ cause15_gender_month_only_cleaned =
   select(-c(notes, population, crude_rate))
 
 cause15_gender_year_only_cleaned = 
-  read.table(file = "data/yyc/cause15_gender_year.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/cause15_gender_year.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   rename(cause_list = ucd_icd_10_113_cause_list) |>
   rename(cause_list_code = ucd_icd_10_113_cause_list_code) |>
@@ -109,7 +109,7 @@ cause15_gender_year_only_cleaned =
 
 #chart pertaining to 15 causes and devided by 4 regions and month
 cause15_region_month_only_cleaned = 
-  read.table(file = "data/yyc/all_15_regin_month_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/all_15_regin_month_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   rename(cause_list = ucd_icd_10_113_cause_list) |>
   rename(cause_list_code = ucd_icd_10_113_cause_list_code) |>
@@ -118,7 +118,7 @@ cause15_region_month_only_cleaned =
 
 #chart pertaining to drug or alchohol use and devided by month
 cause_drug_month_only_cleaned = 
-  read.table(file = "data/yyc/all_drug_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/all_drug_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   separate(month_code, into = c("year", "month"), sep = "/") |> 
   select(-c(notes, population, crude_rate))
@@ -126,21 +126,21 @@ cause_drug_month_only_cleaned =
 
 #chart pertaining to system devided by month
 cause_system_month_only_cleaned = 
-  read.table(file = "data/yyc/all_ICDsystem_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/all_ICDsystem_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   separate(month_code, into = c("year", "month"), sep = "/") |> 
   select(-c(notes, population, crude_rate))
 
 #chart pertaining to system devided by month and region
 cause_system_region_month_only_cleaned = 
-  read.table(file = "data/yyc/all_ICDsystem_region_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/all_ICDsystem_region_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   separate(month_code, into = c("year", "month"), sep = "/") |> 
   select(-c(notes, population, crude_rate))
 
 #chart pertaining to injury devided by month
 cause_injury_month_only_cleaned = 
-  read.table(file = "data/yyc/all_UCDinjury_intent_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/all_UCDinjury_intent_month.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   separate(month_code, into = c("year", "month"), sep = "/") |> 
   select(-c(notes, population, crude_rate))
@@ -148,7 +148,7 @@ cause_injury_month_only_cleaned =
 
 #chart pertaining to 15 and subgroups divided by 1 year
 cause15_1year_full_cleaned1 = 
-  read.table(file = "data/yyc/Hawaii_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/Hawaii_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   select(-notes)
 
@@ -157,19 +157,19 @@ cause15_1year_full_cleaned1$single_year_ages_code <- as.character(cause15_1year_
 
 
 cause15_1year_full_cleaned2 = 
-  read.table(file = "data/yyc/Idaho_Illinois_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/Idaho_Illinois_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   select(-notes)
 cause15_1year_full_cleaned2$single_year_ages_code <- as.character(cause15_1year_full_cleaned2$single_year_ages_code)
 
 cause15_1year_full_cleaned3 = 
-  read.table(file = "data/yyc/Indiana_Iowa_Kansas_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/Indiana_Iowa_Kansas_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   select(-notes)
 cause15_1year_full_cleaned3$single_year_ages_code <- as.character(cause15_1year_full_cleaned3$single_year_ages_code)
 
 cause15_1year_full_cleaned4 = 
-  read.table(file = "data/yyc/Kentucky-Maryland_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/Kentucky-Maryland_15_1year_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   select(-notes)
 cause15_1year_full_cleaned4$single_year_ages_code <- as.character(cause15_1year_full_cleaned4$single_year_ages_code)
@@ -179,7 +179,7 @@ cause15_1year_full_cleaned_combined =
 
 # cause15_month only
 cause15_month_only = 
-  read.table(file = "data/yyc/cause15_month_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  read.table(file = "data/cause15_month_only.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
   janitor::clean_names() |>
   separate(month_code, into = c("year", "month"), sep = "/") |>
   rename(cause_list = ucd_icd_10_113_cause_list) |>
