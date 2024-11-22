@@ -181,25 +181,7 @@ ggplot(heatmap_data, aes(x = state, y = cause_of_death, fill = total_deaths)) +
   )
 ```
 
-# Create heatmap
-ggplot(heatmap_data, aes(x = state, y = cause_of_death, fill = total_deaths)) +
-  geom_tile(color = "white") +
-  scale_fill_gradient(low = "lightblue", high = "darkblue") +
-  labs(
-    title = "Heatmap of Deaths by State and Cause",
-    x = "State",
-    y = "Cause of Death",
-    fill = "Total Deaths"
-  ) +
-  theme_minimal() +
-  theme(
-    axis.text.x = element_text(angle = 25, hjust = 1, size = 10), # Rotate and resize x-axis labels
-    axis.text.y = element_text(size = 10), # Adjust y-axis label size
-    plot.title = element_text(hjust = 0.5, face = "bold", size = 16), # Center and bold the title
-    axis.title.x = element_text(size = 12), # Adjust x-axis title size
-    axis.title.y = element_text(size = 12) # Adjust y-axis title size
-  )
-```
+
 
 
 
