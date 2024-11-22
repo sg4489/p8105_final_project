@@ -124,6 +124,10 @@ count_na(subset_df,"Wyoming")
 
 -which disease among the listed creates the most health burdens, that is, gives rise to the most deaths?
 
+-correlation between diseases (heatmap?)
+
+
+
 # Time Seires Analyses
 How many people died from covid in 2020, 2021, 2022, and 2023?
 ```{r}
