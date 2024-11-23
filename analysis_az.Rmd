@@ -43,6 +43,13 @@ library(tidyverse)
 library(lubridate)
 library(viridis)
 library(broom)
+library(plotly)
+library(datasets)
+library(usmap)
+```
+
+```{r}
+set.seed(123)
 ```
 
 Import data and do some inital cleaning
@@ -69,9 +76,23 @@ data = read_csv("data/weekly_deaths_by_state_and_causes.csv") %>%
          year = year(week_ending_date),
          month = month(week_ending_date)
          ) %>%  
-  select(state, year, month, mmwr_week, all_cause: covid_19_underlying)
+  select(state, year, month, mmwr_week, week_ending_date, all_cause: covid_19_underlying)
 
 data
+```
+for supressed cells, replace with a random number between 1-9
+```{r}
+# generate random number 1-9 to suppressed cells
+data[] = lapply(data, function(col) {
+  if (is.numeric(col)) { 
+    col[is.na(col)] <- sample(1:9, sum(is.na(col)), replace = TRUE)
+  }
+  return(col)
+})
+
+summary(data)
+
+write_csv(data, "data/full_weekly_deaths_by_state_and_causes.csv")
 ```
 
 ```{r}
@@ -147,12 +168,14 @@ covid_deaths_long = covid_deaths_by_year %>%
                names_to = "cause_type", values_to = "deaths")
 
 # Create the bar plot
-ggplot(covid_deaths_long, aes(x = factor(year), y = deaths, fill = cause_type)) +
+covid_bar_plot = ggplot(covid_deaths_long, aes(x = factor(year), y = deaths, fill = cause_type)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(title = "COVID-19 Deaths by Year (2020-2023)",
        x = "Year", y = "Number of Deaths", fill = "Cause Type") +
   scale_fill_viridis(discrete = TRUE) +
   theme_minimal()
+
+ggplotly(covid_bar_plot)
 ```
 
 Which months have the highest mortality?
@@ -173,9 +196,198 @@ Did the pandemic period affect mortality rates of non-COVID causes like heart di
 # geographical variations
 Which states had higher mortality rates from specific causes, such as COVID-19 or heart disease, and did these vary over time?
 
+________
+# Explore the changes in COVID-19 deaths (underlying and multiple) over time.  
+
+How did covid 19 deaths in the US change over time (as underlying and multiple cause) ?
+```{r}
+# Prepare the dataset
+data_covid_us = data %>%
+  filter(state == "United States") %>% 
+  select(week_ending_date, covid_19_multiple, covid_19_underlying) %>%
+  pivot_longer(cols = c(covid_19_multiple, covid_19_underlying),
+               names_to = "cause_type",
+               values_to = "deaths")
+
+# Create an interactive line chart
+plot = plot_ly(
+  data = data_covid_us,
+  x = ~week_ending_date,
+  y = ~deaths,
+  color = ~cause_type,
+  colors = c("#440154", "#21908C"),
+  type = 'scatter',
+  mode = 'lines'
+) %>%
+  layout(
+    title = "COVID-19 Deaths Over Time (Underlying vs. Multiple Cause)",
+    xaxis = list(title = "Week Ending Date"),
+    yaxis = list(title = "Number of Deaths"),
+    legend = list(title = list(text = "Cause Type"))
+  )
+
+# Show the plot
+plot
+
+
+```
 
 
 
+## how did covid death rate vary across states over time?
+```{r}
+# read the population data
+population_data = read.table(file = "data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) %>% 
+  as.tibble() %>% 
+  janitor::clean_names() %>% 
+  select(residence_state, year_code, population) %>% 
+  rename(state = residence_state,
+         year = year_code)
+
+```
+```{r}
+# calculate annual covid deaths for each state
+data_covid_states = 
+  data %>% 
+  filter(!state %in% c("United States", "Puerto Rico")) %>% 
+  group_by(state, year) %>% 
+  summarize(
+    covid_deaths_total = sum(covid_19_multiple, na.rm = TRUE)
+  )
+```
+
+join covid data with population data, calculate covid mortality rate
+```{r}
+data_covid_df = data_covid_states %>%
+  left_join(population_data, by = c("year", "state")) %>% 
+  mutate(covid_mortality = covid_deaths_total/population)
+```
+
+Now, plot the mortality rate on the map.
+```{r}
+## convert state name to abbreviations for plotting
+
+# Create a vector with state names and abbreviations
+state_abbreviations = tibble(
+  state_name = state.name, # Full state names
+  state_abbr = state.abb  # Corresponding abbreviations
+)
+
+# Assuming covid_data is your dataset, join it with the state_abbreviations data
+map_data = data_covid_df %>%
+  left_join(state_abbreviations, by = c("state" = "state_name")) %>%  # Join by state name
+  select(state, state_abbr, everything()) %>% 
+  filter(!is.na(state_abbr)) 
+
+```
+
+```{r}
+map_data_2021 = map_data %>% 
+  filter(year == 2021)
+
+# Create the choropleth map
+fig = plot_ly(
+  data = map_data_2021,
+  type = "choropleth",
+  locations = ~state_abbr, # State names
+  locationmode = "USA-states", # Use state names in the USA
+  z = ~covid_mortality, # Color scale based on covid_mortality
+  text = ~paste("State: ", state), # Hover text
+  colorscale = "Viridis",
+  colorbar = list(title = "Covid_19 Mortality Rate")
+) %>%
+  layout(
+    title = "COVID-19 Mortality by State (2021)", # Adjust the year in the title
+    geo = list(
+      scope = "usa", # Focus on the USA
+      projection = list(type = "albers usa"), # Use Albers USA projection
+      showlakes = TRUE,
+      lakecolor = "rgb(255, 255, 255)" # Color of lakes
+    )
+  )
+
+# Display the map
+fig
+
+```
+let's try and add data of different years on this plot.
+
+update: the plots for each year's data works well, but when combined together the colors are not showing, probably because of scale issues. Alternatively, we can make the plots for each year separately.
+```{r}
+# Assuming map_data is your dataset containing data from 2020-2023
+
+# Create a choropleth map with dropdown to select years
+fig = plot_ly(
+  data = map_data,
+  type = "choropleth",
+  locations = ~state_abbr, # Use state abbreviations
+  locationmode = "USA-states", # USA-state mode
+  z = ~covid_mortality, # Color scale based on covid_mortality
+  text = ~paste("State: ", state, "<br>Year: ", year, "<br>Mortality: ", round(covid_mortality, 5)), # Hover text
+  colorscale = "Viridis",
+  colorbar = list(
+    title = "COVID Mortality",
+    tickvals = seq(0, 0.002, length.out = 5),  # Set tickvals based on your range
+    ticktext = seq(0, 0.002, length.out = 5)  # Adjust ticktext for clarity
+  ),
+  zmin = 0,  # Min value for the color scale
+  zmax = 0.002  # Max value for the color scale
+) %>%
+  layout(
+    title = "COVID-19 Mortality by State (2020-2023)",
+    geo = list(
+      scope = "usa",
+      projection = list(type = "albers usa"),
+      showlakes = TRUE,
+      lakecolor = "rgb(255, 255, 255)"
+    ),
+    updatemenus = list(
+      list(
+        buttons = list(
+          list(
+            label = "2020",
+            method = "relayout",
+            args = list("geo.scope", "usa", "visible", TRUE, "z", map_data %>% filter(year == 2020) %>% pull(covid_mortality))
+          ),
+          list(
+            label = "2021",
+            method = "relayout",
+            args = list("geo.scope", "usa", "visible", TRUE, "z", map_data %>% filter(year == 2021) %>% pull(covid_mortality))
+          ),
+          list(
+            label = "2022",
+            method = "relayout",
+            args = list("geo.scope", "usa", "visible", TRUE, "z", map_data %>% filter(year == 2022) %>% pull(covid_mortality))
+          ),
+          list(
+            label = "2023",
+            method = "relayout",
+            args = list("geo.scope", "usa", "visible", TRUE, "z", map_data %>% filter(year == 2023) %>% pull(covid_mortality))
+          )
+        ),
+        direction = "down",
+        showactive = TRUE,
+        x = 1,
+        xanchor = "left",
+        y = 1.15,
+        yanchor = "top"
+      )
+    )
+  )
+
+# Display the map
+fig
+
+```
+
+```{r}
+summary(map_data$covid_mortality)
+
+# Check for the range of values
+range(map_data$covid_mortality, na.rm = TRUE)
+
+range(map_data_2021$covid_mortality, na.rm = TRUE)
+```
 
 
 
