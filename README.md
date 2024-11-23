@@ -27,37 +27,54 @@ The address of the latest dataset： https://wonder.cdc.gov/controller/datareque
 
 ### Meeting Record (11.22 19:00 pm)
 Overall Advice: 
-(1) Use data for 2020-2023 only
-(2) Consider using CDC's web backgrounds and then adjust the image colours accordingly
+(1) Use data for 2020-2023 only.
+
+(2) Consider using CDC's web backgrounds and then adjust the image colours accordingly.
+
 (3) For the disease not COVID_19, using annual mortality rates (per 1,000 population) or using monthly mortality rates (per 10,000 population).
+
 (4) Make a pie plot to see which disease accounts for the largest proportion, then analyse the proportion of systemic diseases that the disease belongs to.
+
 (5) Comment on each other's pictures of everyone.
+
 (6) Unify the dataset after filling in the missing values with random numbers and put it in the data folder.
 
 
 1. Specific: Shangzi Gao
 (1) Consider calculating mortality rates based on annual population size and display them seprately.
+
 (2) Vertical coordinates using annual mortality rates (per 1,000 population) or using monthly mortality rates (per 10,000 population).
 
-2. Specific: Jiawa Zhang
+3. Specific: Jiawa Zhang
 (1) Vertical coordinates using annual mortality rates (per 1,000 population) or using monthly mortality rates (per 10,000 population).
+
 (2) Draw and resize four 4-panal violin plots.
 
-3. Specific: Yingyu Cui
+5. Specific: Yingyu Cui
 (1) Harmonised mortality rate per 1000 population.
+
 (2) Change the colour of the heatmap.
+
 (3) Hypothesis testing the month of peak mortality and analysing.
+
 (4) Hypothesis testing for endemic diseases (septicaemia, etc.).
+
 (5) Add some comments (all of us).
 
-4. General: Yuhao Chang
+7. General: Yuhao Chang
 (1) Plot a barplot of mortality rates for a few selected diseases in a row.
+
 (2) Try to plot a line graph of the change in mortality for each disease with the vertical coordinate as the mortality rate and the horizontal coordinate as time.
-(3) Draw a plot comparing all cause and natural cause (using a density plot)
+
+(3) Draw a plot comparing all cause and natural cause (using a density plot).
+
 (4) Hypothesis testing followed by some tables explaining the statistics in the tables.
 
-5. General: Alice Zhou
+9. General: Alice Zhou
 (1) Plot the difference in mortality rates between MULTIPLE and UNDERLINING for a given number of weeks.
+
 (2) Putting the legend below makes the picture wider and makes it easier to see trends.
+
 (3) Plot a plot of the mortality rates (2020-2023) for each state in Shiny.(Welcome to debug!)
+
 (4) Adjust for covid-19 mortality (per ? person).
