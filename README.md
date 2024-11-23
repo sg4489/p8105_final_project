@@ -27,6 +27,7 @@ The address of the latest dataset： https://wonder.cdc.gov/controller/datareque
 
 ### Meeting Record (11.22 19:00 pm)
 Overall Advice: 
+
 (1) Use data for 2020-2023 only.
 
 (2) Consider using CDC's web backgrounds and then adjust the image colours accordingly.
@@ -41,16 +42,21 @@ Overall Advice:
 
 
 1. Specific: Shangzi Gao
+   
 (1) Consider calculating mortality rates based on annual population size and display them seprately.
 
 (2) Vertical coordinates using annual mortality rates (per 1,000 population) or using monthly mortality rates (per 10,000 population).
 
-3. Specific: Jiawa Zhang
+
+2. Specific: Jiawa Zhang
 (1) Vertical coordinates using annual mortality rates (per 1,000 population) or using monthly mortality rates (per 10,000 population).
 
 (2) Draw and resize four 4-panal violin plots.
 
-5. Specific: Yingyu Cui
+
+3. Specific: Yingyu Cui
+   
+   
 (1) Harmonised mortality rate per 1000 population.
 
 (2) Change the colour of the heatmap.
@@ -61,7 +67,9 @@ Overall Advice:
 
 (5) Add some comments (all of us).
 
-7. General: Yuhao Chang
+
+4. General: Yuhao Chang
+   
 (1) Plot a barplot of mortality rates for a few selected diseases in a row.
 
 (2) Try to plot a line graph of the change in mortality for each disease with the vertical coordinate as the mortality rate and the horizontal coordinate as time.
@@ -70,7 +78,9 @@ Overall Advice:
 
 (4) Hypothesis testing followed by some tables explaining the statistics in the tables.
 
-9. General: Alice Zhou
+
+5. General: Alice Zhou
+    
 (1) Plot the difference in mortality rates between MULTIPLE and UNDERLINING for a given number of weeks.
 
 (2) Putting the legend below makes the picture wider and makes it easier to see trends.
