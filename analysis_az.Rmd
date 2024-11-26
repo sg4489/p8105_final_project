@@ -302,6 +302,8 @@ plot
 t_test_res %>% knitr::kable()
 seasonal_summary %>% knitr::kable()
 ```
+There is a significant difference between covid deaths in winter and non-winter months. We want to know whether this difference might be affected by other factors like a person's pre-existing conditions and co-morbidity (e.g., diabetes, heart disease, respiratory diseases).
+
 
 ## how did covid death rate vary across states over time?
 ```{r}
