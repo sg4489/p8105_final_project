@@ -1,7 +1,10 @@
 ---
 title: "Analysis_yhc"
-output: html_document
-date: "2024-11-20"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
 runtime: shiny
 ---
 
@@ -146,6 +149,7 @@ death_trends_plot2 <- plot_ly(
 death_trends_plot2
 ```
 The plot reveals several significant peaks in the number and rate of all-cause and natural-cause deaths between 2020 and 2022. Interestingly, these peaks align with surges in COVID-related deaths, suggesting a strong correlation between COVID-19 and both total mortality and natural-cause mortality during this period.
+
 ## Proportion of death plot
 ```{r message=FALSE,fig.width=10, fig.height=6}
 death_proportion_data =general_data |> select(
@@ -299,8 +303,9 @@ proportion_plot3 <- plot_ly(
 proportion_plot3
 ```
 The plots above show that among all natural causes of death, excluding COVID-19, the highest proportions are attributed to heart disease and malignant neoplasms. Notably, in 2020 and 2021, these two causes exhibited an inverse relationship with COVID-19 deaths. This phenomenon could be explained by evidence of COVID-19 infection, whether virological or clinical, in the days or weeks leading up to death in patients with heart disease or malignant neoplasms. Such deaths were likely coded as COVID-19 during certification, resulting in an apparent decrease in the reported numbers of deaths from heart disease and malignant neoplasms.
-### Pie-chart
-```{r}
+
+## Pie-chart
+```{r message=FALSE, warning=FALSE}
 pie_data <- death_proportion_data |>
   filter(!cause_of_death %in% c("all_cause", "natural_cause"))
 
@@ -353,8 +358,9 @@ server <- function(input, output, session) {
 shinyApp(ui = ui, server = server)
 ```
 In the pie chart, it is evident that the leading causes of death are heart disease and malignant neoplasms, followed by COVID-19.
-#### Change of proportion plot
-```{r fig.width=10, fig.height=6}
+
+### Change of proportion plot
+```{r message=FALSE, warning=FALSE,fig.width=10, fig.height=6}
 # death by disease
 death_sum_data <- death_proportion_data |>
   group_by(mmwr_year, cause_of_death) |>
