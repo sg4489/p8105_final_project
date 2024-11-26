@@ -89,3 +89,7 @@ Overall Advice:
 (3) Plot a plot of the mortality rates (2020-2023) for each state in Shiny.(Welcome to debug!)
 
 (4) Adjust for covid-19 mortality (per ? person).
+
+Meeting Record 11.26
+1. 12.04 next meeting
+2. lateset due: 12.06 report finished!
