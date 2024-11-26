@@ -199,7 +199,7 @@ Which states had higher mortality rates from specific causes, such as COVID-19 o
 ________
 # Explore the changes in COVID-19 deaths (underlying and multiple) over time.  
 
-How did covid 19 deaths in the US change over time (as underlying and multiple cause) ?
+How did Covid-19 deaths in the US change over time (as underlying and multiple cause)?
 ```{r}
 # Prepare the dataset
 data_covid_us = data %>%
@@ -223,7 +223,13 @@ plot = plot_ly(
     title = "COVID-19 Deaths Over Time (Underlying vs. Multiple Cause)",
     xaxis = list(title = "Week Ending Date"),
     yaxis = list(title = "Number of Deaths"),
-    legend = list(title = list(text = "Cause Type"))
+     legend = list(
+      title = list(text = "Cause Type"), # Title for the legend
+      orientation = "h",                # Horizontal legend
+      x = 0.5,                          # Center the legend horizontally
+      xanchor = "center",               # Set x-anchor to the center
+      y = -0.2                           # Position the legend above the plot
+    )
   )
 
 # Show the plot
@@ -231,8 +237,71 @@ plot
 
 
 ```
+## Key Findings
+The U.S. experienced 5 main waves of COVID-19-related deaths: 
+
+1. Spring 2020: January 20, 2020 CDC reports the first laboratory-confirmed case of the 2019 Novel Coronavirus in the US.
+2. Summer of 2020.
+3. The winter months of 2020-2021, probably due to the emergence of the Delta variant. 
+4. The rollout of vaccines in 2021 had a visible impact on reducing deaths, particularly in later months. However, more deaths occurred in Fall 2021 as new variants emerged.
+5. the winter months of 2021-2022
+
+Deaths from multiple causes tend to be consistently higher than those from underlying COVID-19 causes, which suggests that COVID-19 exacerbated existing health conditions, leading to higher mortality rates among vulnerable populations.
+
+There is a gradual reduction in both underlying and multiple cause deaths through 2023, but COVID-19 remains a significant cause of death for some time. This may reflect ongoing issues such as long COVID, healthcare access disparities, or specific high-risk populations.
+
+Cases seems to accelerate during winter months.
+```{r}
+# Add a month column to the dataset
+winter_deaths = data %>% 
+  filter(state == "United States") %>% 
+  mutate(month = month(week_ending_date, label = TRUE), # Extract month name
+         season = case_when(                         # Define seasons
+           month %in% c("Dec", "Jan", "Feb") ~ "Winter",
+           TRUE ~ "Non-Winter"
+         )) %>% 
+  mutate(season = factor(season))
+
+t_test_res = t.test(
+  covid_19_underlying ~ season,
+  data = winter_deaths
+) %>% 
+  broom::tidy() %>% 
+  select(estimate1, estimate2, p.value) %>% 
+  rename(avg_nonwinter = estimate1, avg_winter = estimate2)
+
+# compute a summary table
+seasonal_summary <- winter_deaths %>%
+  group_by(season) %>%
+  summarize(
+    total_underlying = sum(covid_19_underlying, na.rm = TRUE),
+    total_multiple = sum(covid_19_multiple, na.rm = TRUE))
 
 
+# Visualization: Boxplot
+plot = plot_ly(
+  data = winter_deaths,
+  x = ~season,
+  y = ~covid_19_underlying,
+  type = "box",
+  boxpoints = "all",  # Display individual data points
+  jitter = 0.3,       # Add jitter to spread points
+  pointpos = -1.8,    # Adjust position of points relative to the box
+  marker = list(color = "blue", size = 5),
+  line = list(color = "darkblue")
+) %>%
+  layout(
+    title = "COVID-19 Underlying Deaths by Season",
+    xaxis = list(title = "Season"),
+    yaxis = list(title = "COVID-19 Underlying Deaths"),
+    showlegend = FALSE
+  )
+
+# Display the plot
+plot
+t_test_res %>% knitr::kable()
+seasonal_summary %>% knitr::kable()
+```
 
 ## how did covid death rate vary across states over time?
 ```{r}
@@ -260,7 +329,9 @@ join covid data with population data, calculate covid mortality rate
 ```{r}
 data_covid_df = data_covid_states %>%
   left_join(population_data, by = c("year", "state")) %>% 
-  mutate(covid_mortality = covid_deaths_total/population)
+  mutate(
+    covid_mortality = covid_deaths_total/population,
+    covid_mortality_per10000 = covid_mortality*10000) 
 ```
 
 Now, plot the mortality rate on the map.
@@ -291,10 +362,10 @@ fig = plot_ly(
   type = "choropleth",
   locations = ~state_abbr, # State names
   locationmode = "USA-states", # Use state names in the USA
-  z = ~covid_mortality, # Color scale based on covid_mortality
+  z = ~covid_mortality_per10000, # Color scale based on covid_mortality
   text = ~paste("State: ", state), # Hover text
-  colorscale = "Viridis",
-  colorbar = list(title = "Covid_19 Mortality Rate")
+  colorscale = "Oranges",
+  colorbar = list(title = "Mortality Rate per 10000")
 ) %>%
   layout(
     title = "COVID-19 Mortality by State (2021)", # Adjust the year in the title
