@@ -304,8 +304,23 @@ seasonal_summary %>% knitr::kable()
 ```
 There is a significant difference between covid deaths in winter and non-winter months. We want to know whether this difference might be affected by other factors like a person's pre-existing conditions and co-morbidity (e.g., diabetes, heart disease, respiratory diseases).
 
+```{r}
+# Fit a linear regression model
+model = lm(
+  covid_19_underlying ~ season + diabetes_mellitus + diseases_of_heart + chronic_lower_respiratory_diseases,
+  data = winter_deaths
+)
 
-## how did covid death rate vary across states over time?
+model2 = lm(
+  covid_19_underlying ~ season + diabetes_mellitus + diseases_of_heart + chronic_lower_respiratory_diseases + cerebrovascular_diseases,
+  data = winter_deaths
+)
+# Summary of the model
+summary(model)
+summary(model2)
+```
+
+## How did covid death rate vary across states?
 ```{r}
 # read the population data
 population_data = read.table(file = "data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) %>% 
@@ -333,7 +348,7 @@ data_covid_df = data_covid_states %>%
   left_join(population_data, by = c("year", "state")) %>% 
   mutate(
     covid_mortality = covid_deaths_total/population,
-    covid_mortality_per10000 = covid_mortality*10000) 
+    covid_mortality_per100000 = covid_mortality*100000) 
 ```
 
 Now, plot the mortality rate on the map.
@@ -364,10 +379,10 @@ fig = plot_ly(
   type = "choropleth",
   locations = ~state_abbr, # State names
   locationmode = "USA-states", # Use state names in the USA
-  z = ~covid_mortality_per10000, # Color scale based on covid_mortality
+  z = ~covid_mortality_per100000, # Color scale based on covid_mortality
   text = ~paste("State: ", state), # Hover text
   colorscale = "Oranges",
-  colorbar = list(title = "Mortality Rate per 10000")
+  colorbar = list(title = "Mortality Rate per 100k")
 ) %>%
   layout(
     title = "COVID-19 Mortality by State (2021)", # Adjust the year in the title
