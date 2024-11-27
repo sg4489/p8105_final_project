@@ -352,7 +352,7 @@ div.tocify {
       <a href="analysis_jz.html">Analysis jz</a>
     </li>
     <li>
-      <a href="analysis_yhc.html">Analysis yc</a>
+      <a href="analysis_yhc.html">Analysis yhc</a>
     </li>
   </ul>
 </li>
@@ -410,22 +410,11 @@ div.tocify {
 
 
 <pre class="r"><code># Load necessary libraries
-library(tidyverse)</code></pre>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.1.4     ✔ readr     2.1.5
-## ✔ forcats   1.0.0     ✔ stringr   1.5.1
-## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-## ✔ purrr     1.0.2     
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<pre class="r"><code>library(janitor)</code></pre>
+library(tidyverse)
+library(janitor)</code></pre>
 <pre><code>## 
-## Attaching package: &#39;janitor&#39;
-## 
-## The following objects are masked from &#39;package:stats&#39;:
+## Attaching package: &#39;janitor&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
 ## 
 ##     chisq.test, fisher.test</code></pre>
 <pre class="r"><code>library(lubridate)</code></pre>
@@ -433,12 +422,13 @@ library(tidyverse)</code></pre>
 <h1>Import and clean the data</h1>
 <pre class="r"><code># Load the dataset
 data &lt;- read_csv(&quot;./data/weekly_deaths_by_state_and_causes.csv&quot;)</code></pre>
-<pre><code>## Warning: One or more parsing issues, call `problems()` on your data frame for details,
-## e.g.:
+<pre><code>## Warning: One or more parsing issues, call
+## `problems()` on your data frame for
+## details, e.g.:
 ##   dat &lt;- vroom(...)
 ##   problems(dat)</code></pre>
 <pre><code>## Rows: 10476 Columns: 35
-## ── Column specification ────────────────────────────────────────────────────────
+## ── Column specification ────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
 ## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...
@@ -605,10 +595,14 @@ ggplot(weekly_trends, aes(x = week_ending_date, y = total_deaths, color = state)
     plot.title = element_text(hjust = 0.5, face = &quot;bold&quot;, size = 16),
     axis.text.x = element_text(angle = 45, hjust = 1)
   )</code></pre>
-<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+<pre><code>## Warning: Using `size` aesthetic for lines
+## was deprecated in ggplot2 3.4.0.
 ## ℹ Please use `linewidth` instead.
-## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## This warning is displayed once
+## every 8 hours.
+## Call
+## `lifecycle::last_lifecycle_warnings()`
+## to see where this warning was
 ## generated.</code></pre>
 <p><img src="analysis_jz_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>

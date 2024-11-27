@@ -486,13 +486,13 @@ results |>
   kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
 
 ```
-**The Impact of COVID-19 Deaths on Total Deaths and Natural Deaths**
+**The Impact of COVID-19 Deaths on Total Deaths and Natural Deaths.**
 Whether COVID-19 deaths are considered as one of the multiple causes or as the underlying cause, the relationship between COVID-19 deaths and total deaths as well as natural deaths is highly significant. The effect of covid_underlying_cause (underlying cause) on the death count is slightly larger than that of covid_multiple_cause (multiple cause), indicating that when COVID-19 is listed as the underlying cause, its impact on death counts is more direct and pronounced.
 
-**Confidence Interval and Standard Error**
+**Confidence Interval and Standard Error.**
 The confidence intervals for all estimated coefficients do not contain zero, indicating that the coefficients are statistically significant. Additionally, the small standard errors suggest that the model's estimates are relatively precise.
 
-**Statistical Significance**
+**Statistical Significance.**
 Each p-value is less than 0.001, indicating that each regression coefficient is statistically significant, showing a strong correlation between COVID-19 deaths and total deaths as well as natural deaths.
 
 
