@@ -94,3 +94,7 @@ Meeting Record 11.26
 1. 12.04 next meeting
 2. lateset due: 12.06 report finished!
 3. report requirement: there is no specific length requirement for the final report. Ensure it includes background context, EDA, analysis, and a conclusion, and refer to previous year example reports for guidance.
+
+Meeting Record 11.27
+Shangzi Gao
+
