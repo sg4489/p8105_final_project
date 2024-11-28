@@ -9,179 +9,408 @@ output:
     code_folding: hide
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r}
 # Load necessary libraries
-library(tidyverse)
-library(janitor)
-library(lubridate)
-
+```{r}
+library(dplyr)
+library(readr)
+library(plotly)
 ```
 
-# Import and clean the data
+# Import and tidy the data
 ```{r}
-# Load the dataset
-data <- read_csv("./data/weekly_deaths_by_state_and_causes.csv")
+# Read the datasets
+population_data <- read.table(file = "./data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+death_data <- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv")
 
-# Convert variable names to snake_case
-cleaned_data <- data %>%
-  clean_names()
+# Clean and process population data
+population_data_clean <- population_data %>%
+  select(Residence.State, Year, Population) %>%
+  filter(!is.na(Population)) %>%
+  mutate(Year = as.numeric(gsub(" .*", "", Year))) %>%
+  rename(State = Residence.State)
 
-# Rename the column 'jurisdiction_of_occurrence' to 'state'
-cleaned_data <- cleaned_data %>%
-  rename(state = jurisdiction_of_occurrence)
+# Clean and process death data
+death_data_clean <- death_data %>%
+  select(state, year, all_cause, month) %>% 
+  group_by(state, year, month) %>%
+  summarise(Total_Deaths = sum(all_cause, na.rm = TRUE), .groups = "drop") %>%
+  rename(State = state, Year = year, Month = month)
 
-# Filter for relevant states
-states_of_interest <- c("New Mexico", "New York", "North Carolina", "North Dakota",
-                        "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina")
-filtered_data <- cleaned_data %>%
-  filter(state %in% states_of_interest)
+# Merge the datasets
+merged_data <- death_data_clean %>%
+  inner_join(population_data_clean, by = c("State", "Year"))
 
-# Check for missing data
-missing_summary <- filtered_data %>%
-  summarize(across(everything(), ~ sum(is.na(.))))
+# Add state abbreviations
+state_abbreviations <- data.frame(
+  State = c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida",
+            "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine",
+            "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska",
+            "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota",
+            "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+            "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"),
+  Abbreviation = c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS",
+                   "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY",
+                   "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV",
+                   "WI", "WY")
+)
 
-# Convert to data frame and display
-as.data.frame(missing_summary)
+# Merge abbreviations into the dataset
+merged_data <- merged_data %>%
+  left_join(state_abbreviations, by = "State") # Ensure 'Abbreviation' is added
 
-# Remove duplicate rows
-filtered_data <- filtered_data %>%
-  distinct()
+# Define state regions
+state_regions <- data.frame(
+  Abbreviation = c("CT", "ME", "MA", "NH", "NJ", "NY", "PA", "RI", "VT", 
+                   "IL", "IN", "IA", "KS", "MI", "MN", "MO", "NE", "ND", "OH", "SD", "WI", 
+                   "AL", "AR", "DE", "DC", "FL", "GA", "KY", "LA", "MD", "MS", "NC", "OK", "SC", "TN", "TX", "VA", "WV", 
+                   "AK", "AZ", "CA", "CO", "HI", "ID", "MT", "NV", "NM", "OR", "UT", "WA", "WY"),
+  Region = c(rep("Northeast", 9), 
+             rep("Midwest", 12), 
+             rep("South", 17), 
+             rep("West", 13))
+)
 
-# Check cleaned and filtered data
-print(glimpse(filtered_data))
-```
+# Merge regions into the dataset
+merged_data <- merged_data %>%
+  left_join(state_regions, by = "Abbreviation") # Join with region data
 
-# The total death cases by each state
-```{r}
-# Data cleaning and aggregation
-barplot_data <- filtered_data %>%
-  select(state, all_cause, natural_cause) %>% # Select relevant columns
-  group_by(state) %>% # Group by jurisdiction
-  summarise(
-    total_all_cause = sum(all_cause, na.rm = TRUE),
-    total_natural_cause = sum(natural_cause, na.rm = TRUE)
-  ) %>%
-  pivot_longer(
-    cols = c(total_all_cause, total_natural_cause),
-    names_to = "cause_type",
-    values_to = "count"
-  )
-
-# Create the plot
-ggplot(barplot_data, aes(x = state, y = count, fill = cause_type)) +
-  geom_bar(stat = "identity", position = position_dodge(width = 0.9)) +
-  labs(
-    title = "Death Counts by State from 2020 to 2023",
-    x = "State",
-    y = "Number of Deaths",
-    fill = "Cause Type"
-  ) +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels for better readability
-```
-
-# Trend Analysis Over Time
-```{r}
-# Summarize deaths by week for each state
-weekly_trends <- filtered_data %>%
-  group_by(state, week_ending_date) %>%
-  summarise(total_deaths = sum(all_cause, na.rm = TRUE), .groups = "drop")
-
-# Plot trends over time
-ggplot(weekly_trends, aes(x = week_ending_date, y = total_deaths, color = state)) +
-  geom_line(size = 1) +
-  labs(
-    title = "Weekly Death Trends by State (2020-2023)",
-    x = "Week Ending Date",
-    y = "Total Deaths",
-    color = "State"
-  ) +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
-    axis.text.x = element_text(angle = 45, hjust = 1)
-  )
-```
-
-# Seasonal Analysis of Deaths
-```{r}
-# Add a season column based on week ending date
-filtered_data <- filtered_data %>%
+# Calculate mortality rates
+merged_data <- merged_data %>%
   mutate(
-    season = case_when(
-      month(week_ending_date) %in% c(12, 1, 2) ~ "Winter",
-      month(week_ending_date) %in% c(3, 4, 5) ~ "Spring",
-      month(week_ending_date) %in% c(6, 7, 8) ~ "Summer",
-      month(week_ending_date) %in% c(9, 10, 11) ~ "Autumn"
-    )
+    Annual_Mortality_Rate = (Total_Deaths / Population) * 1000,  # Annual rate per 1,000
+    Monthly_Mortality_Rate = (Total_Deaths / Population) * 10000 / 12  # Monthly rate per 10,000
   )
 
-# Summarize deaths by season and state
-season_summary <- filtered_data %>%
-  group_by(state, season) %>%
-  summarise(total_deaths = sum(all_cause, na.rm = TRUE), .groups = "drop")
+# Save the updated dataset
+write.csv(merged_data, "./data/Mortality_Rate_with_Region.csv", row.names = FALSE)
 
-# Plot seasonal deaths by state
-ggplot(season_summary, aes(x = season, y = total_deaths, group = state, color = state)) +
-  geom_bar(stat = "identity", aes(fill = state), position = "dodge", alpha = 0.7) + # Add bar plot
-  geom_line(aes(group = state), size = 1) + # Add line plot
-  labs(
-    title = "Seasonal Deaths by State",
-    x = "Season",
-    y = "Total Deaths",
-    fill = "State"
-  ) +
-  scale_fill_brewer(palette = "Paired") + # Change bar plot color palette
-  scale_color_brewer(palette = "Paired") + # Match line colors with bar colors
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, size = 16, face = "bold", color = "darkblue"), # Center and style title
-    axis.text.x = element_text(angle = 45, hjust = 1) # Rotate x-axis labels for readability
-  )
+# Preview the result
+head(merged_data)
 ```
 
-# Heatmap of Deaths by State and Causes
+# Monthly Mortality Rates in 2020 by Region and Stat
 ```{r}
-# Aggregate data for heatmap
-heatmap_data <- filtered_data %>%
-  select(state, septicemia_a40_a41:covid_19_u071_underlying_cause_of_death) %>%
-  pivot_longer(
-    cols = -state,
-    names_to = "cause_of_death",
-    values_to = "death_count"
-  ) %>%
-  group_by(state, cause_of_death) %>%
-  summarise(total_deaths = sum(death_count, na.rm = TRUE), .groups = "drop") %>%
-  mutate(
-    cause_of_death = str_replace_all(cause_of_death, "_", " "), # Replace underscores with spaces
-    cause_of_death = str_trunc(cause_of_death, 30) # Truncate long names to 30 characters
+# Filter for 2020 data
+data_2020 <- merged_data %>%
+  filter(Year == 2020)
+
+# Create violin plots for each region with 2x2 layout and adjusted subheading positions
+plot <- subplot(
+  lapply(seq_along(unique(data_2020$Region)), function(i) {
+    region_name <- unique(data_2020$Region)[i]
+    region_data <- data_2020 %>% filter(Region == region_name)
+    
+    plot_ly(
+      data = region_data,
+      x = ~Abbreviation, 
+      y = ~Monthly_Mortality_Rate,
+      type = "violin",
+      box = list(visible = TRUE),
+      points = "all",
+      color = ~Abbreviation, # Different colors for each state
+      legendgroup = region_name,
+      showlegend = FALSE
+    ) %>%
+      layout(
+        annotations = list(
+          list(
+            text = paste0(region_name, " Region"), # Add region name as title
+            x = 0.5, # Ensure each title is centered in its subplot
+            y = 1.1, # Position above the subplot
+            xref = "paper",
+            yref = "paper",
+            showarrow = FALSE,
+            font = list(size = 16, color = "black"),
+            xanchor = "center" # Center the text horizontally
+          )
+        ),
+        xaxis = list(
+          title = "State", # X-axis title
+          titlefont = list(size = 12), # Reduce the size of axis title
+          tickangle = 45 # Rotate the x-axis labels
+        ),
+        yaxis = list(
+          title = "Monthly Mortality Rate (per 10,000)", # Y-axis title
+          titlefont = list(size = 12) # Reduce the size of axis title
+        )
+      )
+  }),
+  nrows = 2, # Arrange in 2 rows
+  shareY = TRUE, # Share the Y-axis
+  titleX = TRUE, # Show X-axis titles
+  titleY = TRUE, # Show Y-axis titles
+  margin = 0.1 # Increase spacing between subplots
+) %>%
+  layout(
+    title = list(
+      text = "Monthly Mortality Rates in 2020 by Region and State", # Overall title
+      x = 0.5, # Center the title
+      y = 0.98, # Adjust vertical position
+      font = list(size = 24) # Increase font size for the overall title
+    ),
+    margin = list(l = 80, r = 80, t = 120, b = 80), # Adjust global margins
+    height = 800, # Increase the height of the overall plot
+    width = 1000  # Increase the width of the overall plot
   )
 
-# Create heatmap
-ggplot(heatmap_data, aes(x = state, y = cause_of_death, fill = total_deaths)) +
-  geom_tile(color = "white") +
-  scale_fill_gradient(low = "lightblue", high = "darkblue") +
-  labs(
-    title = "Heatmap of Deaths by State and Cause",
-    x = "State",
-    y = "Cause of Death",
-    fill = "Total Deaths"
-  ) +
-  theme_minimal() +
-  theme(
-    axis.text.x = element_text(angle = 25, hjust = 1, size = 10), # Rotate and resize x-axis labels
-    axis.text.y = element_text(size = 10), # Adjust y-axis label size
-    plot.title = element_text(hjust = 0.5, face = "bold", size = 16), # Center and bold the title
-    axis.title.x = element_text(size = 12), # Adjust x-axis title size
-    axis.title.y = element_text(size = 12.5) # Adjust y-axis title size
+# Render the final plot
+plot
+```
+From the visualized data showing the **Monthly Mortality Rates (per 1,000 persons)** in 2020 and 2021 across different U.S. regions (South, West, Northeast, Midwest), the following observations can be made:
+
+### 1. **Regional Variations**:
+   - The **Northeast Region** generally shows higher peaks in monthly mortality rates compared to other regions, particularly noticeable in 2020. This could reflect the severe early impacts of COVID-19 in states like New Jersey, and Massachusetts. (Combined with the plots: COVID-19 mortality by state (2020-2023) ))
+   - The **South Region** and **West Region** display relatively moderate mortality rates, with more stable patterns across states.
+   - The **Midwest Region** shows some variability, with certain states like ND and SD having higher peaks than others.
+
+### 2. **Temporal Trends**:
+   - **2020** has more extreme variations in mortality rates compared to **2021**, especially in regions like the Northeast. This suggests that 2020 was more affected by large mortality spikes (likely due to the initial outbreak of COVID-19).
+   - By **2021**, the monthly mortality rates appear more stable across most regions and states, which may indicate the effects of public health measures, vaccination campaigns, or improved healthcare responses.
+
+### 3. **State-Level Observations**:
+   - Certain states within regions exhibit outliers or higher peaks in mortality rates. For example:
+     - **Northeast**: States like New Jersey and RI show high peaks in 2020.
+     - **Midwest**: States like SD show noticeable variability.
+     - **West**: Certain spikes are visible in states like MT, and NM, but overall patterns are less extreme.
+     - **South**: States like Florida and Texas show slightly elevated peaks compared to others.
+
+### 4. **Consistency Across Regions**:
+   - The South and West regions show more consistent mortality rates across states, with fewer extreme variations compared to the Northeast and Midwest regions.
+
+### 5. **Possible Influences**:
+   - The observed variations could be influenced by factors such as:
+     - COVID-19 outbreaks and associated mortality.
+     - Healthcare capacity and access within regions and states.
+     - Public health measures like lockdowns and mask mandates.
+
+### Next Steps:
+- **Explore Mortality Causes**: Break down the "all-cause mortality" into subcategories to determine whether the trends are dominated by COVID-19 or other factors like chronic diseases.
+- **Compare by Population Density**: Normalize and compare across regions considering population density differences.
+- **Policy Analysis**: Investigate how state or regional policies in response to the pandemic affected mortality rates.
+
+# Monthly Mortality Rates in 2021 by Region and Stat
+```{r}
+# Filter for 2021 data
+data_2021 <- merged_data %>%
+  filter(Year == 2021)
+
+# Define a custom color palette for states
+state_colors <- c(
+  "AL" = "#FF5733", "AK" = "#33FF57", "AZ" = "#3357FF", "AR" = "#FF33A1",
+  "CA" = "#A133FF", "CO" = "#FFC300", "CT" = "#33FFF9", "DE" = "#FF5733",
+  "FL" = "#C70039", "GA" = "#581845", "HI" = "#DAF7A6", "ID" = "#FFC300",
+  "IL" = "#C70039", "IN" = "#900C3F", "IA" = "#FF5733", "KS" = "#33FF57",
+  "KY" = "#FFC300", "LA" = "#581845", "ME" = "#DAF7A6", "MD" = "#FF33A1",
+  "MA" = "#3357FF", "MI" = "#FF5733", "MN" = "#33FFF9", "MS" = "#FFC300",
+  "MO" = "#C70039", "MT" = "#581845", "NE" = "#DAF7A6", "NV" = "#33FF57",
+  "NH" = "#FFC300", "NJ" = "#FF5733", "NM" = "#33FFF9", "NY" = "#C70039",
+  "NC" = "#FF33A1", "ND" = "#3357FF", "OH" = "#33FF57", "OK" = "#FF5733",
+  "OR" = "#C70039", "PA" = "#FF33A1", "RI" = "#581845", "SC" = "#33FFF9",
+  "SD" = "#FFC300", "TN" = "#FF5733", "TX" = "#33FF57", "UT" = "#FFC300",
+  "VT" = "#FF33A1", "VA" = "#581845", "WA" = "#33FFF9", "WV" = "#C70039",
+  "WI" = "#FF5733", "WY" = "#33FF57"
+)
+
+# Create violin plots for each region with 2x2 layout and adjusted subheading positions
+plot <- subplot(
+  lapply(seq_along(unique(data_2021$Region)), function(i) {
+    region_name <- unique(data_2021$Region)[i]
+    region_data <- data_2021 %>% filter(Region == region_name)
+    
+    plot_ly(
+      data = region_data,
+      x = ~Abbreviation, 
+      y = ~Monthly_Mortality_Rate,
+      type = "violin",
+      box = list(visible = TRUE),
+      points = "all",
+      color = ~Abbreviation, # Different colors for each state
+      colors = state_colors, # Use custom color palette
+      legendgroup = region_name,
+      showlegend = FALSE
+    ) %>%
+      layout(
+        annotations = list(
+          list(
+            text = paste0(region_name, " Region"), # Add region name as title
+            x = 0.5, # Ensure each title is centered in its subplot
+            y = 1.1, # Position above the subplot
+            xref = "paper",
+            yref = "paper",
+            showarrow = FALSE,
+            font = list(size = 16, color = "black"),
+            xanchor = "center" # Center the text horizontally
+          )
+        ),
+        xaxis = list(
+          title = "State", # X-axis title
+          titlefont = list(size = 12), # Reduce the size of axis title
+          tickangle = 45 # Rotate the x-axis labels
+        ),
+        yaxis = list(
+          title = "Monthly Mortality Rate (per 10,000)", # Y-axis title
+          titlefont = list(size = 12) # Reduce the size of axis title
+        )
+      )
+  }),
+  nrows = 2, # Arrange in 2 rows
+  shareY = TRUE, # Share the Y-axis
+  titleX = TRUE, # Show X-axis titles
+  titleY = TRUE, # Show Y-axis titles
+  margin = 0.1 # Increase spacing between subplots
+) %>%
+  layout(
+    title = list(
+      text = "Monthly Mortality Rates in 2021 by Region and State", # Overall title
+      x = 0.5, # Center the title
+      y = 0.98, # Adjust vertical position
+      font = list(size = 24) # Increase font size for the overall title
+    ),
+    margin = list(l = 80, r = 80, t = 120, b = 80), # Adjust global margins
+    height = 800, # Increase the height of the overall plot
+    width = 1000  # Increase the width of the overall plot
   )
+
+# Render the final plot
+plot
 ```
 
+# Monthly Mortality Rates in 2022 by Region and Stat
+```{r}
+# Filter for 2022 data
+data_2022 <- merged_data %>%
+  filter(Year == 2022)
 
+# Create violin plots for each region with 2x2 layout and adjusted subheading positions
+plot <- subplot(
+  lapply(seq_along(unique(data_2022$Region)), function(i) {
+    region_name <- unique(data_2022$Region)[i]
+    region_data <- data_2022 %>% filter(Region == region_name)
+    
+    plot_ly(
+      data = region_data,
+      x = ~Abbreviation, 
+      y = ~Monthly_Mortality_Rate,
+      type = "violin",
+      box = list(visible = TRUE),
+      points = "all",
+      color = ~Abbreviation, # Different colors for each state
+      legendgroup = region_name,
+      showlegend = FALSE
+    ) %>%
+      layout(
+        annotations = list(
+          list(
+            text = paste0(region_name, " Region"), # Add region name as title
+            x = 0.5, # Ensure each title is centered in its subplot
+            y = 1.1, # Position above the subplot
+            xref = "paper",
+            yref = "paper",
+            showarrow = FALSE,
+            font = list(size = 16, color = "black"),
+            xanchor = "center" # Center the text horizontally
+          )
+        ),
+        xaxis = list(
+          title = "State", # X-axis title
+          titlefont = list(size = 12), # Reduce the size of axis title
+          tickangle = 45 # Rotate the x-axis labels
+        ),
+        yaxis = list(
+          title = "Monthly Mortality Rate (per 10,000)", # Y-axis title
+          titlefont = list(size = 12) # Reduce the size of axis title
+        )
+      )
+  }),
+  nrows = 2, # Arrange in 2 rows
+  shareY = TRUE, # Share the Y-axis
+  titleX = TRUE, # Show X-axis titles
+  titleY = TRUE, # Show Y-axis titles
+  margin = 0.1 # Increase spacing between subplots
+) %>%
+  layout(
+    title = list(
+      text = "Monthly Mortality Rates in 2022 by Region and State", # Overall title
+      x = 0.5, # Center the title
+      y = 0.98, # Adjust vertical position
+      font = list(size = 24) # Increase font size for the overall title
+    ),
+    margin = list(l = 80, r = 80, t = 120, b = 80), # Adjust global margins
+    height = 800, # Increase the height of the overall plot
+    width = 1000  # Increase the width of the overall plot
+  )
 
+# Render the final plot
+plot
+```
 
+# Monthly Mortality Rates in 2023 by Region and Stat
+```{r}
+# Filter for 2023 data
+data_2023 <- merged_data %>%
+  filter(Year == 2023)
+
+# Create violin plots for each region with 2x2 layout and adjusted subheading positions
+plot <- subplot(
+  lapply(seq_along(unique(data_2023$Region)), function(i) {
+    region_name <- unique(data_2023$Region)[i]
+    region_data <- data_2023 %>% filter(Region == region_name)
+    
+    plot_ly(
+      data = region_data,
+      x = ~Abbreviation, 
+      y = ~Monthly_Mortality_Rate,
+      type = "violin",
+      box = list(visible = TRUE),
+      points = "all",
+      color = ~Abbreviation, # Different colors for each state
+      legendgroup = region_name,
+      showlegend = FALSE
+    ) %>%
+      layout(
+        annotations = list(
+          list(
+            text = paste0(region_name, " Region"), # Add region name as title
+            x = 0.5, # Ensure each title is centered in its subplot
+            y = 1.1, # Position above the subplot
+            xref = "paper",
+            yref = "paper",
+            showarrow = FALSE,
+            font = list(size = 16, color = "black"),
+            xanchor = "center" # Center the text horizontally
+          )
+        ),
+        xaxis = list(
+          title = "State", # X-axis title
+          titlefont = list(size = 12), # Reduce the size of axis title
+          tickangle = 45 # Rotate the x-axis labels
+        ),
+        yaxis = list(
+          title = "Monthly Mortality Rate (per 10,000)", # Y-axis title
+          titlefont = list(size = 12) # Reduce the size of axis title
+        )
+      )
+  }),
+  nrows = 2, # Arrange in 2 rows
+  shareY = TRUE, # Share the Y-axis
+  titleX = TRUE, # Show X-axis titles
+  titleY = TRUE, # Show Y-axis titles
+  margin = 0.1 # Increase spacing between subplots
+) %>%
+  layout(
+    title = list(
+      text = "Monthly Mortality Rates in 2023 by Region and State", # Overall title
+      x = 0.5, # Center the title
+      y = 0.98, # Adjust vertical position
+      font = list(size = 24) # Increase font size for the overall title
+    ),
+    margin = list(l = 80, r = 80, t = 120, b = 80), # Adjust global margins
+    height = 800, # Increase the height of the overall plot
+    width = 1000  # Increase the width of the overall plot
+  )
+
+# Render the final plot
+plot
+```
+ 
 
