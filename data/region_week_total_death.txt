@@ -1,0 +1,1482 @@
+"Notes"	"Residence Census Region"	"Residence Census Region Code"	"MMWR Week"	"MMWR Week Code"	Deaths	Population	Crude Rate
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 01 ending January 06, 2018"	"2018/01"	9858	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 02 ending January 13, 2018"	"2018/02"	11996	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 03 ending January 20, 2018"	"2018/03"	10963	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 04 ending January 27, 2018"	"2018/04"	10960	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 05 ending February 03, 2018"	"2018/05"	10693	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 06 ending February 10, 2018"	"2018/06"	10929	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 07 ending February 17, 2018"	"2018/07"	10722	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 08 ending February 24, 2018"	"2018/08"	10297	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 09 ending March 03, 2018"	"2018/09"	10203	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 10 ending March 10, 2018"	"2018/10"	10042	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 11 ending March 17, 2018"	"2018/11"	9812	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 12 ending March 24, 2018"	"2018/12"	9967	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 13 ending March 31, 2018"	"2018/13"	9776	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 14 ending April 07, 2018"	"2018/14"	9884	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 15 ending April 14, 2018"	"2018/15"	9915	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 16 ending April 21, 2018"	"2018/16"	9825	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 17 ending April 28, 2018"	"2018/17"	9587	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 18 ending May 05, 2018"	"2018/18"	9547	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 19 ending May 12, 2018"	"2018/19"	8904	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 20 ending May 19, 2018"	"2018/20"	8749	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 21 ending May 26, 2018"	"2018/21"	9118	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 22 ending June 02, 2018"	"2018/22"	8845	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 23 ending June 09, 2018"	"2018/23"	9068	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 24 ending June 16, 2018"	"2018/24"	9064	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 25 ending June 23, 2018"	"2018/25"	9056	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 26 ending June 30, 2018"	"2018/26"	8906	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 27 ending July 07, 2018"	"2018/27"	9258	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 28 ending July 14, 2018"	"2018/28"	8996	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 29 ending July 21, 2018"	"2018/29"	8869	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 30 ending July 28, 2018"	"2018/30"	8803	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 31 ending August 04, 2018"	"2018/31"	8820	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 32 ending August 11, 2018"	"2018/32"	8773	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 33 ending August 18, 2018"	"2018/33"	8852	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 34 ending August 25, 2018"	"2018/34"	8880	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 35 ending September 01, 2018"	"2018/35"	8917	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 36 ending September 08, 2018"	"2018/36"	8843	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 37 ending September 15, 2018"	"2018/37"	8870	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 38 ending September 22, 2018"	"2018/38"	9074	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 39 ending September 29, 2018"	"2018/39"	8942	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 40 ending October 06, 2018"	"2018/40"	9489	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 41 ending October 13, 2018"	"2018/41"	9316	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 42 ending October 20, 2018"	"2018/42"	9624	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 43 ending October 27, 2018"	"2018/43"	9796	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 44 ending November 03, 2018"	"2018/44"	9731	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 45 ending November 10, 2018"	"2018/45"	9436	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 46 ending November 17, 2018"	"2018/46"	9489	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 47 ending November 24, 2018"	"2018/47"	9615	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 48 ending December 01, 2018"	"2018/48"	9768	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 49 ending December 08, 2018"	"2018/49"	10035	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 50 ending December 15, 2018"	"2018/50"	9908	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 51 ending December 22, 2018"	"2018/51"	10030	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week 52 ending December 29, 2018"	"2018/52"	9904	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2018 Week Not Available"	"2018/99"	156	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 01 ending January 05, 2019"	"2019/01"	10212	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 02 ending January 12, 2019"	"2019/02"	10134	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 03 ending January 19, 2019"	"2019/03"	10408	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 04 ending January 26, 2019"	"2019/04"	10708	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 05 ending February 02, 2019"	"2019/05"	10385	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 06 ending February 09, 2019"	"2019/06"	10582	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 07 ending February 16, 2019"	"2019/07"	10291	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 08 ending February 23, 2019"	"2019/08"	10291	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 09 ending March 02, 2019"	"2019/09"	10185	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 10 ending March 09, 2019"	"2019/10"	10438	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 11 ending March 16, 2019"	"2019/11"	10179	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 12 ending March 23, 2019"	"2019/12"	10011	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 13 ending March 30, 2019"	"2019/13"	10077	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 14 ending April 06, 2019"	"2019/14"	9878	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 15 ending April 13, 2019"	"2019/15"	9800	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 16 ending April 20, 2019"	"2019/16"	9576	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 17 ending April 27, 2019"	"2019/17"	9123	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 18 ending May 04, 2019"	"2019/18"	9371	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 19 ending May 11, 2019"	"2019/19"	9159	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 20 ending May 18, 2019"	"2019/20"	9292	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 21 ending May 25, 2019"	"2019/21"	9295	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 22 ending June 01, 2019"	"2019/22"	8895	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 23 ending June 08, 2019"	"2019/23"	9231	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 24 ending June 15, 2019"	"2019/24"	8969	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 25 ending June 22, 2019"	"2019/25"	8951	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 26 ending June 29, 2019"	"2019/26"	9134	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 27 ending July 06, 2019"	"2019/27"	9169	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 28 ending July 13, 2019"	"2019/28"	8842	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 29 ending July 20, 2019"	"2019/29"	9056	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 30 ending July 27, 2019"	"2019/30"	9018	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 31 ending August 03, 2019"	"2019/31"	8892	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 32 ending August 10, 2019"	"2019/32"	9125	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 33 ending August 17, 2019"	"2019/33"	8871	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 34 ending August 24, 2019"	"2019/34"	8823	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 35 ending August 31, 2019"	"2019/35"	8837	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 36 ending September 07, 2019"	"2019/36"	8833	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 37 ending September 14, 2019"	"2019/37"	8814	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 38 ending September 21, 2019"	"2019/38"	9058	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 39 ending September 28, 2019"	"2019/39"	9157	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 40 ending October 05, 2019"	"2019/40"	9139	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 41 ending October 12, 2019"	"2019/41"	9355	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 42 ending October 19, 2019"	"2019/42"	9613	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 43 ending October 26, 2019"	"2019/43"	9434	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 44 ending November 02, 2019"	"2019/44"	9365	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 45 ending November 09, 2019"	"2019/45"	9686	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 46 ending November 16, 2019"	"2019/46"	9900	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 47 ending November 23, 2019"	"2019/47"	9894	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 48 ending November 30, 2019"	"2019/48"	9757	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 49 ending December 07, 2019"	"2019/49"	10221	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 50 ending December 14, 2019"	"2019/50"	10140	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 51 ending December 21, 2019"	"2019/51"	10055	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week 52 ending December 28, 2019"	"2019/52"	10264	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2019 Week Not Available"	"2019/99"	127	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 01 ending January 04, 2020"	"2020/01"	10502	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 02 ending January 11, 2020"	"2020/02"	10441	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 03 ending January 18, 2020"	"2020/03"	10366	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 04 ending January 25, 2020"	"2020/04"	10416	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 05 ending February 01, 2020"	"2020/05"	10277	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 06 ending February 08, 2020"	"2020/06"	10354	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 07 ending February 15, 2020"	"2020/07"	10249	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 08 ending February 22, 2020"	"2020/08"	10086	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 09 ending February 29, 2020"	"2020/09"	10453	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 10 ending March 07, 2020"	"2020/10"	10312	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 11 ending March 14, 2020"	"2020/11"	10322	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 12 ending March 21, 2020"	"2020/12"	10507	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 13 ending March 28, 2020"	"2020/13"	13116	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 14 ending April 04, 2020"	"2020/14"	19883	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 15 ending April 11, 2020"	"2020/15"	24974	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 16 ending April 18, 2020"	"2020/16"	23665	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 17 ending April 25, 2020"	"2020/17"	20441	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 18 ending May 02, 2020"	"2020/18"	17202	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 19 ending May 09, 2020"	"2020/19"	15108	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 20 ending May 16, 2020"	"2020/20"	13486	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 21 ending May 23, 2020"	"2020/21"	11810	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 22 ending May 30, 2020"	"2020/22"	10899	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 23 ending June 06, 2020"	"2020/23"	10196	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 24 ending June 13, 2020"	"2020/24"	9689	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 25 ending June 20, 2020"	"2020/25"	9493	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 26 ending June 27, 2020"	"2020/26"	9581	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 27 ending July 04, 2020"	"2020/27"	9268	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 28 ending July 11, 2020"	"2020/28"	9474	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 29 ending July 18, 2020"	"2020/29"	9162	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 30 ending July 25, 2020"	"2020/30"	9254	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 31 ending August 01, 2020"	"2020/31"	9315	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 32 ending August 08, 2020"	"2020/32"	9140	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 33 ending August 15, 2020"	"2020/33"	9239	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 34 ending August 22, 2020"	"2020/34"	9314	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 35 ending August 29, 2020"	"2020/35"	9154	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 36 ending September 05, 2020"	"2020/36"	9210	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 37 ending September 12, 2020"	"2020/37"	9191	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 38 ending September 19, 2020"	"2020/38"	9392	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 39 ending September 26, 2020"	"2020/39"	9810	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 40 ending October 03, 2020"	"2020/40"	9511	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 41 ending October 10, 2020"	"2020/41"	9916	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 42 ending October 17, 2020"	"2020/42"	9574	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 43 ending October 24, 2020"	"2020/43"	9875	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 44 ending October 31, 2020"	"2020/44"	9859	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 45 ending November 07, 2020"	"2020/45"	10747	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 46 ending November 14, 2020"	"2020/46"	10760	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 47 ending November 21, 2020"	"2020/47"	11168	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 48 ending November 28, 2020"	"2020/48"	11739	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 49 ending December 05, 2020"	"2020/49"	12636	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 50 ending December 12, 2020"	"2020/50"	13577	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 51 ending December 19, 2020"	"2020/51"	14019	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 52 ending December 26, 2020"	"2020/52"	14571	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week 53 ending January 02, 2021"	"2020/53"	14518	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2020 Week Not Available"	"2020/99"	194	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 01 ending January 09, 2021"	"2021/01"	14120	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 02 ending January 16, 2021"	"2021/02"	14353	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 03 ending January 23, 2021"	"2021/03"	13892	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 04 ending January 30, 2021"	"2021/04"	13515	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 05 ending February 06, 2021"	"2021/05"	13167	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 06 ending February 13, 2021"	"2021/06"	12330	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 07 ending February 20, 2021"	"2021/07"	11944	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 08 ending February 27, 2021"	"2021/08"	11504	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 09 ending March 06, 2021"	"2021/09"	10966	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 10 ending March 13, 2021"	"2021/10"	10680	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 11 ending March 20, 2021"	"2021/11"	10701	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 12 ending March 27, 2021"	"2021/12"	10605	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 13 ending April 03, 2021"	"2021/13"	10197	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 14 ending April 10, 2021"	"2021/14"	10474	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 15 ending April 17, 2021"	"2021/15"	10248	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 16 ending April 24, 2021"	"2021/16"	10374	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 17 ending May 01, 2021"	"2021/17"	10243	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 18 ending May 08, 2021"	"2021/18"	9984	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 19 ending May 15, 2021"	"2021/19"	9872	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 20 ending May 22, 2021"	"2021/20"	10052	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 21 ending May 29, 2021"	"2021/21"	9346	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 22 ending June 05, 2021"	"2021/22"	9554	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 23 ending June 12, 2021"	"2021/23"	9158	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 24 ending June 19, 2021"	"2021/24"	9148	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 25 ending June 26, 2021"	"2021/25"	9192	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 26 ending July 03, 2021"	"2021/26"	9376	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 27 ending July 10, 2021"	"2021/27"	9396	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 28 ending July 17, 2021"	"2021/28"	8995	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 29 ending July 24, 2021"	"2021/29"	9279	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 30 ending July 31, 2021"	"2021/30"	9255	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 31 ending August 07, 2021"	"2021/31"	9689	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 32 ending August 14, 2021"	"2021/32"	9861	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 33 ending August 21, 2021"	"2021/33"	9846	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 34 ending August 28, 2021"	"2021/34"	9968	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 35 ending September 04, 2021"	"2021/35"	10188	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 36 ending September 11, 2021"	"2021/36"	10362	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 37 ending September 18, 2021"	"2021/37"	10587	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 38 ending September 25, 2021"	"2021/38"	10487	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 39 ending October 02, 2021"	"2021/39"	10826	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 40 ending October 09, 2021"	"2021/40"	10898	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 41 ending October 16, 2021"	"2021/41"	10813	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 42 ending October 23, 2021"	"2021/42"	10756	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 43 ending October 30, 2021"	"2021/43"	11061	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 44 ending November 06, 2021"	"2021/44"	11134	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 45 ending November 13, 2021"	"2021/45"	11342	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 46 ending November 20, 2021"	"2021/46"	11165	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 47 ending November 27, 2021"	"2021/47"	11722	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 48 ending December 04, 2021"	"2021/48"	12101	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 49 ending December 11, 2021"	"2021/49"	12387	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 50 ending December 18, 2021"	"2021/50"	12408	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 51 ending December 25, 2021"	"2021/51"	12560	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week 52 ending January 01, 2022"	"2021/52"	13218	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2021 Week Not Available"	"2021/99"	258	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 01 ending January 08, 2022"	"2022/01"	14433	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 02 ending January 15, 2022"	"2022/02"	15272	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 03 ending January 22, 2022"	"2022/03"	15193	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 04 ending January 29, 2022"	"2022/04"	14043	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 05 ending February 05, 2022"	"2022/05"	13219	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 06 ending February 12, 2022"	"2022/06"	12326	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 07 ending February 19, 2022"	"2022/07"	11251	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 08 ending February 26, 2022"	"2022/08"	10406	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 09 ending March 05, 2022"	"2022/09"	10470	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 10 ending March 12, 2022"	"2022/10"	10218	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 11 ending March 19, 2022"	"2022/11"	9927	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 12 ending March 26, 2022"	"2022/12"	9780	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 13 ending April 02, 2022"	"2022/13"	9792	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 14 ending April 09, 2022"	"2022/14"	9747	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 15 ending April 16, 2022"	"2022/15"	9680	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 16 ending April 23, 2022"	"2022/16"	9354	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 17 ending April 30, 2022"	"2022/17"	9696	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 18 ending May 07, 2022"	"2022/18"	9817	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 19 ending May 14, 2022"	"2022/19"	10165	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 20 ending May 21, 2022"	"2022/20"	9804	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 21 ending May 28, 2022"	"2022/21"	9681	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 22 ending June 04, 2022"	"2022/22"	9691	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 23 ending June 11, 2022"	"2022/23"	9500	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 24 ending June 18, 2022"	"2022/24"	9545	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 25 ending June 25, 2022"	"2022/25"	9517	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 26 ending July 02, 2022"	"2022/26"	9834	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 27 ending July 09, 2022"	"2022/27"	9513	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 28 ending July 16, 2022"	"2022/28"	9516	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 29 ending July 23, 2022"	"2022/29"	9765	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 30 ending July 30, 2022"	"2022/30"	9621	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 31 ending August 06, 2022"	"2022/31"	9599	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 32 ending August 13, 2022"	"2022/32"	9552	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 33 ending August 20, 2022"	"2022/33"	9615	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 34 ending August 27, 2022"	"2022/34"	9649	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 35 ending September 03, 2022"	"2022/35"	9400	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 36 ending September 10, 2022"	"2022/36"	9599	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 37 ending September 17, 2022"	"2022/37"	9578	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 38 ending September 24, 2022"	"2022/38"	9765	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 39 ending October 01, 2022"	"2022/39"	9942	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 40 ending October 08, 2022"	"2022/40"	10307	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 41 ending October 15, 2022"	"2022/41"	10483	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 42 ending October 22, 2022"	"2022/42"	10194	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 43 ending October 29, 2022"	"2022/43"	10305	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 44 ending November 05, 2022"	"2022/44"	10472	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 45 ending November 12, 2022"	"2022/45"	10305	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 46 ending November 19, 2022"	"2022/46"	10252	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 47 ending November 26, 2022"	"2022/47"	10956	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 48 ending December 03, 2022"	"2022/48"	11134	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 49 ending December 10, 2022"	"2022/49"	11201	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 50 ending December 17, 2022"	"2022/50"	11436	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 51 ending December 24, 2022"	"2022/51"	11598	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2022 Week 52 ending December 31, 2022"	"2022/52"	12023	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 01 ending January 07, 2023 (provisional)"	"2023/01"	11844	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 02 ending January 14, 2023 (provisional)"	"2023/02"	11164	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 03 ending January 21, 2023 (provisional)"	"2023/03"	10991	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 04 ending January 28, 2023 (provisional)"	"2023/04"	10681	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 05 ending February 04, 2023 (provisional)"	"2023/05"	10552	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 06 ending February 11, 2023 (provisional)"	"2023/06"	10689	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 07 ending February 18, 2023 (provisional)"	"2023/07"	10491	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 08 ending February 25, 2023 (provisional)"	"2023/08"	10329	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 09 ending March 04, 2023 (provisional)"	"2023/09"	10300	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 10 ending March 11, 2023 (provisional)"	"2023/10"	10164	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 11 ending March 18, 2023 (provisional)"	"2023/11"	10306	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 12 ending March 25, 2023 (provisional)"	"2023/12"	10076	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 13 ending April 01, 2023 (provisional)"	"2023/13"	9960	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 14 ending April 08, 2023 (provisional)"	"2023/14"	9735	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 15 ending April 15, 2023 (provisional)"	"2023/15"	10094	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 16 ending April 22, 2023 (provisional)"	"2023/16"	9667	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 17 ending April 29, 2023 (provisional)"	"2023/17"	9395	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 18 ending May 06, 2023 (provisional)"	"2023/18"	9688	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 19 ending May 13, 2023 (provisional)"	"2023/19"	9617	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 20 ending May 20, 2023 (provisional)"	"2023/20"	9506	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 21 ending May 27, 2023 (provisional)"	"2023/21"	9319	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 22 ending June 03, 2023 (provisional)"	"2023/22"	9551	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 23 ending June 10, 2023 (provisional)"	"2023/23"	9295	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 24 ending June 17, 2023 (provisional)"	"2023/24"	9332	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 25 ending June 24, 2023 (provisional)"	"2023/25"	9024	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 26 ending July 01, 2023 (provisional)"	"2023/26"	9231	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 27 ending July 08, 2023 (provisional)"	"2023/27"	9344	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 28 ending July 15, 2023 (provisional)"	"2023/28"	9121	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 29 ending July 22, 2023 (provisional)"	"2023/29"	9105	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 30 ending July 29, 2023 (provisional)"	"2023/30"	8931	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 31 ending August 05, 2023 (provisional)"	"2023/31"	9258	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 32 ending August 12, 2023 (provisional)"	"2023/32"	9348	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 33 ending August 19, 2023 (provisional)"	"2023/33"	9244	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 34 ending August 26, 2023 (provisional)"	"2023/34"	9220	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 35 ending September 02, 2023 (provisional)"	"2023/35"	9151	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 36 ending September 09, 2023 (provisional)"	"2023/36"	9575	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 37 ending September 16, 2023 (provisional)"	"2023/37"	9103	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 38 ending September 23, 2023 (provisional)"	"2023/38"	9290	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 39 ending September 30, 2023 (provisional)"	"2023/39"	9745	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 40 ending October 07, 2023 (provisional)"	"2023/40"	10162	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 41 ending October 14, 2023 (provisional)"	"2023/41"	10060	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 42 ending October 21, 2023 (provisional)"	"2023/42"	10065	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 43 ending October 28, 2023 (provisional)"	"2023/43"	10119	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 44 ending November 04, 2023 (provisional)"	"2023/44"	9793	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 45 ending November 11, 2023 (provisional)"	"2023/45"	10225	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 46 ending November 18, 2023 (provisional)"	"2023/46"	10127	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 47 ending November 25, 2023 (provisional)"	"2023/47"	10142	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 48 ending December 02, 2023 (provisional)"	"2023/48"	10589	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 49 ending December 09, 2023 (provisional)"	"2023/49"	10652	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 50 ending December 16, 2023 (provisional)"	"2023/50"	10393	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 51 ending December 23, 2023 (provisional)"	"2023/51"	10794	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2023 Week 52 ending December 30, 2023 (provisional)"	"2023/52"	11242	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 01 ending January 06, 2024 (provisional)"	"2024/01"	11317	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 02 ending January 13, 2024 (provisional)"	"2024/02"	11676	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 03 ending January 20, 2024 (provisional)"	"2024/03"	11069	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 04 ending January 27, 2024 (provisional)"	"2024/04"	11035	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 05 ending February 03, 2024 (provisional)"	"2024/05"	10759	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 06 ending February 10, 2024 (provisional)"	"2024/06"	10505	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 07 ending February 17, 2024 (provisional)"	"2024/07"	10267	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 08 ending February 24, 2024 (provisional)"	"2024/08"	10222	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 09 ending March 02, 2024 (provisional)"	"2024/09"	10245	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 10 ending March 09, 2024 (provisional)"	"2024/10"	10167	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 11 ending March 16, 2024 (provisional)"	"2024/11"	10086	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 12 ending March 23, 2024 (provisional)"	"2024/12"	9686	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 13 ending March 30, 2024 (provisional)"	"2024/13"	9879	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 14 ending April 06, 2024 (provisional)"	"2024/14"	9868	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 15 ending April 13, 2024 (provisional)"	"2024/15"	9943	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 16 ending April 20, 2024 (provisional)"	"2024/16"	9457	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 17 ending April 27, 2024 (provisional)"	"2024/17"	9596	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 18 ending May 04, 2024 (provisional)"	"2024/18"	9515	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 19 ending May 11, 2024 (provisional)"	"2024/19"	9397	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 20 ending May 18, 2024 (provisional)"	"2024/20"	9351	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 21 ending May 25, 2024 (provisional)"	"2024/21"	9461	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 22 ending June 01, 2024 (provisional)"	"2024/22"	9008	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 23 ending June 08, 2024 (provisional)"	"2024/23"	9298	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 24 ending June 15, 2024 (provisional)"	"2024/24"	9115	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 25 ending June 22, 2024 (provisional)"	"2024/25"	9213	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 26 ending June 29, 2024 (provisional)"	"2024/26"	9236	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 27 ending July 06, 2024 (provisional)"	"2024/27"	9164	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 28 ending July 13, 2024 (provisional)"	"2024/28"	9201	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 29 ending July 20, 2024 (provisional)"	"2024/29"	9092	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 30 ending July 27, 2024 (provisional)"	"2024/30"	9046	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 31 ending August 03, 2024 (provisional)"	"2024/31"	9208	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 32 ending August 10, 2024 (provisional)"	"2024/32"	9109	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 33 ending August 17, 2024 (provisional)"	"2024/33"	9207	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 34 ending August 24, 2024 (provisional)"	"2024/34"	9245	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 35 ending August 31, 2024 (provisional)"	"2024/35"	9110	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 36 ending September 07, 2024 (provisional)"	"2024/36"	9014	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 37 ending September 14, 2024 (provisional)"	"2024/37"	9464	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 38 ending September 21, 2024 (provisional)"	"2024/38"	9185	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 39 ending September 28, 2024 (provisional)"	"2024/39"	9108	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 40 ending October 05, 2024 (provisional)"	"2024/40"	9155	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 41 ending October 12, 2024 (provisional)"	"2024/41"	9345	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 42 ending October 19, 2024 (provisional)"	"2024/42"	9460	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 43 ending October 26, 2024 (provisional)"	"2024/43"	9281	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 44 ending November 02, 2024 (provisional)"	"2024/44"	8305	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week 45 ending November 09, 2024 (provisional)"	"2024/45"	6896	Not Applicable	Not Applicable
+	"Census Region 1: Northeast"	"CENS-R1"	"2024 Week Not Available (provisional)"	"2024/99"	225	Not Applicable	Not Applicable
+"Total"	"Census Region 1: Northeast"	"CENS-R1"			3675006	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 01 ending January 06, 2018"	"2018/01"	13069	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 02 ending January 13, 2018"	"2018/02"	15324	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 03 ending January 20, 2018"	"2018/03"	15022	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 04 ending January 27, 2018"	"2018/04"	14446	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 05 ending February 03, 2018"	"2018/05"	13588	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 06 ending February 10, 2018"	"2018/06"	13925	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 07 ending February 17, 2018"	"2018/07"	13581	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 08 ending February 24, 2018"	"2018/08"	13564	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 09 ending March 03, 2018"	"2018/09"	12965	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 10 ending March 10, 2018"	"2018/10"	12871	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 11 ending March 17, 2018"	"2018/11"	12735	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 12 ending March 24, 2018"	"2018/12"	12869	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 13 ending March 31, 2018"	"2018/13"	12671	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 14 ending April 07, 2018"	"2018/14"	12888	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 15 ending April 14, 2018"	"2018/15"	12807	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 16 ending April 21, 2018"	"2018/16"	12565	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 17 ending April 28, 2018"	"2018/17"	12379	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 18 ending May 05, 2018"	"2018/18"	12618	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 19 ending May 12, 2018"	"2018/19"	12001	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 20 ending May 19, 2018"	"2018/20"	11519	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 21 ending May 26, 2018"	"2018/21"	11564	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 22 ending June 02, 2018"	"2018/22"	11455	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 23 ending June 09, 2018"	"2018/23"	11645	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 24 ending June 16, 2018"	"2018/24"	11627	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 25 ending June 23, 2018"	"2018/25"	11543	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 26 ending June 30, 2018"	"2018/26"	11706	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 27 ending July 07, 2018"	"2018/27"	11696	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 28 ending July 14, 2018"	"2018/28"	11575	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 29 ending July 21, 2018"	"2018/29"	11545	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 30 ending July 28, 2018"	"2018/30"	11455	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 31 ending August 04, 2018"	"2018/31"	11476	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 32 ending August 11, 2018"	"2018/32"	11693	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 33 ending August 18, 2018"	"2018/33"	11257	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 34 ending August 25, 2018"	"2018/34"	11450	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 35 ending September 01, 2018"	"2018/35"	11650	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 36 ending September 08, 2018"	"2018/36"	11594	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 37 ending September 15, 2018"	"2018/37"	11891	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 38 ending September 22, 2018"	"2018/38"	11800	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 39 ending September 29, 2018"	"2018/39"	11800	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 40 ending October 06, 2018"	"2018/40"	12232	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 41 ending October 13, 2018"	"2018/41"	11888	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 42 ending October 20, 2018"	"2018/42"	12350	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 43 ending October 27, 2018"	"2018/43"	12356	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 44 ending November 03, 2018"	"2018/44"	12485	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 45 ending November 10, 2018"	"2018/45"	12417	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 46 ending November 17, 2018"	"2018/46"	12552	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 47 ending November 24, 2018"	"2018/47"	12554	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 48 ending December 01, 2018"	"2018/48"	12530	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 49 ending December 08, 2018"	"2018/49"	12719	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 50 ending December 15, 2018"	"2018/50"	12799	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 51 ending December 22, 2018"	"2018/51"	12617	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2018 Week 52 ending December 29, 2018"	"2018/52"	12595	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 01 ending January 05, 2019"	"2019/01"	13178	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 02 ending January 12, 2019"	"2019/02"	13205	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 03 ending January 19, 2019"	"2019/03"	13240	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 04 ending January 26, 2019"	"2019/04"	13168	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 05 ending February 02, 2019"	"2019/05"	13414	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 06 ending February 09, 2019"	"2019/06"	13209	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 07 ending February 16, 2019"	"2019/07"	12980	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 08 ending February 23, 2019"	"2019/08"	12945	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 09 ending March 02, 2019"	"2019/09"	13035	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 10 ending March 09, 2019"	"2019/10"	13289	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 11 ending March 16, 2019"	"2019/11"	13263	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 12 ending March 23, 2019"	"2019/12"	12863	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 13 ending March 30, 2019"	"2019/13"	12757	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 14 ending April 06, 2019"	"2019/14"	12872	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 15 ending April 13, 2019"	"2019/15"	12406	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 16 ending April 20, 2019"	"2019/16"	12335	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 17 ending April 27, 2019"	"2019/17"	12257	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 18 ending May 04, 2019"	"2019/18"	12196	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 19 ending May 11, 2019"	"2019/19"	12200	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 20 ending May 18, 2019"	"2019/20"	12242	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 21 ending May 25, 2019"	"2019/21"	12376	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 22 ending June 01, 2019"	"2019/22"	11972	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 23 ending June 08, 2019"	"2019/23"	11897	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 24 ending June 15, 2019"	"2019/24"	11806	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 25 ending June 22, 2019"	"2019/25"	11864	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 26 ending June 29, 2019"	"2019/26"	12042	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 27 ending July 06, 2019"	"2019/27"	11855	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 28 ending July 13, 2019"	"2019/28"	11912	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 29 ending July 20, 2019"	"2019/29"	11828	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 30 ending July 27, 2019"	"2019/30"	11700	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 31 ending August 03, 2019"	"2019/31"	11735	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 32 ending August 10, 2019"	"2019/32"	11792	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 33 ending August 17, 2019"	"2019/33"	11699	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 34 ending August 24, 2019"	"2019/34"	11654	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 35 ending August 31, 2019"	"2019/35"	11656	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 36 ending September 07, 2019"	"2019/36"	11850	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 37 ending September 14, 2019"	"2019/37"	11878	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 38 ending September 21, 2019"	"2019/38"	12021	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 39 ending September 28, 2019"	"2019/39"	12222	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 40 ending October 05, 2019"	"2019/40"	12013	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 41 ending October 12, 2019"	"2019/41"	12326	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 42 ending October 19, 2019"	"2019/42"	12593	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 43 ending October 26, 2019"	"2019/43"	12561	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 44 ending November 02, 2019"	"2019/44"	12615	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 45 ending November 09, 2019"	"2019/45"	12820	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 46 ending November 16, 2019"	"2019/46"	12917	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 47 ending November 23, 2019"	"2019/47"	12914	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 48 ending November 30, 2019"	"2019/48"	12533	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 49 ending December 07, 2019"	"2019/49"	12980	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 50 ending December 14, 2019"	"2019/50"	13031	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 51 ending December 21, 2019"	"2019/51"	13116	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2019 Week 52 ending December 28, 2019"	"2019/52"	13327	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 01 ending January 04, 2020"	"2020/01"	13643	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 02 ending January 11, 2020"	"2020/02"	13658	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 03 ending January 18, 2020"	"2020/03"	13384	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 04 ending January 25, 2020"	"2020/04"	13546	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 05 ending February 01, 2020"	"2020/05"	13405	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 06 ending February 08, 2020"	"2020/06"	13250	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 07 ending February 15, 2020"	"2020/07"	13443	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 08 ending February 22, 2020"	"2020/08"	13636	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 09 ending February 29, 2020"	"2020/09"	13478	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 10 ending March 07, 2020"	"2020/10"	13591	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 11 ending March 14, 2020"	"2020/11"	13331	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 12 ending March 21, 2020"	"2020/12"	13320	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 13 ending March 28, 2020"	"2020/13"	13945	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 14 ending April 04, 2020"	"2020/14"	15201	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 15 ending April 11, 2020"	"2020/15"	15937	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 16 ending April 18, 2020"	"2020/16"	15617	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 17 ending April 25, 2020"	"2020/17"	15584	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 18 ending May 02, 2020"	"2020/18"	15306	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 19 ending May 09, 2020"	"2020/19"	14889	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 20 ending May 16, 2020"	"2020/20"	14549	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 21 ending May 23, 2020"	"2020/21"	14025	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 22 ending May 30, 2020"	"2020/22"	13675	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 23 ending June 06, 2020"	"2020/23"	13617	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 24 ending June 13, 2020"	"2020/24"	12982	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 25 ending June 20, 2020"	"2020/25"	12956	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 26 ending June 27, 2020"	"2020/26"	12720	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 27 ending July 04, 2020"	"2020/27"	13034	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 28 ending July 11, 2020"	"2020/28"	12869	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 29 ending July 18, 2020"	"2020/29"	12905	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 30 ending July 25, 2020"	"2020/30"	12951	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 31 ending August 01, 2020"	"2020/31"	13105	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 32 ending August 08, 2020"	"2020/32"	13251	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 33 ending August 15, 2020"	"2020/33"	13437	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 34 ending August 22, 2020"	"2020/34"	13194	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 35 ending August 29, 2020"	"2020/35"	13313	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 36 ending September 05, 2020"	"2020/36"	13116	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 37 ending September 12, 2020"	"2020/37"	13173	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 38 ending September 19, 2020"	"2020/38"	13316	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 39 ending September 26, 2020"	"2020/39"	13895	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 40 ending October 03, 2020"	"2020/40"	13794	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 41 ending October 10, 2020"	"2020/41"	14524	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 42 ending October 17, 2020"	"2020/42"	14359	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 43 ending October 24, 2020"	"2020/43"	14964	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 44 ending October 31, 2020"	"2020/44"	15398	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 45 ending November 07, 2020"	"2020/45"	16946	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 46 ending November 14, 2020"	"2020/46"	17663	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 47 ending November 21, 2020"	"2020/47"	18859	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 48 ending November 28, 2020"	"2020/48"	19349	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 49 ending December 05, 2020"	"2020/49"	19913	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 50 ending December 12, 2020"	"2020/50"	20537	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 51 ending December 19, 2020"	"2020/51"	19472	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 52 ending December 26, 2020"	"2020/52"	18640	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2020 Week 53 ending January 02, 2021"	"2020/53"	18396	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 01 ending January 09, 2021"	"2021/01"	17615	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 02 ending January 16, 2021"	"2021/02"	17142	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 03 ending January 23, 2021"	"2021/03"	16240	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 04 ending January 30, 2021"	"2021/04"	15444	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 05 ending February 06, 2021"	"2021/05"	15388	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 06 ending February 13, 2021"	"2021/06"	14459	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 07 ending February 20, 2021"	"2021/07"	14349	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 08 ending February 27, 2021"	"2021/08"	14047	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 09 ending March 06, 2021"	"2021/09"	13522	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 10 ending March 13, 2021"	"2021/10"	12940	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 11 ending March 20, 2021"	"2021/11"	12695	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 12 ending March 27, 2021"	"2021/12"	13098	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 13 ending April 03, 2021"	"2021/13"	12835	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 14 ending April 10, 2021"	"2021/14"	13619	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 15 ending April 17, 2021"	"2021/15"	13201	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 16 ending April 24, 2021"	"2021/16"	13628	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 17 ending May 01, 2021"	"2021/17"	13562	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 18 ending May 08, 2021"	"2021/18"	13073	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 19 ending May 15, 2021"	"2021/19"	13065	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 20 ending May 22, 2021"	"2021/20"	13305	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 21 ending May 29, 2021"	"2021/21"	12637	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 22 ending June 05, 2021"	"2021/22"	12903	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 23 ending June 12, 2021"	"2021/23"	12776	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 24 ending June 19, 2021"	"2021/24"	12612	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 25 ending June 26, 2021"	"2021/25"	12516	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 26 ending July 03, 2021"	"2021/26"	12578	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 27 ending July 10, 2021"	"2021/27"	12699	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 28 ending July 17, 2021"	"2021/28"	12603	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 29 ending July 24, 2021"	"2021/29"	12723	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 30 ending July 31, 2021"	"2021/30"	12901	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 31 ending August 07, 2021"	"2021/31"	13379	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 32 ending August 14, 2021"	"2021/32"	13592	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 33 ending August 21, 2021"	"2021/33"	13986	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 34 ending August 28, 2021"	"2021/34"	14319	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 35 ending September 04, 2021"	"2021/35"	14448	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 36 ending September 11, 2021"	"2021/36"	14659	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 37 ending September 18, 2021"	"2021/37"	15107	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 38 ending September 25, 2021"	"2021/38"	15174	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 39 ending October 02, 2021"	"2021/39"	15609	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 40 ending October 09, 2021"	"2021/40"	15060	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 41 ending October 16, 2021"	"2021/41"	14973	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 42 ending October 23, 2021"	"2021/42"	15333	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 43 ending October 30, 2021"	"2021/43"	15407	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 44 ending November 06, 2021"	"2021/44"	15377	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 45 ending November 13, 2021"	"2021/45"	15823	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 46 ending November 20, 2021"	"2021/46"	15982	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 47 ending November 27, 2021"	"2021/47"	16755	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 48 ending December 04, 2021"	"2021/48"	17115	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 49 ending December 11, 2021"	"2021/49"	18000	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 50 ending December 18, 2021"	"2021/50"	17908	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 51 ending December 25, 2021"	"2021/51"	17923	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2021 Week 52 ending January 01, 2022"	"2021/52"	18080	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 01 ending January 08, 2022"	"2022/01"	19348	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 02 ending January 15, 2022"	"2022/02"	19982	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 03 ending January 22, 2022"	"2022/03"	19138	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 04 ending January 29, 2022"	"2022/04"	18564	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 05 ending February 05, 2022"	"2022/05"	17414	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 06 ending February 12, 2022"	"2022/06"	16652	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 07 ending February 19, 2022"	"2022/07"	15462	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 08 ending February 26, 2022"	"2022/08"	14688	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 09 ending March 05, 2022"	"2022/09"	14024	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 10 ending March 12, 2022"	"2022/10"	13692	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 11 ending March 19, 2022"	"2022/11"	13584	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 12 ending March 26, 2022"	"2022/12"	12911	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 13 ending April 02, 2022"	"2022/13"	12899	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 14 ending April 09, 2022"	"2022/14"	12789	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 15 ending April 16, 2022"	"2022/15"	12879	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 16 ending April 23, 2022"	"2022/16"	12710	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 17 ending April 30, 2022"	"2022/17"	12704	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 18 ending May 07, 2022"	"2022/18"	12954	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 19 ending May 14, 2022"	"2022/19"	12925	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 20 ending May 21, 2022"	"2022/20"	12631	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 21 ending May 28, 2022"	"2022/21"	12561	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 22 ending June 04, 2022"	"2022/22"	12771	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 23 ending June 11, 2022"	"2022/23"	12621	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 24 ending June 18, 2022"	"2022/24"	12601	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 25 ending June 25, 2022"	"2022/25"	12988	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 26 ending July 02, 2022"	"2022/26"	12794	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 27 ending July 09, 2022"	"2022/27"	12669	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 28 ending July 16, 2022"	"2022/28"	12815	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 29 ending July 23, 2022"	"2022/29"	12898	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 30 ending July 30, 2022"	"2022/30"	12882	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 31 ending August 06, 2022"	"2022/31"	13056	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 32 ending August 13, 2022"	"2022/32"	12811	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 33 ending August 20, 2022"	"2022/33"	12854	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 34 ending August 27, 2022"	"2022/34"	12990	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 35 ending September 03, 2022"	"2022/35"	12944	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 36 ending September 10, 2022"	"2022/36"	12889	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 37 ending September 17, 2022"	"2022/37"	12921	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 38 ending September 24, 2022"	"2022/38"	13001	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 39 ending October 01, 2022"	"2022/39"	13191	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 40 ending October 08, 2022"	"2022/40"	13299	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 41 ending October 15, 2022"	"2022/41"	13471	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 42 ending October 22, 2022"	"2022/42"	13809	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 43 ending October 29, 2022"	"2022/43"	13534	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 44 ending November 05, 2022"	"2022/44"	13698	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 45 ending November 12, 2022"	"2022/45"	13661	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 46 ending November 19, 2022"	"2022/46"	14129	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 47 ending November 26, 2022"	"2022/47"	14472	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 48 ending December 03, 2022"	"2022/48"	14588	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 49 ending December 10, 2022"	"2022/49"	15125	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 50 ending December 17, 2022"	"2022/50"	15186	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 51 ending December 24, 2022"	"2022/51"	15339	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2022 Week 52 ending December 31, 2022"	"2022/52"	15777	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 01 ending January 07, 2023 (provisional)"	"2023/01"	15381	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 02 ending January 14, 2023 (provisional)"	"2023/02"	14567	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 03 ending January 21, 2023 (provisional)"	"2023/03"	13913	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 04 ending January 28, 2023 (provisional)"	"2023/04"	13486	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 05 ending February 04, 2023 (provisional)"	"2023/05"	13568	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 06 ending February 11, 2023 (provisional)"	"2023/06"	13839	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 07 ending February 18, 2023 (provisional)"	"2023/07"	13490	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 08 ending February 25, 2023 (provisional)"	"2023/08"	13454	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 09 ending March 04, 2023 (provisional)"	"2023/09"	13617	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 10 ending March 11, 2023 (provisional)"	"2023/10"	13406	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 11 ending March 18, 2023 (provisional)"	"2023/11"	13635	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 12 ending March 25, 2023 (provisional)"	"2023/12"	13467	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 13 ending April 01, 2023 (provisional)"	"2023/13"	13435	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 14 ending April 08, 2023 (provisional)"	"2023/14"	13206	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 15 ending April 15, 2023 (provisional)"	"2023/15"	13574	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 16 ending April 22, 2023 (provisional)"	"2023/16"	12867	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 17 ending April 29, 2023 (provisional)"	"2023/17"	12950	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 18 ending May 06, 2023 (provisional)"	"2023/18"	12875	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 19 ending May 13, 2023 (provisional)"	"2023/19"	12909	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 20 ending May 20, 2023 (provisional)"	"2023/20"	12516	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 21 ending May 27, 2023 (provisional)"	"2023/21"	12627	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 22 ending June 03, 2023 (provisional)"	"2023/22"	12768	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 23 ending June 10, 2023 (provisional)"	"2023/23"	12467	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 24 ending June 17, 2023 (provisional)"	"2023/24"	12584	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 25 ending June 24, 2023 (provisional)"	"2023/25"	12278	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 26 ending July 01, 2023 (provisional)"	"2023/26"	12109	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 27 ending July 08, 2023 (provisional)"	"2023/27"	12164	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 28 ending July 15, 2023 (provisional)"	"2023/28"	12142	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 29 ending July 22, 2023 (provisional)"	"2023/29"	11971	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 30 ending July 29, 2023 (provisional)"	"2023/30"	12389	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 31 ending August 05, 2023 (provisional)"	"2023/31"	12174	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 32 ending August 12, 2023 (provisional)"	"2023/32"	12269	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 33 ending August 19, 2023 (provisional)"	"2023/33"	12331	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 34 ending August 26, 2023 (provisional)"	"2023/34"	12364	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 35 ending September 02, 2023 (provisional)"	"2023/35"	12463	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 36 ending September 09, 2023 (provisional)"	"2023/36"	12420	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 37 ending September 16, 2023 (provisional)"	"2023/37"	12655	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 38 ending September 23, 2023 (provisional)"	"2023/38"	12755	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 39 ending September 30, 2023 (provisional)"	"2023/39"	12560	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 40 ending October 07, 2023 (provisional)"	"2023/40"	12739	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 41 ending October 14, 2023 (provisional)"	"2023/41"	12875	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 42 ending October 21, 2023 (provisional)"	"2023/42"	13193	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 43 ending October 28, 2023 (provisional)"	"2023/43"	13183	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 44 ending November 04, 2023 (provisional)"	"2023/44"	13335	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 45 ending November 11, 2023 (provisional)"	"2023/45"	13504	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 46 ending November 18, 2023 (provisional)"	"2023/46"	13153	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 47 ending November 25, 2023 (provisional)"	"2023/47"	13355	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 48 ending December 02, 2023 (provisional)"	"2023/48"	13953	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 49 ending December 09, 2023 (provisional)"	"2023/49"	14259	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 50 ending December 16, 2023 (provisional)"	"2023/50"	13997	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 51 ending December 23, 2023 (provisional)"	"2023/51"	14118	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2023 Week 52 ending December 30, 2023 (provisional)"	"2023/52"	14236	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 01 ending January 06, 2024 (provisional)"	"2024/01"	14648	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 02 ending January 13, 2024 (provisional)"	"2024/02"	14738	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 03 ending January 20, 2024 (provisional)"	"2024/03"	14840	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 04 ending January 27, 2024 (provisional)"	"2024/04"	14670	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 05 ending February 03, 2024 (provisional)"	"2024/05"	13760	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 06 ending February 10, 2024 (provisional)"	"2024/06"	13675	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 07 ending February 17, 2024 (provisional)"	"2024/07"	13435	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 08 ending February 24, 2024 (provisional)"	"2024/08"	13952	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 09 ending March 02, 2024 (provisional)"	"2024/09"	13564	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 10 ending March 09, 2024 (provisional)"	"2024/10"	13431	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 11 ending March 16, 2024 (provisional)"	"2024/11"	13389	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 12 ending March 23, 2024 (provisional)"	"2024/12"	12911	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 13 ending March 30, 2024 (provisional)"	"2024/13"	13295	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 14 ending April 06, 2024 (provisional)"	"2024/14"	12961	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 15 ending April 13, 2024 (provisional)"	"2024/15"	13200	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 16 ending April 20, 2024 (provisional)"	"2024/16"	12706	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 17 ending April 27, 2024 (provisional)"	"2024/17"	12783	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 18 ending May 04, 2024 (provisional)"	"2024/18"	12528	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 19 ending May 11, 2024 (provisional)"	"2024/19"	12594	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 20 ending May 18, 2024 (provisional)"	"2024/20"	12603	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 21 ending May 25, 2024 (provisional)"	"2024/21"	12419	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 22 ending June 01, 2024 (provisional)"	"2024/22"	12182	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 23 ending June 08, 2024 (provisional)"	"2024/23"	12607	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 24 ending June 15, 2024 (provisional)"	"2024/24"	12396	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 25 ending June 22, 2024 (provisional)"	"2024/25"	12149	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 26 ending June 29, 2024 (provisional)"	"2024/26"	12252	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 27 ending July 06, 2024 (provisional)"	"2024/27"	12061	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 28 ending July 13, 2024 (provisional)"	"2024/28"	12265	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 29 ending July 20, 2024 (provisional)"	"2024/29"	12077	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 30 ending July 27, 2024 (provisional)"	"2024/30"	12129	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 31 ending August 03, 2024 (provisional)"	"2024/31"	12379	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 32 ending August 10, 2024 (provisional)"	"2024/32"	12197	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 33 ending August 17, 2024 (provisional)"	"2024/33"	12381	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 34 ending August 24, 2024 (provisional)"	"2024/34"	12360	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 35 ending August 31, 2024 (provisional)"	"2024/35"	12333	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 36 ending September 07, 2024 (provisional)"	"2024/36"	12165	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 37 ending September 14, 2024 (provisional)"	"2024/37"	12504	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 38 ending September 21, 2024 (provisional)"	"2024/38"	12474	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 39 ending September 28, 2024 (provisional)"	"2024/39"	12310	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 40 ending October 05, 2024 (provisional)"	"2024/40"	12323	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 41 ending October 12, 2024 (provisional)"	"2024/41"	12431	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 42 ending October 19, 2024 (provisional)"	"2024/42"	12036	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 43 ending October 26, 2024 (provisional)"	"2024/43"	11520	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 44 ending November 02, 2024 (provisional)"	"2024/44"	10059	Not Applicable	Not Applicable
+	"Census Region 2: Midwest"	"CENS-R2"	"2024 Week 45 ending November 09, 2024 (provisional)"	"2024/45"	7835	Not Applicable	Not Applicable
+"Total"	"Census Region 2: Midwest"	"CENS-R2"			4805110	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 01 ending January 06, 2018"	"2018/01"	22313	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 02 ending January 13, 2018"	"2018/02"	26511	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 03 ending January 20, 2018"	"2018/03"	25969	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 04 ending January 27, 2018"	"2018/04"	25193	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 05 ending February 03, 2018"	"2018/05"	24530	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 06 ending February 10, 2018"	"2018/06"	24606	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 07 ending February 17, 2018"	"2018/07"	23902	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 08 ending February 24, 2018"	"2018/08"	22383	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 09 ending March 03, 2018"	"2018/09"	21711	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 10 ending March 10, 2018"	"2018/10"	22117	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 11 ending March 17, 2018"	"2018/11"	22061	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 12 ending March 24, 2018"	"2018/12"	21438	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 13 ending March 31, 2018"	"2018/13"	21383	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 14 ending April 07, 2018"	"2018/14"	21244	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 15 ending April 14, 2018"	"2018/15"	21471	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 16 ending April 21, 2018"	"2018/16"	21005	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 17 ending April 28, 2018"	"2018/17"	20952	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 18 ending May 05, 2018"	"2018/18"	21077	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 19 ending May 12, 2018"	"2018/19"	20679	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 20 ending May 19, 2018"	"2018/20"	20340	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 21 ending May 26, 2018"	"2018/21"	20124	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 22 ending June 02, 2018"	"2018/22"	20453	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 23 ending June 09, 2018"	"2018/23"	20728	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 24 ending June 16, 2018"	"2018/24"	20271	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 25 ending June 23, 2018"	"2018/25"	20076	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 26 ending June 30, 2018"	"2018/26"	20107	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 27 ending July 07, 2018"	"2018/27"	20376	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 28 ending July 14, 2018"	"2018/28"	20178	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 29 ending July 21, 2018"	"2018/29"	20093	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 30 ending July 28, 2018"	"2018/30"	19907	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 31 ending August 04, 2018"	"2018/31"	20249	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 32 ending August 11, 2018"	"2018/32"	20306	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 33 ending August 18, 2018"	"2018/33"	20044	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 34 ending August 25, 2018"	"2018/34"	20074	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 35 ending September 01, 2018"	"2018/35"	19990	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 36 ending September 08, 2018"	"2018/36"	19852	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 37 ending September 15, 2018"	"2018/37"	20261	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 38 ending September 22, 2018"	"2018/38"	20447	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 39 ending September 29, 2018"	"2018/39"	20148	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 40 ending October 06, 2018"	"2018/40"	20477	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 41 ending October 13, 2018"	"2018/41"	20360	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 42 ending October 20, 2018"	"2018/42"	20587	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 43 ending October 27, 2018"	"2018/43"	21147	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 44 ending November 03, 2018"	"2018/44"	21121	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 45 ending November 10, 2018"	"2018/45"	21082	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 46 ending November 17, 2018"	"2018/46"	21851	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 47 ending November 24, 2018"	"2018/47"	21657	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 48 ending December 01, 2018"	"2018/48"	21916	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 49 ending December 08, 2018"	"2018/49"	22120	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 50 ending December 15, 2018"	"2018/50"	22637	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 51 ending December 22, 2018"	"2018/51"	22638	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2018 Week 52 ending December 29, 2018"	"2018/52"	22337	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 01 ending January 05, 2019"	"2019/01"	22890	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 02 ending January 12, 2019"	"2019/02"	22819	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 03 ending January 19, 2019"	"2019/03"	22702	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 04 ending January 26, 2019"	"2019/04"	22533	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 05 ending February 02, 2019"	"2019/05"	22954	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 06 ending February 09, 2019"	"2019/06"	23039	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 07 ending February 16, 2019"	"2019/07"	22844	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 08 ending February 23, 2019"	"2019/08"	22726	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 09 ending March 02, 2019"	"2019/09"	22663	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 10 ending March 09, 2019"	"2019/10"	22818	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 11 ending March 16, 2019"	"2019/11"	22599	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 12 ending March 23, 2019"	"2019/12"	22509	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 13 ending March 30, 2019"	"2019/13"	22360	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 14 ending April 06, 2019"	"2019/14"	22264	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 15 ending April 13, 2019"	"2019/15"	22027	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 16 ending April 20, 2019"	"2019/16"	21420	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 17 ending April 27, 2019"	"2019/17"	21560	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 18 ending May 04, 2019"	"2019/18"	21626	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 19 ending May 11, 2019"	"2019/19"	21194	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 20 ending May 18, 2019"	"2019/20"	21195	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 21 ending May 25, 2019"	"2019/21"	21114	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 22 ending June 01, 2019"	"2019/22"	21156	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 23 ending June 08, 2019"	"2019/23"	21230	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 24 ending June 15, 2019"	"2019/24"	21009	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 25 ending June 22, 2019"	"2019/25"	20987	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 26 ending June 29, 2019"	"2019/26"	20601	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 27 ending July 06, 2019"	"2019/27"	20916	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 28 ending July 13, 2019"	"2019/28"	20693	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 29 ending July 20, 2019"	"2019/29"	20490	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 30 ending July 27, 2019"	"2019/30"	20548	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 31 ending August 03, 2019"	"2019/31"	20654	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 32 ending August 10, 2019"	"2019/32"	20687	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 33 ending August 17, 2019"	"2019/33"	20352	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 34 ending August 24, 2019"	"2019/34"	20356	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 35 ending August 31, 2019"	"2019/35"	20374	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 36 ending September 07, 2019"	"2019/36"	20569	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 37 ending September 14, 2019"	"2019/37"	20650	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 38 ending September 21, 2019"	"2019/38"	20360	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 39 ending September 28, 2019"	"2019/39"	20904	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 40 ending October 05, 2019"	"2019/40"	20795	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 41 ending October 12, 2019"	"2019/41"	20799	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 42 ending October 19, 2019"	"2019/42"	21311	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 43 ending October 26, 2019"	"2019/43"	21280	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 44 ending November 02, 2019"	"2019/44"	21191	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 45 ending November 09, 2019"	"2019/45"	21900	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 46 ending November 16, 2019"	"2019/46"	22100	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 47 ending November 23, 2019"	"2019/47"	22465	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 48 ending November 30, 2019"	"2019/48"	22180	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 49 ending December 07, 2019"	"2019/49"	22652	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 50 ending December 14, 2019"	"2019/50"	23102	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 51 ending December 21, 2019"	"2019/51"	22791	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2019 Week 52 ending December 28, 2019"	"2019/52"	23240	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 01 ending January 04, 2020"	"2020/01"	23670	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 02 ending January 11, 2020"	"2020/02"	24102	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 03 ending January 18, 2020"	"2020/03"	23251	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 04 ending January 25, 2020"	"2020/04"	22968	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 05 ending February 01, 2020"	"2020/05"	23229	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 06 ending February 08, 2020"	"2020/06"	23603	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 07 ending February 15, 2020"	"2020/07"	23155	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 08 ending February 22, 2020"	"2020/08"	22993	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 09 ending February 29, 2020"	"2020/09"	23278	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 10 ending March 07, 2020"	"2020/10"	23580	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 11 ending March 14, 2020"	"2020/11"	23241	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 12 ending March 21, 2020"	"2020/12"	23231	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 13 ending March 28, 2020"	"2020/13"	23678	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 14 ending April 04, 2020"	"2020/14"	24414	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 15 ending April 11, 2020"	"2020/15"	25155	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 16 ending April 18, 2020"	"2020/16"	24682	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 17 ending April 25, 2020"	"2020/17"	25201	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 18 ending May 02, 2020"	"2020/18"	24537	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 19 ending May 09, 2020"	"2020/19"	24628	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 20 ending May 16, 2020"	"2020/20"	24379	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 21 ending May 23, 2020"	"2020/21"	24074	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 22 ending May 30, 2020"	"2020/22"	23310	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 23 ending June 06, 2020"	"2020/23"	23275	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 24 ending June 13, 2020"	"2020/24"	23356	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 25 ending June 20, 2020"	"2020/25"	23503	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 26 ending June 27, 2020"	"2020/26"	23944	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 27 ending July 04, 2020"	"2020/27"	24849	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 28 ending July 11, 2020"	"2020/28"	26478	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 29 ending July 18, 2020"	"2020/29"	27643	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 30 ending July 25, 2020"	"2020/30"	28635	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 31 ending August 01, 2020"	"2020/31"	28462	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 32 ending August 08, 2020"	"2020/32"	27983	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 33 ending August 15, 2020"	"2020/33"	27874	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 34 ending August 22, 2020"	"2020/34"	26639	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 35 ending August 29, 2020"	"2020/35"	26171	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 36 ending September 05, 2020"	"2020/36"	25662	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 37 ending September 12, 2020"	"2020/37"	24988	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 38 ending September 19, 2020"	"2020/38"	24856	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 39 ending September 26, 2020"	"2020/39"	24914	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 40 ending October 03, 2020"	"2020/40"	24589	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 41 ending October 10, 2020"	"2020/41"	25321	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 42 ending October 17, 2020"	"2020/42"	24654	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 43 ending October 24, 2020"	"2020/43"	25303	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 44 ending October 31, 2020"	"2020/44"	25730	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 45 ending November 07, 2020"	"2020/45"	26760	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 46 ending November 14, 2020"	"2020/46"	26962	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 47 ending November 21, 2020"	"2020/47"	27388	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 48 ending November 28, 2020"	"2020/48"	27834	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 49 ending December 05, 2020"	"2020/49"	29262	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 50 ending December 12, 2020"	"2020/50"	30763	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 51 ending December 19, 2020"	"2020/51"	31271	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 52 ending December 26, 2020"	"2020/52"	31834	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2020 Week 53 ending January 02, 2021"	"2020/53"	34064	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 01 ending January 09, 2021"	"2021/01"	34432	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 02 ending January 16, 2021"	"2021/02"	35555	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 03 ending January 23, 2021"	"2021/03"	34675	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 04 ending January 30, 2021"	"2021/04"	32726	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 05 ending February 06, 2021"	"2021/05"	31333	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 06 ending February 13, 2021"	"2021/06"	29581	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 07 ending February 20, 2021"	"2021/07"	29139	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 08 ending February 27, 2021"	"2021/08"	27496	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 09 ending March 06, 2021"	"2021/09"	25973	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 10 ending March 13, 2021"	"2021/10"	25375	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 11 ending March 20, 2021"	"2021/11"	24268	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 12 ending March 27, 2021"	"2021/12"	24758	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 13 ending April 03, 2021"	"2021/13"	23342	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 14 ending April 10, 2021"	"2021/14"	24993	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 15 ending April 17, 2021"	"2021/15"	23904	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 16 ending April 24, 2021"	"2021/16"	24444	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 17 ending May 01, 2021"	"2021/17"	24120	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 18 ending May 08, 2021"	"2021/18"	23977	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 19 ending May 15, 2021"	"2021/19"	23718	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 20 ending May 22, 2021"	"2021/20"	23654	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 21 ending May 29, 2021"	"2021/21"	23599	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 22 ending June 05, 2021"	"2021/22"	23245	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 23 ending June 12, 2021"	"2021/23"	23470	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 24 ending June 19, 2021"	"2021/24"	23419	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 25 ending June 26, 2021"	"2021/25"	23244	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 26 ending July 03, 2021"	"2021/26"	23215	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 27 ending July 10, 2021"	"2021/27"	23189	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 28 ending July 17, 2021"	"2021/28"	23552	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 29 ending July 24, 2021"	"2021/29"	24366	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 30 ending July 31, 2021"	"2021/30"	25851	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 31 ending August 07, 2021"	"2021/31"	27877	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 32 ending August 14, 2021"	"2021/32"	30170	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 33 ending August 21, 2021"	"2021/33"	32293	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 34 ending August 28, 2021"	"2021/34"	33652	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 35 ending September 04, 2021"	"2021/35"	34332	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 36 ending September 11, 2021"	"2021/36"	33930	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 37 ending September 18, 2021"	"2021/37"	33157	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 38 ending September 25, 2021"	"2021/38"	31941	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 39 ending October 02, 2021"	"2021/39"	30581	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 40 ending October 09, 2021"	"2021/40"	28971	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 41 ending October 16, 2021"	"2021/41"	27632	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 42 ending October 23, 2021"	"2021/42"	26721	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 43 ending October 30, 2021"	"2021/43"	25868	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 44 ending November 06, 2021"	"2021/44"	25901	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 45 ending November 13, 2021"	"2021/45"	26173	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 46 ending November 20, 2021"	"2021/46"	25590	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 47 ending November 27, 2021"	"2021/47"	25427	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 48 ending December 04, 2021"	"2021/48"	26644	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 49 ending December 11, 2021"	"2021/49"	27055	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 50 ending December 18, 2021"	"2021/50"	26271	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 51 ending December 25, 2021"	"2021/51"	26814	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2021 Week 52 ending January 01, 2022"	"2021/52"	27949	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 01 ending January 08, 2022"	"2022/01"	29889	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 02 ending January 15, 2022"	"2022/02"	33024	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 03 ending January 22, 2022"	"2022/03"	34227	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 04 ending January 29, 2022"	"2022/04"	35275	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 05 ending February 05, 2022"	"2022/05"	33981	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 06 ending February 12, 2022"	"2022/06"	32189	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 07 ending February 19, 2022"	"2022/07"	29683	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 08 ending February 26, 2022"	"2022/08"	27177	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 09 ending March 05, 2022"	"2022/09"	26481	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 10 ending March 12, 2022"	"2022/10"	25064	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 11 ending March 19, 2022"	"2022/11"	24536	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 12 ending March 26, 2022"	"2022/12"	23725	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 13 ending April 02, 2022"	"2022/13"	23643	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 14 ending April 09, 2022"	"2022/14"	23293	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 15 ending April 16, 2022"	"2022/15"	23218	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 16 ending April 23, 2022"	"2022/16"	22772	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 17 ending April 30, 2022"	"2022/17"	22890	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 18 ending May 07, 2022"	"2022/18"	22787	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 19 ending May 14, 2022"	"2022/19"	22905	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 20 ending May 21, 2022"	"2022/20"	23204	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 21 ending May 28, 2022"	"2022/21"	22643	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 22 ending June 04, 2022"	"2022/22"	23069	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 23 ending June 11, 2022"	"2022/23"	23657	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 24 ending June 18, 2022"	"2022/24"	23504	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 25 ending June 25, 2022"	"2022/25"	23632	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 26 ending July 02, 2022"	"2022/26"	23237	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 27 ending July 09, 2022"	"2022/27"	23592	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 28 ending July 16, 2022"	"2022/28"	23762	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 29 ending July 23, 2022"	"2022/29"	24484	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 30 ending July 30, 2022"	"2022/30"	24004	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 31 ending August 06, 2022"	"2022/31"	24095	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 32 ending August 13, 2022"	"2022/32"	23982	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 33 ending August 20, 2022"	"2022/33"	23707	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 34 ending August 27, 2022"	"2022/34"	23826	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 35 ending September 03, 2022"	"2022/35"	23630	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 36 ending September 10, 2022"	"2022/36"	23739	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 37 ending September 17, 2022"	"2022/37"	23774	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 38 ending September 24, 2022"	"2022/38"	23879	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 39 ending October 01, 2022"	"2022/39"	23511	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 40 ending October 08, 2022"	"2022/40"	24173	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 41 ending October 15, 2022"	"2022/41"	24055	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 42 ending October 22, 2022"	"2022/42"	24211	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 43 ending October 29, 2022"	"2022/43"	24140	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 44 ending November 05, 2022"	"2022/44"	24282	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 45 ending November 12, 2022"	"2022/45"	24391	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 46 ending November 19, 2022"	"2022/46"	24327	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 47 ending November 26, 2022"	"2022/47"	25678	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 48 ending December 03, 2022"	"2022/48"	25799	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 49 ending December 10, 2022"	"2022/49"	26230	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 50 ending December 17, 2022"	"2022/50"	25347	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 51 ending December 24, 2022"	"2022/51"	26354	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2022 Week 52 ending December 31, 2022"	"2022/52"	28029	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 01 ending January 07, 2023 (provisional)"	"2023/01"	27436	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 02 ending January 14, 2023 (provisional)"	"2023/02"	26770	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 03 ending January 21, 2023 (provisional)"	"2023/03"	26245	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 04 ending January 28, 2023 (provisional)"	"2023/04"	25236	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 05 ending February 04, 2023 (provisional)"	"2023/05"	25346	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 06 ending February 11, 2023 (provisional)"	"2023/06"	25453	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 07 ending February 18, 2023 (provisional)"	"2023/07"	24922	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 08 ending February 25, 2023 (provisional)"	"2023/08"	25122	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 09 ending March 04, 2023 (provisional)"	"2023/09"	24158	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 10 ending March 11, 2023 (provisional)"	"2023/10"	24118	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 11 ending March 18, 2023 (provisional)"	"2023/11"	24172	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 12 ending March 25, 2023 (provisional)"	"2023/12"	24797	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 13 ending April 01, 2023 (provisional)"	"2023/13"	24200	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 14 ending April 08, 2023 (provisional)"	"2023/14"	23328	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 15 ending April 15, 2023 (provisional)"	"2023/15"	23500	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 16 ending April 22, 2023 (provisional)"	"2023/16"	23378	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 17 ending April 29, 2023 (provisional)"	"2023/17"	22992	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 18 ending May 06, 2023 (provisional)"	"2023/18"	23525	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 19 ending May 13, 2023 (provisional)"	"2023/19"	23385	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 20 ending May 20, 2023 (provisional)"	"2023/20"	22874	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 21 ending May 27, 2023 (provisional)"	"2023/21"	22317	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 22 ending June 03, 2023 (provisional)"	"2023/22"	22987	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 23 ending June 10, 2023 (provisional)"	"2023/23"	22773	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 24 ending June 17, 2023 (provisional)"	"2023/24"	22846	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 25 ending June 24, 2023 (provisional)"	"2023/25"	22852	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 26 ending July 01, 2023 (provisional)"	"2023/26"	22841	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 27 ending July 08, 2023 (provisional)"	"2023/27"	22960	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 28 ending July 15, 2023 (provisional)"	"2023/28"	22688	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 29 ending July 22, 2023 (provisional)"	"2023/29"	22697	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 30 ending July 29, 2023 (provisional)"	"2023/30"	22785	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 31 ending August 05, 2023 (provisional)"	"2023/31"	22978	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 32 ending August 12, 2023 (provisional)"	"2023/32"	23515	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 33 ending August 19, 2023 (provisional)"	"2023/33"	23148	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 34 ending August 26, 2023 (provisional)"	"2023/34"	23433	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 35 ending September 02, 2023 (provisional)"	"2023/35"	22900	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 36 ending September 09, 2023 (provisional)"	"2023/36"	23493	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 37 ending September 16, 2023 (provisional)"	"2023/37"	23209	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 38 ending September 23, 2023 (provisional)"	"2023/38"	23236	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 39 ending September 30, 2023 (provisional)"	"2023/39"	23211	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 40 ending October 07, 2023 (provisional)"	"2023/40"	23122	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 41 ending October 14, 2023 (provisional)"	"2023/41"	23336	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 42 ending October 21, 2023 (provisional)"	"2023/42"	23330	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 43 ending October 28, 2023 (provisional)"	"2023/43"	23485	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 44 ending November 04, 2023 (provisional)"	"2023/44"	23584	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 45 ending November 11, 2023 (provisional)"	"2023/45"	24286	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 46 ending November 18, 2023 (provisional)"	"2023/46"	23907	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 47 ending November 25, 2023 (provisional)"	"2023/47"	23564	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 48 ending December 02, 2023 (provisional)"	"2023/48"	24674	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 49 ending December 09, 2023 (provisional)"	"2023/49"	25547	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 50 ending December 16, 2023 (provisional)"	"2023/50"	25445	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 51 ending December 23, 2023 (provisional)"	"2023/51"	26075	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2023 Week 52 ending December 30, 2023 (provisional)"	"2023/52"	26486	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 01 ending January 06, 2024 (provisional)"	"2024/01"	27357	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 02 ending January 13, 2024 (provisional)"	"2024/02"	27862	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 03 ending January 20, 2024 (provisional)"	"2024/03"	27024	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 04 ending January 27, 2024 (provisional)"	"2024/04"	26977	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 05 ending February 03, 2024 (provisional)"	"2024/05"	25502	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 06 ending February 10, 2024 (provisional)"	"2024/06"	25402	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 07 ending February 17, 2024 (provisional)"	"2024/07"	24806	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 08 ending February 24, 2024 (provisional)"	"2024/08"	25040	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 09 ending March 02, 2024 (provisional)"	"2024/09"	24558	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 10 ending March 09, 2024 (provisional)"	"2024/10"	24460	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 11 ending March 16, 2024 (provisional)"	"2024/11"	24089	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 12 ending March 23, 2024 (provisional)"	"2024/12"	23460	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 13 ending March 30, 2024 (provisional)"	"2024/13"	23675	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 14 ending April 06, 2024 (provisional)"	"2024/14"	23733	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 15 ending April 13, 2024 (provisional)"	"2024/15"	23652	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 16 ending April 20, 2024 (provisional)"	"2024/16"	23432	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 17 ending April 27, 2024 (provisional)"	"2024/17"	23035	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 18 ending May 04, 2024 (provisional)"	"2024/18"	23067	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 19 ending May 11, 2024 (provisional)"	"2024/19"	22783	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 20 ending May 18, 2024 (provisional)"	"2024/20"	22581	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 21 ending May 25, 2024 (provisional)"	"2024/21"	22801	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 22 ending June 01, 2024 (provisional)"	"2024/22"	22543	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 23 ending June 08, 2024 (provisional)"	"2024/23"	22959	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 24 ending June 15, 2024 (provisional)"	"2024/24"	22948	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 25 ending June 22, 2024 (provisional)"	"2024/25"	22650	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 26 ending June 29, 2024 (provisional)"	"2024/26"	22959	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 27 ending July 06, 2024 (provisional)"	"2024/27"	22626	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 28 ending July 13, 2024 (provisional)"	"2024/28"	22314	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 29 ending July 20, 2024 (provisional)"	"2024/29"	22021	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 30 ending July 27, 2024 (provisional)"	"2024/30"	22351	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 31 ending August 03, 2024 (provisional)"	"2024/31"	22823	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 32 ending August 10, 2024 (provisional)"	"2024/32"	23010	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 33 ending August 17, 2024 (provisional)"	"2024/33"	22966	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 34 ending August 24, 2024 (provisional)"	"2024/34"	22914	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 35 ending August 31, 2024 (provisional)"	"2024/35"	23072	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 36 ending September 07, 2024 (provisional)"	"2024/36"	22919	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 37 ending September 14, 2024 (provisional)"	"2024/37"	22770	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 38 ending September 21, 2024 (provisional)"	"2024/38"	22524	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 39 ending September 28, 2024 (provisional)"	"2024/39"	22573	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 40 ending October 05, 2024 (provisional)"	"2024/40"	22136	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 41 ending October 12, 2024 (provisional)"	"2024/41"	21784	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 42 ending October 19, 2024 (provisional)"	"2024/42"	21434	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 43 ending October 26, 2024 (provisional)"	"2024/43"	19834	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 44 ending November 02, 2024 (provisional)"	"2024/44"	16843	Not Applicable	Not Applicable
+	"Census Region 3: South"	"CENS-R3"	"2024 Week 45 ending November 09, 2024 (provisional)"	"2024/45"	12535	Not Applicable	Not Applicable
+"Total"	"Census Region 3: South"	"CENS-R3"			8615780	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 01 ending January 06, 2018"	"2018/01"	11873	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 02 ending January 13, 2018"	"2018/02"	13664	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 03 ending January 20, 2018"	"2018/03"	12693	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 04 ending January 27, 2018"	"2018/04"	12181	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 05 ending February 03, 2018"	"2018/05"	12163	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 06 ending February 10, 2018"	"2018/06"	11650	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 07 ending February 17, 2018"	"2018/07"	11574	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 08 ending February 24, 2018"	"2018/08"	11549	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 09 ending March 03, 2018"	"2018/09"	11813	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 10 ending March 10, 2018"	"2018/10"	12063	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 11 ending March 17, 2018"	"2018/11"	11718	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 12 ending March 24, 2018"	"2018/12"	11492	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 13 ending March 31, 2018"	"2018/13"	11088	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 14 ending April 07, 2018"	"2018/14"	11278	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 15 ending April 14, 2018"	"2018/15"	11035	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 16 ending April 21, 2018"	"2018/16"	10643	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 17 ending April 28, 2018"	"2018/17"	10809	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 18 ending May 05, 2018"	"2018/18"	10499	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 19 ending May 12, 2018"	"2018/19"	10521	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 20 ending May 19, 2018"	"2018/20"	10010	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 21 ending May 26, 2018"	"2018/21"	10123	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 22 ending June 02, 2018"	"2018/22"	10292	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 23 ending June 09, 2018"	"2018/23"	10560	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 24 ending June 16, 2018"	"2018/24"	10425	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 25 ending June 23, 2018"	"2018/25"	10369	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 26 ending June 30, 2018"	"2018/26"	10136	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 27 ending July 07, 2018"	"2018/27"	10354	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 28 ending July 14, 2018"	"2018/28"	10442	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 29 ending July 21, 2018"	"2018/29"	10102	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 30 ending July 28, 2018"	"2018/30"	10109	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 31 ending August 04, 2018"	"2018/31"	10092	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 32 ending August 11, 2018"	"2018/32"	10195	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 33 ending August 18, 2018"	"2018/33"	10148	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 34 ending August 25, 2018"	"2018/34"	10055	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 35 ending September 01, 2018"	"2018/35"	10054	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 36 ending September 08, 2018"	"2018/36"	10010	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 37 ending September 15, 2018"	"2018/37"	10061	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 38 ending September 22, 2018"	"2018/38"	10262	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 39 ending September 29, 2018"	"2018/39"	10069	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 40 ending October 06, 2018"	"2018/40"	10159	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 41 ending October 13, 2018"	"2018/41"	10285	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 42 ending October 20, 2018"	"2018/42"	10418	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 43 ending October 27, 2018"	"2018/43"	10464	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 44 ending November 03, 2018"	"2018/44"	10301	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 45 ending November 10, 2018"	"2018/45"	10626	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 46 ending November 17, 2018"	"2018/46"	10806	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 47 ending November 24, 2018"	"2018/47"	11021	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 48 ending December 01, 2018"	"2018/48"	10846	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 49 ending December 08, 2018"	"2018/49"	11093	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 50 ending December 15, 2018"	"2018/50"	11043	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 51 ending December 22, 2018"	"2018/51"	11243	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2018 Week 52 ending December 29, 2018"	"2018/52"	11190	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 01 ending January 05, 2019"	"2019/01"	12019	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 02 ending January 12, 2019"	"2019/02"	12204	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 03 ending January 19, 2019"	"2019/03"	11870	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 04 ending January 26, 2019"	"2019/04"	11499	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 05 ending February 02, 2019"	"2019/05"	11398	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 06 ending February 09, 2019"	"2019/06"	11694	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 07 ending February 16, 2019"	"2019/07"	11885	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 08 ending February 23, 2019"	"2019/08"	12043	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 09 ending March 02, 2019"	"2019/09"	12089	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 10 ending March 09, 2019"	"2019/10"	12001	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 11 ending March 16, 2019"	"2019/11"	11876	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 12 ending March 23, 2019"	"2019/12"	11713	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 13 ending March 30, 2019"	"2019/13"	11481	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 14 ending April 06, 2019"	"2019/14"	11584	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 15 ending April 13, 2019"	"2019/15"	11259	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 16 ending April 20, 2019"	"2019/16"	11139	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 17 ending April 27, 2019"	"2019/17"	10716	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 18 ending May 04, 2019"	"2019/18"	10794	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 19 ending May 11, 2019"	"2019/19"	10925	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 20 ending May 18, 2019"	"2019/20"	10849	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 21 ending May 25, 2019"	"2019/21"	10910	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 22 ending June 01, 2019"	"2019/22"	10704	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 23 ending June 08, 2019"	"2019/23"	10783	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 24 ending June 15, 2019"	"2019/24"	10863	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 25 ending June 22, 2019"	"2019/25"	10490	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 26 ending June 29, 2019"	"2019/26"	10432	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 27 ending July 06, 2019"	"2019/27"	10404	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 28 ending July 13, 2019"	"2019/28"	10484	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 29 ending July 20, 2019"	"2019/29"	10275	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 30 ending July 27, 2019"	"2019/30"	10396	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 31 ending August 03, 2019"	"2019/31"	10129	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 32 ending August 10, 2019"	"2019/32"	10143	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 33 ending August 17, 2019"	"2019/33"	10101	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 34 ending August 24, 2019"	"2019/34"	10189	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 35 ending August 31, 2019"	"2019/35"	10295	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 36 ending September 07, 2019"	"2019/36"	10584	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 37 ending September 14, 2019"	"2019/37"	10291	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 38 ending September 21, 2019"	"2019/38"	10319	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 39 ending September 28, 2019"	"2019/39"	10475	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 40 ending October 05, 2019"	"2019/40"	10617	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 41 ending October 12, 2019"	"2019/41"	10612	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 42 ending October 19, 2019"	"2019/42"	10824	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 43 ending October 26, 2019"	"2019/43"	10774	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 44 ending November 02, 2019"	"2019/44"	10916	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 45 ending November 09, 2019"	"2019/45"	11293	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 46 ending November 16, 2019"	"2019/46"	10972	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 47 ending November 23, 2019"	"2019/47"	10927	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 48 ending November 30, 2019"	"2019/48"	10998	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 49 ending December 07, 2019"	"2019/49"	11450	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 50 ending December 14, 2019"	"2019/50"	11387	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 51 ending December 21, 2019"	"2019/51"	11463	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2019 Week 52 ending December 28, 2019"	"2019/52"	11631	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 01 ending January 04, 2020"	"2020/01"	12221	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 02 ending January 11, 2020"	"2020/02"	12385	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 03 ending January 18, 2020"	"2020/03"	12212	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 04 ending January 25, 2020"	"2020/04"	12090	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 05 ending February 01, 2020"	"2020/05"	11788	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 06 ending February 08, 2020"	"2020/06"	12146	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 07 ending February 15, 2020"	"2020/07"	11852	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 08 ending February 22, 2020"	"2020/08"	12058	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 09 ending February 29, 2020"	"2020/09"	11991	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 10 ending March 07, 2020"	"2020/10"	12084	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 11 ending March 14, 2020"	"2020/11"	11653	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 12 ending March 21, 2020"	"2020/12"	12035	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 13 ending March 28, 2020"	"2020/13"	12137	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 14 ending April 04, 2020"	"2020/14"	12646	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 15 ending April 11, 2020"	"2020/15"	12880	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 16 ending April 18, 2020"	"2020/16"	12734	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 17 ending April 25, 2020"	"2020/17"	12548	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 18 ending May 02, 2020"	"2020/18"	12142	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 19 ending May 09, 2020"	"2020/19"	12085	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 20 ending May 16, 2020"	"2020/20"	11984	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 21 ending May 23, 2020"	"2020/21"	11615	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 22 ending May 30, 2020"	"2020/22"	11710	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 23 ending June 06, 2020"	"2020/23"	11717	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 24 ending June 13, 2020"	"2020/24"	11894	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 25 ending June 20, 2020"	"2020/25"	11952	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 26 ending June 27, 2020"	"2020/26"	12148	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 27 ending July 04, 2020"	"2020/27"	12552	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 28 ending July 11, 2020"	"2020/28"	12978	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 29 ending July 18, 2020"	"2020/29"	13287	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 30 ending July 25, 2020"	"2020/30"	13280	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 31 ending August 01, 2020"	"2020/31"	13238	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 32 ending August 08, 2020"	"2020/32"	13203	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 33 ending August 15, 2020"	"2020/33"	12961	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 34 ending August 22, 2020"	"2020/34"	13292	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 35 ending August 29, 2020"	"2020/35"	12341	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 36 ending September 05, 2020"	"2020/36"	12134	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 37 ending September 12, 2020"	"2020/37"	12196	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 38 ending September 19, 2020"	"2020/38"	12073	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 39 ending September 26, 2020"	"2020/39"	11889	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 40 ending October 03, 2020"	"2020/40"	11814	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 41 ending October 10, 2020"	"2020/41"	11911	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 42 ending October 17, 2020"	"2020/42"	11922	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 43 ending October 24, 2020"	"2020/43"	11947	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 44 ending October 31, 2020"	"2020/44"	12335	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 45 ending November 07, 2020"	"2020/45"	13019	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 46 ending November 14, 2020"	"2020/46"	13342	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 47 ending November 21, 2020"	"2020/47"	14124	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 48 ending November 28, 2020"	"2020/48"	14264	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 49 ending December 05, 2020"	"2020/49"	15463	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 50 ending December 12, 2020"	"2020/50"	16984	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 51 ending December 19, 2020"	"2020/51"	18040	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 52 ending December 26, 2020"	"2020/52"	19182	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2020 Week 53 ending January 02, 2021"	"2020/53"	19876	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 01 ending January 09, 2021"	"2021/01"	20721	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 02 ending January 16, 2021"	"2021/02"	20180	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 03 ending January 23, 2021"	"2021/03"	18731	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 04 ending January 30, 2021"	"2021/04"	17366	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 05 ending February 06, 2021"	"2021/05"	16461	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 06 ending February 13, 2021"	"2021/06"	15012	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 07 ending February 20, 2021"	"2021/07"	13939	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 08 ending February 27, 2021"	"2021/08"	13571	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 09 ending March 06, 2021"	"2021/09"	13111	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 10 ending March 13, 2021"	"2021/10"	12759	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 11 ending March 20, 2021"	"2021/11"	12577	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 12 ending March 27, 2021"	"2021/12"	12252	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 13 ending April 03, 2021"	"2021/13"	12192	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 14 ending April 10, 2021"	"2021/14"	11797	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 15 ending April 17, 2021"	"2021/15"	11666	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 16 ending April 24, 2021"	"2021/16"	11698	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 17 ending May 01, 2021"	"2021/17"	11758	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 18 ending May 08, 2021"	"2021/18"	11857	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 19 ending May 15, 2021"	"2021/19"	11676	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 20 ending May 22, 2021"	"2021/20"	11623	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 21 ending May 29, 2021"	"2021/21"	11636	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 22 ending June 05, 2021"	"2021/22"	11645	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 23 ending June 12, 2021"	"2021/23"	11598	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 24 ending June 19, 2021"	"2021/24"	11923	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 25 ending June 26, 2021"	"2021/25"	11810	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 26 ending July 03, 2021"	"2021/26"	12230	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 27 ending July 10, 2021"	"2021/27"	11766	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 28 ending July 17, 2021"	"2021/28"	11912	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 29 ending July 24, 2021"	"2021/29"	11950	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 30 ending July 31, 2021"	"2021/30"	12174	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 31 ending August 07, 2021"	"2021/31"	12654	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 32 ending August 14, 2021"	"2021/32"	13260	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 33 ending August 21, 2021"	"2021/33"	13679	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 34 ending August 28, 2021"	"2021/34"	14039	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 35 ending September 04, 2021"	"2021/35"	14381	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 36 ending September 11, 2021"	"2021/36"	14619	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 37 ending September 18, 2021"	"2021/37"	14294	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 38 ending September 25, 2021"	"2021/38"	14437	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 39 ending October 02, 2021"	"2021/39"	14187	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 40 ending October 09, 2021"	"2021/40"	14042	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 41 ending October 16, 2021"	"2021/41"	13999	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 42 ending October 23, 2021"	"2021/42"	14114	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 43 ending October 30, 2021"	"2021/43"	13986	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 44 ending November 06, 2021"	"2021/44"	14085	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 45 ending November 13, 2021"	"2021/45"	13979	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 46 ending November 20, 2021"	"2021/46"	14077	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 47 ending November 27, 2021"	"2021/47"	13920	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 48 ending December 04, 2021"	"2021/48"	14166	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 49 ending December 11, 2021"	"2021/49"	14550	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 50 ending December 18, 2021"	"2021/50"	14588	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 51 ending December 25, 2021"	"2021/51"	14843	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2021 Week 52 ending January 01, 2022"	"2021/52"	15012	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 01 ending January 08, 2022"	"2022/01"	16009	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 02 ending January 15, 2022"	"2022/02"	16682	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 03 ending January 22, 2022"	"2022/03"	16987	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 04 ending January 29, 2022"	"2022/04"	17058	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 05 ending February 05, 2022"	"2022/05"	16593	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 06 ending February 12, 2022"	"2022/06"	15969	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 07 ending February 19, 2022"	"2022/07"	14515	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 08 ending February 26, 2022"	"2022/08"	13798	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 09 ending March 05, 2022"	"2022/09"	13440	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 10 ending March 12, 2022"	"2022/10"	12833	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 11 ending March 19, 2022"	"2022/11"	12480	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 12 ending March 26, 2022"	"2022/12"	12102	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 13 ending April 02, 2022"	"2022/13"	11659	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 14 ending April 09, 2022"	"2022/14"	11951	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 15 ending April 16, 2022"	"2022/15"	11997	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 16 ending April 23, 2022"	"2022/16"	11820	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 17 ending April 30, 2022"	"2022/17"	11985	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 18 ending May 07, 2022"	"2022/18"	11887	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 19 ending May 14, 2022"	"2022/19"	11859	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 20 ending May 21, 2022"	"2022/20"	11953	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 21 ending May 28, 2022"	"2022/21"	12147	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 22 ending June 04, 2022"	"2022/22"	11989	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 23 ending June 11, 2022"	"2022/23"	12226	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 24 ending June 18, 2022"	"2022/24"	12053	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 25 ending June 25, 2022"	"2022/25"	12103	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 26 ending July 02, 2022"	"2022/26"	12144	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 27 ending July 09, 2022"	"2022/27"	12340	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 28 ending July 16, 2022"	"2022/28"	12302	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 29 ending July 23, 2022"	"2022/29"	12578	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 30 ending July 30, 2022"	"2022/30"	12232	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 31 ending August 06, 2022"	"2022/31"	12405	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 32 ending August 13, 2022"	"2022/32"	12218	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 33 ending August 20, 2022"	"2022/33"	12231	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 34 ending August 27, 2022"	"2022/34"	11787	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 35 ending September 03, 2022"	"2022/35"	12075	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 36 ending September 10, 2022"	"2022/36"	12431	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 37 ending September 17, 2022"	"2022/37"	11950	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 38 ending September 24, 2022"	"2022/38"	12071	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 39 ending October 01, 2022"	"2022/39"	11876	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 40 ending October 08, 2022"	"2022/40"	11767	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 41 ending October 15, 2022"	"2022/41"	11706	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 42 ending October 22, 2022"	"2022/42"	11859	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 43 ending October 29, 2022"	"2022/43"	12032	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 44 ending November 05, 2022"	"2022/44"	12556	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 45 ending November 12, 2022"	"2022/45"	12674	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 46 ending November 19, 2022"	"2022/46"	12897	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 47 ending November 26, 2022"	"2022/47"	13499	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 48 ending December 03, 2022"	"2022/48"	14236	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 49 ending December 10, 2022"	"2022/49"	14441	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 50 ending December 17, 2022"	"2022/50"	14416	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 51 ending December 24, 2022"	"2022/51"	14653	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2022 Week 52 ending December 31, 2022"	"2022/52"	14336	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 01 ending January 07, 2023 (provisional)"	"2023/01"	14305	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 02 ending January 14, 2023 (provisional)"	"2023/02"	13839	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 03 ending January 21, 2023 (provisional)"	"2023/03"	13015	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 04 ending January 28, 2023 (provisional)"	"2023/04"	13044	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 05 ending February 04, 2023 (provisional)"	"2023/05"	13266	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 06 ending February 11, 2023 (provisional)"	"2023/06"	12869	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 07 ending February 18, 2023 (provisional)"	"2023/07"	12833	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 08 ending February 25, 2023 (provisional)"	"2023/08"	13131	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 09 ending March 04, 2023 (provisional)"	"2023/09"	13237	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 10 ending March 11, 2023 (provisional)"	"2023/10"	13016	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 11 ending March 18, 2023 (provisional)"	"2023/11"	12883	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 12 ending March 25, 2023 (provisional)"	"2023/12"	12392	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 13 ending April 01, 2023 (provisional)"	"2023/13"	12502	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 14 ending April 08, 2023 (provisional)"	"2023/14"	12744	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 15 ending April 15, 2023 (provisional)"	"2023/15"	12441	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 16 ending April 22, 2023 (provisional)"	"2023/16"	12485	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 17 ending April 29, 2023 (provisional)"	"2023/17"	12405	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 18 ending May 06, 2023 (provisional)"	"2023/18"	11928	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 19 ending May 13, 2023 (provisional)"	"2023/19"	11879	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 20 ending May 20, 2023 (provisional)"	"2023/20"	11723	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 21 ending May 27, 2023 (provisional)"	"2023/21"	11478	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 22 ending June 03, 2023 (provisional)"	"2023/22"	11492	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 23 ending June 10, 2023 (provisional)"	"2023/23"	11740	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 24 ending June 17, 2023 (provisional)"	"2023/24"	11538	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 25 ending June 24, 2023 (provisional)"	"2023/25"	11643	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 26 ending July 01, 2023 (provisional)"	"2023/26"	11532	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 27 ending July 08, 2023 (provisional)"	"2023/27"	11499	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 28 ending July 15, 2023 (provisional)"	"2023/28"	11651	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 29 ending July 22, 2023 (provisional)"	"2023/29"	11952	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 30 ending July 29, 2023 (provisional)"	"2023/30"	11579	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 31 ending August 05, 2023 (provisional)"	"2023/31"	11684	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 32 ending August 12, 2023 (provisional)"	"2023/32"	11514	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 33 ending August 19, 2023 (provisional)"	"2023/33"	11901	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 34 ending August 26, 2023 (provisional)"	"2023/34"	11431	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 35 ending September 02, 2023 (provisional)"	"2023/35"	11687	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 36 ending September 09, 2023 (provisional)"	"2023/36"	11742	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 37 ending September 16, 2023 (provisional)"	"2023/37"	11708	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 38 ending September 23, 2023 (provisional)"	"2023/38"	11648	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 39 ending September 30, 2023 (provisional)"	"2023/39"	11726	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 40 ending October 07, 2023 (provisional)"	"2023/40"	12032	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 41 ending October 14, 2023 (provisional)"	"2023/41"	12127	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 42 ending October 21, 2023 (provisional)"	"2023/42"	11916	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 43 ending October 28, 2023 (provisional)"	"2023/43"	11702	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 44 ending November 04, 2023 (provisional)"	"2023/44"	12268	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 45 ending November 11, 2023 (provisional)"	"2023/45"	12289	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 46 ending November 18, 2023 (provisional)"	"2023/46"	12579	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 47 ending November 25, 2023 (provisional)"	"2023/47"	12310	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 48 ending December 02, 2023 (provisional)"	"2023/48"	12790	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 49 ending December 09, 2023 (provisional)"	"2023/49"	12901	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 50 ending December 16, 2023 (provisional)"	"2023/50"	12960	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 51 ending December 23, 2023 (provisional)"	"2023/51"	13432	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2023 Week 52 ending December 30, 2023 (provisional)"	"2023/52"	13309	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 01 ending January 06, 2024 (provisional)"	"2024/01"	13641	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 02 ending January 13, 2024 (provisional)"	"2024/02"	13855	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 03 ending January 20, 2024 (provisional)"	"2024/03"	13788	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 04 ending January 27, 2024 (provisional)"	"2024/04"	13362	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 05 ending February 03, 2024 (provisional)"	"2024/05"	12659	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 06 ending February 10, 2024 (provisional)"	"2024/06"	12594	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 07 ending February 17, 2024 (provisional)"	"2024/07"	12497	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 08 ending February 24, 2024 (provisional)"	"2024/08"	12413	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 09 ending March 02, 2024 (provisional)"	"2024/09"	12329	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 10 ending March 09, 2024 (provisional)"	"2024/10"	12201	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 11 ending March 16, 2024 (provisional)"	"2024/11"	12199	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 12 ending March 23, 2024 (provisional)"	"2024/12"	12337	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 13 ending March 30, 2024 (provisional)"	"2024/13"	11818	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 14 ending April 06, 2024 (provisional)"	"2024/14"	12123	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 15 ending April 13, 2024 (provisional)"	"2024/15"	12146	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 16 ending April 20, 2024 (provisional)"	"2024/16"	12081	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 17 ending April 27, 2024 (provisional)"	"2024/17"	11797	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 18 ending May 04, 2024 (provisional)"	"2024/18"	11848	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 19 ending May 11, 2024 (provisional)"	"2024/19"	11976	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 20 ending May 18, 2024 (provisional)"	"2024/20"	11899	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 21 ending May 25, 2024 (provisional)"	"2024/21"	11609	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 22 ending June 01, 2024 (provisional)"	"2024/22"	11898	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 23 ending June 08, 2024 (provisional)"	"2024/23"	11884	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 24 ending June 15, 2024 (provisional)"	"2024/24"	11836	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 25 ending June 22, 2024 (provisional)"	"2024/25"	11916	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 26 ending June 29, 2024 (provisional)"	"2024/26"	11917	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 27 ending July 06, 2024 (provisional)"	"2024/27"	12010	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 28 ending July 13, 2024 (provisional)"	"2024/28"	11882	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 29 ending July 20, 2024 (provisional)"	"2024/29"	11824	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 30 ending July 27, 2024 (provisional)"	"2024/30"	11795	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 31 ending August 03, 2024 (provisional)"	"2024/31"	11766	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 32 ending August 10, 2024 (provisional)"	"2024/32"	11651	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 33 ending August 17, 2024 (provisional)"	"2024/33"	11609	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 34 ending August 24, 2024 (provisional)"	"2024/34"	11506	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 35 ending August 31, 2024 (provisional)"	"2024/35"	11454	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 36 ending September 07, 2024 (provisional)"	"2024/36"	11634	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 37 ending September 14, 2024 (provisional)"	"2024/37"	11502	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 38 ending September 21, 2024 (provisional)"	"2024/38"	11379	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 39 ending September 28, 2024 (provisional)"	"2024/39"	11384	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 40 ending October 05, 2024 (provisional)"	"2024/40"	11327	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 41 ending October 12, 2024 (provisional)"	"2024/41"	11342	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 42 ending October 19, 2024 (provisional)"	"2024/42"	11001	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 43 ending October 26, 2024 (provisional)"	"2024/43"	10282	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 44 ending November 02, 2024 (provisional)"	"2024/44"	8955	Not Applicable	Not Applicable
+	"Census Region 4: West"	"CENS-R4"	"2024 Week 45 ending November 09, 2024 (provisional)"	"2024/45"	6817	Not Applicable	Not Applicable
+"Total"	"Census Region 4: West"	"CENS-R4"			4378944	Not Applicable	Not Applicable
+"Total"					21474840	Not Applicable	Not Applicable
+"---"
+"Dataset: Provisional Mortality Statistics, 2018 through Last Week"
+"Query Parameters:"
+"Group By: Residence Census Region; MMWR Week"
+"Show Totals: True"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/mcd-provisional.html for more information."
+"---"
+"Query Date: Nov 22, 2024 2:19:18 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Provisional Mortality on CDC WONDER Online Database. Data are from the final Multiple Cause of Death Files, 2018-2022,"
+"and from provisional data for years 2023-2024, as compiled from data provided by the 57 vital statistics jurisdictions through"
+"the Vital Statistics Cooperative Program. Accessed at http://wonder.cdc.gov/mcd-icd10-provisional.html on Nov 22, 2024 2:19:18"
+"AM"
+"---"
+Messages:
+"1. Rows with zero Deaths are hidden, but the Population values in those rows are included in the totals. Use Quick Options above"
+"to show zero rows."
+"2. Rows with suppressed Deaths are hidden, but the Deaths and Population values in those rows are included in the totals. Use"
+"Quick Options above to show suppressed rows."
+"---"
+Caveats:
+"1. Population and rates are labeled 'Not Applicable' when location of Death's Occurrence, Autopsy, Place of Death, Weekday or"
+"Month are grouped by or limited, due to lack of a valid population. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#NotApplicableRates."
+"2. Data are Suppressed when the data meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Assurance of Confidentiality."
+"3. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Unreliable."
+"4. Connecticut population estimates for 2022 are reported for 9 planning regions as county equivalent areas, instead of the"
+"former 8 legacy counties in the Vintage 2022 postcensal series released by the Census Bureau on June 22, 2023. Populations"
+"estimates for the former counties are not available for 2022. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Connecticut-2022."
+"5. Deaths occurring through November 09, 2024 as of November 17, 2024."
