@@ -44,31 +44,6 @@ region_joint_df =
 ```
 
 ## Trend of total deaths in Regions
-### line plot for year (Decide to delete this)
-```{r year trend in regions, warning=FALSE, message=FALSE}
-region_year_trend_lineplot = 
-  region_population_df |> 
-  select(residence_census_region, year_code, deaths, population) |>
-  group_by(residence_census_region, year_code) |>
-  summarise(
-    total_population_per_year = sum(population, na.rm = TRUE),
-    total_deaths_per_year = sum(deaths, na.rm = TRUE),
-    death_rate = total_deaths_per_year / total_population_per_year * 1000) |>
-  ungroup() |>
-  slice(-n()) |> 
-  ggplot(aes(x = year_code, y = death_rate, color = residence_census_region)) +
-  geom_point() + 
-  geom_line(size = 0.8, alpha = 0.7) +
-  labs(title = "Death Rate by Region (2018-2024)",
-       x = "Year",
-       y = "Death Rate (per 1000)") +
-  scale_x_continuous(breaks = seq(2018, 2024, 1)) +
-  theme(legend.position = "bottom")
-
-region_year_trend_lineplot
-```
-
-
 
 ### heatmap for year (keep)
 ```{r attempts, warning=FALSE, message=FALSE}
