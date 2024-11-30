@@ -38,6 +38,14 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -352,7 +360,7 @@ div.tocify {
       <a href="analysis_jz.html">Analysis jz</a>
     </li>
     <li>
-      <a href="analysis_yhc.html">Analysis yc</a>
+      <a href="analysis_yhc.html">Analysis yhc</a>
     </li>
   </ul>
 </li>
@@ -449,7 +457,11 @@ between 1-10 for those cells for further analyses.</p>
 <pre class="r"><code>library(tidyverse)
 library(lubridate)
 library(viridis)
-library(broom)</code></pre>
+library(broom)
+library(plotly)
+library(datasets)
+library(usmap)</code></pre>
+<pre class="r"><code>set.seed(123)</code></pre>
 <p>Import data and do some inital cleaning</p>
 <pre class="r"><code>data = read_csv(&quot;data/weekly_deaths_by_state_and_causes.csv&quot;) %&gt;% 
   rename(
@@ -473,13 +485,14 @@ library(broom)</code></pre>
          year = year(week_ending_date),
          month = month(week_ending_date)
          ) %&gt;%  
-  select(state, year, month, mmwr_week, all_cause: covid_19_underlying)</code></pre>
-<pre><code>## Warning: One or more parsing issues, call `problems()` on your data
-## frame for details, e.g.:
+  select(state, year, month, mmwr_week, week_ending_date, all_cause: covid_19_underlying)</code></pre>
+<pre><code>## Warning: One or more parsing issues, call
+## `problems()` on your data frame for
+## details, e.g.:
 ##   dat &lt;- vroom(...)
 ##   problems(dat)</code></pre>
 <pre><code>## Rows: 10476 Columns: 35
-## ── Column specification ────────────────────────────────────
+## ── Column specification ────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
 ## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...
@@ -489,26 +502,86 @@ library(broom)</code></pre>
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>data</code></pre>
-<pre><code>## # A tibble: 10,476 × 19
-##    state          year month mmwr_week all_cause natural_cause septicemia
-##    &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;
-##  1 United States  2020     1         1     60179         55010        843
-##  2 United States  2020     1         2     60735         55755        861
-##  3 United States  2020     1         3     59363         54516        829
-##  4 United States  2020     1         4     59162         54401        828
-##  5 United States  2020     2         5     58834         54001        811
-##  6 United States  2020     2         6     59491         54416        806
-##  7 United States  2020     2         7     58815         53969        792
-##  8 United States  2020     2         8     58912         53987        779
-##  9 United States  2020     2         9     59334         54316        814
-## 10 United States  2020     3        10     59716         54401        811
+<pre><code>## # A tibble: 10,476 × 20
+##    state          year month mmwr_week week_ending_date all_cause natural_cause
+##    &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;date&gt;               &lt;dbl&gt;         &lt;dbl&gt;
+##  1 United States  2020     1         1 2020-01-04           60179         55010
+##  2 United States  2020     1         2 2020-01-11           60735         55755
+##  3 United States  2020     1         3 2020-01-18           59363         54516
+##  4 United States  2020     1         4 2020-01-25           59162         54401
+##  5 United States  2020     2         5 2020-02-01           58834         54001
+##  6 United States  2020     2         6 2020-02-08           59491         54416
+##  7 United States  2020     2         7 2020-02-15           58815         53969
+##  8 United States  2020     2         8 2020-02-22           58912         53987
+##  9 United States  2020     2         9 2020-02-29           59334         54316
+## 10 United States  2020     3        10 2020-03-07           59716         54401
 ## # ℹ 10,466 more rows
-## # ℹ 12 more variables: malignant_neoplasms &lt;dbl&gt;, diabetes_mellitus &lt;dbl&gt;,
-## #   alzheimer_disease &lt;dbl&gt;, influenza_and_pneumonia &lt;dbl&gt;,
-## #   chronic_lower_respiratory_diseases &lt;dbl&gt;, other_respiratory_diseases &lt;dbl&gt;,
-## #   kidney_disease &lt;dbl&gt;, other_symptoms &lt;dbl&gt;, diseases_of_heart &lt;dbl&gt;,
-## #   cerebrovascular_diseases &lt;dbl&gt;, covid_19_multiple &lt;dbl&gt;,
-## #   covid_19_underlying &lt;dbl&gt;</code></pre>
+## # ℹ 13 more variables: septicemia &lt;dbl&gt;, malignant_neoplasms &lt;dbl&gt;,
+## #   diabetes_mellitus &lt;dbl&gt;, alzheimer_disease &lt;dbl&gt;,
+## #   influenza_and_pneumonia &lt;dbl&gt;, chronic_lower_respiratory_diseases &lt;dbl&gt;,
+## #   other_respiratory_diseases &lt;dbl&gt;, kidney_disease &lt;dbl&gt;,
+## #   other_symptoms &lt;dbl&gt;, diseases_of_heart &lt;dbl&gt;,
+## #   cerebrovascular_diseases &lt;dbl&gt;, covid_19_multiple &lt;dbl&gt;, …</code></pre>
+<p>for supressed cells, replace with a random number between 1-9</p>
+<pre class="r"><code># generate random number 1-9 to suppressed cells
+data[] = lapply(data, function(col) {
+  if (is.numeric(col)) { 
+    col[is.na(col)] &lt;- sample(1:9, sum(is.na(col)), replace = TRUE)
+  }
+  return(col)
+})
+
+summary(data)</code></pre>
+<pre><code>##     state                year          month          mmwr_week    
+##  Length:10476       Min.   :2020   Min.   : 1.000   Min.   : 1.00  
+##  Class :character   1st Qu.:2020   1st Qu.: 3.000   1st Qu.:13.00  
+##  Mode  :character   Median :2021   Median : 6.000   Median :25.00  
+##                     Mean   :2021   Mean   : 6.186   Mean   :25.21  
+##                     3rd Qu.:2022   3rd Qu.: 9.000   3rd Qu.:37.00  
+##                     Max.   :2023   Max.   :12.000   Max.   :53.00  
+##  week_ending_date       all_cause       natural_cause     septicemia    
+##  Min.   :2020-01-04   Min.   :   12.0   Min.   :   12   Min.   :  0.00  
+##  1st Qu.:2020-12-05   1st Qu.:  366.8   1st Qu.:  331   1st Qu.:  5.00  
+##  Median :2021-11-09   Median :  931.5   Median :  837   Median : 11.00  
+##  Mean   :2021-11-09   Mean   : 2362.3   Mean   : 2152   Mean   : 29.83  
+##  3rd Qu.:2022-10-15   3rd Qu.: 1548.0   3rd Qu.: 1405   3rd Qu.: 23.00  
+##  Max.   :2023-09-16   Max.   :87415.0   Max.   :81622   Max.   :993.00  
+##  malignant_neoplasms diabetes_mellitus alzheimer_disease
+##  Min.   :    3.0     Min.   :   0.00   Min.   :   0.00  
+##  1st Qu.:   66.0     1st Qu.:  11.00   1st Qu.:  13.00  
+##  Median :  170.5     Median :  28.00   Median :  32.00  
+##  Mean   :  431.5     Mean   :  72.31   Mean   :  87.48  
+##  3rd Qu.:  282.0     3rd Qu.:  49.00   3rd Qu.:  57.00  
+##  Max.   :12284.0     Max.   :2601.00   Max.   :3075.00  
+##  influenza_and_pneumonia chronic_lower_respiratory_diseases
+##  Min.   :   0.00         Min.   :   0.0                    
+##  1st Qu.:   5.00         1st Qu.:  18.0                    
+##  Median :  11.00         Median :  41.0                    
+##  Mean   :  33.71         Mean   : 104.4                    
+##  3rd Qu.:  23.00         3rd Qu.:  75.0                    
+##  Max.   :1916.00         Max.   :3708.0                    
+##  other_respiratory_diseases kidney_disease    other_symptoms   
+##  Min.   :   0.00            Min.   :   0.00   Min.   :   0.00  
+##  1st Qu.:   5.00            1st Qu.:   6.00   1st Qu.:   4.00  
+##  Median :  12.00            Median :  13.00   Median :   9.00  
+##  Mean   :  33.68            Mean   :  39.45   Mean   :  32.09  
+##  3rd Qu.:  25.00            3rd Qu.:  30.00   3rd Qu.:  21.00  
+##  Max.   :1135.00            Max.   :1349.00   Max.   :3541.00  
+##  diseases_of_heart cerebrovascular_diseases covid_19_multiple
+##  Min.   :    1     Min.   :   0.0           Min.   :    0.0  
+##  1st Qu.:   72     1st Qu.:  17.0           1st Qu.:   11.0  
+##  Median :  190     Median :  41.0           Median :   38.0  
+##  Mean   :  493     Mean   : 115.4           Mean   :  219.5  
+##  3rd Qu.:  329     3rd Qu.:  73.0           3rd Qu.:  112.0  
+##  Max.   :16538     Max.   :3833.0           Max.   :26028.0  
+##  covid_19_underlying
+##  Min.   :    0.0    
+##  1st Qu.:    8.0    
+##  Median :   28.0    
+##  Mean   :  189.6    
+##  3rd Qu.:   90.0    
+##  Max.   :23954.0</code></pre>
+<pre class="r"><code>write_csv(data, &quot;data/full_weekly_deaths_by_state_and_causes.csv&quot;)</code></pre>
 <pre class="r"><code>subset_df = data %&gt;%
   filter(state %in% c( &quot;South Dakota&quot;,
  &quot;Tennessee&quot;,
@@ -538,126 +611,35 @@ count_na = function(df, state_name) {
 }
 
 count_na(subset_df,&quot;South Dakota&quot;)</code></pre>
-<pre><code>## # A tibble: 13 × 2
-##    disease                               na
-##    &lt;chr&gt;                              &lt;int&gt;
-##  1 septicemia                           174
-##  2 malignant_neoplasms                    1
-##  3 diabetes_mellitus                    173
-##  4 alzheimer_disease                    130
-##  5 influenza_and_pneumonia              174
-##  6 chronic_lower_respiratory_diseases   129
-##  7 other_respiratory_diseases           169
-##  8 kidney_disease                       149
-##  9 other_symptoms                       102
-## 10 diseases_of_heart                      1
-## 11 cerebrovascular_diseases             138
-## 12 covid_19_multiple                     90
-## 13 covid_19_underlying                  104</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code>count_na(subset_df,&quot;Tennessee&quot;)</code></pre>
-<pre><code>## # A tibble: 4 × 2
-##   disease                       na
-##   &lt;chr&gt;                      &lt;int&gt;
-## 1 other_respiratory_diseases     1
-## 2 other_symptoms                 6
-## 3 covid_19_multiple              3
-## 4 covid_19_underlying            8</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code>count_na(subset_df,&quot;Texas&quot;)</code></pre>
-<pre><code>## # A tibble: 2 × 2
-##   disease                na
-##   &lt;chr&gt;               &lt;int&gt;
-## 1 covid_19_multiple       2
-## 2 covid_19_underlying     3</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code>count_na(subset_df,&quot;Utah&quot;)</code></pre>
-<pre><code>## # A tibble: 10 × 2
-##    disease                               na
-##    &lt;chr&gt;                              &lt;int&gt;
-##  1 septicemia                           183
-##  2 diabetes_mellitus                     15
-##  3 influenza_and_pneumonia              174
-##  4 chronic_lower_respiratory_diseases     1
-##  5 other_respiratory_diseases           170
-##  6 kidney_disease                       156
-##  7 other_symptoms                       175
-##  8 cerebrovascular_diseases               3
-##  9 covid_19_multiple                     50
-## 10 covid_19_underlying                   66</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code>count_na(subset_df,&quot;Vermont&quot;)</code></pre>
-<pre><code>## # A tibble: 11 × 2
-##    disease                               na
-##    &lt;chr&gt;                              &lt;int&gt;
-##  1 septicemia                            85
-##  2 diabetes_mellitus                    190
-##  3 alzheimer_disease                    177
-##  4 influenza_and_pneumonia               97
-##  5 chronic_lower_respiratory_diseases   172
-##  6 other_respiratory_diseases           146
-##  7 kidney_disease                        79
-##  8 other_symptoms                        90
-##  9 cerebrovascular_diseases             189
-## 10 covid_19_multiple                    120
-## 11 covid_19_underlying                  119</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code>count_na(subset_df,&quot;Virginia&quot;)</code></pre>
-<pre><code>## # A tibble: 5 × 2
-##   disease                    na
-##   &lt;chr&gt;                   &lt;int&gt;
-## 1 septicemia                  3
-## 2 influenza_and_pneumonia     8
-## 3 other_symptoms             14
-## 4 covid_19_multiple           4
-## 5 covid_19_underlying        12</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code>count_na(subset_df,&quot;Washington&quot;)</code></pre>
-<pre><code>## # A tibble: 7 × 2
-##   disease                       na
-##   &lt;chr&gt;                      &lt;int&gt;
-## 1 septicemia                    43
-## 2 influenza_and_pneumonia       66
-## 3 other_respiratory_diseases    10
-## 4 kidney_disease               106
-## 5 other_symptoms                39
-## 6 covid_19_multiple              3
-## 7 covid_19_underlying           10</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code>count_na(subset_df,&quot;West Virginia&quot;)</code></pre>
-<pre><code>## # A tibble: 9 × 2
-##   disease                       na
-##   &lt;chr&gt;                      &lt;int&gt;
-## 1 septicemia                   177
-## 2 diabetes_mellitus              1
-## 3 alzheimer_disease             23
-## 4 influenza_and_pneumonia      118
-## 5 other_respiratory_diseases   183
-## 6 kidney_disease                61
-## 7 other_symptoms                98
-## 8 covid_19_multiple             36
-## 9 covid_19_underlying           43</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code>count_na(subset_df,&quot;Wisconsin&quot;)</code></pre>
-<pre><code>## # A tibble: 7 × 2
-##   disease                       na
-##   &lt;chr&gt;                      &lt;int&gt;
-## 1 septicemia                    50
-## 2 influenza_and_pneumonia       78
-## 3 other_respiratory_diseases    26
-## 4 kidney_disease                 5
-## 5 other_symptoms               134
-## 6 covid_19_multiple             14
-## 7 covid_19_underlying           27</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code>count_na(subset_df,&quot;Wyoming&quot;)</code></pre>
-<pre><code>## # A tibble: 13 × 2
-##    disease                               na
-##    &lt;chr&gt;                              &lt;int&gt;
-##  1 septicemia                           115
-##  2 malignant_neoplasms                    3
-##  3 diabetes_mellitus                    181
-##  4 alzheimer_disease                    189
-##  5 influenza_and_pneumonia              148
-##  6 chronic_lower_respiratory_diseases   163
-##  7 other_respiratory_diseases           156
-##  8 kidney_disease                       134
-##  9 other_symptoms                       114
-## 10 diseases_of_heart                      1
-## 11 cerebrovascular_diseases             190
-## 12 covid_19_multiple                    114
-## 13 covid_19_underlying                  107</code></pre>
+<pre><code>## # A tibble: 0 × 2
+## # ℹ 2 variables: disease &lt;chr&gt;, na &lt;int&gt;</code></pre>
 <pre class="r"><code># significant missing was found in: South Dakota, Utah, Vermont, West Virginia, and Wyoming </code></pre>
 </div>
 </div>
@@ -669,6 +651,7 @@ of natural and non-natural causes?) -and, what’s the mortality rate of
 the general population?</p>
 <p>-which disease among the listed creates the most health burdens, that
 is, gives rise to the most deaths?</p>
+<p>-correlation between diseases (heatmap?)</p>
 </div>
 <div id="time-seires-analyses" class="section level1">
 <h1>Time Seires Analyses</h1>
@@ -688,13 +671,16 @@ covid_deaths_long = covid_deaths_by_year %&gt;%
                names_to = &quot;cause_type&quot;, values_to = &quot;deaths&quot;)
 
 # Create the bar plot
-ggplot(covid_deaths_long, aes(x = factor(year), y = deaths, fill = cause_type)) +
+covid_bar_plot = ggplot(covid_deaths_long, aes(x = factor(year), y = deaths, fill = cause_type)) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
   labs(title = &quot;COVID-19 Deaths by Year (2020-2023)&quot;,
        x = &quot;Year&quot;, y = &quot;Number of Deaths&quot;, fill = &quot;Cause Type&quot;) +
   scale_fill_viridis(discrete = TRUE) +
-  theme_minimal()</code></pre>
-<p><img src="analysis_az_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+  theme_minimal()
+
+ggplotly(covid_bar_plot)</code></pre>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-48fc9c3bb5f73c3063fa" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-48fc9c3bb5f73c3063fa">{"x":{"data":[{"orientation":"v","width":[0.44999999999999996,0.45000000000000018,0.45000000000000018,0.45000000000000018],"base":[0,0,0,0],"x":[0.77500000000000002,1.7749999999999999,2.7749999999999999,3.7749999999999999],"y":[60425,94526,46525,9320],"text":["factor(year): 2020<br />deaths: 60425<br />cause_type: covid_deaths_multiple","factor(year): 2021<br />deaths: 94526<br />cause_type: covid_deaths_multiple","factor(year): 2022<br />deaths: 46525<br />cause_type: covid_deaths_multiple","factor(year): 2023<br />deaths:  9320<br />cause_type: covid_deaths_multiple"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(68,1,84,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"covid_deaths_multiple","legendgroup":"covid_deaths_multiple","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.45000000000000018,0.45000000000000018,0.45000000000000018,0.44999999999999973],"base":[0,0,0,0],"x":[1.2250000000000001,2.2250000000000001,3.2250000000000001,4.2249999999999996],"y":[55502,86321,36418,6285],"text":["factor(year): 2020<br />deaths: 55502<br />cause_type: covid_deaths_underlying","factor(year): 2021<br />deaths: 86321<br />cause_type: covid_deaths_underlying","factor(year): 2022<br />deaths: 36418<br />cause_type: covid_deaths_underlying","factor(year): 2023<br />deaths:  6285<br />cause_type: covid_deaths_underlying"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(253,231,37,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"covid_deaths_underlying","legendgroup":"covid_deaths_underlying","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.762557077625573,"r":7.3059360730593621,"b":40.182648401826498,"l":54.794520547945211},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"COVID-19 Deaths by Year (2020-2023)","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,4.5999999999999996],"tickmode":"array","ticktext":["2020","2021","2022","2023"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["2020","2021","2022","2023"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Year","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-4726.3000000000002,99252.300000000003],"tickmode":"array","ticktext":["0","25000","50000","75000"],"tickvals":[0,25000,50000,75000],"categoryorder":"array","categoryarray":["0","25000","50000","75000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Number of Deaths","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Cause Type","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"8b4939ed103":{"x":{},"y":{},"fill":{},"type":"bar"}},"cur_data":"8b4939ed103","visdat":{"8b4939ed103":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p>Which months have the highest mortality?</p>
 <p>How is deaths from specific diseases distribute across months? (which
 season will exacerbate what diseases?)</p>
@@ -714,6 +700,384 @@ like heart disease or diabetes?</p>
 <h1>geographical variations</h1>
 <p>Which states had higher mortality rates from specific causes, such as
 COVID-19 or heart disease, and did these vary over time?</p>
+<hr />
+</div>
+<div
+id="explore-the-changes-in-covid-19-deaths-underlying-and-multiple-over-time."
+class="section level1">
+<h1>Explore the changes in COVID-19 deaths (underlying and multiple)
+over time.</h1>
+<p>How did Covid-19 deaths in the US change over time (as underlying and
+multiple cause)?</p>
+<pre class="r"><code># Prepare the dataset
+data_covid_us = data %&gt;%
+  filter(state == &quot;United States&quot;) %&gt;% 
+  select(week_ending_date, covid_19_multiple, covid_19_underlying) %&gt;%
+  pivot_longer(cols = c(covid_19_multiple, covid_19_underlying),
+               names_to = &quot;cause_type&quot;,
+               values_to = &quot;deaths&quot;)
+
+# Create an interactive line chart
+plot = plot_ly(
+  data = data_covid_us,
+  x = ~week_ending_date,
+  y = ~deaths,
+  color = ~cause_type,
+  colors = c(&quot;#440154&quot;, &quot;#21908C&quot;),
+  type = &#39;scatter&#39;,
+  mode = &#39;lines&#39;
+) %&gt;%
+  layout(
+    title = &quot;COVID-19 Deaths Over Time (Underlying vs. Multiple Cause)&quot;,
+    xaxis = list(title = &quot;Week Ending Date&quot;),
+    yaxis = list(title = &quot;Number of Deaths&quot;),
+     legend = list(
+      title = list(text = &quot;Cause Type&quot;), # Title for the legend
+      orientation = &quot;h&quot;,                # Horizontal legend
+      x = 0.5,                          # Center the legend horizontally
+      xanchor = &quot;center&quot;,               # Set x-anchor to the center
+      y = -0.2                           # Position the legend above the plot
+    )
+  )
+
+# Show the plot
+plot</code></pre>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-c1fffd940bdddca2aeac" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-c1fffd940bdddca2aeac">{"x":{"visdat":{"8b4951ee7e3f":["function () ","plotlyVisDat"]},"cur_data":"8b4951ee7e3f","attrs":{"8b4951ee7e3f":{"x":{},"y":{},"mode":"lines","color":{},"colors":["#440154","#21908C"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"COVID-19 Deaths Over Time (Underlying vs. Multiple Cause)","xaxis":{"domain":[0,1],"automargin":true,"title":"Week Ending Date"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Deaths"},"legend":{"title":{"text":"Cause Type"},"orientation":"h","x":0.5,"xanchor":"center","y":-0.20000000000000001},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["2020-01-04","2020-01-11","2020-01-18","2020-01-25","2020-02-01","2020-02-08","2020-02-15","2020-02-22","2020-02-29","2020-03-07","2020-03-14","2020-03-21","2020-03-28","2020-04-04","2020-04-11","2020-04-18","2020-04-25","2020-05-02","2020-05-09","2020-05-16","2020-05-23","2020-05-30","2020-06-06","2020-06-13","2020-06-20","2020-06-27","2020-07-04","2020-07-11","2020-07-18","2020-07-25","2020-08-01","2020-08-08","2020-08-15","2020-08-22","2020-08-29","2020-09-05","2020-09-12","2020-09-19","2020-09-26","2020-10-03","2020-10-10","2020-10-17","2020-10-24","2020-10-31","2020-11-07","2020-11-14","2020-11-21","2020-11-28","2020-12-05","2020-12-12","2020-12-19","2020-12-26","2021-01-02","2021-01-09","2021-01-16","2021-01-23","2021-01-30","2021-02-06","2021-02-13","2021-02-20","2021-02-27","2021-03-06","2021-03-13","2021-03-20","2021-03-27","2021-04-03","2021-04-10","2021-04-17","2021-04-24","2021-05-01","2021-05-08","2021-05-15","2021-05-22","2021-05-29","2021-06-05","2021-06-12","2021-06-19","2021-06-26","2021-07-03","2021-07-10","2021-07-17","2021-07-24","2021-07-31","2021-08-07","2021-08-14","2021-08-21","2021-08-28","2021-09-04","2021-09-11","2021-09-18","2021-09-25","2021-10-02","2021-10-09","2021-10-16","2021-10-23","2021-10-30","2021-11-06","2021-11-13","2021-11-20","2021-11-27","2021-12-04","2021-12-11","2021-12-18","2021-12-25","2022-01-01","2022-01-08","2022-01-15","2022-01-22","2022-01-29","2022-02-05","2022-02-12","2022-02-19","2022-02-26","2022-03-05","2022-03-12","2022-03-19","2022-03-26","2022-04-02","2022-04-09","2022-04-16","2022-04-23","2022-04-30","2022-05-07","2022-05-14","2022-05-21","2022-05-28","2022-06-04","2022-06-11","2022-06-18","2022-06-25","2022-07-02","2022-07-09","2022-07-16","2022-07-23","2022-07-30","2022-08-06","2022-08-13","2022-08-20","2022-08-27","2022-09-03","2022-09-10","2022-09-17","2022-09-24","2022-10-01","2022-10-08","2022-10-15","2022-10-22","2022-10-29","2022-11-05","2022-11-12","2022-11-19","2022-11-26","2022-12-03","2022-12-10","2022-12-17","2022-12-24","2022-12-31","2023-01-07","2023-01-14","2023-01-21","2023-01-28","2023-02-04","2023-02-11","2023-02-18","2023-02-25","2023-03-04","2023-03-11","2023-03-18","2023-03-25","2023-04-01","2023-04-08","2023-04-15","2023-04-22","2023-04-29","2023-05-06","2023-05-13","2023-05-20","2023-05-27","2023-06-03","2023-06-10","2023-06-17","2023-06-24","2023-07-01","2023-07-08","2023-07-15","2023-07-22","2023-07-29","2023-08-05","2023-08-12","2023-08-19","2023-08-26","2023-09-02","2023-09-09","2023-09-16"],"y":[0,1,2,3,0,4,6,6,9,38,60,588,3226,10141,16347,17221,15557,13223,11243,9239,7249,6176,5060,4233,3852,3846,4557,5786,7198,8250,8308,7870,7270,6389,5755,5021,4628,4280,4305,4246,4823,5204,6000,7031,8766,10654,13365,15628,18578,20941,22342,23399,24895,26028,25743,23734,20363,17069,13551,10835,8675,6742,5734,4912,4465,4213,4325,4462,4615,4181,4015,3694,3246,2783,2353,2049,1783,1642,1549,1650,1996,2770,4126,6503,9425,12207,14212,15539,15454,15246,14375,12858,11199,9902,8957,7975,7302,7174,7327,7897,8793,9744,10268,10476,11700,15155,19132,21394,21016,18797,15351,11591,8302,6056,4411,3129,2511,1910,1559,1410,1347,1427,1433,1675,1747,1944,2010,2140,2200,2333,2428,2592,2937,3235,3407,3378,3291,3171,3054,2931,2810,2516,2547,2379,2197,2146,2193,2245,2248,2205,2257,2499,2596,3037,3190,3324,3666,3874,3693,3247,2910,2644,2345,2101,2151,1992,1846,1761,1667,1443,1367,1218,1191,1020,946,830,755,736,687,623,603,573,534,474,505,525,529,656,733,881,993,1079,1104,964],"mode":"lines","type":"scatter","name":"covid_19_multiple","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["2020-01-04","2020-01-11","2020-01-18","2020-01-25","2020-02-01","2020-02-08","2020-02-15","2020-02-22","2020-02-29","2020-03-07","2020-03-14","2020-03-21","2020-03-28","2020-04-04","2020-04-11","2020-04-18","2020-04-25","2020-05-02","2020-05-09","2020-05-16","2020-05-23","2020-05-30","2020-06-06","2020-06-13","2020-06-20","2020-06-27","2020-07-04","2020-07-11","2020-07-18","2020-07-25","2020-08-01","2020-08-08","2020-08-15","2020-08-22","2020-08-29","2020-09-05","2020-09-12","2020-09-19","2020-09-26","2020-10-03","2020-10-10","2020-10-17","2020-10-24","2020-10-31","2020-11-07","2020-11-14","2020-11-21","2020-11-28","2020-12-05","2020-12-12","2020-12-19","2020-12-26","2021-01-02","2021-01-09","2021-01-16","2021-01-23","2021-01-30","2021-02-06","2021-02-13","2021-02-20","2021-02-27","2021-03-06","2021-03-13","2021-03-20","2021-03-27","2021-04-03","2021-04-10","2021-04-17","2021-04-24","2021-05-01","2021-05-08","2021-05-15","2021-05-22","2021-05-29","2021-06-05","2021-06-12","2021-06-19","2021-06-26","2021-07-03","2021-07-10","2021-07-17","2021-07-24","2021-07-31","2021-08-07","2021-08-14","2021-08-21","2021-08-28","2021-09-04","2021-09-11","2021-09-18","2021-09-25","2021-10-02","2021-10-09","2021-10-16","2021-10-23","2021-10-30","2021-11-06","2021-11-13","2021-11-20","2021-11-27","2021-12-04","2021-12-11","2021-12-18","2021-12-25","2022-01-01","2022-01-08","2022-01-15","2022-01-22","2022-01-29","2022-02-05","2022-02-12","2022-02-19","2022-02-26","2022-03-05","2022-03-12","2022-03-19","2022-03-26","2022-04-02","2022-04-09","2022-04-16","2022-04-23","2022-04-30","2022-05-07","2022-05-14","2022-05-21","2022-05-28","2022-06-04","2022-06-11","2022-06-18","2022-06-25","2022-07-02","2022-07-09","2022-07-16","2022-07-23","2022-07-30","2022-08-06","2022-08-13","2022-08-20","2022-08-27","2022-09-03","2022-09-10","2022-09-17","2022-09-24","2022-10-01","2022-10-08","2022-10-15","2022-10-22","2022-10-29","2022-11-05","2022-11-12","2022-11-19","2022-11-26","2022-12-03","2022-12-10","2022-12-17","2022-12-24","2022-12-31","2023-01-07","2023-01-14","2023-01-21","2023-01-28","2023-02-04","2023-02-11","2023-02-18","2023-02-25","2023-03-04","2023-03-11","2023-03-18","2023-03-25","2023-04-01","2023-04-08","2023-04-15","2023-04-22","2023-04-29","2023-05-06","2023-05-13","2023-05-20","2023-05-27","2023-06-03","2023-06-10","2023-06-17","2023-06-24","2023-07-01","2023-07-08","2023-07-15","2023-07-22","2023-07-29","2023-08-05","2023-08-12","2023-08-19","2023-08-26","2023-09-02","2023-09-09","2023-09-16"],"y":[0,1,1,2,0,3,2,6,9,34,55,550,3043,9638,15528,16305,14659,12437,10463,8497,6593,5596,4519,3730,3347,3333,4050,5236,6530,7521,7613,7182,6563,5748,5153,4434,4078,3764,3797,3699,4279,4592,5330,6260,7847,9581,12074,14135,16861,19080,20437,21376,22760,23954,23526,21685,18441,15268,12036,9511,7526,5792,4794,4097,3780,3539,3658,3775,3945,3607,3445,3170,2755,2314,2002,1682,1434,1320,1235,1352,1697,2422,3730,5950,8771,11377,13303,14567,14475,14193,13403,11869,10305,9039,8101,7203,6511,6472,6550,7077,7994,8864,9380,9477,10506,13280,16651,18437,18049,15810,12697,9345,6507,4617,3218,2108,1637,1147,909,807,788,845,865,1046,1084,1294,1308,1404,1427,1520,1590,1716,2000,2141,2279,2265,2212,2133,1956,1889,1777,1595,1596,1528,1347,1348,1376,1395,1416,1381,1447,1613,1663,2077,2190,2240,2501,2710,2553,2122,1902,1663,1559,1354,1385,1293,1161,1081,1079,897,828,755,738,634,573,491,452,445,403,372,354,343,332,282,317,323,334,445,494,586,696,746,782,706],"mode":"lines","type":"scatter","name":"covid_19_underlying","marker":{"color":"rgba(33,144,140,1)","line":{"color":"rgba(33,144,140,1)"}},"textfont":{"color":"rgba(33,144,140,1)"},"error_y":{"color":"rgba(33,144,140,1)"},"error_x":{"color":"rgba(33,144,140,1)"},"line":{"color":"rgba(33,144,140,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="key-findings" class="section level2">
+<h2>Key Findings</h2>
+<p>The U.S. experienced 5 main waves of COVID-19-related deaths:</p>
+<ol style="list-style-type: decimal">
+<li>Spring 2020: January 20, 2020 CDC reports the first
+laboratory-confirmed case of the 2019 Novel Coronavirus in the US.</li>
+<li>Summer of 2020.</li>
+<li>The winter months of 2020-2021, probably due to the emergence of the
+Delta variant.</li>
+<li>The rollout of vaccines in 2021 had a visible impact on reducing
+deaths, particularly in later months. However, more deaths occurred in
+Fall 2021 as new variants emerged.</li>
+<li>the winter months of 2021-2022</li>
+</ol>
+<p>Deaths from multiple causes tend to be consistently higher than those
+from underlying COVID-19 causes, which suggests that COVID-19
+exacerbated existing health conditions, leading to higher mortality
+rates among vulnerable populations.</p>
+<p>There is a gradual reduction in both underlying and multiple cause
+deaths through 2023, but COVID-19 remains a significant cause of death
+for some time. This may reflect ongoing issues such as long COVID,
+healthcare access disparities, or specific high-risk populations.</p>
+<p>Cases seems to accelerate during winter months.</p>
+<pre class="r"><code># Add a month column to the dataset
+winter_deaths = data %&gt;% 
+  filter(state == &quot;United States&quot;) %&gt;% 
+  mutate(month = month(week_ending_date, label = TRUE), # Extract month name
+         season = case_when(                         # Define seasons
+           month %in% c(&quot;Dec&quot;, &quot;Jan&quot;, &quot;Feb&quot;) ~ &quot;Winter&quot;,
+           TRUE ~ &quot;Non-Winter&quot;
+         )) %&gt;% 
+  mutate(season = factor(season))
+
+t_test_res = t.test(
+  covid_19_underlying ~ season,
+  data = winter_deaths
+) %&gt;% 
+  broom::tidy() %&gt;% 
+  select(estimate1, estimate2, p.value) %&gt;% 
+  rename(avg_nonwinter = estimate1, avg_winter = estimate2)
+
+# compute a summary table
+seasonal_summary &lt;- winter_deaths %&gt;%
+  group_by(season) %&gt;%
+  summarize(
+    total_underlying = sum(covid_19_underlying, na.rm = TRUE),
+    total_multiple = sum(covid_19_multiple, na.rm = TRUE))
+
+
+# Visualization: Boxplot
+plot = plot_ly(
+  data = winter_deaths,
+  x = ~season,
+  y = ~covid_19_underlying,
+  type = &quot;box&quot;,
+  boxpoints = &quot;all&quot;,  # Display individual data points
+  jitter = 0.3,       # Add jitter to spread points
+  pointpos = -1.8,    # Adjust position of points relative to the box
+  marker = list(color = &quot;blue&quot;, size = 5),
+  line = list(color = &quot;darkblue&quot;)
+) %&gt;%
+  layout(
+    title = &quot;COVID-19 Underlying Deaths by Season&quot;,
+    xaxis = list(title = &quot;Season&quot;),
+    yaxis = list(title = &quot;COVID-19 Underlying Deaths&quot;),
+    showlegend = FALSE
+  )
+
+# Display the plot
+plot</code></pre>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-bc6c6895e9a7f9fda8b2" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-bc6c6895e9a7f9fda8b2">{"x":{"visdat":{"8b494cecc7b2":["function () ","plotlyVisDat"]},"cur_data":"8b494cecc7b2","attrs":{"8b494cecc7b2":{"x":{},"y":{},"boxpoints":"all","jitter":0.29999999999999999,"pointpos":-1.8,"marker":{"color":"blue","size":5},"line":{"color":"darkblue"},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"box"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"COVID-19 Underlying Deaths by Season","xaxis":{"domain":[0,1],"automargin":true,"title":"Season","type":"category","categoryorder":"array","categoryarray":["Non-Winter","Winter"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"COVID-19 Underlying Deaths"},"showlegend":false,"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","x":["Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter","Non-Winter"],"y":[0,1,1,2,0,3,2,6,9,34,55,550,3043,9638,15528,16305,14659,12437,10463,8497,6593,5596,4519,3730,3347,3333,4050,5236,6530,7521,7613,7182,6563,5748,5153,4434,4078,3764,3797,3699,4279,4592,5330,6260,7847,9581,12074,14135,16861,19080,20437,21376,22760,23954,23526,21685,18441,15268,12036,9511,7526,5792,4794,4097,3780,3539,3658,3775,3945,3607,3445,3170,2755,2314,2002,1682,1434,1320,1235,1352,1697,2422,3730,5950,8771,11377,13303,14567,14475,14193,13403,11869,10305,9039,8101,7203,6511,6472,6550,7077,7994,8864,9380,9477,10506,13280,16651,18437,18049,15810,12697,9345,6507,4617,3218,2108,1637,1147,909,807,788,845,865,1046,1084,1294,1308,1404,1427,1520,1590,1716,2000,2141,2279,2265,2212,2133,1956,1889,1777,1595,1596,1528,1347,1348,1376,1395,1416,1381,1447,1613,1663,2077,2190,2240,2501,2710,2553,2122,1902,1663,1559,1354,1385,1293,1161,1081,1079,897,828,755,738,634,573,491,452,445,403,372,354,343,332,282,317,323,334,445,494,586,696,746,782,706],"boxpoints":"all","jitter":0.29999999999999999,"pointpos":-1.8,"marker":{"color":"blue","size":5,"line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"darkblue"},"type":"box","xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>t_test_res %&gt;% knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">avg_nonwinter</th>
+<th align="right">avg_winter</th>
+<th align="right">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">3934.726</td>
+<td align="right">8654.188</td>
+<td align="right">0.0002619</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>seasonal_summary %&gt;% knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">season</th>
+<th align="right">total_underlying</th>
+<th align="right">total_multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Non-Winter</td>
+<td align="right">574470</td>
+<td align="right">669633</td>
+</tr>
+<tr class="even">
+<td align="left">Winter</td>
+<td align="right">415401</td>
+<td align="right">476681</td>
+</tr>
+</tbody>
+</table>
+<p>There is a significant difference between covid deaths in winter and
+non-winter months. We want to know whether this difference might be
+affected by other factors like a person’s pre-existing conditions and
+co-morbidity (e.g., diabetes, heart disease, respiratory diseases).</p>
+<pre class="r"><code># Fit a linear regression model
+model = lm(
+  covid_19_underlying ~ season + diabetes_mellitus + diseases_of_heart + chronic_lower_respiratory_diseases,
+  data = winter_deaths
+)
+
+model2 = lm(
+  covid_19_underlying ~ season + diabetes_mellitus + diseases_of_heart + chronic_lower_respiratory_diseases + cerebrovascular_diseases,
+  data = winter_deaths
+)
+# Summary of the model
+summary(model)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = covid_19_underlying ~ season + diabetes_mellitus + 
+##     diseases_of_heart + chronic_lower_respiratory_diseases, data = winter_deaths)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -8485.4 -1967.5  -359.4  1674.6  8504.0 
+## 
+## Coefficients:
+##                                      Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                        -12519.015   4111.172  -3.045  0.00266 ** 
+## seasonWinter                         1759.412    723.461   2.432  0.01595 *  
+## diabetes_mellitus                      34.144      3.240  10.538  &lt; 2e-16 ***
+## diseases_of_heart                      -2.383      0.839  -2.840  0.00500 ** 
+## chronic_lower_respiratory_diseases     -6.002      1.360  -4.414  1.7e-05 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3103 on 189 degrees of freedom
+## Multiple R-squared:  0.7035, Adjusted R-squared:  0.6972 
+## F-statistic: 112.1 on 4 and 189 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>summary(model2)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = covid_19_underlying ~ season + diabetes_mellitus + 
+##     diseases_of_heart + chronic_lower_respiratory_diseases + 
+##     cerebrovascular_diseases, data = winter_deaths)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -9039.9 -1873.8  -268.9  1799.7  8721.2 
+## 
+## Coefficients:
+##                                      Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                        -7389.6440  4772.4749  -1.548  0.12321    
+## seasonWinter                        2143.2338   740.9448   2.893  0.00427 ** 
+## diabetes_mellitus                     33.8390     3.2159  10.523  &lt; 2e-16 ***
+## diseases_of_heart                     -1.3258     0.9766  -1.358  0.17622    
+## chronic_lower_respiratory_diseases    -6.6749     1.3869  -4.813 3.05e-06 ***
+## cerebrovascular_diseases              -5.3967     2.6117  -2.066  0.04017 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3077 on 188 degrees of freedom
+## Multiple R-squared:  0.7101, Adjusted R-squared:  0.7024 
+## F-statistic:  92.1 on 5 and 188 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="how-did-covid-death-rate-vary-across-states"
+class="section level2">
+<h2>How did covid death rate vary across states?</h2>
+<pre class="r"><code># read the population data
+population_data = read.table(file = &quot;data/Population by States.txt&quot;, header = TRUE, sep = &quot;\t&quot;, quote = &quot;\&quot;&quot;, fill = TRUE) %&gt;% 
+  as.tibble() %&gt;% 
+  janitor::clean_names() %&gt;% 
+  select(residence_state, year_code, population) %&gt;% 
+  rename(state = residence_state,
+         year = year_code)</code></pre>
+<pre><code>## Warning: `as.tibble()` was deprecated in
+## tibble 2.0.0.
+## ℹ Please use `as_tibble()` instead.
+## ℹ The signature and semantics have
+##   changed, see `?as_tibble`.
+## This warning is displayed once
+## every 8 hours.
+## Call
+## `lifecycle::last_lifecycle_warnings()`
+## to see where this warning was
+## generated.</code></pre>
+<pre class="r"><code># calculate annual covid deaths for each state
+data_covid_states = 
+  data %&gt;% 
+  filter(!state %in% c(&quot;United States&quot;, &quot;Puerto Rico&quot;)) %&gt;% 
+  group_by(state, year) %&gt;% 
+  summarize(
+    covid_deaths_total = sum(covid_19_multiple, na.rm = TRUE)
+  )</code></pre>
+<pre><code>## `summarise()` has grouped output by
+## &#39;state&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<p>join covid data with population data, calculate covid mortality
+rate</p>
+<pre class="r"><code>data_covid_df = data_covid_states %&gt;%
+  left_join(population_data, by = c(&quot;year&quot;, &quot;state&quot;)) %&gt;% 
+  mutate(
+    covid_mortality = covid_deaths_total/population,
+    covid_mortality_per100000 = covid_mortality*100000) </code></pre>
+<p>Now, plot the mortality rate on the map.</p>
+<pre class="r"><code>## convert state name to abbreviations for plotting
+
+# Create a vector with state names and abbreviations
+state_abbreviations = tibble(
+  state_name = state.name, # Full state names
+  state_abbr = state.abb  # Corresponding abbreviations
+)
+
+# Assuming covid_data is your dataset, join it with the state_abbreviations data
+map_data = data_covid_df %&gt;%
+  left_join(state_abbreviations, by = c(&quot;state&quot; = &quot;state_name&quot;)) %&gt;%  # Join by state name
+  select(state, state_abbr, everything()) %&gt;% 
+  filter(!is.na(state_abbr)) </code></pre>
+<pre class="r"><code>map_data_2021 = map_data %&gt;% 
+  filter(year == 2021)
+
+# Create the choropleth map
+fig = plot_ly(
+  data = map_data_2021,
+  type = &quot;choropleth&quot;,
+  locations = ~state_abbr, # State names
+  locationmode = &quot;USA-states&quot;, # Use state names in the USA
+  z = ~covid_mortality_per100000, # Color scale based on covid_mortality
+  text = ~paste(&quot;State: &quot;, state), # Hover text
+  colorscale = &quot;Oranges&quot;,
+  colorbar = list(title = &quot;Mortality Rate per 100k&quot;)
+) %&gt;%
+  layout(
+    title = &quot;COVID-19 Mortality by State (2021)&quot;, # Adjust the year in the title
+    geo = list(
+      scope = &quot;usa&quot;, # Focus on the USA
+      projection = list(type = &quot;albers usa&quot;), # Use Albers USA projection
+      showlakes = TRUE,
+      lakecolor = &quot;rgb(255, 255, 255)&quot; # Color of lakes
+    )
+  )
+
+# Display the map
+fig</code></pre>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-7de5c276368bb45d3f60" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-7de5c276368bb45d3f60">{"x":{"visdat":{"8b49371dbde6":["function () ","plotlyVisDat"]},"cur_data":"8b49371dbde6","attrs":{"8b49371dbde6":{"locations":{},"locationmode":"USA-states","z":{},"text":{},"colorscale":"Oranges","colorbar":{"title":"Mortality Rate per 100k"},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"choropleth"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"COVID-19 Mortality by State (2021)","geo":{"scope":"usa","projection":{"type":"albers usa"},"showlakes":true,"lakecolor":"rgb(255, 255, 255)"},"scene":{"zaxis":{"title":"covid_mortality_per100000"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"Mortality Rate per 100k","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":"Oranges","showscale":true,"locations":["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationmode":"USA-states","z":[198.29849022109073,118.87977310478207,196.43182071806669,180.50881541998703,130.31299687373178,107.34559414212048,91.191555795059742,126.77100691260773,180.4543823442018,162.94173302890135,52.02722341807759,147.2968657857262,93.596093712575865,148.70735095654783,110.08183637172773,130.61485417684699,193.72891346376031,152.72336115960758,102.53256155779535,99.559960545837725,80.590167999504061,146.86377049573412,90.636876050173541,205.08717900042882,146.1693687302282,164.72405777205051,98.182403350423584,183.65192521225413,86.249596829931349,105.34005673817029,174.6793410013909,75.544795946624689,147.34869960294421,120.52421581835169,174.77903469918593,201.89939445231937,99.101422345627981,161.90920495869503,113.17895966630462,185.755114189691,110.3447043476707,200.05109517724037,168.23726381734505,80.647698080423012,47.090168378332329,112.88695544714274,79.948911263040316,223.22442636089778,102.18951856100875,166.37785222260425],"text":["State:  Alabama","State:  Alaska","State:  Arizona","State:  Arkansas","State:  California","State:  Colorado","State:  Connecticut","State:  Delaware","State:  Florida","State:  Georgia","State:  Hawaii","State:  Idaho","State:  Illinois","State:  Indiana","State:  Iowa","State:  Kansas","State:  Kentucky","State:  Louisiana","State:  Maine","State:  Maryland","State:  Massachusetts","State:  Michigan","State:  Minnesota","State:  Mississippi","State:  Missouri","State:  Montana","State:  Nebraska","State:  Nevada","State:  New Hampshire","State:  New Jersey","State:  New Mexico","State:  New York","State:  North Carolina","State:  North Dakota","State:  Ohio","State:  Oklahoma","State:  Oregon","State:  Pennsylvania","State:  Rhode Island","State:  South Carolina","State:  South Dakota","State:  Tennessee","State:  Texas","State:  Utah","State:  Vermont","State:  Virginia","State:  Washington","State:  West Virginia","State:  Wisconsin","State:  Wyoming"],"type":"choropleth","marker":{"line":{"color":"rgba(31,119,180,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>let’s try and add data of different years on this plot.</p>
+<p>update: the plots for each year’s data works well, but when combined
+together the colors are not showing, probably because of scale issues.
+Alternatively, we can make the plots for each year separately.</p>
+<pre class="r"><code># Assuming map_data is your dataset containing data from 2020-2023
+
+# Create a choropleth map with dropdown to select years
+fig = plot_ly(
+  data = map_data,
+  type = &quot;choropleth&quot;,
+  locations = ~state_abbr, # Use state abbreviations
+  locationmode = &quot;USA-states&quot;, # USA-state mode
+  z = ~covid_mortality, # Color scale based on covid_mortality
+  text = ~paste(&quot;State: &quot;, state, &quot;&lt;br&gt;Year: &quot;, year, &quot;&lt;br&gt;Mortality: &quot;, round(covid_mortality, 5)), # Hover text
+  colorscale = &quot;Viridis&quot;,
+  colorbar = list(
+    title = &quot;COVID Mortality&quot;,
+    tickvals = seq(0, 0.002, length.out = 5),  # Set tickvals based on your range
+    ticktext = seq(0, 0.002, length.out = 5)  # Adjust ticktext for clarity
+  ),
+  zmin = 0,  # Min value for the color scale
+  zmax = 0.002  # Max value for the color scale
+) %&gt;%
+  layout(
+    title = &quot;COVID-19 Mortality by State (2020-2023)&quot;,
+    geo = list(
+      scope = &quot;usa&quot;,
+      projection = list(type = &quot;albers usa&quot;),
+      showlakes = TRUE,
+      lakecolor = &quot;rgb(255, 255, 255)&quot;
+    ),
+    updatemenus = list(
+      list(
+        buttons = list(
+          list(
+            label = &quot;2020&quot;,
+            method = &quot;relayout&quot;,
+            args = list(&quot;geo.scope&quot;, &quot;usa&quot;, &quot;visible&quot;, TRUE, &quot;z&quot;, map_data %&gt;% filter(year == 2020) %&gt;% pull(covid_mortality))
+          ),
+          list(
+            label = &quot;2021&quot;,
+            method = &quot;relayout&quot;,
+            args = list(&quot;geo.scope&quot;, &quot;usa&quot;, &quot;visible&quot;, TRUE, &quot;z&quot;, map_data %&gt;% filter(year == 2021) %&gt;% pull(covid_mortality))
+          ),
+          list(
+            label = &quot;2022&quot;,
+            method = &quot;relayout&quot;,
+            args = list(&quot;geo.scope&quot;, &quot;usa&quot;, &quot;visible&quot;, TRUE, &quot;z&quot;, map_data %&gt;% filter(year == 2022) %&gt;% pull(covid_mortality))
+          ),
+          list(
+            label = &quot;2023&quot;,
+            method = &quot;relayout&quot;,
+            args = list(&quot;geo.scope&quot;, &quot;usa&quot;, &quot;visible&quot;, TRUE, &quot;z&quot;, map_data %&gt;% filter(year == 2023) %&gt;% pull(covid_mortality))
+          )
+        ),
+        direction = &quot;down&quot;,
+        showactive = TRUE,
+        x = 1,
+        xanchor = &quot;left&quot;,
+        y = 1.15,
+        yanchor = &quot;top&quot;
+      )
+    )
+  )
+
+# Display the map
+fig</code></pre>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-d776751db475538ed246" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-d776751db475538ed246">{"x":{"visdat":{"8b495cdbe555":["function () ","plotlyVisDat"]},"cur_data":"8b495cdbe555","attrs":{"8b495cdbe555":{"locations":{},"locationmode":"USA-states","z":{},"text":{},"colorscale":"Viridis","colorbar":{"title":"COVID Mortality","tickvals":[0,0.00050000000000000001,0.001,0.0015,0.002],"ticktext":[0,0.00050000000000000001,0.001,0.0015,0.002]},"zmin":0,"zmax":0.002,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"choropleth"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"COVID-19 Mortality by State (2020-2023)","geo":{"scope":"usa","projection":{"type":"albers usa"},"showlakes":true,"lakecolor":"rgb(255, 255, 255)"},"updatemenus":[{"buttons":[{"label":"2020","method":"relayout","args":["geo.scope","usa","visible",true,"z",[0.0012930932888377035,0.00039389571063983437,0.0011724201400786724,0.0012628187487172178,0.00076859225893628844,0.00083974448488296355,0.0017084593053821107,0.0010336346749978973,0.00097357457528792662,0.0009329583697206083,0.00026225900955646243,0.00080682550291119506,0.0012818241545402473,0.0013748430225939397,0.0014682821036167788,0.0011428355706713388,0.00097403518364282007,0.0014823527689600583,0.00033700183906717893,0.0010693876715255882,0.0014430830799814435,0.0012010168006899075,0.00099746488722088919,0.0016738652535100273,0.0012569193965486412,0.0011512367929356262,0.0011210021718126792,0.0010556808727386745,0.00058846132733161329,0.001991923102513957,0.0013022718780963376,0.00080752861800746927,0.00078144876110090692,0.0019325527336017216,0.0012134385259420055,0.0012304112030221189,0.00036001355178713601,0.0013518467207175888,0.0017330022466595719,0.0010434952587561612,0.0018953374921727715,0.0010819195003103023,0.0010939431095769697,0.00048832587305558145,0.00025667886426019535,0.00068004856026316317,0.00046363138666207757,0.00080401751021270322,0.00104052099772745,0.00086377436771029384]]},{"label":"2021","method":"relayout","args":["geo.scope","usa","visible",true,"z",[0.0019829849022109072,0.0011887977310478207,0.0019643182071806668,0.0018050881541998704,0.0013031299687373177,0.0010734559414212047,0.00091191555795059741,0.0012677100691260773,0.0018045438234420182,0.0016294173302890136,0.00052027223418077591,0.001472968657857262,0.00093596093712575862,0.0014870735095654781,0.0011008183637172774,0.00130614854176847,0.0019372891346376032,0.0015272336115960759,0.0010253256155779535,0.00099559960545837723,0.00080590167999504056,0.0014686377049573413,0.00090636876050173543,0.0020508717900042882,0.0014616936873022819,0.0016472405777205052,0.00098182403350423591,0.0018365192521225412,0.00086249596829931347,0.0010534005673817029,0.0017467934100139091,0.00075544795946624692,0.0014734869960294421,0.0012052421581835169,0.0017477903469918592,0.0020189939445231938,0.00099101422345627987,0.0016190920495869504,0.0011317895966630462,0.0018575511418969101,0.0011034470434767071,0.0020005109517724036,0.0016823726381734506,0.00080647698080423013,0.00047090168378332328,0.0011288695544714273,0.00079948911263040318,0.0022322442636089779,0.0010218951856100875,0.0016637785222260424]]},{"label":"2022","method":"relayout","args":["geo.scope","usa","visible",true,"z",[0.00084740819219060145,0.00052345814992986483,0.00085539223912608944,0.00093215310951370769,0.00058789102824229012,0.00061353517150731021,0.00073851312873927423,0.0008317000459546188,0.00077092094641526259,0.00067901440463540496,0.00045410485794989016,0.00057915466111200793,0.00073422162652264753,0.00094452876517425559,0.00073988046306268645,0.00086852901622320956,0.0013228257810301155,0.00068798130642813747,0.00078536676916857954,0.00073564478819594268,0.00065311042407204607,0.00086514871817768046,0.00062390855358162342,0.00110576087470413,0.00092117831185940596,0.00063409112566314627,0.00067634760099861632,0.00088080579726928176,0.00060778466074793347,0.00074403195353249984,0.0010121400018170256,0.00048330167309281716,0.00080409586976245293,0.0007032303682591583,0.0010910970326958238,0.0011734414647494901,0.00067521403199943776,0.0009498144003611469,0.00070492459775411574,0.00088743607828973203,0.00069134250140686553,0.001056678738605533,0.00063770472652757086,0.00040730004732607669,0.00058263170258274297,0.00071732764876026916,0.00054843531532975602,0.0013812870530815319,0.00070920192467118165,0.00070693744721619727]]},{"label":"2023","method":"relayout","args":["geo.scope","usa","visible",true,"z",[0.00017007285345592768,0.00020311266755091106,0.00013765088772592989,0.00016482594609928893,0.00012505975632384476,0.00011404254095000518,0.00014340060752218917,0.0002474479475567461,0.0001910556896766497,0.00013699413426854662,0.00013539823746212321,0.00010881712688747432,0.00011675379620716273,0.00014898207049076422,0.00014903842098011041,0.00014163389680472567,0.00026305816754611277,0.00013049423766638832,0.00021944071491475017,0.00015945729367069716,0.00016084276452476046,0.00016822613020204177,0.00015549613236166617,0.00022856699717046302,0.00014729788504516946,0.00015228873944999721,0.00017175468755637287,0.00011328691926293013,0.00017201452662677364,0.00014036301546832821,0.00017034614336331426,0.00010916214445881927,0.00018310168648897422,0.00017195779077869931,0.00017999230694506612,0.000209711925966466,0.00014032565457201029,0.00018655554328982839,0.00017920262147834849,0.00019933237850663135,0.00018904755205402364,0.00021527826133447845,0.0001150532548382641,7.1580690960719361e-05,0.00030754299420150091,0.00014924652958633953,0.00013319143372294076,0.0002687087782707548,0.00013033430920015971,0.00026832662230103838]]}],"direction":"down","showactive":true,"x":1,"xanchor":"left","y":1.1499999999999999,"yanchor":"top"}],"scene":{"zaxis":{"title":"covid_mortality"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"COVID Mortality","ticklen":2,"tickvals":[0,0.00050000000000000001,0.001,0.0015,0.002],"ticktext":[0,0.00050000000000000001,0.001,0.0015,0.002],"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":"Viridis","showscale":true,"locations":["AL","AL","AL","AL","AK","AK","AK","AK","AZ","AZ","AZ","AZ","AR","AR","AR","AR","CA","CA","CA","CA","CO","CO","CO","CO","CT","CT","CT","CT","DE","DE","DE","DE","FL","FL","FL","FL","GA","GA","GA","GA","HI","HI","HI","HI","ID","ID","ID","ID","IL","IL","IL","IL","IN","IN","IN","IN","IA","IA","IA","IA","KS","KS","KS","KS","KY","KY","KY","KY","LA","LA","LA","LA","ME","ME","ME","ME","MD","MD","MD","MD","MA","MA","MA","MA","MI","MI","MI","MI","MN","MN","MN","MN","MS","MS","MS","MS","MO","MO","MO","MO","MT","MT","MT","MT","NE","NE","NE","NE","NV","NV","NV","NV","NH","NH","NH","NH","NJ","NJ","NJ","NJ","NM","NM","NM","NM","NY","NY","NY","NY","NC","NC","NC","NC","ND","ND","ND","ND","OH","OH","OH","OH","OK","OK","OK","OK","OR","OR","OR","OR","PA","PA","PA","PA","RI","RI","RI","RI","SC","SC","SC","SC","SD","SD","SD","SD","TN","TN","TN","TN","TX","TX","TX","TX","UT","UT","UT","UT","VT","VT","VT","VT","VA","VA","VA","VA","WA","WA","WA","WA","WV","WV","WV","WV","WI","WI","WI","WI","WY","WY","WY","WY"],"locationmode":"USA-states","z":[0.0012930932888377035,0.0019829849022109072,0.00084740819219060145,0.00017007285345592768,0.00039389571063983437,0.0011887977310478207,0.00052345814992986483,0.00020311266755091106,0.0011724201400786724,0.0019643182071806668,0.00085539223912608944,0.00013765088772592989,0.0012628187487172178,0.0018050881541998704,0.00093215310951370769,0.00016482594609928893,0.00076859225893628844,0.0013031299687373177,0.00058789102824229012,0.00012505975632384476,0.00083974448488296355,0.0010734559414212047,0.00061353517150731021,0.00011404254095000518,0.0017084593053821107,0.00091191555795059741,0.00073851312873927423,0.00014340060752218917,0.0010336346749978973,0.0012677100691260773,0.0008317000459546188,0.0002474479475567461,0.00097357457528792662,0.0018045438234420182,0.00077092094641526259,0.0001910556896766497,0.0009329583697206083,0.0016294173302890136,0.00067901440463540496,0.00013699413426854662,0.00026225900955646243,0.00052027223418077591,0.00045410485794989016,0.00013539823746212321,0.00080682550291119506,0.001472968657857262,0.00057915466111200793,0.00010881712688747432,0.0012818241545402473,0.00093596093712575862,0.00073422162652264753,0.00011675379620716273,0.0013748430225939397,0.0014870735095654781,0.00094452876517425559,0.00014898207049076422,0.0014682821036167788,0.0011008183637172774,0.00073988046306268645,0.00014903842098011041,0.0011428355706713388,0.00130614854176847,0.00086852901622320956,0.00014163389680472567,0.00097403518364282007,0.0019372891346376032,0.0013228257810301155,0.00026305816754611277,0.0014823527689600583,0.0015272336115960759,0.00068798130642813747,0.00013049423766638832,0.00033700183906717893,0.0010253256155779535,0.00078536676916857954,0.00021944071491475017,0.0010693876715255882,0.00099559960545837723,0.00073564478819594268,0.00015945729367069716,0.0014430830799814435,0.00080590167999504056,0.00065311042407204607,0.00016084276452476046,0.0012010168006899075,0.0014686377049573413,0.00086514871817768046,0.00016822613020204177,0.00099746488722088919,0.00090636876050173543,0.00062390855358162342,0.00015549613236166617,0.0016738652535100273,0.0020508717900042882,0.00110576087470413,0.00022856699717046302,0.0012569193965486412,0.0014616936873022819,0.00092117831185940596,0.00014729788504516946,0.0011512367929356262,0.0016472405777205052,0.00063409112566314627,0.00015228873944999721,0.0011210021718126792,0.00098182403350423591,0.00067634760099861632,0.00017175468755637287,0.0010556808727386745,0.0018365192521225412,0.00088080579726928176,0.00011328691926293013,0.00058846132733161329,0.00086249596829931347,0.00060778466074793347,0.00017201452662677364,0.001991923102513957,0.0010534005673817029,0.00074403195353249984,0.00014036301546832821,0.0013022718780963376,0.0017467934100139091,0.0010121400018170256,0.00017034614336331426,0.00080752861800746927,0.00075544795946624692,0.00048330167309281716,0.00010916214445881927,0.00078144876110090692,0.0014734869960294421,0.00080409586976245293,0.00018310168648897422,0.0019325527336017216,0.0012052421581835169,0.0007032303682591583,0.00017195779077869931,0.0012134385259420055,0.0017477903469918592,0.0010910970326958238,0.00017999230694506612,0.0012304112030221189,0.0020189939445231938,0.0011734414647494901,0.000209711925966466,0.00036001355178713601,0.00099101422345627987,0.00067521403199943776,0.00014032565457201029,0.0013518467207175888,0.0016190920495869504,0.0009498144003611469,0.00018655554328982839,0.0017330022466595719,0.0011317895966630462,0.00070492459775411574,0.00017920262147834849,0.0010434952587561612,0.0018575511418969101,0.00088743607828973203,0.00019933237850663135,0.0018953374921727715,0.0011034470434767071,0.00069134250140686553,0.00018904755205402364,0.0010819195003103023,0.0020005109517724036,0.001056678738605533,0.00021527826133447845,0.0010939431095769697,0.0016823726381734506,0.00063770472652757086,0.0001150532548382641,0.00048832587305558145,0.00080647698080423013,0.00040730004732607669,7.1580690960719361e-05,0.00025667886426019535,0.00047090168378332328,0.00058263170258274297,0.00030754299420150091,0.00068004856026316317,0.0011288695544714273,0.00071732764876026916,0.00014924652958633953,0.00046363138666207757,0.00079948911263040318,0.00054843531532975602,0.00013319143372294076,0.00080401751021270322,0.0022322442636089779,0.0013812870530815319,0.0002687087782707548,0.00104052099772745,0.0010218951856100875,0.00070920192467118165,0.00013033430920015971,0.00086377436771029384,0.0016637785222260424,0.00070693744721619727,0.00026832662230103838],"text":["State:  Alabama <br>Year:  2020 <br>Mortality:  0.00129","State:  Alabama <br>Year:  2021 <br>Mortality:  0.00198","State:  Alabama <br>Year:  2022 <br>Mortality:  0.00085","State:  Alabama <br>Year:  2023 <br>Mortality:  0.00017","State:  Alaska <br>Year:  2020 <br>Mortality:  0.00039","State:  Alaska <br>Year:  2021 <br>Mortality:  0.00119","State:  Alaska <br>Year:  2022 <br>Mortality:  0.00052","State:  Alaska <br>Year:  2023 <br>Mortality:  2e-04","State:  Arizona <br>Year:  2020 <br>Mortality:  0.00117","State:  Arizona <br>Year:  2021 <br>Mortality:  0.00196","State:  Arizona <br>Year:  2022 <br>Mortality:  0.00086","State:  Arizona <br>Year:  2023 <br>Mortality:  0.00014","State:  Arkansas <br>Year:  2020 <br>Mortality:  0.00126","State:  Arkansas <br>Year:  2021 <br>Mortality:  0.00181","State:  Arkansas <br>Year:  2022 <br>Mortality:  0.00093","State:  Arkansas <br>Year:  2023 <br>Mortality:  0.00016","State:  California <br>Year:  2020 <br>Mortality:  0.00077","State:  California <br>Year:  2021 <br>Mortality:  0.0013","State:  California <br>Year:  2022 <br>Mortality:  0.00059","State:  California <br>Year:  2023 <br>Mortality:  0.00013","State:  Colorado <br>Year:  2020 <br>Mortality:  0.00084","State:  Colorado <br>Year:  2021 <br>Mortality:  0.00107","State:  Colorado <br>Year:  2022 <br>Mortality:  0.00061","State:  Colorado <br>Year:  2023 <br>Mortality:  0.00011","State:  Connecticut <br>Year:  2020 <br>Mortality:  0.00171","State:  Connecticut <br>Year:  2021 <br>Mortality:  0.00091","State:  Connecticut <br>Year:  2022 <br>Mortality:  0.00074","State:  Connecticut <br>Year:  2023 <br>Mortality:  0.00014","State:  Delaware <br>Year:  2020 <br>Mortality:  0.00103","State:  Delaware <br>Year:  2021 <br>Mortality:  0.00127","State:  Delaware <br>Year:  2022 <br>Mortality:  0.00083","State:  Delaware <br>Year:  2023 <br>Mortality:  0.00025","State:  Florida <br>Year:  2020 <br>Mortality:  0.00097","State:  Florida <br>Year:  2021 <br>Mortality:  0.0018","State:  Florida <br>Year:  2022 <br>Mortality:  0.00077","State:  Florida <br>Year:  2023 <br>Mortality:  0.00019","State:  Georgia <br>Year:  2020 <br>Mortality:  0.00093","State:  Georgia <br>Year:  2021 <br>Mortality:  0.00163","State:  Georgia <br>Year:  2022 <br>Mortality:  0.00068","State:  Georgia <br>Year:  2023 <br>Mortality:  0.00014","State:  Hawaii <br>Year:  2020 <br>Mortality:  0.00026","State:  Hawaii <br>Year:  2021 <br>Mortality:  0.00052","State:  Hawaii <br>Year:  2022 <br>Mortality:  0.00045","State:  Hawaii <br>Year:  2023 <br>Mortality:  0.00014","State:  Idaho <br>Year:  2020 <br>Mortality:  0.00081","State:  Idaho <br>Year:  2021 <br>Mortality:  0.00147","State:  Idaho <br>Year:  2022 <br>Mortality:  0.00058","State:  Idaho <br>Year:  2023 <br>Mortality:  0.00011","State:  Illinois <br>Year:  2020 <br>Mortality:  0.00128","State:  Illinois <br>Year:  2021 <br>Mortality:  0.00094","State:  Illinois <br>Year:  2022 <br>Mortality:  0.00073","State:  Illinois <br>Year:  2023 <br>Mortality:  0.00012","State:  Indiana <br>Year:  2020 <br>Mortality:  0.00137","State:  Indiana <br>Year:  2021 <br>Mortality:  0.00149","State:  Indiana <br>Year:  2022 <br>Mortality:  0.00094","State:  Indiana <br>Year:  2023 <br>Mortality:  0.00015","State:  Iowa <br>Year:  2020 <br>Mortality:  0.00147","State:  Iowa <br>Year:  2021 <br>Mortality:  0.0011","State:  Iowa <br>Year:  2022 <br>Mortality:  0.00074","State:  Iowa <br>Year:  2023 <br>Mortality:  0.00015","State:  Kansas <br>Year:  2020 <br>Mortality:  0.00114","State:  Kansas <br>Year:  2021 <br>Mortality:  0.00131","State:  Kansas <br>Year:  2022 <br>Mortality:  0.00087","State:  Kansas <br>Year:  2023 <br>Mortality:  0.00014","State:  Kentucky <br>Year:  2020 <br>Mortality:  0.00097","State:  Kentucky <br>Year:  2021 <br>Mortality:  0.00194","State:  Kentucky <br>Year:  2022 <br>Mortality:  0.00132","State:  Kentucky <br>Year:  2023 <br>Mortality:  0.00026","State:  Louisiana <br>Year:  2020 <br>Mortality:  0.00148","State:  Louisiana <br>Year:  2021 <br>Mortality:  0.00153","State:  Louisiana <br>Year:  2022 <br>Mortality:  0.00069","State:  Louisiana <br>Year:  2023 <br>Mortality:  0.00013","State:  Maine <br>Year:  2020 <br>Mortality:  0.00034","State:  Maine <br>Year:  2021 <br>Mortality:  0.00103","State:  Maine <br>Year:  2022 <br>Mortality:  0.00079","State:  Maine <br>Year:  2023 <br>Mortality:  0.00022","State:  Maryland <br>Year:  2020 <br>Mortality:  0.00107","State:  Maryland <br>Year:  2021 <br>Mortality:  0.001","State:  Maryland <br>Year:  2022 <br>Mortality:  0.00074","State:  Maryland <br>Year:  2023 <br>Mortality:  0.00016","State:  Massachusetts <br>Year:  2020 <br>Mortality:  0.00144","State:  Massachusetts <br>Year:  2021 <br>Mortality:  0.00081","State:  Massachusetts <br>Year:  2022 <br>Mortality:  0.00065","State:  Massachusetts <br>Year:  2023 <br>Mortality:  0.00016","State:  Michigan <br>Year:  2020 <br>Mortality:  0.0012","State:  Michigan <br>Year:  2021 <br>Mortality:  0.00147","State:  Michigan <br>Year:  2022 <br>Mortality:  0.00087","State:  Michigan <br>Year:  2023 <br>Mortality:  0.00017","State:  Minnesota <br>Year:  2020 <br>Mortality:  0.001","State:  Minnesota <br>Year:  2021 <br>Mortality:  0.00091","State:  Minnesota <br>Year:  2022 <br>Mortality:  0.00062","State:  Minnesota <br>Year:  2023 <br>Mortality:  0.00016","State:  Mississippi <br>Year:  2020 <br>Mortality:  0.00167","State:  Mississippi <br>Year:  2021 <br>Mortality:  0.00205","State:  Mississippi <br>Year:  2022 <br>Mortality:  0.00111","State:  Mississippi <br>Year:  2023 <br>Mortality:  0.00023","State:  Missouri <br>Year:  2020 <br>Mortality:  0.00126","State:  Missouri <br>Year:  2021 <br>Mortality:  0.00146","State:  Missouri <br>Year:  2022 <br>Mortality:  0.00092","State:  Missouri <br>Year:  2023 <br>Mortality:  0.00015","State:  Montana <br>Year:  2020 <br>Mortality:  0.00115","State:  Montana <br>Year:  2021 <br>Mortality:  0.00165","State:  Montana <br>Year:  2022 <br>Mortality:  0.00063","State:  Montana <br>Year:  2023 <br>Mortality:  0.00015","State:  Nebraska <br>Year:  2020 <br>Mortality:  0.00112","State:  Nebraska <br>Year:  2021 <br>Mortality:  0.00098","State:  Nebraska <br>Year:  2022 <br>Mortality:  0.00068","State:  Nebraska <br>Year:  2023 <br>Mortality:  0.00017","State:  Nevada <br>Year:  2020 <br>Mortality:  0.00106","State:  Nevada <br>Year:  2021 <br>Mortality:  0.00184","State:  Nevada <br>Year:  2022 <br>Mortality:  0.00088","State:  Nevada <br>Year:  2023 <br>Mortality:  0.00011","State:  New Hampshire <br>Year:  2020 <br>Mortality:  0.00059","State:  New Hampshire <br>Year:  2021 <br>Mortality:  0.00086","State:  New Hampshire <br>Year:  2022 <br>Mortality:  0.00061","State:  New Hampshire <br>Year:  2023 <br>Mortality:  0.00017","State:  New Jersey <br>Year:  2020 <br>Mortality:  0.00199","State:  New Jersey <br>Year:  2021 <br>Mortality:  0.00105","State:  New Jersey <br>Year:  2022 <br>Mortality:  0.00074","State:  New Jersey <br>Year:  2023 <br>Mortality:  0.00014","State:  New Mexico <br>Year:  2020 <br>Mortality:  0.0013","State:  New Mexico <br>Year:  2021 <br>Mortality:  0.00175","State:  New Mexico <br>Year:  2022 <br>Mortality:  0.00101","State:  New Mexico <br>Year:  2023 <br>Mortality:  0.00017","State:  New York <br>Year:  2020 <br>Mortality:  0.00081","State:  New York <br>Year:  2021 <br>Mortality:  0.00076","State:  New York <br>Year:  2022 <br>Mortality:  0.00048","State:  New York <br>Year:  2023 <br>Mortality:  0.00011","State:  North Carolina <br>Year:  2020 <br>Mortality:  0.00078","State:  North Carolina <br>Year:  2021 <br>Mortality:  0.00147","State:  North Carolina <br>Year:  2022 <br>Mortality:  8e-04","State:  North Carolina <br>Year:  2023 <br>Mortality:  0.00018","State:  North Dakota <br>Year:  2020 <br>Mortality:  0.00193","State:  North Dakota <br>Year:  2021 <br>Mortality:  0.00121","State:  North Dakota <br>Year:  2022 <br>Mortality:  7e-04","State:  North Dakota <br>Year:  2023 <br>Mortality:  0.00017","State:  Ohio <br>Year:  2020 <br>Mortality:  0.00121","State:  Ohio <br>Year:  2021 <br>Mortality:  0.00175","State:  Ohio <br>Year:  2022 <br>Mortality:  0.00109","State:  Ohio <br>Year:  2023 <br>Mortality:  0.00018","State:  Oklahoma <br>Year:  2020 <br>Mortality:  0.00123","State:  Oklahoma <br>Year:  2021 <br>Mortality:  0.00202","State:  Oklahoma <br>Year:  2022 <br>Mortality:  0.00117","State:  Oklahoma <br>Year:  2023 <br>Mortality:  0.00021","State:  Oregon <br>Year:  2020 <br>Mortality:  0.00036","State:  Oregon <br>Year:  2021 <br>Mortality:  0.00099","State:  Oregon <br>Year:  2022 <br>Mortality:  0.00068","State:  Oregon <br>Year:  2023 <br>Mortality:  0.00014","State:  Pennsylvania <br>Year:  2020 <br>Mortality:  0.00135","State:  Pennsylvania <br>Year:  2021 <br>Mortality:  0.00162","State:  Pennsylvania <br>Year:  2022 <br>Mortality:  0.00095","State:  Pennsylvania <br>Year:  2023 <br>Mortality:  0.00019","State:  Rhode Island <br>Year:  2020 <br>Mortality:  0.00173","State:  Rhode Island <br>Year:  2021 <br>Mortality:  0.00113","State:  Rhode Island <br>Year:  2022 <br>Mortality:  7e-04","State:  Rhode Island <br>Year:  2023 <br>Mortality:  0.00018","State:  South Carolina <br>Year:  2020 <br>Mortality:  0.00104","State:  South Carolina <br>Year:  2021 <br>Mortality:  0.00186","State:  South Carolina <br>Year:  2022 <br>Mortality:  0.00089","State:  South Carolina <br>Year:  2023 <br>Mortality:  2e-04","State:  South Dakota <br>Year:  2020 <br>Mortality:  0.0019","State:  South Dakota <br>Year:  2021 <br>Mortality:  0.0011","State:  South Dakota <br>Year:  2022 <br>Mortality:  0.00069","State:  South Dakota <br>Year:  2023 <br>Mortality:  0.00019","State:  Tennessee <br>Year:  2020 <br>Mortality:  0.00108","State:  Tennessee <br>Year:  2021 <br>Mortality:  0.002","State:  Tennessee <br>Year:  2022 <br>Mortality:  0.00106","State:  Tennessee <br>Year:  2023 <br>Mortality:  0.00022","State:  Texas <br>Year:  2020 <br>Mortality:  0.00109","State:  Texas <br>Year:  2021 <br>Mortality:  0.00168","State:  Texas <br>Year:  2022 <br>Mortality:  0.00064","State:  Texas <br>Year:  2023 <br>Mortality:  0.00012","State:  Utah <br>Year:  2020 <br>Mortality:  0.00049","State:  Utah <br>Year:  2021 <br>Mortality:  0.00081","State:  Utah <br>Year:  2022 <br>Mortality:  0.00041","State:  Utah <br>Year:  2023 <br>Mortality:  7e-05","State:  Vermont <br>Year:  2020 <br>Mortality:  0.00026","State:  Vermont <br>Year:  2021 <br>Mortality:  0.00047","State:  Vermont <br>Year:  2022 <br>Mortality:  0.00058","State:  Vermont <br>Year:  2023 <br>Mortality:  0.00031","State:  Virginia <br>Year:  2020 <br>Mortality:  0.00068","State:  Virginia <br>Year:  2021 <br>Mortality:  0.00113","State:  Virginia <br>Year:  2022 <br>Mortality:  0.00072","State:  Virginia <br>Year:  2023 <br>Mortality:  0.00015","State:  Washington <br>Year:  2020 <br>Mortality:  0.00046","State:  Washington <br>Year:  2021 <br>Mortality:  8e-04","State:  Washington <br>Year:  2022 <br>Mortality:  0.00055","State:  Washington <br>Year:  2023 <br>Mortality:  0.00013","State:  West Virginia <br>Year:  2020 <br>Mortality:  8e-04","State:  West Virginia <br>Year:  2021 <br>Mortality:  0.00223","State:  West Virginia <br>Year:  2022 <br>Mortality:  0.00138","State:  West Virginia <br>Year:  2023 <br>Mortality:  0.00027","State:  Wisconsin <br>Year:  2020 <br>Mortality:  0.00104","State:  Wisconsin <br>Year:  2021 <br>Mortality:  0.00102","State:  Wisconsin <br>Year:  2022 <br>Mortality:  0.00071","State:  Wisconsin <br>Year:  2023 <br>Mortality:  0.00013","State:  Wyoming <br>Year:  2020 <br>Mortality:  0.00086","State:  Wyoming <br>Year:  2021 <br>Mortality:  0.00166","State:  Wyoming <br>Year:  2022 <br>Mortality:  0.00071","State:  Wyoming <br>Year:  2023 <br>Mortality:  0.00027"],"zmin":0,"zmax":0.002,"type":"choropleth","marker":{"line":{"color":"rgba(31,119,180,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>summary(map_data$covid_mortality)</code></pre>
+<pre><code>##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+## 7.158e-05 2.686e-04 8.067e-04 8.426e-04 1.177e-03 2.232e-03</code></pre>
+<pre class="r"><code># Check for the range of values
+range(map_data$covid_mortality, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 7.158069e-05 2.232244e-03</code></pre>
+<pre class="r"><code>range(map_data_2021$covid_mortality, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 0.0004709017 0.0022322443</code></pre>
+</div>
 </div>
 
 

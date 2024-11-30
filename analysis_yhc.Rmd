@@ -1,7 +1,11 @@
 ---
 title: "Analysis_yhc"
-output: html_document
-date: "2024-11-20"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
@@ -15,86 +19,48 @@ library(stringr)
 library(ggplot2)
 library(lubridate)
 library(tidyr)
-
+library(shiny)
+library(plotly)
+library(usmap)
+library(broom)        
+library(dplyr)        
+library(purrr)       
+library(kableExtra)   
+library(knitr)
+library(tibble)
 ```
-## Import and clean data
-```{r}
+# Import and clean data
+```{r message=FALSE, warning=FALSE}
 data=read_csv("./data/weekly_deaths_by_state_and_causes.csv") 
-states <- c("Alabama", "Alaska", "Arizona", "Arkansas", "California", 
-            "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", 
-            "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", 
-            "Kentucky", "Louisiana", "Maine", "Maryland")
-
-yh_data <- data |>
+general_data <- data |>
   janitor::clean_names() |>
   rename_with(~ str_replace_all(., " ", "_")) |>
-  filter(jurisdiction_of_occurrence %in% states) |>
+  filter(jurisdiction_of_occurrence =="United States") |>
   rename_with(~ make.unique(str_replace(., "_\\w\\d.*", ""))) |>
-  mutate(
-    across(where(is.character), ~ ifelse(. == "Suppressed (counts 1-9)", 
-                                         as.character(sample(1:9, 1)), .))
-  )  |>
-  mutate(month = month(week_ending_date)) 
+  mutate(month = month(week_ending_date)) |>
+  rename( covid_multiple_cause=covid,
+          covid_underlying_cause=covid.1,
+           symptoms_not_classified=symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified
+          )
+
+
+p_data <- read.delim("./data/Population by States.txt", 
+                     header = TRUE, stringsAsFactors = FALSE) |>
+  janitor::clean_names()
+
+population_summary <- p_data |>
+  filter(year_code >= 2020 & year_code <= 2023) |>
+  group_by(year_code)  |> 
+  summarise(Total_Population = sum(population, na.rm = TRUE)) |>
+  rename(mmwr_year=year_code)
 ```
-## Visualize the extent of missing data
-```{r fig.width=18, fig.height=10}
-data_missing = yh_data |>
-  pivot_longer(cols = 6:20, names_to = "disease", values_to = "value") |>
-  mutate(missing = ifelse(is.na(value), 1, 0))  |> # 1 as missing
-  group_by(jurisdiction_of_occurrence, disease) |>
-  summarize(missing_rate = mean(is.na(value)), .groups = "drop")
-
-missing_plot=
-ggplot(data_missing, aes(x = jurisdiction_of_occurrence, y = disease, fill = missing_rate)) +
-  geom_tile(color = "white") +  
-  scale_fill_gradient(
-    low = "white",    # no missing as white
-    high = "red",     # all missing as red
-    na.value = "gray" 
-  ) +
-  labs(
-    title = "Missing Data Heatmap",
-    x = "State",
-    y = "Disease",
-    fill = "Missing Rate"
-  ) +theme(
-    axis.text.y = element_text(size = 10, angle = 45),
-    plot.title = element_text(hjust = 0.5)
-  )
-
-
-
-missing_plot
-```
-It can be observed that the states with relatively complete data are Alabama, Arizona, California, Florida, Georgia, Illinois, Indiana, Kentucky, and Louisiana.
-##Week with the Highest Mortality in the Past Four Years
-```{r fig.width=18, fig.height=10}
-total_weekly_deaths = yh_data |>
-  group_by(mmwr_week) |>
-  summarize(total_deaths = sum(natural_cause, na.rm = TRUE)) |>
-  ungroup()
-
-total_weekly_deaths_plot=
-ggplot(total_weekly_deaths, aes(x = factor(mmwr_week), 
-                                y = total_deaths, fill = factor(mmwr_week))) +
-  geom_bar(stat = "identity") +
-  theme_minimal() +
-  labs(
-    title = "Total Mortality for Each Week Over the Past Four Years",
-    x = "Week",
-    y = "Total Death Count"
-  ) +
-  theme(
-    plot.title = element_text(hjust = 0.5)
-  )
-
-total_weekly_deaths_plot
-```
-##Mortality Trends Over Time for Different Causes of Death
-```{r fig.width=18, fig.height=10}
-mortality_trends_data = yh_data |>
+## Trends in the number of deaths across the United States
+```{r message=FALSE,fig.width=10, fig.height=6}
+death_trends_data = general_data |>
   select(
     week_ending_date, 
+    all_cause,
+    natural_cause,
     jurisdiction_of_occurrence, 
     mmwr_year,
     septicemia,
@@ -105,14 +71,16 @@ mortality_trends_data = yh_data |>
     chronic_lower_respiratory_diseases,
     other_diseases_of_respiratory_system,
     nephritis_nephrotic_syndrome_and_nephrosis,
-    symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+    symptoms_not_classified,
     diseases_of_heart,
     cerebrovascular_diseases,
-    covid,
-    covid.1
+    covid_multiple_cause,
+    covid_underlying_cause
   ) |>
   gather(key = "cause_of_death", value = "death_count", 
          septicemia,
+         all_cause,
+    natural_cause,
          malignant_neoplasms,
          diabetes_mellitus,
          alzheimer_disease,
@@ -120,41 +88,82 @@ mortality_trends_data = yh_data |>
          chronic_lower_respiratory_diseases,
          other_diseases_of_respiratory_system,
          nephritis_nephrotic_syndrome_and_nephrosis,
-         symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+         symptoms_not_classified,
          diseases_of_heart,
          cerebrovascular_diseases,
-         covid,
-         covid.1) |>
+         covid_multiple_cause,
+         covid_underlying_cause) |>
   group_by(week_ending_date, cause_of_death) |>
   summarize(total_deaths = sum(death_count, na.rm = TRUE)) |>
   ungroup()
 
-mortality_trends_plot=
-ggplot(mortality_trends_data, aes(x = week_ending_date, 
-                                  y = total_deaths,
-                                  color = cause_of_death, 
-                                  group = cause_of_death)) +
-  geom_line(alpha=0.6) +
-  geom_point(alpha=0.6) +
-  theme_minimal() +
-  labs(
-    title = "Mortality Trends Over Time for Different Causes of Death",
-    x = "Week Ending Date",
-    y = "Total Deaths",
-    color = "Cause of Death"
-  ) +
-theme(
-    plot.title = element_text(hjust = 0.5)
+death_trends_data2 = death_trends_data |>
+  mutate(mmwr_year = as.numeric(format(week_ending_date, "%Y"))) |>
+  left_join(population_summary, by = "mmwr_year") |> 
+  mutate(death_rate = total_deaths / Total_Population) |>
+  mutate(death_rate_percent = death_rate * 100)
+
+
+death_trends_plot = plot_ly(
+  data = death_trends_data,
+  x = ~week_ending_date,
+  y = ~total_deaths,
+  color = ~cause_of_death,
+  colors = RColorBrewer::brewer.pal(12, "Set3"),
+  type = 'scatter',
+  mode = 'lines+markers',
+  line = list(shape = 'linear', opacity = 0.6),
+  marker = list(opacity = 0.6)
+) |>
+  layout(
+    title = list(
+      text = "Mortality Trends Over Time for Different Causes of Death",
+      x = 0.5
+    ),
+    xaxis = list(title = "Week Ending Date"),
+    yaxis = list(title = "Total Deaths"),
+    legend = list(title = list(text = "Cause of Death"),
+                  font = list(size = 6)),
+    plot_bgcolor = 'rgba(240,240,240,0.9)'
   )
-mortality_trends_plot
+
+death_trends_plot
+
+
+death_trends_plot2 <- plot_ly(
+  data = death_trends_data2,
+  x = ~week_ending_date, 
+  y = ~death_rate_percent, 
+  color = ~cause_of_death, 
+  colors = RColorBrewer::brewer.pal(12, "Set3"), 
+  type = 'scatter',
+  mode = 'lines+markers', 
+  line = list(shape = 'linear', opacity = 0.6), 
+  marker = list(opacity = 0.6) 
+) |>
+  layout(
+    title = "Proportion of Deaths to Population Over Time by Cause of Death", 
+    xaxis = list(title = "Week Ending Date"), 
+    yaxis = list(title = "Deaths as Percentage of Population (%)"), 
+    legend = list(
+      title = list(text = "Cause of Death"),
+      font = list(size = 6)
+    ),
+    plot_bgcolor = 'rgba(240,240,240,0.9)'
+  )
+
+
+death_trends_plot2
 ```
-##Changes in the Proportion of Each Cause of Death in Total Mortality Over Four Years
-```{r fig.width=18, fig.height=10}
-mortality_data <- yh_data |>
-  select(
+The plot reveals several significant peaks in the number and rate of all-cause and natural-cause deaths between 2020 and 2022. Interestingly, these peaks align with surges in COVID-related deaths, suggesting a strong correlation between COVID-19 and both total mortality and natural-cause mortality during this period.
+
+## Proportion of death plot
+```{r message=FALSE,fig.width=10, fig.height=6}
+death_proportion_data =general_data |> select(
     week_ending_date, 
-    jurisdiction_of_occurrence, 
     mmwr_year,
+    covid_multiple_cause,
+    covid_underlying_cause,
     septicemia,
     malignant_neoplasms,
     diabetes_mellitus,
@@ -163,13 +172,13 @@ mortality_data <- yh_data |>
     chronic_lower_respiratory_diseases,
     other_diseases_of_respiratory_system,
     nephritis_nephrotic_syndrome_and_nephrosis,
-    symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+    symptoms_not_classified,
     diseases_of_heart,
-    cerebrovascular_diseases,
-    covid,
-    covid.1
+    cerebrovascular_diseases
   ) |>
   gather(key = "cause_of_death", value = "death_count", 
+         covid_multiple_cause,
+    covid_underlying_cause,
          septicemia,
          malignant_neoplasms,
          diabetes_mellitus,
@@ -178,39 +187,332 @@ mortality_data <- yh_data |>
          chronic_lower_respiratory_diseases,
          other_diseases_of_respiratory_system,
          nephritis_nephrotic_syndrome_and_nephrosis,
-         symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified,
+         symptoms_not_classified,
          diseases_of_heart,
-         cerebrovascular_diseases,
-         covid,
-         covid.1) |>
+         cerebrovascular_diseases
+         ) |>
   group_by(week_ending_date, mmwr_year, cause_of_death) |>
   summarize(death_count = sum(death_count, na.rm = TRUE)) |>
   group_by(week_ending_date, mmwr_year) |>
   mutate(total_deaths = sum(death_count, na.rm = TRUE)) |>
   mutate(proportion = death_count / total_deaths) |>
+  arrange(week_ending_date, cause_of_death, desc(proportion))|>
   ungroup()
 
-mortality_plot=
-ggplot(mortality_data, aes(x = week_ending_date, y = proportion, fill = cause_of_death)) +
-  geom_bar(stat = "identity", position = "stack") +
-  labs(
+proportion_plot <- plot_ly(
+  data = death_proportion_data,
+  x = ~week_ending_date,
+  y = ~proportion,
+  color = ~cause_of_death,
+  colors = RColorBrewer::brewer.pal(12, "Set3"),
+  type = 'bar',
+  hoverinfo = 'x+y+name',  
+  marker = list(opacity = 0.7)  
+) |>
+  layout(
     title = "Changes in the Proportion of Each Cause of Death in Total Mortality Over Four Years",
-    x = "Week Ending Date",
-    y = "Proportion of Total Deaths",
-    fill = "Cause of Death"
-  ) +
-  theme_minimal() +
-  theme(
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    legend.position = "bottom"
-  ) +
-  scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
-  theme(
-    plot.title = element_text(hjust = 0.5)
+    xaxis = list(
+      title = "Week Ending Date",
+      tickformat = "%Y",  
+      dtick = 31536000000  
+    ),
+    yaxis = list(
+      title = "Proportion of Total Deaths"
+    ),
+    legend = list(
+      orientation = "v",  
+      x = 1.2, 
+      y=1,
+      xanchor = "center",
+       font = list(size = 5)  
+    ),
+    plot_bgcolor = 'rgba(240,240,240,0.9)',  
+    margin = list(t = 50), 
+    showlegend = TRUE,
+    barmode = 'stack'  
   )
 
-mortality_plot
 
+proportion_plot
+
+
+proportion_plot2 <- plot_ly(
+  data = death_proportion_data,
+  x = ~week_ending_date,
+  y = ~proportion,
+  color = ~cause_of_death,
+  colors = RColorBrewer::brewer.pal(12, "Set3"),
+  type = 'scatter',  
+  mode = 'lines',   
+  line = list(opacity = 0.7, width = 2),  
+  hoverinfo = 'x+y+name' 
+) |>
+  layout(
+    title = "Changes in the Proportion of Each Cause of Death Over Four Years",
+    xaxis = list(
+      title = "Week Ending Date",
+      tickformat = "%Y", 
+      dtick = 31536000000  
+    ),
+    yaxis = list(
+      title = "Proportion of Total Deaths",
+      tickformat = ".1%"  
+    ),
+    legend = list(
+      orientation = "v",  
+      x = 1.3,
+      y = 1,
+      xanchor = "center",
+      font = list(size = 8)  
+    ),
+    plot_bgcolor = 'rgba(240,240,240,0.9)', 
+    margin = list(t = 50), 
+    showlegend = TRUE
+  )
+
+proportion_plot2
+
+proportion_plot3 <- plot_ly(
+  data = death_proportion_data,
+  x = ~week_ending_date,
+  y = ~proportion,
+  color = ~cause_of_death,
+  colors = RColorBrewer::brewer.pal(12, "Set3"),
+  type = 'scatter',  
+  mode = 'lines',    
+  fill = 'tozeroy',  
+  line = list(opacity = 1, width = 2),  
+  hoverinfo = 'x+y+name'  
+) |>
+  layout(
+    title = "Proportion of Each Cause of Death Over Time",
+    xaxis = list(
+      title = "Week Ending Date",
+      tickformat = "%Y",  
+      dtick = 31536000000  
+    ),
+    yaxis = list(
+      title = "Proportion of Total Deaths",
+      tickformat = ".1%"  
+    ),
+    legend = list(
+      orientation = "v",  
+      x = 1.3,
+      y = 1,
+      xanchor = "center",
+      font = list(size = 8)  
+    ),
+    plot_bgcolor = 'rgba(240,240,240,0.9)',  
+    margin = list(t = 50), 
+    showlegend = TRUE
+  )
+
+proportion_plot3
+```
+The plots above show that among all natural causes of death, excluding COVID-19, the highest proportions are attributed to heart disease and malignant neoplasms. Notably, in 2020 and 2021, these two causes exhibited an inverse relationship with COVID-19 deaths. This phenomenon could be explained by evidence of COVID-19 infection, whether virological or clinical, in the days or weeks leading up to death in patients with heart disease or malignant neoplasms. Such deaths were likely coded as COVID-19 during certification, resulting in an apparent decrease in the reported numbers of deaths from heart disease and malignant neoplasms.
+
+## Pie-chart
+```{r message=FALSE, warning=FALSE}
+pie_data <- death_proportion_data |>
+  filter(!cause_of_death %in% c("all_cause", "natural_cause"))
+
+# Define UI for Shiny app
+ui <- fluidPage(
+  titlePanel("Death Proportions for Different Years"),
+  
+  # Layout: two rows, each containing two pie charts
+  fluidRow(
+    column(6, plotlyOutput("pie_2020")),
+    column(6, plotlyOutput("pie_2021"))
+  ),
+  fluidRow(
+    column(6, plotlyOutput("pie_2022")),
+    column(6, plotlyOutput("pie_2023"))
+  )
+)
+
+# Define server for Shiny app
+
+server <- function(input, output, session) {
+  
+
+  # Function to create a pie chart for each year
+  pie_chart <- function(year) {
+    pie_plot <- pie_data |>
+      filter(year == year) |>
+      plot_ly(
+        labels = ~cause_of_death,
+        values = ~proportion,
+        type = 'pie',
+        textinfo = 'label+percent',
+        showlegend = TRUE
+      ) |>
+      layout(
+        title = paste("Proportion of Death Causes in", year),  
+        showlegend = FALSE)
+       
+    return(pie_plot)
+  }
+
+  # Render the pie chart for each year
+  output$pie_2020 = renderPlotly({ pie_chart(2020) })
+  output$pie_2021 = renderPlotly({ pie_chart(2021) })
+  output$pie_2022 = renderPlotly({ pie_chart(2022) })
+  output$pie_2023 = renderPlotly({ pie_chart(2023) })
+}
+
+# Run the Shiny app
+shinyApp(ui = ui, server = server)
+```
+In the pie chart, it is evident that the leading causes of death are heart disease and malignant neoplasms, followed by COVID-19.
+
+### Change of proportion plot
+```{r message=FALSE, warning=FALSE,fig.width=10, fig.height=6}
+# death by disease
+death_sum_data <- death_proportion_data |>
+  group_by(mmwr_year, cause_of_death) |>
+  summarise(total_deaths = sum(death_count, na.rm = TRUE)) |>
+  ungroup()
+
+death_proportion_data <- death_sum_data |>
+  group_by(mmwr_year) |>
+  mutate(total_deaths_year = sum(total_deaths, na.rm = TRUE)) |>
+  ungroup() |>
+  mutate(death_proportion = total_deaths / total_deaths_year)  
+
+# death change
+death_change_data <- death_proportion_data |>
+  arrange(cause_of_death, mmwr_year) |>
+  group_by(cause_of_death) |>
+  mutate(
+    lag_proportion = lag(death_proportion),  
+    proportion_change = death_proportion - lag_proportion  
+  ) |>
+  ungroup()
+
+# top 5 in change
+top_changes_data <- death_change_data |>
+  group_by(mmwr_year) |>
+  slice_max(order_by = abs(proportion_change), n = 5) |>
+  ungroup()
+
+
+proportion_plot = plot_ly(
+  data = top_changes_data,
+  x = ~as.factor(mmwr_year),  
+  y = ~proportion_change,  
+  color = ~cause_of_death,  
+  colors = RColorBrewer::brewer.pal(12, "Set3"),
+  type = 'bar', 
+  hoverinfo = 'x+y+name',  
+  marker = list(opacity = 0.7)  
+) %>%
+  layout(
+    title = "Top 5 Causes of Death with the Largest Change in Proportion by Year",
+    xaxis = list(
+      title = "Year",
+      tickmode = "linear",  
+      dtick = 1  
+    ),
+    yaxis = list(
+      title = "Change in Proportion of Total Deaths"
+    ),
+    legend = list(
+      orientation = "v", 
+      x = 1.15, 
+      y = 1,  
+      xanchor = "center",
+      font = list(size = 5)  
+    ),
+    plot_bgcolor = 'rgba(240,240,240,0.9)',  
+    margin = list(t = 50),  
+    showlegend = TRUE,
+    barmode = 'group'  
+  )
+
+proportion_plot
 
 ```
+It can be observed that for COVID-19, its proportion of total deaths increased from 2020 to 2021 and then declined for the next two consecutive years. In contrast, heart disease and malignant neoplasms showed the opposite trend, with their proportions of total deaths decreasing from 2020 to 2021 and subsequently rising over the following two years.
+
+## Hypothesis Test
+```{r message=FALSE, warning=FALSE,fig.width=10, fig.height=6}
+ht_data = general_data |>
+  filter(mmwr_year >= 2020 & 
+    mmwr_year <= 2022) |>
+  mutate(week_ending_date = as.Date(week_ending_date, format = "%Y-%m-%d"))
+
+ggplot(ht_data, aes(x = week_ending_date)) +
+  geom_line(aes(y = all_cause, color = "All Causes")) +
+  geom_line(aes(y = covid_multiple_cause, color = "COVID-19 Multiple Deaths")) +
+  geom_line(aes(y =natural_cause, color = "Natural Causes")) +
+  geom_line(aes(y = covid_underlying_cause, color = "COVID-19 Underlying Deaths")) +
+  labs(title = "Trends in Total Deaths and COVID-19 Deaths",
+       x = "Date", y = "Number of Deaths") 
+ 
+```
+
+```{r}
+models <- list(
+  "All Cause vs COVID Multiple Cause" = lm(all_cause ~ covid_multiple_cause, data = ht_data),
+  "Natural Cause vs COVID Multiple Cause" = lm(natural_cause ~ covid_multiple_cause, data = ht_data),
+  "All Cause vs COVID Underlying Cause" = lm(all_cause ~ covid_underlying_cause, data = ht_data),
+  "Natural Cause vs COVID Underlying Cause" = lm(natural_cause ~ covid_underlying_cause, data = ht_data)
+)
+
+extract_model_info <- function(model, model_name) {
+  tidy(model) |>
+    mutate(Model = model_name) |>
+    left_join(
+      confint(model) |>
+        as.data.frame() |>
+        rownames_to_column(var = "term") |>
+        rename(`2.5 %` = `2.5 %`, `97.5 %` = `97.5 %`),
+      by = "term"
+    )
+}
+
+results = map2_dfr(models, names(models), extract_model_info)
+
+results |>
+  select(Model, term, estimate, `2.5 %`, `97.5 %`, std.error, p.value) |>
+  mutate(
+    p.value = ifelse(p.value < 0.001, "<0.001", round(p.value, 3))
+  ) |>
+  kbl(
+    digits = 2,
+    caption = "Comparison of Regression Models"
+  ) |>
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
+**The Impact of COVID-19 Deaths on Total Deaths and Natural Deaths.**
+Whether COVID-19 deaths are considered as one of the multiple causes or as the underlying cause, the relationship between COVID-19 deaths and total deaths as well as natural deaths is highly significant. The effect of covid_underlying_cause (underlying cause) on the death count is slightly larger than that of covid_multiple_cause (multiple cause), indicating that when COVID-19 is listed as the underlying cause, its impact on death counts is more direct and pronounced.
+
+**Confidence Interval and Standard Error.**
+The confidence intervals for all estimated coefficients do not contain zero, indicating that the coefficients are statistically significant. Additionally, the small standard errors suggest that the model's estimates are relatively precise.
+
+**Statistical Significance.**
+Each p-value is less than 0.001, indicating that each regression coefficient is statistically significant, showing a strong correlation between COVID-19 deaths and total deaths as well as natural deaths.
+
+
+
+
+
+
+
+# Thoughts about framework
+What can we learn from death?
+
+**Have you ever thought about which week you are most likely to die in a year?**
+Time Trend Analysis: By examining the fluctuations in death rates across the 52 weeks of a year, we can identify peak mortality periods and try to find underlying causes (death peaks and seasonal illnesses, public health crises).
+
+Weekly trends might look different depending on where you are, as mortality rates are influenced by both environmental and healthcare system factors. 
+
+**National and Regional Level Analysis**
+Explore how death might change across time and regions.
+
+**City-Level Analysis**
+Narrowing it down to a city like New York 
+
 
