@@ -412,5 +412,206 @@ plot <- subplot(
 # Render the final plot
 plot
 ```
- 
+
+
+# Generate data we need
+```{r}
+# Load necessary libraries
+library(tidyr)
+library(dplyr)
+library(janitor)
+library(readr)
+library(ggplot2)
+
+# Load the dataset using read_csv
+data <- read_csv("./data/weekly_deaths_by_state_and_causes.csv")
+
+# Convert column names to snake_case
+data <- data %>%
+  clean_names()
+
+# Filter rows where jurisdiction_of_occurrence is "United States"
+filtered_data <- data %>%
+  filter(jurisdiction_of_occurrence == "United States")
+
+# Display the filtered data
+print(filtered_data)
+
+# Count missing values for each column
+missing_values <- filtered_data %>%
+  summarise(across(everything(), ~ sum(is.na(.)))) %>%
+  pivot_longer(cols = everything(), names_to = "column", values_to = "missing_values")
+
+# Print all rows of the tibble
+print(missing_values, n = nrow(missing_values))
+
+# Remove columns from flag_allcause to flag_cov19ucod (inclusive)
+filtered_data <- filtered_data %>%
+  select(-flag_allcause:flag_cov19ucod)
+
+# Display the modified dataset
+print(filtered_data)
+
+# Summarize data from all_cause to covid_19_u071_underlying_cause_of_death grouped by mmwr_year
+summarized_data <- filtered_data %>%
+  group_by(mmwr_year) %>%
+  summarise(across(all_cause:covid_19_u071_underlying_cause_of_death, sum, na.rm = TRUE))
+
+# Display the summarized data
+print(summarized_data)
+
+# Read the data up to line 413
+data <- read.table("./data/Population by States.txt", header = TRUE, sep = "\t", stringsAsFactors = FALSE, check.names = FALSE, nrows = 413)
+
+
+# Ensure column names are consistent
+colnames(data) <- make.names(colnames(data))
+
+# Aggregate the Population column by Year Code
+summary_data <- aggregate(Population ~ Year.Code, data = data, FUN = sum)
+
+# Save the aggregated data to a file
+write.table(summary_data, "./data/Population_Summary_by_Year.txt", sep = "\t", row.names = FALSE, quote = FALSE)
+
+print("Data has been aggregated and saved as Population_Summary_by_Year.txt")
+
+# Read the datasets
+population_data <- read.table("./data/Population_Summary_by_Year.txt", header = TRUE, sep = "\t", stringsAsFactors = FALSE)
+summarized_data <- read_csv("./data/summarized_data_united_states.csv")
+
+# Merge the datasets by matching mmwr_year and Year.Code
+merged_data_usa <- merge(summarized_data, population_data, by.x = "mmwr_year", by.y = "Year.Code", all.x = TRUE)
+
+# Get the column names for all death-related columns between septicemia_a40_a41 and covid_19_u071_underlying_cause_of_death
+start_col <- "septicemia_a40_a41"
+end_col <- "covid_19_u071_underlying_cause_of_death"
+
+# Identify the range of columns between start_col and end_col inclusively
+death_rate_columns <- merged_data_usa %>%
+  select(all_of(start_col):all_of(end_col)) %>%
+  colnames()
+
+# Calculate death rates for each column in the range
+for (col in death_rate_columns) {
+  new_col_name <- paste0(col, "_death_rate")  # Generate new column name
+  merged_data_usa[[new_col_name]] <- (merged_data_usa[[col]] / merged_data_usa$Population) * 100000
+}
+
+# View the first few rows to confirm the new columns
+head(merged_data_usa)
+
+# Rename columns in the dataset
+merged_data_usa <- merged_data_usa %>%
+  rename(
+    septicemia = septicemia_a40_a41_death_rate,
+    malignant_neoplasms = malignant_neoplasms_c00_c97_death_rate,
+    diabetes = diabetes_mellitus_e10_e14_death_rate,
+    alzheimer = alzheimer_disease_g30_death_rate,
+    influ_pneum = influenza_and_pneumonia_j09_j18_death_rate,
+    chronic_lower_respir = chronic_lower_respiratory_diseases_j40_j47_death_rate,
+    other_respiratory = other_diseases_of_respiratory_system_j00_j06_j30_j39_j67_j70_j98_death_rate,
+    nephritis_nephrotic = nephritis_nephrotic_syndrome_and_nephrosis_n00_n07_n17_n19_n25_n27_death_rate,
+   not_classified = symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified_r00_r99_death_rate,
+    diseases_of_heart = diseases_of_heart_i00_i09_i11_i13_i20_i51_death_rate,
+    cerebrovascular = cerebrovascular_diseases_i60_i69_death_rate,
+    covid_19_multiple_cause = covid_19_u071_multiple_cause_of_death_death_rate,
+    covid_19_underlying_cause = covid_19_u071_underlying_cause_of_death_death_rate
+  )
+
+# Identify the columns to remove
+columns_to_remove <- which(colnames(merged_data_usa) == "all_cause"):
+                     which(colnames(merged_data_usa) == "Population")
+
+# Remove the specified columns
+filtered_data <- merged_data_usa[, -columns_to_remove]
+
+# Duplicate each row
+duplicated_data <- filtered_data[rep(1:nrow(filtered_data), each = 2), ]
+
+# View the resulting dataset
+head(duplicated_data)
+
+# Optionally, save the resulting dataset to a new file
+write.csv(duplicated_data, "./data/filtered_duplicated_data.csv", row.names = FALSE)
+
+```
+
+# Create Heatmap with mortality rate in each diseases in 2020
+```{r}
+# Load necessary libraries
+library(plotly)
+library(readr)
+
+# Read the dataset
+data <- read_csv("./data/filtered_duplicated_data.csv")  # Replace with the correct file path
+
+# Filter the data for mmwr_year == 2020
+data_2020 <- subset(data, mmwr_year == 2020)
+
+# Remove the mmwr_year column to prepare for the heatmap
+data_numeric <- data_2020[, -which(colnames(data_2020) == "mmwr_year")]
+
+# Compute the correlation matrix (or use raw data values if correlation isn't needed)
+correlation_matrix <- cor(data_numeric)
+
+# Create the heatmap
+fig <- plot_ly(
+  x = colnames(correlation_matrix),  # Variables for x-axis
+  y = colnames(correlation_matrix),  # Variables for y-axis (same as x-axis)
+  z = correlation_matrix,            # Correlation or similarity values
+  type = "heatmap",
+  colors = colorRamp(c("white", "red"))  # Color scale
+)
+
+# Add layout details
+fig <- fig %>% layout(
+  title = "Heatmap for MMWR Year 2020",
+  xaxis = list(title = "Variables"),
+  yaxis = list(title = "Variables"),
+  margin = list(l = 100, b = 100, t = 50, r = 50)
+)
+
+# Display the heatmap
+fig
+```
+All grids other than the diagonal show NaN because cor() requires at least two distinct rows of data for each variable to compute correlations. In this case, the data for mmwr_year == 2020 may only have a single row, resulting in NaN values for all non-diagonal elements of the correlation matrix. Use Raw Values Instead of Correlations
+
+# Create Raw Data Heatmap with mortality rate in each diseases in 2020
+```{r}
+# Load necessary libraries
+library(plotly)
+library(readr)
+
+# Read the dataset
+data <- read_csv("./data/filtered_duplicated_data.csv")  # Replace with the correct file path
+
+# Filter the data for mmwr_year == 2020
+data_2020 <- subset(data, mmwr_year == 2020)
+
+# Remove the mmwr_year column to prepare for the heatmap
+data_numeric <- data_2020[, -which(colnames(data_2020) == "mmwr_year")]
+
+# Transpose the data so variables are both rows and columns
+data_matrix <- t(as.matrix(data_numeric))
+
+# Create the heatmap
+fig <- plot_ly(
+  x = colnames(data_matrix),  # Variable names for x-axis
+  y = rownames(data_matrix),  # Variable names for y-axis
+  z = data_matrix,            # Raw values
+  type = "heatmap",
+  colors = colorRamp(c("white", "red"))
+)
+
+# Add layout details
+fig <- fig %>% layout(
+  title = "Heatmap for MMWR Year 2020 (Raw Values)",
+  xaxis = list(title = "Variables"),
+  yaxis = list(title = "Variables"),
+  margin = list(l = 100, b = 100, t = 50, r = 50)
+)
+
+# Display the heatmap
+fig
+```
 
