@@ -413,17 +413,6 @@ plot <- subplot(
 plot
 ```
 
----
-title: "analysis_jz"
-author: "ELisajava"
-date: "2024-11-18"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
-    code_folding: hide
----
-
 # Generate data we need
 ```{r}
 # Load necessary libraries
@@ -469,6 +458,8 @@ summarized_data <- filtered_data %>%
 
 # Display the summarized data
 print(summarized_data)
+
+write.csv(summarized_data,"./data/summarized_data_united_states.csv")
 
 # Read the data up to line 413
 data <- read.table("./data/Population by States.txt", header = TRUE, sep = "\t", stringsAsFactors = FALSE, check.names = FALSE, nrows = 413)
