@@ -413,6 +413,16 @@ plot <- subplot(
 plot
 ```
 
+---
+title: "analysis_jz"
+author: "ELisajava"
+date: "2024-11-18"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
 
 # Generate data we need
 ```{r}
@@ -614,4 +624,3 @@ fig <- fig %>% layout(
 # Display the heatmap
 fig
 ```
-
