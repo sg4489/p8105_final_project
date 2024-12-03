@@ -18,7 +18,7 @@
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -334,7 +334,7 @@ div.tocify {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Analyses
+    Analysis
      
     <span class="caret"></span>
   </a>
@@ -409,276 +409,119 @@ div.tocify {
 </div>
 
 
-<pre class="r"><code># Load necessary libraries
-library(tidyverse)
-library(janitor)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;janitor&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     chisq.test, fisher.test</code></pre>
-<pre class="r"><code>library(lubridate)</code></pre>
-<div id="import-and-clean-the-data" class="section level1">
-<h1>Import and clean the data</h1>
-<pre class="r"><code># Load the dataset
-data &lt;- read_csv(&quot;./data/weekly_deaths_by_state_and_causes.csv&quot;)</code></pre>
-<pre><code>## Warning: One or more parsing issues, call
-## `problems()` on your data frame for
-## details, e.g.:
-##   dat &lt;- vroom(...)
-##   problems(dat)</code></pre>
-<pre><code>## Rows: 10476 Columns: 35
-## ── Column specification ────────────
-## Delimiter: &quot;,&quot;
-## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
-## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...
-## lgl   (3): flag_allcause, flag_natcause, flag_neopl
-## date  (1): Week Ending Date
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre class="r"><code># Convert variable names to snake_case
-cleaned_data &lt;- data %&gt;%
-  clean_names()
-
-# Rename the column &#39;jurisdiction_of_occurrence&#39; to &#39;state&#39;
-cleaned_data &lt;- cleaned_data %&gt;%
-  rename(state = jurisdiction_of_occurrence)
-
-# Filter for relevant states
-states_of_interest &lt;- c(&quot;New Mexico&quot;, &quot;New York&quot;, &quot;North Carolina&quot;, &quot;North Dakota&quot;,
-                        &quot;Ohio&quot;, &quot;Oklahoma&quot;, &quot;Oregon&quot;, &quot;Pennsylvania&quot;, &quot;Rhode Island&quot;, &quot;South Carolina&quot;)
-filtered_data &lt;- cleaned_data %&gt;%
-  filter(state %in% states_of_interest)
-
-# Check for missing data
-missing_summary &lt;- filtered_data %&gt;%
-  summarize(across(everything(), ~ sum(is.na(.))))
-
-# Convert to data frame and display
-as.data.frame(missing_summary)</code></pre>
-<pre><code>##   data_as_of state mmwr_year mmwr_week week_ending_date all_cause natural_cause
-## 1          0     0         0         0                0         0             0
-##   septicemia_a40_a41 malignant_neoplasms_c00_c97 diabetes_mellitus_e10_e14
-## 1                864                           0                       383
-##   alzheimer_disease_g30 influenza_and_pneumonia_j09_j18
-## 1                   294                             825
-##   chronic_lower_respiratory_diseases_j40_j47
-## 1                                        302
-##   other_diseases_of_respiratory_system_j00_j06_j30_j39_j67_j70_j98
-## 1                                                              736
-##   nephritis_nephrotic_syndrome_and_nephrosis_n00_n07_n17_n19_n25_n27
-## 1                                                                777
-##   symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified_r00_r99
-## 1                                                                                           779
-##   diseases_of_heart_i00_i09_i11_i13_i20_i51 cerebrovascular_diseases_i60_i69
-## 1                                         0                              287
-##   covid_19_u071_multiple_cause_of_death covid_19_u071_underlying_cause_of_death
-## 1                                   260                                     365
-##   flag_allcause flag_natcause flag_sept flag_neopl flag_diab flag_alz
-## 1          1940          1940      1076       1940      1557     1646
-##   flag_inflpn flag_clrd flag_otherresp flag_nephr flag_otherunk flag_hd
-## 1        1115      1638           1204       1163          1161    1940
-##   flag_stroke flag_cov19mcod flag_cov19ucod
-## 1        1653           1680           1575</code></pre>
-<pre class="r"><code># Remove duplicate rows
-filtered_data &lt;- filtered_data %&gt;%
-  distinct()
-
-# Check cleaned and filtered data
-print(glimpse(filtered_data))</code></pre>
-<pre><code>## Rows: 1,940
-## Columns: 35
-## $ data_as_of                                                                                    &lt;chr&gt; …
-## $ state                                                                                         &lt;chr&gt; …
-## $ mmwr_year                                                                                     &lt;dbl&gt; …
-## $ mmwr_week                                                                                     &lt;dbl&gt; …
-## $ week_ending_date                                                                              &lt;date&gt; …
-## $ all_cause                                                                                     &lt;dbl&gt; …
-## $ natural_cause                                                                                 &lt;dbl&gt; …
-## $ septicemia_a40_a41                                                                            &lt;dbl&gt; …
-## $ malignant_neoplasms_c00_c97                                                                   &lt;dbl&gt; …
-## $ diabetes_mellitus_e10_e14                                                                     &lt;dbl&gt; …
-## $ alzheimer_disease_g30                                                                         &lt;dbl&gt; …
-## $ influenza_and_pneumonia_j09_j18                                                               &lt;dbl&gt; …
-## $ chronic_lower_respiratory_diseases_j40_j47                                                    &lt;dbl&gt; …
-## $ other_diseases_of_respiratory_system_j00_j06_j30_j39_j67_j70_j98                              &lt;dbl&gt; …
-## $ nephritis_nephrotic_syndrome_and_nephrosis_n00_n07_n17_n19_n25_n27                            &lt;dbl&gt; …
-## $ symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified_r00_r99 &lt;dbl&gt; …
-## $ diseases_of_heart_i00_i09_i11_i13_i20_i51                                                     &lt;dbl&gt; …
-## $ cerebrovascular_diseases_i60_i69                                                              &lt;dbl&gt; …
-## $ covid_19_u071_multiple_cause_of_death                                                         &lt;dbl&gt; …
-## $ covid_19_u071_underlying_cause_of_death                                                       &lt;dbl&gt; …
-## $ flag_allcause                                                                                 &lt;lgl&gt; …
-## $ flag_natcause                                                                                 &lt;lgl&gt; …
-## $ flag_sept                                                                                     &lt;chr&gt; …
-## $ flag_neopl                                                                                    &lt;lgl&gt; …
-## $ flag_diab                                                                                     &lt;chr&gt; …
-## $ flag_alz                                                                                      &lt;chr&gt; …
-## $ flag_inflpn                                                                                   &lt;chr&gt; …
-## $ flag_clrd                                                                                     &lt;chr&gt; …
-## $ flag_otherresp                                                                                &lt;chr&gt; …
-## $ flag_nephr                                                                                    &lt;chr&gt; …
-## $ flag_otherunk                                                                                 &lt;chr&gt; …
-## $ flag_hd                                                                                       &lt;chr&gt; …
-## $ flag_stroke                                                                                   &lt;chr&gt; …
-## $ flag_cov19mcod                                                                                &lt;chr&gt; …
-## $ flag_cov19ucod                                                                                &lt;chr&gt; …
-## # A tibble: 1,940 × 35
-##    data_as_of state mmwr_year mmwr_week week_ending_date all_cause natural_cause
-##    &lt;chr&gt;      &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;date&gt;               &lt;dbl&gt;         &lt;dbl&gt;
-##  1 09/27/2023 New …      2020         1 2020-01-04             408           358
-##  2 09/27/2023 New …      2020         2 2020-01-11             410           365
-##  3 09/27/2023 New …      2020         3 2020-01-18             388           337
-##  4 09/27/2023 New …      2020         4 2020-01-25             404           367
-##  5 09/27/2023 New …      2020         5 2020-02-01             370           322
-##  6 09/27/2023 New …      2020         6 2020-02-08             377           315
-##  7 09/27/2023 New …      2020         7 2020-02-15             382           337
-##  8 09/27/2023 New …      2020         8 2020-02-22             391           338
-##  9 09/27/2023 New …      2020         9 2020-02-29             396           355
-## 10 09/27/2023 New …      2020        10 2020-03-07             400           358
-## # ℹ 1,930 more rows
-## # ℹ 28 more variables: septicemia_a40_a41 &lt;dbl&gt;,
-## #   malignant_neoplasms_c00_c97 &lt;dbl&gt;, diabetes_mellitus_e10_e14 &lt;dbl&gt;,
-## #   alzheimer_disease_g30 &lt;dbl&gt;, influenza_and_pneumonia_j09_j18 &lt;dbl&gt;,
-## #   chronic_lower_respiratory_diseases_j40_j47 &lt;dbl&gt;,
-## #   other_diseases_of_respiratory_system_j00_j06_j30_j39_j67_j70_j98 &lt;dbl&gt;,
-## #   nephritis_nephrotic_syndrome_and_nephrosis_n00_n07_n17_n19_n25_n27 &lt;dbl&gt;, …</code></pre>
+<div id="load-necessary-libraries" class="section level1">
+<h1>Load necessary libraries</h1>
 </div>
-<div id="the-total-death-cases-by-each-state" class="section level1">
-<h1>The total death cases by each state</h1>
-<pre class="r"><code># Data cleaning and aggregation
-barplot_data &lt;- filtered_data %&gt;%
-  select(state, all_cause, natural_cause) %&gt;% # Select relevant columns
-  group_by(state) %&gt;% # Group by jurisdiction
-  summarise(
-    total_all_cause = sum(all_cause, na.rm = TRUE),
-    total_natural_cause = sum(natural_cause, na.rm = TRUE)
-  ) %&gt;%
-  pivot_longer(
-    cols = c(total_all_cause, total_natural_cause),
-    names_to = &quot;cause_type&quot;,
-    values_to = &quot;count&quot;
-  )
-
-# Create the plot
-ggplot(barplot_data, aes(x = state, y = count, fill = cause_type)) +
-  geom_bar(stat = &quot;identity&quot;, position = position_dodge(width = 0.9)) +
-  labs(
-    title = &quot;Death Counts by State from 2020 to 2023&quot;,
-    x = &quot;State&quot;,
-    y = &quot;Number of Deaths&quot;,
-    fill = &quot;Cause Type&quot;
-  ) +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels for better readability</code></pre>
-<p><img src="analysis_jz_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div id="import-and-tidy-the-data" class="section level1">
+<h1>Import and tidy the data</h1>
+<pre><code>## # A tibble: 6 × 9
+##   State    Year Month Total_Deaths Population Abbreviation Region
+##   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt; 
+## 1 Alabama  2020     1         4304    4921532 AL           South 
+## 2 Alabama  2020     2         5503    4921532 AL           South 
+## 3 Alabama  2020     3         4280    4921532 AL           South 
+## 4 Alabama  2020     4         4579    4921532 AL           South 
+## 5 Alabama  2020     5         5728    4921532 AL           South 
+## 6 Alabama  2020     6         4552    4921532 AL           South 
+## # ℹ 2 more variables: Annual_Mortality_Rate &lt;dbl&gt;, Monthly_Mortality_Rate &lt;dbl&gt;</code></pre>
 </div>
-<div id="trend-analysis-over-time" class="section level1">
-<h1>Trend Analysis Over Time</h1>
-<pre class="r"><code># Summarize deaths by week for each state
-weekly_trends &lt;- filtered_data %&gt;%
-  group_by(state, week_ending_date) %&gt;%
-  summarise(total_deaths = sum(all_cause, na.rm = TRUE), .groups = &quot;drop&quot;)
-
-# Plot trends over time
-ggplot(weekly_trends, aes(x = week_ending_date, y = total_deaths, color = state)) +
-  geom_line(size = 1) +
-  labs(
-    title = &quot;Weekly Death Trends by State (2020-2023)&quot;,
-    x = &quot;Week Ending Date&quot;,
-    y = &quot;Total Deaths&quot;,
-    color = &quot;State&quot;
-  ) +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, face = &quot;bold&quot;, size = 16),
-    axis.text.x = element_text(angle = 45, hjust = 1)
-  )</code></pre>
-<pre><code>## Warning: Using `size` aesthetic for lines
-## was deprecated in ggplot2 3.4.0.
-## ℹ Please use `linewidth` instead.
-## This warning is displayed once
-## every 8 hours.
-## Call
-## `lifecycle::last_lifecycle_warnings()`
-## to see where this warning was
-## generated.</code></pre>
-<p><img src="analysis_jz_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div id="monthly-mortality-rates-by-region-and-state"
+class="section level1">
+<h1>Monthly Mortality Rates by Region and State</h1>
+<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
 </div>
-<div id="seasonal-analysis-of-deaths" class="section level1">
-<h1>Seasonal Analysis of Deaths</h1>
-<pre class="r"><code># Add a season column based on week ending date
-filtered_data &lt;- filtered_data %&gt;%
-  mutate(
-    season = case_when(
-      month(week_ending_date) %in% c(12, 1, 2) ~ &quot;Winter&quot;,
-      month(week_ending_date) %in% c(3, 4, 5) ~ &quot;Spring&quot;,
-      month(week_ending_date) %in% c(6, 7, 8) ~ &quot;Summer&quot;,
-      month(week_ending_date) %in% c(9, 10, 11) ~ &quot;Autumn&quot;
-    )
-  )
-
-# Summarize deaths by season and state
-season_summary &lt;- filtered_data %&gt;%
-  group_by(state, season) %&gt;%
-  summarise(total_deaths = sum(all_cause, na.rm = TRUE), .groups = &quot;drop&quot;)
-
-# Plot seasonal deaths by state
-ggplot(season_summary, aes(x = season, y = total_deaths, group = state, color = state)) +
-  geom_bar(stat = &quot;identity&quot;, aes(fill = state), position = &quot;dodge&quot;, alpha = 0.7) + # Add bar plot
-  geom_line(aes(group = state), size = 1) + # Add line plot
-  labs(
-    title = &quot;Seasonal Deaths by State&quot;,
-    x = &quot;Season&quot;,
-    y = &quot;Total Deaths&quot;,
-    fill = &quot;State&quot;
-  ) +
-  scale_fill_brewer(palette = &quot;Paired&quot;) + # Change bar plot color palette
-  scale_color_brewer(palette = &quot;Paired&quot;) + # Match line colors with bar colors
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, size = 16, face = &quot;bold&quot;, color = &quot;darkblue&quot;), # Center and style title
-    axis.text.x = element_text(angle = 45, hjust = 1) # Rotate x-axis labels for readability
-  )</code></pre>
-<p><img src="analysis_jz_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div id="death-cause-distribution-by-state-and-year"
+class="section level1">
+<h1>Death Cause Distribution by State and Year</h1>
+<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
+<p><strong>Description</strong></p>
+<ol style="list-style-type: decimal">
+<li>In 2020, Pennsylvania (Northeast), Ohio (Midwest) (highest among
+three other states), West Virginia (South), and New Mexico (West) each
+exhibited significantly higher average monthly mortality rates compared
+to other states in their respective regions. Across all these states,
+heart disease was identified as the leading cause of death, accounting
+for 24.8% in Pennsylvania, 25.7% in Ohio, 28.2% in West Virginia, and
+24.7% in New Mexico.</li>
+</ol>
+<p>2.In 2021, Massachusetts (Northeast), Montana (Midwest), Maine
+(South), and Missouri (West) recorded the highest average monthly
+mortality rates in their respective regions. Malignant neoplasms were
+the leading cause of death in Massachusetts (26.7%), while heart disease
+was the largest cause in Montana (29.1%) and Missouri (25.3%). In Maine,
+malignant neoplasms and heart disease were equally prominent, each
+accounting for 29.1% of deaths.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>In 2022, West Virginia (Northeast), New Mexico (Midwest), Maine
+(South), and Missouri (West) recorded the highest average monthly
+mortality rates in their respective regions. Heart disease was the
+leading cause of death in all four states, accounting for 26.8% in West
+Virginia, 28.3% in New Mexico, 32.8% in Maine, and 29% in
+Missouri.</p></li>
+<li><p>In 2023, West Virginia (Northeast), Oregon (Midwest), Maine
+(South), and Missouri (West) recorded the highest average monthly
+mortality rates in their respective regions. The leading causes of death
+were diseases of the heart in West Virginia (32.3%) and Missouri (32%),
+malignant neoplasms in Oregon (30.8%), and a combined share of diseases
+of the heart and malignant neoplasms in Maine (35%).</p></li>
+</ol>
+<div id="patterns-observed" class="section level3">
+<h3>Patterns Observed:</h3>
+<ol style="list-style-type: decimal">
+<li><strong>Recurring States with High Mortality Rates</strong>:
+<ul>
+<li>West Virginia consistently recorded the highest average monthly
+mortality rate in the Northeast region for three consecutive years (2022
+and 2023).</li>
+<li>Maine appeared as the state with the highest mortality rate in the
+South region for three years (2021, 2022, and 2023).</li>
+<li>Missouri consistently had the highest mortality rates in the Western
+region from 2021 to 2023.</li>
+</ul></li>
+<li><strong>Leading Causes of Death</strong>:
+<ul>
+<li><strong>Heart Disease</strong>: Dominated as the leading cause of
+death in most states across years, especially in 2020, 2022, and
+2023.</li>
+<li><strong>Malignant Neoplasms</strong>: Became a significant cause of
+death in specific states (Massachusetts in 2021, Maine in 2021 and 2023,
+and Oregon in 2023).</li>
+</ul></li>
+<li><strong>Northeast and Midwest Variability</strong>:
+<ul>
+<li>The Northeast region saw changes in states with the highest
+mortality rates: Pennsylvania in 2020, Massachusetts in 2021, and West
+Virginia from 2022 onward.</li>
+<li>The Midwest region also showed variability, with Ohio in 2020,
+Montana in 2021, New Mexico in 2022, and Oregon in 2023.</li>
+</ul></li>
+<li><strong>South and West Region Consistency</strong>:
+<ul>
+<li>The South region consistently highlighted Maine as the state with
+the highest mortality rate from 2021 to 2023.</li>
+<li>Missouri remained the Western region’s leader in mortality rates for
+three consecutive years (2021–2023).</li>
+</ul></li>
+<li><strong>Heart Disease vs. Malignant Neoplasms</strong>:
+<ul>
+<li>While heart disease dominated as the leading cause of death in most
+years, malignant neoplasms emerged as a primary or equally significant
+cause in specific years and regions (e.g., Massachusetts in 2021, Oregon
+in 2023, and Maine in multiple years).</li>
+</ul></li>
+<li><strong>Combined Causes</strong>:
+<ul>
+<li>In some states (e.g., Maine in 2021 and 2023), both heart disease
+and malignant neoplasms shared the leading percentage, indicating a
+balanced impact of these two major causes of death.</li>
+</ul></li>
+</ol>
 </div>
-<div id="heatmap-of-deaths-by-state-and-causes" class="section level1">
-<h1>Heatmap of Deaths by State and Causes</h1>
-<pre class="r"><code># Aggregate data for heatmap
-heatmap_data &lt;- filtered_data %&gt;%
-  select(state, septicemia_a40_a41:covid_19_u071_underlying_cause_of_death) %&gt;%
-  pivot_longer(
-    cols = -state,
-    names_to = &quot;cause_of_death&quot;,
-    values_to = &quot;death_count&quot;
-  ) %&gt;%
-  group_by(state, cause_of_death) %&gt;%
-  summarise(total_deaths = sum(death_count, na.rm = TRUE), .groups = &quot;drop&quot;) %&gt;%
-  mutate(
-    cause_of_death = str_replace_all(cause_of_death, &quot;_&quot;, &quot; &quot;), # Replace underscores with spaces
-    cause_of_death = str_trunc(cause_of_death, 30) # Truncate long names to 30 characters
-  )
-
-# Create heatmap
-ggplot(heatmap_data, aes(x = state, y = cause_of_death, fill = total_deaths)) +
-  geom_tile(color = &quot;white&quot;) +
-  scale_fill_gradient(low = &quot;lightblue&quot;, high = &quot;darkblue&quot;) +
-  labs(
-    title = &quot;Heatmap of Deaths by State and Cause&quot;,
-    x = &quot;State&quot;,
-    y = &quot;Cause of Death&quot;,
-    fill = &quot;Total Deaths&quot;
-  ) +
-  theme_minimal() +
-  theme(
-    axis.text.x = element_text(angle = 25, hjust = 1, size = 10), # Rotate and resize x-axis labels
-    axis.text.y = element_text(size = 10), # Adjust y-axis label size
-    plot.title = element_text(hjust = 0.5, face = &quot;bold&quot;, size = 16), # Center and bold the title
-    axis.title.x = element_text(size = 12), # Adjust x-axis title size
-    axis.title.y = element_text(size = 12.5) # Adjust y-axis title size
-  )</code></pre>
-<p><img src="analysis_jz_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="monthly-mortality-rate-by-year-and-region"
+class="section level1">
+<h1>Monthly Mortality Rate by Year and Region</h1>
+<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
 </div>
 
 
