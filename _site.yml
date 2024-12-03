@@ -5,9 +5,15 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Data Processing"
-      href: data-processing.html
-    - text: "Analyses"
+    - text: "About"
+      menu:
+        - text: "Our Team"
+          href: about_our_team.html
+        - text: "Data Source"
+          href: about_data_source.html
+  
+  right:
+    - text: "Exploratory Analysis"
       menu:
         - text: "Analysis yyc"
           href: analysis_yyc.html
@@ -19,21 +25,18 @@ navbar:
           href: analysis_jz.html
         - text: "Analysis yhc"
           href: analysis_yhc.html
-    - text: "Shiny"
-      menu:
-        - text: "Shiny App 1"
-          href: shiny-app1.html
-        - text: "Shiny App 2"
-          href: shiny-app2.html
+    - text: "Statistical Analysis"
+      href: stat_anal.html
     - text: "Project Report"
       href: project-report.html
-  right:
-    - text: "About the Team"
-      href: about-team.html
+    - text: "Shiny"
+      menu:
+        - text: "Shiny App"
+          href: shiny-app.html
     - icon: "fa-github"
       href: "https://github.com/sg4489/p8105_final_project"
 
 output:
   html_document:
-    theme: cosmo
+    theme: readable
     highlight: textmate

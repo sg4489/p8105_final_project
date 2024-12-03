@@ -9,9 +9,6 @@ output:
     code_folding: hide
 ---
 
-TO DO 11/20/2024: 
--replace suppressed counts with random numbers
--how do we deal with missing values?
 
 # EDA
 ## data overview
@@ -147,8 +144,6 @@ count_na(subset_df,"Wyoming")
 
 -correlation between diseases (heatmap?)
 
-
-
 # Time Seires Analyses
 How many people died from covid in 2020, 2021, 2022, and 2023?
 ```{r}
@@ -238,19 +233,34 @@ plot
 
 ```
 ## Key Findings
-The U.S. experienced 5 main waves of COVID-19-related deaths: 
+The plot yshows the progression of COVID-19 deaths in the United States over time, split between underlying and multiple cause deaths.
 
-1. Spring 2020: January 20, 2020 CDC reports the first laboratory-confirmed case of the 2019 Novel Coronavirus in the US.
-2. Summer of 2020.
-3. The winter months of 2020-2021, probably due to the emergence of the Delta variant. 
-4. The rollout of vaccines in 2021 had a visible impact on reducing deaths, particularly in later months. However, more deaths occurred in Fall 2021 as new variants emerged.
-5. the winter months of 2021-2022
+1. Initial Surge (March 2020 - May 2020)
 
-Deaths from multiple causes tend to be consistently higher than those from underlying COVID-19 causes, which suggests that COVID-19 exacerbated existing health conditions, leading to higher mortality rates among vulnerable populations.
+There’s a sharp increase in both underlying and multiple cause deaths starting in March 2020, which corresponds to the initial outbreak and the declaration of the pandemic. This was likely when COVID-19 began to spread rapidly across the U.S.
 
-There is a gradual reduction in both underlying and multiple cause deaths through 2023, but COVID-19 remains a significant cause of death for some time. This may reflect ongoing issues such as long COVID, healthcare access disparities, or specific high-risk populations.
+The data shows a steep rise in deaths, especially in the multiple cause category, which may indicate that people were dying from COVID-19 along with other pre-existing conditions or complications.
+
+2. Second Peak (Winter 2020 - Early 2021)
+
+A second peak emerges in winter 2020 (Nov-Dec 2020), followed by a sustained high in early 2021. This aligns with the winter surge and the emergence of the Delta variant.
+
+3. Decline After Vaccine Rollout (Mid 2021)
+
+After mid-2021, we see a gradual decline in deaths as vaccines became more widely available and the country adapted to the pandemic. 
+
+4. Fluctuations in 2022-2023
+
+In 2022 and 2023, there are smaller peaks and valleys in the death counts, indicating continued fluctuations in the number of deaths due to COVID-19 as variants like Omicron and others continued to emerge.
+
+The multiple cause deaths remain higher than underlying cause deaths in these later periods, suggesting that COVID-19 continued to be associated with other health conditions, especially in individuals with multiple risk factors.
+
+5. Slow Decline into 2023
+
+The plot shows a gradual reduction in both underlying and multiple cause deaths through 2023, but COVID-19 remains a significant cause of death for some time. This may reflect ongoing issues such as long COVID, healthcare access disparities, or specific high-risk populations.
 
 Cases seems to accelerate during winter months.
+
 ```{r}
 # Add a month column to the dataset
 winter_deaths = data %>% 
@@ -261,14 +271,6 @@ winter_deaths = data %>%
            TRUE ~ "Non-Winter"
          )) %>% 
   mutate(season = factor(season))
-
-t_test_res = t.test(
-  covid_19_underlying ~ season,
-  data = winter_deaths
-) %>% 
-  broom::tidy() %>% 
-  select(estimate1, estimate2, p.value) %>% 
-  rename(avg_nonwinter = estimate1, avg_winter = estimate2)
 
 # compute a summary table
 seasonal_summary <- winter_deaths %>%
@@ -299,25 +301,66 @@ plot = plot_ly(
 
 # Display the plot
 plot
-t_test_res %>% knitr::kable()
 seasonal_summary %>% knitr::kable()
 ```
+
+```{r}
+#check normality of outcome variable
+qqnorm(winter_deaths$covid_19_underlying, main = "Q-Q Plot for COVID-19 Underlying Deaths")
+qqline(winter_deaths$covid_19_underlying, col = "red", lwd = 2)
+```
+since the outcome variable is not normally distributed, we used a Wilcoxon Rank-Sum Test.
+
+```{r}
+wilcox.test(covid_19_underlying ~ season, data = winter_deaths) %>% 
+  tidy() %>% 
+  knitr::kable()
+```
 There is a significant difference between covid deaths in winter and non-winter months. We want to know whether this difference might be affected by other factors like a person's pre-existing conditions and co-morbidity (e.g., diabetes, heart disease, respiratory diseases).
+
+# correlation between leading causes of death
+```{r}
+# Subset data for relevant columns
+corr_mat_df = winter_deaths %>% 
+  select(covid_19_underlying, septicemia, malignant_neoplasms, diabetes_mellitus, alzheimer_disease,influenza_and_pneumonia, chronic_lower_respiratory_diseases, other_respiratory_diseases, kidney_disease,
+         diseases_of_heart, cerebrovascular_diseases) # Adjust based on your dataset
+
+# Calculate correlation matrix
+cor_matrix = cor(corr_mat_df, use = "complete.obs")
+
+# Convert correlation matrix to long format
+cor_long = as.data.frame(as.table(cor_matrix))
+
+# Create heatmap
+heatmap = plot_ly(
+  data = cor_long,
+  x = ~Var1,
+  y = ~Var2,
+  z = ~Freq,
+  type = "heatmap",
+  colorscale = "oranges"
+) %>%
+  layout(
+    title = "Correlation Heatmap of COVID-19 and Other Diseases",
+    xaxis = list(title = "Disease"),
+    yaxis = list(title = "Disease"),
+    colorbar = list(title = "Correlation")
+  )
+
+# Show heatmap
+heatmap
+
+```
+In the time series analysis, we observed interesting pattern for diabetes, Alzheimer, and heart disease. The winter surge for these diseases seems to be lower in 2023 compared to 2021 and 2022. Combining with the heatmap, we hypothesize that the decline is due to those diseases' asscociation with COVID. To verify, we fit an MLR.
 
 ```{r}
 # Fit a linear regression model
 model = lm(
-  covid_19_underlying ~ season + diabetes_mellitus + diseases_of_heart + chronic_lower_respiratory_diseases,
+  covid_19_underlying ~ diabetes_mellitus + alzheimer_disease + diseases_of_heart,
   data = winter_deaths
 )
 
-model2 = lm(
-  covid_19_underlying ~ season + diabetes_mellitus + diseases_of_heart + chronic_lower_respiratory_diseases + cerebrovascular_diseases,
-  data = winter_deaths
-)
-# Summary of the model
-summary(model)
-summary(model2)
+summary(model) %>% tidy() %>% knitr::kable()
 ```
 
 ## How did covid death rate vary across states?
