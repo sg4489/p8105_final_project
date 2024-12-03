@@ -9,9 +9,6 @@ output:
     code_folding: hide
 ---
 
-TO DO 11/20/2024: 
--replace suppressed counts with random numbers
--how do we deal with missing values?
 
 # EDA
 ## data overview
@@ -303,6 +300,46 @@ t_test_res %>% knitr::kable()
 seasonal_summary %>% knitr::kable()
 ```
 There is a significant difference between covid deaths in winter and non-winter months. We want to know whether this difference might be affected by other factors like a person's pre-existing conditions and co-morbidity (e.g., diabetes, heart disease, respiratory diseases).
+```{r}
+winter_deaths
+```
+
+
+# correlation between leading causes of death
+```{r}
+
+# Subset data for relevant columns
+corr_mat_df = winter_deaths %>% 
+  select(covid_19_underlying, septicemia, malignant_neoplasms, diabetes_mellitus, alzheimer_disease,influenza_and_pneumonia, chronic_lower_respiratory_diseases, other_respiratory_diseases, kidney_disease,
+         diseases_of_heart, cerebrovascular_diseases) # Adjust based on your dataset
+
+# Calculate correlation matrix
+cor_matrix = cor(corr_mat_df, use = "complete.obs")
+
+# Convert correlation matrix to long format
+cor_long = as.data.frame(as.table(cor_matrix))
+
+# Create heatmap
+heatmap <- plot_ly(
+  data = cor_long,
+  x = ~Var1,
+  y = ~Var2,
+  z = ~Freq,
+  type = "heatmap",
+  colorscale = "oranges"
+) %>%
+  layout(
+    title = "Correlation Heatmap of COVID-19 and Other Diseases",
+    xaxis = list(title = "Disease"),
+    yaxis = list(title = "Disease"),
+    colorbar = list(title = "Correlation")
+  )
+
+# Show heatmap
+heatmap
+
+```
+
 
 ```{r}
 # Fit a linear regression model
