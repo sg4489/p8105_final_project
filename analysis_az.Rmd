@@ -144,8 +144,6 @@ count_na(subset_df,"Wyoming")
 
 -correlation between diseases (heatmap?)
 
-
-
 # Time Seires Analyses
 How many people died from covid in 2020, 2021, 2022, and 2023?
 ```{r}
@@ -339,22 +337,16 @@ heatmap = plot_ly(
 heatmap
 
 ```
-
+In the time series analysis, we observed interesting pattern for diabetes, Alzheimer, and heart disease. The winter surge for these diseases seems to be lower in 2023 compared to 2021 and 2022. Combining with the heatmap, we hypothesize that the decline is due to those diseases' asscociation with COVID. To verify, we fit an MLR.
 
 ```{r}
 # Fit a linear regression model
 model = lm(
-  covid_19_underlying ~ season + diabetes_mellitus + diseases_of_heart + chronic_lower_respiratory_diseases,
+  covid_19_underlying ~ diabetes_mellitus + alzheimer_disease + diseases_of_heart,
   data = winter_deaths
 )
 
-model2 = lm(
-  covid_19_underlying ~ season + diabetes_mellitus + diseases_of_heart + chronic_lower_respiratory_diseases + cerebrovascular_diseases,
-  data = winter_deaths
-)
-# Summary of the model
-summary(model)
-summary(model2)
+summary(model) %>% tidy() %>% knitr::kable()
 ```
 
 ## How did covid death rate vary across states?
