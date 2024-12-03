@@ -2,42 +2,39 @@ name: "project-website"
 output_dir: "."
 navbar:
 #  title: "Project Name"
-<<<<<<< HEAD
-left:
-  - text: "Home"
-    href: index.html
-  - text: "Data Processing"
-    menu:
-      - text: "About"
-        href: about_our_proj.html
-      - text: "Our Team"
-        href: about_our_team.html
-      - text: "Data Source"
-        href: about_data_source.html
-
-right:
-  - text: "Exploratory Analysis"
-    menu:
-      - text: "Analysis yyc"
-        href: analysis_yyc.html
-      - text: "Analysis az"
-        href: analysis_az.html
-      - text: "Analysis sg"
-        href: analysis_sg.html
-      - text: "Analysis jz"
-        href: analysis_jz.html
-      - text: "Analysis yhc"
-        href: analysis_yhc.html
-  - text: "Statistical Analysis"
-    href: stat_anal.html
-  - text: "Project Report"
-    href: project-report.html
-  - text: "Shiny"
-    menu:
-      - text: "Shiny App"
-        href: shiny-app.html
-  - icon: "fa-github"
-    href: "https://github.com/sg4489/p8105_final_project"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      menu:
+        - text: "Our Team"
+          href: about_our_team.html
+        - text: "Data Source"
+          href: about_data_source.html
+  
+  right:
+    - text: "Exploratory Analysis"
+      menu:
+        - text: "Analysis yyc"
+          href: analysis_yyc.html
+        - text: "Analysis az"
+          href: analysis_az.html
+        - text: "Analysis sg"
+          href: analysis_sg.html
+        - text: "Analysis jz"
+          href: analysis_jz.html
+        - text: "Analysis yhc"
+          href: analysis_yhc.html
+    - text: "Statistical Analysis"
+      href: stat_anal.html
+    - text: "Project Report"
+      href: project-report.html
+    - text: "Shiny"
+      menu:
+        - text: "Shiny App"
+          href: shiny-app.html
+    - icon: "fa-github"
+      href: "https://github.com/sg4489/p8105_final_project"
 
 output:
   html_document:
