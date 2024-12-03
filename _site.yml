@@ -7,7 +7,7 @@ navbar:
       href: index.html
     - text: "Data Processing"
       href: data-processing.html
-    - text: "Analyses"
+    - text: "Analysis"
       menu:
         - text: "Analysis yyc"
           href: analysis_yyc.html
