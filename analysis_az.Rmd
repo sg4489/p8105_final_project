@@ -233,17 +233,31 @@ plot
 
 ```
 ## Key Findings
-The U.S. experienced 5 main waves of COVID-19-related deaths: 
+The plot yshows the progression of COVID-19 deaths in the United States over time, split between underlying and multiple cause deaths.
 
-1. Spring 2020: January 20, 2020 CDC reports the first laboratory-confirmed case of the 2019 Novel Coronavirus in the US.
-2. Summer of 2020.
-3. The winter months of 2020-2021, probably due to the emergence of the Delta variant. 
-4. The rollout of vaccines in 2021 had a visible impact on reducing deaths, particularly in later months. However, more deaths occurred in Fall 2021 as new variants emerged.
-5. the winter months of 2021-2022
+1. Initial Surge (March 2020 - May 2020)
 
-Deaths from multiple causes tend to be consistently higher than those from underlying COVID-19 causes, which suggests that COVID-19 exacerbated existing health conditions, leading to higher mortality rates among vulnerable populations.
+There’s a sharp increase in both underlying and multiple cause deaths starting in March 2020, which corresponds to the initial outbreak and the declaration of the pandemic. This was likely when COVID-19 began to spread rapidly across the U.S.
 
-There is a gradual reduction in both underlying and multiple cause deaths through 2023, but COVID-19 remains a significant cause of death for some time. This may reflect ongoing issues such as long COVID, healthcare access disparities, or specific high-risk populations.
+The data shows a steep rise in deaths, especially in the multiple cause category, which may indicate that people were dying from COVID-19 along with other pre-existing conditions or complications.
+
+2. Second Peak (Winter 2020 - Early 2021)
+
+A second peak emerges in winter 2020 (Nov-Dec 2020), followed by a sustained high in early 2021. This aligns with the winter surge and the emergence of the Delta variant.
+
+3. Decline After Vaccine Rollout (Mid 2021)
+
+After mid-2021, we see a gradual decline in deaths as vaccines became more widely available and the country adapted to the pandemic. 
+
+4. Fluctuations in 2022-2023
+
+In 2022 and 2023, there are smaller peaks and valleys in the death counts, indicating continued fluctuations in the number of deaths due to COVID-19 as variants like Omicron and others continued to emerge.
+
+The multiple cause deaths remain higher than underlying cause deaths in these later periods, suggesting that COVID-19 continued to be associated with other health conditions, especially in individuals with multiple risk factors.
+
+5. Slow Decline into 2023
+
+The plot shows a gradual reduction in both underlying and multiple cause deaths through 2023, but COVID-19 remains a significant cause of death for some time. This may reflect ongoing issues such as long COVID, healthcare access disparities, or specific high-risk populations.
 
 Cases seems to accelerate during winter months.
 
