@@ -248,6 +248,7 @@ Deaths from multiple causes tend to be consistently higher than those from under
 There is a gradual reduction in both underlying and multiple cause deaths through 2023, but COVID-19 remains a significant cause of death for some time. This may reflect ongoing issues such as long COVID, healthcare access disparities, or specific high-risk populations.
 
 Cases seems to accelerate during winter months.
+
 ```{r}
 # Add a month column to the dataset
 winter_deaths = data %>% 
@@ -258,14 +259,6 @@ winter_deaths = data %>%
            TRUE ~ "Non-Winter"
          )) %>% 
   mutate(season = factor(season))
-
-t_test_res = t.test(
-  covid_19_underlying ~ season,
-  data = winter_deaths
-) %>% 
-  broom::tidy() %>% 
-  select(estimate1, estimate2, p.value) %>% 
-  rename(avg_nonwinter = estimate1, avg_winter = estimate2)
 
 # compute a summary table
 seasonal_summary <- winter_deaths %>%
@@ -296,18 +289,25 @@ plot = plot_ly(
 
 # Display the plot
 plot
-t_test_res %>% knitr::kable()
 seasonal_summary %>% knitr::kable()
 ```
-There is a significant difference between covid deaths in winter and non-winter months. We want to know whether this difference might be affected by other factors like a person's pre-existing conditions and co-morbidity (e.g., diabetes, heart disease, respiratory diseases).
-```{r}
-winter_deaths
-```
 
+```{r}
+#check normality of outcome variable
+qqnorm(winter_deaths$covid_19_underlying, main = "Q-Q Plot for COVID-19 Underlying Deaths")
+qqline(winter_deaths$covid_19_underlying, col = "red", lwd = 2)
+```
+since the outcome variable is not normally distributed, we used a Wilcoxon Rank-Sum Test.
+
+```{r}
+wilcox.test(covid_19_underlying ~ season, data = winter_deaths) %>% 
+  tidy() %>% 
+  knitr::kable()
+```
+There is a significant difference between covid deaths in winter and non-winter months. We want to know whether this difference might be affected by other factors like a person's pre-existing conditions and co-morbidity (e.g., diabetes, heart disease, respiratory diseases).
 
 # correlation between leading causes of death
 ```{r}
-
 # Subset data for relevant columns
 corr_mat_df = winter_deaths %>% 
   select(covid_19_underlying, septicemia, malignant_neoplasms, diabetes_mellitus, alzheimer_disease,influenza_and_pneumonia, chronic_lower_respiratory_diseases, other_respiratory_diseases, kidney_disease,
@@ -320,7 +320,7 @@ cor_matrix = cor(corr_mat_df, use = "complete.obs")
 cor_long = as.data.frame(as.table(cor_matrix))
 
 # Create heatmap
-heatmap <- plot_ly(
+heatmap = plot_ly(
   data = cor_long,
   x = ~Var1,
   y = ~Var2,
