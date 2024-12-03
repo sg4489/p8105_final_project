@@ -1,9 +1,26 @@
 ---
-title: "index"
+title: "about_our_project"
 output: 
   html_document:
     toc: true
     toc_float: true
+    code_folding: hide
 ---
 
-test
+## Motivation  
+
+The primary objective of our project is to investigate the patterns and determinants of mortality in the United States across different causes of death, classified by the International Classification of Diseases, 10th Revision (ICD-10). Mortality data provides valuable insights into public health trends, resource allocation, and the burden of diseases. Using comprehensive, publicly available mortality data from 2018 to 2023, we aim to identify and visualize the trends in death rates across various ICD chapters, highlighting disparities, correlations, and potential areas for intervention.  
+
+By focusing on specific ICD-10 chapters, we seek to answer key questions about the distribution of deaths over time, differences in death rates by geographic regions, and potential relationships between causes of death. This project aims to make these findings accessible and intuitive by employing statistical analyses and interactive visualizations.  
+
+## Related Work  
+
+## Initial Questions  
+
+## Data  
+
+## Exploratory Analysis  
+
+## Additional Analysis  
+
+## Discussion
