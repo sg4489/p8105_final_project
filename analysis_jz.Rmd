@@ -11,7 +11,7 @@ output:
 ---
 
 # Load necessary libraries
-```{r}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(dplyr)
 library(readr)
 library(plotly)
@@ -21,7 +21,7 @@ library(lubridate)
 ```
 
 # Import and tidy the data
-```{r}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Read the datasets
 population_data <- read.table(file = "./data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
 death_data <- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv")
@@ -93,7 +93,7 @@ head(merged_data)
 ```
 
 # Monthly Mortality Rates by Region and State
-```{r}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Define UI
 ui <- fluidPage(
   titlePanel("Monthly Mortality Rates by Region and State"),
@@ -206,7 +206,7 @@ shinyApp(ui = ui, server = server)
 ```
 
 # Death Cause Distribution by State and Year
-```{r}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Load the dataset
 data <- read_csv("./data/weekly_deaths_by_state_and_causes.csv")
 
@@ -330,7 +330,7 @@ shinyApp(ui = ui, server = server)
    - In some states (e.g., Maine in 2021 and 2023), both heart disease and malignant neoplasms shared the leading percentage, indicating a balanced impact of these two major causes of death.
 
 # Monthly Mortality Rate by Year and Region
-```{r}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Load the dataset for the second plot
 data1 <- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv")
 data2 <- read_csv("./data/Mortality_Rate_with_Region.csv")
