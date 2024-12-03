@@ -15,7 +15,7 @@ navbar:
           href: about_data_sourcr.html
   right:
       - text: "Exploratory Analysis"
-      menu:
+        menu:
         - text: "Analysis yyc"
           href: analysis_yyc.html
         - text: "Analysis az"
