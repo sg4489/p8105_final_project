@@ -13,6 +13,7 @@ output:
 library(tidyverse)
 library(usmap)
 library(plotly)
+library(gt)
 
 
 theme_set(theme_minimal() + theme(legend.position = "bottom"))
@@ -375,10 +376,17 @@ region_month_12cause_GR113_010_df_anova =
   drop_na(`GR113_010_death_rate`, residence_census_region) 
   
 result_anova_GR113_010 =
-  aov(GR113_010_death_rate ~ residence_census_region, data = region_month_12cause_GR113_010_df_anova) |>
-  summary()
+  aov(GR113_010_death_rate ~ residence_census_region, data = region_month_12cause_GR113_010_df_anova) 
 
-result_anova_GR113_010
+anova_df <- as.data.frame(summary(result_anova_GR113_010)[[1]])
+
+anova_df %>%
+  gt() %>%
+  tab_header(
+    title = "ANOVA Results",
+    subtitle = "GR113_O10 Death Rate by Residence Census Region"
+  )
+
 ```
 
 The result shows that the p-value is less than 0.05, which means the difference is significant. Hoewever, we want to explore which region is significantly different from others. So, we have done a post-hoc test to compare the death rate of Septicemia between each pair of regions. 
