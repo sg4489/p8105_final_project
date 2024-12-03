@@ -92,6 +92,7 @@ write.csv(merged_data, "./data/Mortality_Rate_with_Region.csv", row.names = FALS
 head(merged_data)
 ```
 
+# Monthly Mortality Rates by Region and State
 ```{r}
 # Define UI
 ui <- fluidPage(
@@ -204,6 +205,7 @@ server <- function(input, output, session) {
 shinyApp(ui = ui, server = server)
 ```
 
+# Death Cause Distribution by State and Year
 ```{r}
 # Load the dataset
 data <- read_csv("./data/weekly_deaths_by_state_and_causes.csv")
@@ -325,4 +327,123 @@ shinyApp(ui = ui, server = server)
    - While heart disease dominated as the leading cause of death in most years, malignant neoplasms emerged as a primary or equally significant cause in specific years and regions (e.g., Massachusetts in 2021, Oregon in 2023, and Maine in multiple years). 
 
 6. **Combined Causes**:
-   - In some states (e.g., Maine in 2021 and 2023), both heart disease and malignant neoplasms shared the leading percentage, indicating a balanced impact of these two major causes of death. 
+   - In some states (e.g., Maine in 2021 and 2023), both heart disease and malignant neoplasms shared the leading percentage, indicating a balanced impact of these two major causes of death.
+
+# Monthly Mortality Rate by Year and Region
+```{r}
+# Load the dataset for the second plot
+data1 <- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv")
+data2 <- read_csv("./data/Mortality_Rate_with_Region.csv")
+
+# Define UI
+ui <- fluidPage(
+# Second Plot: Monthly Mortality Rate by Year and Region
+  titlePanel("Monthly Mortality Rate by Year and Region"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("year2", "Select Year:", choices = unique(data2$Year), selected = unique(data2$Year)[1]),
+      selectInput("region2", "Select Region:", choices = unique(data2$Region), selected = unique(data2$Region)[1])
+    ),
+    mainPanel(
+      plotlyOutput("mortalityPlot2", height = "600px")
+    )
+  )
+)
+
+# Define Server Logic
+server <- function(input, output) {
+  # First Plot: Death Cause Distribution by State and Year
+  filtered_data1 <- reactive({
+    req(input$year1, input$state1)
+    data1 %>%
+      filter(`MMWR Year` == input$year1, `Jurisdiction of Occurrence` == input$state1)
+  })
+  
+  death_cause_totals1 <- reactive({
+    req(filtered_data1())
+    
+    cause_columns <- c(
+      "Septicemia (A40-A41)",
+      "Malignant neoplasms (C00-C97)",
+      "Diabetes mellitus (E10-E14)",
+      "Alzheimer disease (G30)",
+      "Influenza and pneumonia (J09-J18)",
+      "Chronic lower respiratory diseases (J40-J47)",
+      "Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)",
+      "Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",
+      "Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)",
+      "Diseases of heart (I00-I09,I11,I13,I20-I51)",
+      "Cerebrovascular diseases (I60-I69)",
+      "COVID-19 (U071, Multiple Cause of Death)",
+      "COVID-19 (U071, Underlying Cause of Death)"
+    )
+    
+    filtered_data1() %>%
+      summarise(across(all_of(cause_columns), sum, na.rm = TRUE)) %>%
+      pivot_longer(cols = everything(), names_to = "Cause", values_to = "Count") %>%
+      filter(Count > 0)
+  })
+  
+  output$pieChart1 <- renderPlotly({
+    req(death_cause_totals1())
+    
+    plot_ly(
+      death_cause_totals1(),
+      labels = ~Cause,
+      values = ~Count,
+      type = 'pie'
+    ) %>%
+      layout(
+        title = list(
+          text = paste("Death Cause Distribution in", input$state1, "for Year", input$year1),
+          x = 0.5
+        ),
+        legend = list(
+          orientation = "h",
+          x = 0.5,
+          y = -0.3,
+          xanchor = "center"
+        )
+      )
+  })
+  
+  # Second Plot: Monthly Mortality Rate by Year and Region
+  filtered_data2 <- reactive({
+    req(input$year2, input$region2)
+    data2 %>%
+      filter(Year == input$year2, Region == input$region2)
+  })
+  
+  output$mortalityPlot2 <- renderPlotly({
+    filtered <- filtered_data2()
+    
+    if (nrow(filtered) == 0) {
+      return(plotly_empty() %>%
+               layout(title = "No data available for the selected year and region."))
+    }
+    
+    plot_ly(
+      data = filtered,
+      x = ~Month,
+      y = ~Monthly_Mortality_Rate,
+      color = ~State,
+      type = 'scatter',
+      mode = 'lines+markers',
+      line = list(width = 2),
+      text = ~paste("State:", State, "<br>Month:", Month, "<br>Rate:", Monthly_Mortality_Rate)
+    ) %>%
+      layout(
+        title = paste("Monthly Mortality Rate in", input$year2, "for", input$region2, "Region"),
+        xaxis = list(title = "Month", tickvals = 1:12, ticktext = month.name),
+        yaxis = list(title = "Monthly Mortality Rate (per 10,000)"),
+        legend = list(title = list(text = "State"))
+      )
+  })
+}
+
+# Run the Shiny app
+shinyApp(ui = ui, server = server)
+```
+
+
