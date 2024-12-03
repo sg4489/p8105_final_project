@@ -14,6 +14,7 @@ library(plotly)
 library(rvest)
 library(gt)
 library(viridis)
+library(reshape2)
 ```
 
 # ICD-10-CM Diagnosis Chapter and Code Range Table 
@@ -23,16 +24,19 @@ In this analysis, we retrieved the ICD code table from a publicly available webp
 
 ```{r}
 # Reading web page content and grab the table
-url <- "https://www.ncbi.nlm.nih.gov/books/NBK538941/table/sb248.tab4/"
-icd_code_table <- read_html(url) %>% html_table(fill = TRUE)
+url <- "https://en.wikipedia.org/wiki/ICD-10"
+webpage <- read_html(url)
+icd_table <- webpage %>%
+  html_table(fill = TRUE) %>%
+  .[[2]] 
+
 
 # Generate a clean df and draw the table
-icd_code_df <- as.data.frame(icd_code_table) %>% 
-  relocate(`ICD.10.CM.diagnosis.code.range`) %>% 
+icd_code_df <- as.data.frame(icd_table) %>%
+  select(-Chapter) %>%  
   rename(
-    `Code Range` = `ICD.10.CM.diagnosis.code.range`, 
-    `Principal Diagnosis Type` = `Principal.diagnosis.type`, 
-    `Chapter Title` = `ICD.10.CM.diagnosis.chapter.title`
+    `Code Range` = Block,
+    ` Chapter Title` = Title
   )
 
 icd_code_df %>% 
@@ -41,9 +45,7 @@ icd_code_df %>%
     title = "ICD-10-CM diagnosis chapter and code range"
     ) %>% 
   cols_width(
-    `Code Range` ~ px(120), 
-    `Principal Diagnosis Type` ~ px(200), 
-    `Chapter Title` ~ px(300) 
+    `Code Range` ~ px(120)
   ) %>% 
   tab_options(table.font.size = "small")
 ```
@@ -352,13 +354,13 @@ plot_ly(
     title = "Grouped Bar Chart of Average Mortality Rate by ICD Chapter",
     xaxis = list(
       title = "ICD Chapter",
-      tickangle = -45 # 倾斜x轴标签
+      tickangle = -45 
     ),
     yaxis = list(title = "Average Rate per 1000"),
-    barmode = "group", # 分组条形图
+    barmode = "group",
     legend = list(
       title = list(text = "Year"),
-      orientation = "h", # 水平排列图例
+      orientation = "h", 
       x = 0,
       y = -0.2
     )
@@ -464,11 +466,11 @@ plot_ly(
     "State:", state, "<br>",
     "Year:", year, "<br>",
     "Rate per 1000:", rate_per_1000
-  ),  # Generate the full hover text dynamically
-  hoverinfo = "text"  # Ensure custom text is displayed
+  ), 
+  hoverinfo = "text" 
 ) %>% 
   layout(
-    title = "Box Plot of Mortality Rate per Year",
+    title = "Mortality Rate of the Circulatory System Disease(I00-I99) per Year",
     xaxis = list(title = "Year"),
     yaxis = list(title = "Rate per 1000")
   )
@@ -479,7 +481,7 @@ plot_ly(
 norm_test <- shapiro.test(csd_data %>% pull(rate_per_1000))
 ```
 
-We conducted the **Shapiro-Wilk normality test** on the csd data to evaluate whether the mortality rate follows a normal distribution. The p-value is r round(norm_test$p.value, 4), which is far smaller than the commonly used **significance level of 0.05**.  
+We conducted the **Shapiro-Wilk normality test** on the csd data to evaluate whether the mortality rate follows a normal distribution. The p-value is r round(`r round(norm_test$p.value, 4)`), which is far smaller than the commonly used **significance level of 0.05**.  
 
 This leads us to reject the null hypothesis that the data follows a normal distribution. The data is likely not normally distributed and may exhibit skewness or kurtosis. We can validate this through the Q-Q plot.  
 
@@ -493,6 +495,7 @@ ggplot(csd_data, aes(sample = rate_per_1000)) +
   theme_minimal() + 
   theme(plot.title = element_text(hjust = .5))
 ```
+
 This Q-Q plot (quantile-quantile plot) compares the sample quantiles of the mortality rate data against the theoretical quantiles of a normal distribution.  
 
 Data points closely aligned with the red diagonal line suggest that these parts of the data are approximately normally distributed. However, the points deviate significantly from the red line at both ends (tails), indicating that the data has heavier tails than expected under a normal distribution. The deviations are particularly noticeable at extreme quantiles
@@ -505,3 +508,36 @@ wil_test <- wilcox.test(rate_per_1000 ~ year, data = csd_data %>% filter(year %i
 ```
 
 Since the p-value(`r wil_test$p.value`) is far below 0.05, we reject the null hypothesis. This suggests that there is a statistically significant difference in mortality rates between the 2019 and 2021.
+
+```{r}
+data_2023 <- death_by_chapters %>%
+  filter(year == 2023) %>%
+  select(icd_code, state, rate_per_1000)
+
+# Reshape to wide format (rows: state, columns: icd_code, values: rate_per_1000)
+wide_data_2023 <- data_2023 %>%
+  pivot_wider(names_from = icd_code, values_from = rate_per_1000)
+
+# Remove rows with missing values
+wide_data_2023_clean <- wide_data_2023 %>% select(-state) %>% na.omit()
+
+# Calculate the correlation matrix
+correlation_matrix <- cor(wide_data_2023_clean, use = "complete.obs") 
+
+correlation_matrix_melt <- melt(correlation_matrix)
+
+# Plot the heatmap
+ggplot(correlation_matrix_melt, aes(x = Var1, y = Var2, fill = value)) +
+  geom_tile(color = "white") +  # Create the heatmap with white gridlines
+  scale_fill_gradient2(low = "blue", high = "red", mid = "white", midpoint = 0, 
+                       limit = c(-1, 1), space = "Lab", 
+                       name = "Correlation") +  # Define the color scale
+  theme_minimal() +  # Use a minimal theme
+  theme(
+    axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1),  # Rotate x-axis labels
+    axis.title.x = element_blank(),  # Remove x-axis title
+    axis.title.y = element_blank(),   # Remove y-axis title
+    plot.title = element_text(hjust = .5)
+  ) +
+  labs(title = "Correlation Heatmap of ICD Codes (2023)")
+```
