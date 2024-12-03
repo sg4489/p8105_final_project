@@ -38,6 +38,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -97,6 +99,80 @@ pre code {
 </style>
 
 
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
 
 <!-- tabsets -->
 
@@ -238,6 +314,91 @@ div.tocify {
 
 
 
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    About
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="about_our_team.html">Our Team</a>
+    </li>
+    <li>
+      <a href="about_data_source.html">Data Source</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Exploratory Analysis
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="analysis_yyc.html">Analysis yyc</a>
+    </li>
+    <li>
+      <a href="analysis_az.html">Analysis az</a>
+    </li>
+    <li>
+      <a href="analysis_sg.html">Analysis sg</a>
+    </li>
+    <li>
+      <a href="analysis_jz.html">Analysis jz</a>
+    </li>
+    <li>
+      <a href="analysis_yhc.html">Analysis yhc</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="stat_anal.html">Statistical Analysis</a>
+</li>
+<li>
+  <a href="project-report.html">Project Report</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Shiny
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="shiny-app.html">Shiny App</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://github.com/sg4489/p8105_final_project">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
 <div id="header">
 
 <div class="btn-group pull-right float-right">
@@ -257,145 +418,8 @@ div.tocify {
 </div>
 
 
-<<<<<<< HEAD
-<pre class="r"><code># Load necessary libraries
-library(tidyverse)
-library(janitor)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;janitor&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     chisq.test, fisher.test</code></pre>
-<pre class="r"><code>library(lubridate)</code></pre>
-<div id="import-and-clean-the-data" class="section level1">
-<h1>Import and clean the data</h1>
-<pre class="r"><code># Load the dataset
-data &lt;- read_csv(&quot;./data/weekly_deaths_by_state_and_causes.csv&quot;)</code></pre>
-<pre><code>## Warning: One or more parsing issues, call `problems()` on
-## your data frame for details, e.g.:
-##   dat &lt;- vroom(...)
-##   problems(dat)</code></pre>
-<pre><code>## Rows: 10476 Columns: 35
-## ── Column specification ──────────────────────────
-## Delimiter: &quot;,&quot;
-## chr  (14): Data As Of, Jurisdiction of Occurrence, flag_sept, flag_diab, fla...
-## dbl  (17): MMWR Year, MMWR Week, All Cause, Natural Cause, Septicemia (A40-A...
-## lgl   (3): flag_allcause, flag_natcause, flag_neopl
-## date  (1): Week Ending Date
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre class="r"><code># Convert variable names to snake_case
-cleaned_data &lt;- data %&gt;%
-  clean_names()
-
-# Rename the column &#39;jurisdiction_of_occurrence&#39; to &#39;state&#39;
-cleaned_data &lt;- cleaned_data %&gt;%
-  rename(state = jurisdiction_of_occurrence)
-
-# Filter for relevant states
-states_of_interest &lt;- c(&quot;New Mexico&quot;, &quot;New York&quot;, &quot;North Carolina&quot;, &quot;North Dakota&quot;,
-                        &quot;Ohio&quot;, &quot;Oklahoma&quot;, &quot;Oregon&quot;, &quot;Pennsylvania&quot;, &quot;Rhode Island&quot;, &quot;South Carolina&quot;)
-filtered_data &lt;- cleaned_data %&gt;%
-  filter(state %in% states_of_interest)
-
-# Check for missing data
-missing_summary &lt;- filtered_data %&gt;%
-  summarize(across(everything(), ~ sum(is.na(.))))
-
-# Convert to data frame and display
-as.data.frame(missing_summary)</code></pre>
-<pre><code>##   data_as_of state mmwr_year mmwr_week week_ending_date all_cause natural_cause
-## 1          0     0         0         0                0         0             0
-##   septicemia_a40_a41 malignant_neoplasms_c00_c97 diabetes_mellitus_e10_e14
-## 1                864                           0                       383
-##   alzheimer_disease_g30 influenza_and_pneumonia_j09_j18
-## 1                   294                             825
-##   chronic_lower_respiratory_diseases_j40_j47
-## 1                                        302
-##   other_diseases_of_respiratory_system_j00_j06_j30_j39_j67_j70_j98
-## 1                                                              736
-##   nephritis_nephrotic_syndrome_and_nephrosis_n00_n07_n17_n19_n25_n27
-## 1                                                                777
-##   symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified_r00_r99
-## 1                                                                                           779
-##   diseases_of_heart_i00_i09_i11_i13_i20_i51 cerebrovascular_diseases_i60_i69
-## 1                                         0                              287
-##   covid_19_u071_multiple_cause_of_death covid_19_u071_underlying_cause_of_death
-## 1                                   260                                     365
-##   flag_allcause flag_natcause flag_sept flag_neopl flag_diab flag_alz
-## 1          1940          1940      1076       1940      1557     1646
-##   flag_inflpn flag_clrd flag_otherresp flag_nephr flag_otherunk flag_hd
-## 1        1115      1638           1204       1163          1161    1940
-##   flag_stroke flag_cov19mcod flag_cov19ucod
-## 1        1653           1680           1575</code></pre>
-<pre class="r"><code># Remove duplicate rows
-filtered_data &lt;- filtered_data %&gt;%
-  distinct()
-
-# Check cleaned and filtered data
-print(glimpse(filtered_data))</code></pre>
-<pre><code>## Rows: 1,940
-## Columns: 35
-## $ data_as_of                                                                                    &lt;chr&gt; …
-## $ state                                                                                         &lt;chr&gt; …
-## $ mmwr_year                                                                                     &lt;dbl&gt; …
-## $ mmwr_week                                                                                     &lt;dbl&gt; …
-## $ week_ending_date                                                                              &lt;date&gt; …
-## $ all_cause                                                                                     &lt;dbl&gt; …
-## $ natural_cause                                                                                 &lt;dbl&gt; …
-## $ septicemia_a40_a41                                                                            &lt;dbl&gt; …
-## $ malignant_neoplasms_c00_c97                                                                   &lt;dbl&gt; …
-## $ diabetes_mellitus_e10_e14                                                                     &lt;dbl&gt; …
-## $ alzheimer_disease_g30                                                                         &lt;dbl&gt; …
-## $ influenza_and_pneumonia_j09_j18                                                               &lt;dbl&gt; …
-## $ chronic_lower_respiratory_diseases_j40_j47                                                    &lt;dbl&gt; …
-## $ other_diseases_of_respiratory_system_j00_j06_j30_j39_j67_j70_j98                              &lt;dbl&gt; …
-## $ nephritis_nephrotic_syndrome_and_nephrosis_n00_n07_n17_n19_n25_n27                            &lt;dbl&gt; …
-## $ symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified_r00_r99 &lt;dbl&gt; …
-## $ diseases_of_heart_i00_i09_i11_i13_i20_i51                                                     &lt;dbl&gt; …
-## $ cerebrovascular_diseases_i60_i69                                                              &lt;dbl&gt; …
-## $ covid_19_u071_multiple_cause_of_death                                                         &lt;dbl&gt; …
-## $ covid_19_u071_underlying_cause_of_death                                                       &lt;dbl&gt; …
-## $ flag_allcause                                                                                 &lt;lgl&gt; …
-## $ flag_natcause                                                                                 &lt;lgl&gt; …
-## $ flag_sept                                                                                     &lt;chr&gt; …
-## $ flag_neopl                                                                                    &lt;lgl&gt; …
-## $ flag_diab                                                                                     &lt;chr&gt; …
-## $ flag_alz                                                                                      &lt;chr&gt; …
-## $ flag_inflpn                                                                                   &lt;chr&gt; …
-## $ flag_clrd                                                                                     &lt;chr&gt; …
-## $ flag_otherresp                                                                                &lt;chr&gt; …
-## $ flag_nephr                                                                                    &lt;chr&gt; …
-## $ flag_otherunk                                                                                 &lt;chr&gt; …
-## $ flag_hd                                                                                       &lt;chr&gt; …
-## $ flag_stroke                                                                                   &lt;chr&gt; …
-## $ flag_cov19mcod                                                                                &lt;chr&gt; …
-## $ flag_cov19ucod                                                                                &lt;chr&gt; …
-## # A tibble: 1,940 × 35
-##    data_as_of state mmwr_year mmwr_week week_ending_date all_cause natural_cause
-##    &lt;chr&gt;      &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;date&gt;               &lt;dbl&gt;         &lt;dbl&gt;
-##  1 09/27/2023 New …      2020         1 2020-01-04             408           358
-##  2 09/27/2023 New …      2020         2 2020-01-11             410           365
-##  3 09/27/2023 New …      2020         3 2020-01-18             388           337
-##  4 09/27/2023 New …      2020         4 2020-01-25             404           367
-##  5 09/27/2023 New …      2020         5 2020-02-01             370           322
-##  6 09/27/2023 New …      2020         6 2020-02-08             377           315
-##  7 09/27/2023 New …      2020         7 2020-02-15             382           337
-##  8 09/27/2023 New …      2020         8 2020-02-22             391           338
-##  9 09/27/2023 New …      2020         9 2020-02-29             396           355
-## 10 09/27/2023 New …      2020        10 2020-03-07             400           358
-## # ℹ 1,930 more rows
-## # ℹ 28 more variables: septicemia_a40_a41 &lt;dbl&gt;,
-## #   malignant_neoplasms_c00_c97 &lt;dbl&gt;, diabetes_mellitus_e10_e14 &lt;dbl&gt;,
-## #   alzheimer_disease_g30 &lt;dbl&gt;, influenza_and_pneumonia_j09_j18 &lt;dbl&gt;,
-## #   chronic_lower_respiratory_diseases_j40_j47 &lt;dbl&gt;,
-## #   other_diseases_of_respiratory_system_j00_j06_j30_j39_j67_j70_j98 &lt;dbl&gt;,
-## #   nephritis_nephrotic_syndrome_and_nephrosis_n00_n07_n17_n19_n25_n27 &lt;dbl&gt;, …</code></pre>
-=======
 <div id="load-necessary-libraries" class="section level1">
 <h1>Load necessary libraries</h1>
->>>>>>> f1e36442dfa125b978986b8bfe6ffd755772fbf0
 </div>
 <div id="import-and-tidy-the-data" class="section level1">
 <h1>Import and tidy the data</h1>
@@ -410,41 +434,10 @@ print(glimpse(filtered_data))</code></pre>
 ## 6 Alabama  2020     6         4552    4921532 AL           South 
 ## # ℹ 2 more variables: Annual_Mortality_Rate &lt;dbl&gt;, Monthly_Mortality_Rate &lt;dbl&gt;</code></pre>
 </div>
-<<<<<<< HEAD
-<div id="trend-analysis-over-time" class="section level1">
-<h1>Trend Analysis Over Time</h1>
-<pre class="r"><code># Summarize deaths by week for each state
-weekly_trends &lt;- filtered_data %&gt;%
-  group_by(state, week_ending_date) %&gt;%
-  summarise(total_deaths = sum(all_cause, na.rm = TRUE), .groups = &quot;drop&quot;)
-
-# Plot trends over time
-ggplot(weekly_trends, aes(x = week_ending_date, y = total_deaths, color = state)) +
-  geom_line(size = 1) +
-  labs(
-    title = &quot;Weekly Death Trends by State (2020-2023)&quot;,
-    x = &quot;Week Ending Date&quot;,
-    y = &quot;Total Deaths&quot;,
-    color = &quot;State&quot;
-  ) +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, face = &quot;bold&quot;, size = 16),
-    axis.text.x = element_text(angle = 45, hjust = 1)
-  )</code></pre>
-<pre><code>## Warning: Using `size` aesthetic for lines was deprecated
-## in ggplot2 3.4.0.
-## ℹ Please use `linewidth` instead.
-## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_lifecycle_warnings()` to
-## see where this warning was generated.</code></pre>
-<p><img src="analysis_jz_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-=======
 <div id="monthly-mortality-rates-by-region-and-state"
 class="section level1">
 <h1>Monthly Mortality Rates by Region and State</h1>
 <div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
->>>>>>> f1e36442dfa125b978986b8bfe6ffd755772fbf0
 </div>
 <div id="death-cause-distribution-by-state-and-year"
 class="section level1">
