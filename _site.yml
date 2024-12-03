@@ -2,6 +2,7 @@ name: "project-website"
 output_dir: "."
 navbar:
 #  title: "Project Name"
+<<<<<<< HEAD
 left:
   - text: "Home"
     href: index.html

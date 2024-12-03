@@ -1,0 +1,858 @@
+---
+title: "analysis_yyc_Nov22"
+author: "Yingyu Cui"
+date: "2024-11-22"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(usmap)
+library(plotly)
+
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+```
+
+# Time series by region
+```{r load the data, message=FALSE}
+region_population_df = 
+  read.table(file = "data/region_population.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |> 
+  mutate(
+    year = str_replace(year, "2023 \\(provisional\\)", "2023"),
+    year = str_replace(year, "2024 \\(provisional and partial\\)", "2024")) |> 
+  mutate(residence_census_region = str_extract(residence_census_region, "(?<=: ).*")) 
+
+region_population_df =
+  region_population_df[!grepl("Total", region_population_df$notes), ]
+
+region_joint_df = 
+  region_population_df |>
+    select(residence_census_region, year_code, deaths, population) |>
+  group_by(residence_census_region, year_code) |>
+  summarise(
+    total_population_per_year = sum(population, na.rm = TRUE),
+    total_deaths_per_year = sum(deaths, na.rm = TRUE),
+    total_death_rate = total_deaths_per_year / total_population_per_year * 1000) |>
+  ungroup() |> 
+    slice(-n()) 
+```
+
+## Trend of total deaths in Regions
+
+### heatmap for year (keep)
+```{r attempts, warning=FALSE, message=FALSE}
+region_year_trend_tileplot = 
+  region_population_df |> 
+  select(residence_census_region, year_code, deaths, population) |>
+  filter(year_code == 2020 | year_code == 2021 | year_code == 2022 | year_code == 2023) |>
+  group_by(residence_census_region, year_code) |>
+  summarise(
+    total_population_per_year = sum(population, na.rm = TRUE),
+    total_deaths_per_year = sum(deaths, na.rm = TRUE),
+    death_rate = total_deaths_per_year / total_population_per_year * 1000) |>
+  ungroup() |> 
+  ggplot(aes(x = year_code, y = residence_census_region, fill = death_rate)) +
+  geom_tile() +
+  labs(
+    title = "Death Rate Heatmap by Region (2020-2023)",
+    x = "Year",
+    y = "Region",
+    fill = "Death Rate (per 1000)"
+  ) + 
+  scale_x_continuous(breaks = seq(2020, 2023, 1)) +
+  scale_fill_gradient(low = "lightblue", high = "darkblue") + 
+    theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 25, hjust = 1, size = 10), # Rotate and resize x-axis labels
+    axis.text.y = element_text(size = 10), # Adjust y-axis label size
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 16), # Center and bold the title
+    axis.title.x = element_text(size = 12), # Adjust x-axis title size
+    axis.title.y = element_text(size = 12) # Adjust y-axis title size
+  )
+
+
+region_year_trend_tileplot
+```
+
+As we could see, the darker the color, the higher the death rate. From the heatmap, we could see that the death rate in the Mideast Census Region in 2020 and 2021 and the death rate in the South Census Region in 2021 are relatively higher. And the death rate in the West Census Region from 2020 to 2023 is relatively lower.
+
+### faced plots --- four regions for year (decide to delete)
+```{r faced plots1, warning=FALSE, message=FALSE}
+region_year_trend_facedplot = 
+  region_population_df |> 
+  select(residence_census_region, year_code, deaths, population) |>
+  group_by(residence_census_region, year_code) |>
+  summarise(
+    total_population_per_year = sum(population, na.rm = TRUE),
+    total_deaths_per_year = sum(deaths, na.rm = TRUE),
+    death_rate = total_deaths_per_year / total_population_per_year * 1000) |>
+  ungroup() |>
+  slice(-n()) |> 
+  ggplot(aes(x = year_code, y = death_rate)) +
+  geom_line(size = 1, alpha = 0.7) +
+  geom_text(aes(label = round(death_rate, 1)), size = 3, vjust = 2.2, check_overlap = TRUE) +
+  scale_x_continuous(breaks = seq(2018, 2024, 1)) + 
+  facet_wrap(~residence_census_region, scales = "free_y") + 
+  labs(
+    title = "Death Rate by Region (2018-2024)",
+    x = "Year",
+    y = "Death Rate (per 1000)"
+  ) 
+
+region_year_trend_facedplot
+```
+
+### Month trend of total deaths 
+```{r total deaths in month, warning=FALSE, message=FALSE}
+region_month_totaldeath_df = 
+  read.table(file = "data/region_month_total_death.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |> 
+  mutate(residence_census_region = str_extract(residence_census_region, "(?<=: ).*")) |> 
+  separate(month_code, into = c("year_code", "months"), sep = "/", remove = FALSE) |>
+  mutate(year_code = as.numeric(year_code)) |> 
+  filter(year_code == 2020 | year_code == 2021 | year_code == 2022 | year_code == 2023) |>
+  mutate(month_code_date = ym(month_code)) |> 
+  select(-notes, -month, -population, -crude_rate, -months) |> 
+  left_join(region_joint_df, by = c("year_code", "residence_census_region")) |> 
+  select(-month_code, -total_death_rate) |> 
+  mutate(month_death_rate = deaths / total_population_per_year * 10000)
+
+plot_month_totaldeath =
+  plot_ly(
+  region_month_totaldeath_df,
+  x = ~month_code_date,
+  y = ~month_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Total Deaths across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 10000)"),
+    legend = list(
+      title = list(text = "Region"),
+      orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  ) 
+
+plot_month_totaldeath
+  
+```
+
+For the monthly total death rate, we could see that it is relatively lowest in West Census Region from 2020 to 2023 and relatively highest in Midwest Census Region for most of the time from 2020 to 2023.
+I think most of you in this two regions will raise a question: why the total death rate in Midwest Census Region is relatively higher than other regions? And, why the total rate in West Census Region is obviously lowest? Is this because there are different disease patterns in different regions?  If so, what kind of disease or which body system will be the main reason for the high total death rate in each of the Census Regions? And, what are the difference between different diseases in the four regions?
+Or, is this because of the different climate conditions in different regions? 
+Without knowing other underlying factors, we could not give a conclusion. But, we could still try to find some clues from the data we have. We think most of you will be curious about what disease you are most likely to die from in your region. So, we will show you the trend of the top 12 causes of death in the four regions.
+(find the bar/pie chart in one region for the top 12 causes of death in the region, and then I will show the time trend of each most account disease as supplement)
+
+Besides, as you could notice, there is a peak in the total death rate in April, 2020 in Northeast Census Region. What's more, there are 3 peaks of death rate in winter from 2020 to 2023 in all regions. So, what happened? 
+As we all know, it is COVID-19. And we could extrapolate that the source of the disease is from some state in Northeast Census Region. The disease may be spread to other regions in the US. Here is the news report from the New York Times on April 1, 2020: "The coronavirus outbreak in New York City became the primary source of infections around the United States, researchers have found." (https://www.nytimes.com/2020/04/01/us/politics/coronavirus-new-york.html)(still need to find more proof)
+This could prove our hypothesis. 
+
+Besides, the disease have highest death rate in winter. This is because the disease is more likely to spread in winter. Here are some related proof: "The flu virus is more stable in cold air, and low humidity also helps the virus particles remain in the air." (https://www.webmd.com/cold-and-flu/qa/why-is-the-flu-more-common-in-the-winter)(still need to find proof)
+
+Also, will you be curious about that if you have COVID-19, what will make you die if not directly from COVID-19? What system will be the most likely to be affected by COVID? 
+For these questions, we will compare the trend of COVID-19 deaths with the trend of the top 12 causes of death in the four regions to give the most likely answer.
+
+### Month trend of total deaths (faced versions)
+```{r faced plots}
+
+plot_month_totaldeath_facet <- region_month_totaldeath_df %>%
+  split(.$residence_census_region) %>% 
+  lapply(function(df) {
+    plot_ly(
+      df,
+      x = ~month_code_date,
+      y = ~month_death_rate,
+      type = "scatter",
+      mode = "lines",
+      name = unique(df$residence_census_region) 
+    ) %>%
+      layout(
+        xaxis = list(title = "Month"),
+        yaxis = list(title = "Mortality Rate"),
+        title = list(text = paste0("Region: ", unique(df$residence_census_region)))
+      )
+  }) %>%
+  subplot(nrows = ceiling(length(unique(region_month_totaldeath_df$residence_census_region)) / 2), shareX = TRUE, shareY = TRUE) %>% 
+  layout(
+    title = "Trends in Total Deaths across Month by Regions (2020-2023)",
+    legend = list(
+      orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+
+plot_month_totaldeath_facet
+
+
+```
+
+
+### Week trend of total deaths (whether need to keep because the week plot is enough?, maybe could be kept in shiny for more information)
+```{r total deaths in week, warning=FALSE, message=FALSE}
+region_week_totaldeath_df = 
+  read.table(file = "data/region_week_total_death.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |> 
+   mutate(
+    ending_date = str_extract(mmwr_week, "(?<=ending ).*"), 
+    ending_date = mdy(ending_date) 
+  ) |> 
+  mutate(residence_census_region = str_extract(residence_census_region, "(?<=: ).*")) |> 
+  separate(mmwr_week_code, into = c("year_code", "number"), sep = "/", remove = TRUE) |>
+  mutate(year_code = as.numeric(year_code)) |>
+  filter(year_code == 2020 | year_code == 2021 | year_code == 2022 | year_code == 2023) |>
+  select(-notes, -mmwr_week, -number, -crude_rate, -population) |> 
+  left_join(region_joint_df, by = c("year_code", "residence_census_region")) |> 
+  select(-total_death_rate) |> 
+  mutate(week_death_rate = deaths / total_population_per_year * 10000) |> 
+  na.omit()
+
+plot_week_totaldeath =
+  plot_ly(
+  region_week_totaldeath_df,
+  x = ~ending_date,
+  y = ~week_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Total Deaths across Week by Regions (2020-2023)",
+    xaxis = list(title = "Week"),
+    yaxis = list(title = "Mortality Rate (per 10000)"),
+    legend = list(title = list(text = "Region"),
+                   orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  ) 
+
+plot_week_totaldeath
+  
+
+```
+
+
+### Week trend of total deaths (faced versions)
+```{r faced plots for weeks} 
+plot_week_totaldeath_facet <- region_week_totaldeath_df %>%
+  split(.$residence_census_region) %>% 
+  lapply(function(df) {
+    plot_ly(
+      df,
+      x = ~ending_date,
+      y = ~week_death_rate,
+      type = "scatter",
+      mode = "lines",
+      name = unique(df$residence_census_region) 
+    ) %>%
+      layout(
+        xaxis = list(title = "Week"),
+        yaxis = list(title = "Mortality Rate"),
+        title = list(text = paste0("Region: ", unique(df$residence_census_region)))
+      )
+  }) %>%
+  subplot(nrows = ceiling(length(unique(region_month_totaldeath_df$residence_census_region)) / 2), shareX = TRUE, shareY = TRUE) %>% 
+  layout(
+    title = "Trends in Total Deaths across Week by Regions (2020-2023)",
+    legend = list(
+      orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+
+plot_week_totaldeath_facet
+```
+### Week trend of total deaths (faced bar plot) (could keep in shiny or in time analysis)
+```{r faced bar plots for weeks}
+plot_week_totaldeath_facetbar <- region_week_totaldeath_df %>%
+  split(.$residence_census_region) %>% 
+  lapply(function(df) {
+    ggplot(df, aes(x = ending_date, 
+                   y = week_death_rate, 
+                   fill = ending_date)) +
+  geom_bar(stat = "identity") +
+  theme_minimal() +
+  labs(
+    title = "Total Mortality for Each Week (2018-2024)",
+    x = "Week",
+    y = "Mortality Rate"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5)
+  )
+  }) %>%
+  subplot(nrows = ceiling(length(unique(region_month_totaldeath_df$residence_census_region)) / 2), shareX = TRUE, shareY = TRUE) %>% 
+  layout(
+    title = "Trends in Total Deaths across Week by Regions (2018-2024)",
+    legend = list(
+      orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+
+plot_week_totaldeath_facetbar
+```
+
+
+## Month Trend of disease(covid and non-covid) deaths in Regions
+
+### Septicemia
+```{r month trend in regions for septicemia, warning=FALSE, message=FALSE}
+region_month_12cause_df = 
+  read.table(file = "data/region_month_12cause.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |> 
+  mutate(residence_census_region = str_extract(residence_census_region, "(?<=: ).*")) |> 
+  rename(cause_list = ucd_icd_10_113_cause_list, 
+         cause_list_code = ucd_icd_10_113_cause_list_code) |> 
+  separate(month_code, into = c("year_code", "month"), sep = "/", remove = FALSE) |> 
+  mutate(year_code = as.numeric(year_code)) |> 
+  filter(year_code == 2020 | year_code == 2021 | year_code == 2022 | year_code == 2023) |>
+  select(-notes, -month, -population, -crude_rate) |> 
+  left_join(region_joint_df, by = c("year_code", "residence_census_region")) |> 
+  mutate(month_code_date = ym(month_code)) |> 
+  select(-month_code)
+
+region_month_12cause_GR113_010_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-010") |> 
+  mutate(GR113_010_death_rate = deaths / total_population_per_year * 100000) 
+
+plot_month_GR113_010 =
+  plot_ly(
+  region_month_12cause_GR113_010_df,
+  x = ~month_code_date,
+  y = ~GR113_010_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Septicemia across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                   orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_010
+```
+
+
+Here we could find that there are some differences in the trend of Septicemia across the four regions. The death rate in the Northeast Census Region is relatively higher than other regions at most of time from 2020 to 2023. And the death rate in the West Census Region is relatively lower. This means the disease is more likely to cause death in the Northeast Census Region than in other regions. 
+
+However, is this statistical difference significant? Here we have done an ANOVA analysis to test the difference in the death rate of Septicemia across the four regions. 
+```{r ANOVA for Septicemia, warning=FALSE, message=FALSE}
+region_month_12cause_GR113_010_df_anova =
+  region_month_12cause_GR113_010_df |>
+  select(GR113_010_death_rate, residence_census_region) |>
+  mutate(residence_census_region = as.factor(residence_census_region)) |> 
+  drop_na(`GR113_010_death_rate`, residence_census_region) 
+  
+result_anova_GR113_010 =
+  aov(GR113_010_death_rate ~ residence_census_region, data = region_month_12cause_GR113_010_df_anova) |>
+  summary()
+
+result_anova_GR113_010
+```
+
+The result shows that the p-value is less than 0.05, which means the difference is significant. Hoewever, we want to explore which region is significantly different from others. So, we have done a post-hoc test to compare the death rate of Septicemia between each pair of regions. 
+```{r post-hoc test for Septicemia, warning=FALSE, message=FALSE}
+region_groups <- split(region_month_12cause_GR113_010_df$GR113_010_death_rate, 
+                       region_month_12cause_GR113_010_df$residence_census_region)
+
+# 对每个地区进行 Shapiro-Wilk 检验
+normality_test_results <- lapply(region_groups, shapiro.test)
+
+# 查看每个地区的结果
+normality_test_results
+
+## 方差有两个地区非正态，所以使用 kruskal.test
+
+bartlett_test <- bartlett.test(GR113_010_death_rate ~ residence_census_region, 
+                               data = region_month_12cause_GR113_010_df)
+
+# 查看结果
+print(bartlett_test)
+
+# so we choose 
+
+# Kruskal-Wallis 检验
+kruskal_test <- kruskal.test(GR113_010_death_rate ~ residence_census_region, 
+                             data = region_month_12cause_GR113_010_df)
+
+print(kruskal_test)
+
+# Wilcoxon 两两比较
+pairwise_wilcox_result <- pairwise.wilcox.test(
+  region_month_12cause_GR113_010_df$GR113_010_death_rate,
+  region_month_12cause_GR113_010_df$residence_census_region,
+  p.adjust.method = "bonferroni" # 调整方法，例如Bonferroni
+)
+
+# 查看结果
+print(pairwise_wilcox_result)
+
+```
+
+So we find out that there are significant differences in the death rate of Septicemia across the four regions except between south and northeast Census Region. So we could say the death rate in the West Census Region is significantly lower than in the other three regions. And the death rate in the Northeast and South Census Region are relatively higher than in the other three regions.
+
+Also, we notice that in four regions, there are some peaks in the death rate of Septicemia in winter from 2020 to 2023. Here we wonder that whether there are some association between the peaks in the death rate of Septicemia and the peaks in the death rate of COVID-19. 
+Here I make a combined plot to show the comparison of trend of Septicemia and COVID-19 in the four regions.
+First I will make the plot for Septicemia in a faced version and look for its association with COVID-19.
+```{r faced plot for Septicemia}
+plot_month_GR113_010_facet <- region_month_12cause_GR113_010_df %>%
+  split(.$residence_census_region) %>% 
+  lapply(function(df) {
+    plot_ly(
+      df,
+      x = ~month_code_date,
+      y = ~GR113_010_death_rate,
+      type = "scatter",
+      mode = "lines",
+      name = unique(df$residence_census_region) 
+    ) %>%
+      layout(
+        xaxis = list(title = "Month"),
+        yaxis = list(title = "Mortality Rate"),
+        title = list(text = paste0("Region: ", unique(df$residence_census_region)))
+      )
+  }) %>%
+  subplot(nrows = ceiling(length(unique(region_month_12cause_GR113_010_df$residence_census_region)) / 2), shareX = TRUE, shareY = TRUE) %>% 
+  layout(
+    title = "Trends in Septicemia across Month by Regions (2020-2023)",
+    legend = list(
+      orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_010_facet
+
+```
+
+When analyzing these two faced plots, we could find the peaks in COVID-19 plot is mainly centralized in winter from 2020, 2021 and 2022. However, the peaks in Septicemia plot is centralized in every winter from 2020 to 2023.
+Does this mean that the death from Septicemia is more likely to be caused by other diseases, which is more likely to be epidemic in winter, rather than COVID-19?
+To answer this question, we need to look at the heatmap and the coeficiency between this two diseases (need assistance from other). Besides, we could analyze the coefficiency between Septicemia and other leading cause in this report we are analyzing.
+
+### Malignant neoplasms
+```{r month trend in regions for malignant neoplasms, warning=FALSE, message=FALSE}
+region_month_12cause_GR113_019_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-019") |> 
+  mutate(GR113_019_death_rate = deaths / total_population_per_year * 100000) 
+
+plot_month_GR113_019 =
+  plot_ly(
+  region_month_12cause_GR113_019_df,
+  x = ~month_code_date,
+  y = ~GR113_019_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Malignant Neoplasms across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_019
+```
+
+### Diabetes
+```{r month trend in regions for diabetes, warning=FALSE, message=FALSE}
+region_month_12cause_GR113_046_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-046") |> 
+  mutate(GR113_046_death_rate = deaths / total_population_per_year * 100000) 
+
+plot_month_GR113_046 =
+  plot_ly(
+  region_month_12cause_GR113_046_df,
+  x = ~month_code_date,
+  y = ~GR113_046_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Diabetes across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_046
+```
+
+### Alzheimer disease
+```{r month trend in regions for Alzheimer disease, warning=FALSE, message=FALSE}
+region_month_12cause_GR113_052_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-052") |> 
+  mutate(GR113_052_death_rate = deaths / total_population_per_year * 100000) 
+
+plot_month_GR113_052 =
+  plot_ly(
+  region_month_12cause_GR113_052_df,
+  x = ~month_code_date,
+  y = ~GR113_052_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Alzheimer disease across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_052
+```
+
+
+### Diseases of heart
+```{r month trend in regions for diseases of heart, warning=FALSE, message=FALSE}
+region_month_12cause_GR113_054_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-054") |> 
+  mutate(GR113_054_death_rate = deaths / total_population_per_year * 100000) 
+
+plot_month_GR113_054 =
+  plot_ly(
+  region_month_12cause_GR113_054_df,
+  x = ~month_code_date,
+  y = ~GR113_054_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Disease of Heart across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_054
+```
+
+### Cerebrovascular diseases
+```{r month trend in regions for cerebrovascular diseases, warning=FALSE, message=FALSE}
+region_month_12cause_GR113_070_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-070") |> 
+  mutate(GR113_070_death_rate = deaths / total_population_per_year * 100000) 
+
+plot_month_GR113_070 =
+  plot_ly(
+  region_month_12cause_GR113_070_df,
+  x = ~month_code_date,
+  y = ~GR113_070_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Cerebrovascular Diseases across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_070
+```
+
+### Influenza and pneumonia
+```{r month trend in regions for influenza and pneumonia, warning=FALSE, message=FALSE}
+region_month_12cause_GR113_076_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-076") |> 
+  mutate(GR113_076_death_rate = deaths / total_population_per_year * 100000) 
+
+plot_month_GR113_076 =
+  plot_ly(
+  region_month_12cause_GR113_076_df,
+  x = ~month_code_date,
+  y = ~GR113_076_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Influenza and Pneumonia across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_076
+```
+
+### Chronic lower respiratory diseases
+```{r month trend in regions for chronic lower respiratory diseases, warning=FALSE, message=FALSE}
+region_month_12cause_GR113_082_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-082") |> 
+  mutate(GR113_082_death_rate = deaths / total_population_per_year * 100000) 
+
+plot_month_GR113_082 =
+  plot_ly(
+  region_month_12cause_GR113_082_df,
+  x = ~month_code_date,
+  y = ~GR113_082_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Chronic Lower Respiratory Diseases across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_082
+```
+
+### Nephritis, nephrotic syndrome and nephrosis
+```{r month trend in regions for nephritis, nephrotic syndrome and nephrosis, warning=FALSE, message=FALSE}
+region_month_12cause_GR113_097_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-097") |> 
+  mutate(GR113_097_death_rate = deaths / total_population_per_year * 100000) 
+
+plot_month_GR113_097 =
+  plot_ly(
+  region_month_12cause_GR113_097_df,
+  x = ~month_code_date,
+  y = ~GR113_097_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in Nephritis, Nephrotic Syndrome and Nephrosis across Month by Regions (2018-2024)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_097
+```
+
+### COVID-19
+#### general plot
+```{r COVID in months}
+region_month_12cause_GR113_137_df = 
+  region_month_12cause_df |> 
+  filter(cause_list_code == "GR113-137") |> 
+  mutate(GR113_137_death_rate = deaths / total_population_per_year * 10000) 
+
+plot_month_GR113_137 =
+  plot_ly(
+  region_month_12cause_GR113_137_df,
+  x = ~month_code_date,
+  y = ~GR113_137_death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in COVID-19 across Month by Regions (2020-2023)",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_137
+```
+
+#### faced plot
+```{r faced plot for COVID}
+plot_month_GR113_137_facet <- region_month_12cause_GR113_137_df %>%
+  split(.$residence_census_region) %>% 
+  lapply(function(df) {
+    plot_ly(
+      df,
+      x = ~month_code_date,
+      y = ~GR113_137_death_rate,
+      type = "scatter",
+      mode = "lines",
+      name = unique(df$residence_census_region) 
+    ) %>%
+      layout(
+        xaxis = list(title = "Month"),
+        yaxis = list(title = "Mortality Rate"),
+        title = list(text = paste0("Region: ", unique(df$residence_census_region)))
+      )
+  }) %>%
+  subplot(nrows = ceiling(length(unique(region_month_12cause_GR113_137_df$residence_census_region)) / 2), shareX = TRUE, shareY = TRUE) %>% 
+  layout(
+    title = "Trends in COVID-19 across Month by Regions (2020-2023)",
+    legend = list(
+      orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_month_GR113_137_facet
+```
+
+#### Weekly general plot
+```{r COVID in weeks, warning=FALSE, message=FALSE}
+region_week_12cause_df = 
+  read.table(file = "data/region_week_12cause.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) |> 
+  janitor::clean_names() |> 
+   mutate(
+    ending_date = str_extract(mmwr_week, "(?<=ending ).*"), 
+    ending_date = mdy(ending_date) 
+  ) |> 
+    rename(cause_list = ucd_icd_10_113_cause_list, 
+         cause_list_code = ucd_icd_10_113_cause_list_code) |> 
+  mutate(residence_census_region = str_extract(residence_census_region, "(?<=: ).*")) |> 
+  separate(mmwr_week_code, into = c("year_code", "number"), sep = "/", remove = TRUE) |>
+  mutate(year_code = as.numeric(year_code)) |>
+  select(-notes, -mmwr_week, -number, -crude_rate, -population) |> 
+  left_join(region_joint_df, by = c("year_code", "residence_census_region")) |> 
+  select(-total_death_rate) |> 
+  mutate(death_rate = deaths / total_population_per_year * 100000) |> 
+  na.omit()
+
+region_week_12cause_covid_df = 
+  region_week_12cause_df |> 
+  filter(cause_list_code == "GR113-137") 
+
+plot_week_GR113_137 =
+  plot_ly(
+  region_week_12cause_covid_df,
+  x = ~ending_date,
+  y = ~death_rate,
+  color = ~residence_census_region,
+  type = "scatter",
+  mode = "lines"
+) %>%
+  layout(
+    title = "Trends in COVID across Week by Regions (2018-2024)",
+    xaxis = list(title = "Week"),
+    yaxis = list(title = "Mortality Rate (per 100,000)"),
+    legend = list(title = list(text = "Region"),
+                  orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_week_GR113_137
+```
+
+#### Weekly general plot (faced version)
+```{r faced plot for COVID2}
+plot_week_GR113_137_facet <- region_week_12cause_covid_df %>%
+  split(.$residence_census_region) %>% 
+  lapply(function(df) {
+    plot_ly(
+      df,
+      x = ~ending_date,
+      y = ~death_rate,
+      type = "scatter",
+      mode = "lines",
+      name = unique(df$residence_census_region) 
+    ) %>%
+      layout(
+        xaxis = list(title = "Week"),
+        yaxis = list(title = "Mortality Rate"),
+        title = list(text = paste0("Region: ", unique(df$residence_census_region)))
+      )
+  }) %>%
+  subplot(nrows = ceiling(length(unique(region_week_12cause_covid_df$residence_census_region)) / 2), shareX = TRUE, shareY = TRUE) %>% 
+  layout(
+    title = "Trends in COVID across Week by Regions (2018-2024)",
+    legend = list(
+      orientation = "h", 
+      x = 0.5,           
+      y = -0.2,          
+      xanchor = "center" 
+    )
+  )
+
+plot_week_GR113_137_facet
+```
