@@ -1,5 +1,5 @@
 ---
-title: "Analysis based Chapters"
+title: "Analysis based Chapters from 2018 to 2023"
 output: 
   html_document:
     toc: true
@@ -17,7 +17,7 @@ library(viridis)
 library(reshape2)
 ```
 
-# ICD-10-CM Diagnosis Chapter and Code Range Table 
+## ICD-10 Table 
 The ICD-10-CM (International Classification of Diseases, Tenth Revision, Clinical Modification) is a standardized system for coding diseases and medical conditions (morbidity data). It is widely used by healthcare providers to document patient diagnoses. The ICD-10-CM builds upon the ICD-10 system, which is utilized globally to code causes of death as recorded on death certificates.  
 
 In this analysis, we retrieved the ICD code table from a publicly available webpage. The data was extracted, cleaned, and formatted into a structured table, detailing code ranges, chapters, and diagnosis types utilized in our study.  
@@ -52,10 +52,7 @@ icd_code_df %>%
 
 For clarity, upcoming charts will use ICD codes instead of lengthy diagnosis types. For more details on specific types or chapter titles, please refer to this table or hover over the chart.  
   
-
-# Analysis Based on Death Counts  
-
-## Proportion of Deaths by Chapter (2018–2023)   
+## Proportion of Deaths by Chapter 
 
 ```{r, warning=FALSE}
 death_by_chapters <- read_delim("data/Provisional Mortality Statistics by Chapter per Year.txt",
@@ -154,11 +151,11 @@ Based on the chart, the top five chapters contributing to the average deaths fro
 4. **C00–D48**: Neoplasms (**9.15%**).  
 5. **E00–E89**: Endocrine, nutritional, and metabolic diseases (**7.92%**).  
 
-## Display of Death Counts Across Different Regions  
+## Regional Analysis of Death Counts 
 
 The pie chart above shows how different ICD chapters contributed to average deaths between 2018 and 2023, with circulatory system diseases and respiratory system diseases being the most significant. To complement this analysis, the bar charts below further dissect the total and average deaths by ICD chapter across different regions. 
 
-### Grouped Bar Charts 
+### Bar Charts Showing Total and Average Deaths
 
 ```{r}
 region_colors <- c("#376795", "#72BCD5", "#FFD06F", "#E76254")
@@ -239,7 +236,7 @@ The chart on the left shows the total number of deaths, highlighting the overall
 
 Both charts emphasize the importance of the "Circulatory System" chapter, reflecting its significant contribution to mortality rates across regions. Other chapters, like "Respiratory System," also show consistently high death rates. Both charts reveal that deaths in the southern regions remain consistently higher, potentially due to population size, health disparities, or resource allocation issues.  
 
-### Staked Bar Charts  
+### Combined Visualizations: Total vs. Average Deaths
 
 The grouped bar charts above provide an absolute view of total and average annual deaths across regions. However, for ICD chapters with lower death counts, the grouped bar charts may not effectively highlight their regional patterns. To address this, we created stacked bar charts as a complementary visualization. These charts present the proportional contribution of each region to the total or average deaths for a given category, offering a clearer and more intuitive comparison.  
 
@@ -332,7 +329,9 @@ combined_staked_bar
 
 The total deaths chart highlights overall regional contribution, such as the South's larger share, while the average deaths chart focuses on per-year patterns, providing a clearer view. By averaging the data, the right chart reduces the impact of annual fluctuations or outliers seen in the total deaths chart, offering a more consistent perspective on mortality trends.  
 
-## Analysis Based on Mortality Rate 
+## Detailed Analysis of Mortality Rate
+
+### Exploration of Chapter Variations 
 
 To account for differences in total population across regions, which can influence the number of deaths, we will analyze mortality rates instead. This approach provides a more balanced perspective, allowing for a clearer comparison of death rates across regions and ICD chapters, highlighting whether certain chapters differ significantly across regions when population size is taken into account.  
 
@@ -367,6 +366,12 @@ plot_ly(
   )
 ```
 
+The analysis of average mortality rates by ICD chapters from 2018 to 2023 reveals a substantial public health burden from circulatory system diseases (I00-I99) and respiratory system diseases (J00-J98), which consistently exhibited the highest mortality rates. The marked rise in respiratory-related deaths during 2020-2021 likely reflects the direct impact of COVID-19, while fluctuations in chapters such as perinatal conditions (P00-P96) and symptoms/abnormal findings (R00-R99) suggest possible indirect effects of the pandemic, such as healthcare system strain. In contrast, chapters like ear and mastoid diseases (H60-H95) and skin diseases (L00-L98) maintained consistently low mortality rates.   
+
+### Regional Mortality Rate Trends: 2018-2019 vs. 2020-2023
+
+To better understand these trends, we grouped and compared the average annual mortality rates across regions before and after 2020, providing a clearer and more visual reference for these shifts.   
+
 ```{r}
 # Function to create a grouped bar chart using plotly
 create_grouped_bar_chart <-function(data, title, showlegend = TRUE){ 
@@ -399,20 +404,14 @@ create_grouped_bar_chart <-function(data, title, showlegend = TRUE){
   )
   return(plot)
 }
-```
 
-
-
-```{r}
 # Group and summarize the data
 grouped_region_rate <- death_by_chapters %>% 
   group_by(icd_chapter, icd_code, region) %>%
   summarise(avg_rate_per_1000 = mean(rate_per_1000, na.rm = TRUE), .groups = "drop")
 
-create_grouped_bar_chart(grouped_region_rate, "(2018-2023)")
-```
+rate_18to23 <- create_grouped_bar_chart(grouped_region_rate, "(2018-2023)")
 
-```{r}
 # Group and summarize the data
 grouped_region_rate_1819 <- death_by_chapters %>% 
   filter(year %in% c(2018, 2019))%>% 
@@ -438,7 +437,7 @@ gbc_compared <- subplot(
   titleX = TRUE
 ) %>%
   layout(
-    title = "*",
+    title = "Regional Mortality Rate Trends: 2018-2019 vs. 2020-2023",
     margin = list(t = 50, b = 50)
   )
 
@@ -446,7 +445,103 @@ gbc_compared <- subplot(
 gbc_compared
 ```
 
-## Hypothesis Test
+This visualization compares regional mortality rates by ICD chapter across two time periods: 2018–2019 (left) and 2020–2023 (right). The data reveals significant differences in mortality trends for some chapters before and after the onset of the COVID-19 pandemic.  
+
+### Statistical Analysis of Regional Differences
+
+Circulatory system diseases (I00-I99) consistently dominate mortality rates across all regions, with an increase of 0.5–1 per thousand post-pandemic. Notably, the mortality rate gap for circulatory system diseases between the South and West regions widened during this period. This raises an important question: were there significant differences in circulatory system mortality rates between the highest and lowest regions before and after the pandemic? To address this, we conducted a statistical test to evaluate these differences.  
+
+First, we need to conduct a normality test on the data. The test results are shown in the table below.   
+
+```{r}
+shapiro_by_year <- function(yr, code, rg){
+  data <- death_by_chapters %>%
+    filter(year == yr, icd_code == code, region == rg) %>%
+    pull(rate_per_1000)
+  shapiro_t <- shapiro.test(data)
+  
+  return(shapiro_t$p.value)
+}
+
+years <- 2018:2023
+souwes_regions <- c(" South", " West")
+csd_icd_code <- "I00-I99"
+csd_souwes_shapiro <- expand.grid(Year = years, Region = souwes_regions) %>%
+  rowwise() %>%
+  mutate(
+    p_value = shapiro_by_year(Year, csd_icd_code, Region)
+  ) %>%
+  ungroup()
+
+csd_souwes_shapiro %>%
+  pivot_wider(names_from = Year, values_from = p_value) %>% # Reshape to wide format
+  gt() %>%
+  tab_header(
+    title = "Shapiro-Wilk Test p-values of South and West"
+  ) %>%
+  fmt_number(
+    columns = everything(),
+    decimals = 3
+  ) %>%
+  cols_label(
+    Region = "Region",
+    `2018` = "2018",
+    `2019` = "2019",
+    `2020` = "2020",
+    `2021` = "2021",
+    `2022` = "2022",
+    `2023` = "2023"
+  ) %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels(everything())
+  )
+```
+
+In the South, p-values are consistently above 0.05 across all years, indicating that mortality rates meet the assumption of normality. In contrast, the West shows p-values below 0.05 in 2018-2019, suggesting significant deviation from normality. Although p-values increase for 2020-2023 (e.g., 0.173 in 2020 and 0.265 in 2022), they still may not fully satisfy normality assumptions.  
+
+Overall, the South exhibits consistent normality, while the West shows potential non-normality, particularly in earlier years. Due to small sample sizes and to ensure robust analysis, we use the Wilcoxon test for all comparisons instead of parametric tests.  
+
+The below Wilcoxon test results for 2019 and 2021 reveal significant differences in circulatory system mortality rates between the South and West regions (p-values: 0.0057 and 0.0050), indicating these disparities are unlikely due to chance. This may reflect differences in healthcare, demographics, or other factors between the regions.  
+
+```{r}
+circulatory_2019 <- death_by_chapters %>%
+  filter(year == 2019, icd_code == "I00-I99", region %in% c(" South", " West"))
+circulatory_2021 <- death_by_chapters %>%
+  filter(year == 2021, icd_code == "I00-I99", region %in% c(" South", " West"))
+
+# Perform the Wilcoxon rank-sum test
+circulatory_2019_wilcox_test <- wilcox.test(
+  rate_per_1000 ~ region,
+  data = circulatory_2019,
+  exact = FALSE # Use approximate method for larger datasets
+)
+
+circulatory_2021_wilcox_test <- wilcox.test(
+  rate_per_1000 ~ region,
+  data = circulatory_2021,
+  exact = FALSE # Use approximate method for larger datasets
+)
+
+wilcox_results <- data.frame(
+  Year = c(2019, 2021),
+  P_Value = c(circulatory_2019_wilcox_test$p.value, circulatory_2021_wilcox_test$p.value)
+)
+
+# Display the table using kable
+library(knitr)
+kable(
+  wilcox_results,
+  col.names = c("Year", "Wilcoxon Test P-Value"),
+  caption = "Wilcoxon Test Results for Circulatory System Death Rates (South vs West)"
+)
+```
+
+## Chapter-Level Trends
+
+We want to examine whether there are significant differences in mortality rates across chapters between 2019 (before COVID) and 2021 (during COVID). We will continue to use the circulatory system, which has the highest number of deaths, as an example.  
+
+### Case Study: Circulatory System Diseases (2019 vs. 2021)
 
 ```{r}
 csd_data <- death_by_chapters %>% 
@@ -504,40 +599,158 @@ Therefore, we will use the **Wilcoxon test** to investigate whether there is a s
 
 ```{r}
 # Since p-value = 0.001035 < 0.05, reject the normality hypothesis
-wil_test <- wilcox.test(rate_per_1000 ~ year, data = csd_data %>% filter(year %in% c(2019, 2021)))
+csd_wil_test_p <- wilcox.test(rate_per_1000 ~ year, data = csd_data %>% 
+                                filter(year %in% c(2019, 2021)))$p.value
 ```
 
-Since the p-value(`r wil_test$p.value`) is far below 0.05, we reject the null hypothesis. This suggests that there is a statistically significant difference in mortality rates between the 2019 and 2021.
+Since the p-value(`r csd_wil_test_p`) is far below 0.05, we reject the null hypothesis. This suggests that there is a statistically significant difference in mortality rates between the 2019 and 2021.  
+
+### Heatmap Analysis (2018–2023) 
+
+We can use the normalized heatmap below to better observe the changes across different chapters, regardless of whether their mortality rates are high or low, from 2018 to 2023. This heatmap highlights both persistent trends and pandemic-related shifts.  
 
 ```{r}
-data_2023 <- death_by_chapters %>%
-  filter(year == 2023) %>%
-  select(icd_code, state, rate_per_1000)
+total_deaths_by_year <- death_by_chapters %>%
+  group_by(year, icd_code, icd_chapter) %>%  # Grouping by year and ICD chapter
+  summarise(total_deaths = sum(deaths_count, na.rm = TRUE), .groups = "drop")  
 
-# Reshape to wide format (rows: state, columns: icd_code, values: rate_per_1000)
-wide_data_2023 <- data_2023 %>%
-  pivot_wider(names_from = icd_code, values_from = rate_per_1000)
+normalized_data <- total_deaths_by_year %>%
+  group_by(icd_code) %>%
+  mutate(
+    normalized_deaths = (total_deaths - min(total_deaths)) / 
+                        (max(total_deaths) - min(total_deaths)),
+    hover_text = paste("Chapter:", icd_chapter, "<br>Code:", icd_code,"<br>Normalized:", round(normalized_deaths, 2))
+  )
 
-# Remove rows with missing values
-wide_data_2023_clean <- wide_data_2023 %>% select(-state) %>% na.omit()
-
-# Calculate the correlation matrix
-correlation_matrix <- cor(wide_data_2023_clean, use = "complete.obs") 
-
-correlation_matrix_melt <- melt(correlation_matrix)
-
-# Plot the heatmap
-ggplot(correlation_matrix_melt, aes(x = Var1, y = Var2, fill = value)) +
-  geom_tile(color = "white") +  # Create the heatmap with white gridlines
-  scale_fill_gradient2(low = "blue", high = "red", mid = "white", midpoint = 0, 
-                       limit = c(-1, 1), space = "Lab", 
-                       name = "Correlation") +  # Define the color scale
-  theme_minimal() +  # Use a minimal theme
-  theme(
-    axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1),  # Rotate x-axis labels
-    axis.title.x = element_blank(),  # Remove x-axis title
-    axis.title.y = element_blank(),   # Remove y-axis title
-    plot.title = element_text(hjust = .5)
-  ) +
-  labs(title = "Correlation Heatmap of ICD Codes (2023)")
+plot_ly(
+  data = normalized_data,
+  x = ~year,
+  y = ~icd_code,
+  z = ~normalized_deaths,
+  type = "heatmap",
+  colorscale = "Reds",  
+  text = ~hover_text,  
+  hoverinfo = "text"   
+) %>%
+  layout(
+    title = "Min-Max Normalized Total Deaths by Year and ICD Chapter",
+    xaxis = list(title = "Year"),
+    yaxis = list(title = "ICD Chapter")
+  )
 ```
+
+## ICD Chapter-Specific Insights
+Many chapters show an increase in normalized values during 2020-2021, indicating a direct impact of the pandemic on mortality rates. One chapter, however, shows a decline in normalized values starting in 2023. We are curious to explore which chapters experienced significant changes in mortality rates before COVID, during COVID, and post-COVID.  
+
+```{r}
+icd_codes <- unique(death_by_chapters$icd_code)  # Get all unique ICD chapters
+
+# Create a function to calculate Wilcoxon test p-values
+calculate_wilcox_p <- function(Icd_code, year1, year2) {
+  data1 <- death_by_chapters %>%
+    filter(year == year1, Icd_code == icd_code) %>%
+    pull(rate_per_1000)
+  
+  data2 <- death_by_chapters %>%
+    filter(year == year2, Icd_code == icd_code) %>%
+    pull(rate_per_1000)
+  
+  # Perform Wilcoxon test only if both datasets are non-empty
+  p_value <- wilcox.test(data1, data2, exact = FALSE)$p.value
+
+  return(p_value)
+}
+
+options(scipen = 999)
+
+# Iterate through all combinations of ICD chapters and year pairs
+btoc_results <- expand.grid(
+  ICD_Code = icd_codes,
+  Year1 = 2019,
+  Year2 = 2021
+) %>%
+  rowwise() %>%
+  mutate(
+    P_Value = calculate_wilcox_p(ICD_Code, Year1, Year2) 
+  ) %>%
+  ungroup() 
+
+btop_results <- expand.grid(
+  ICD_Code = icd_codes,
+  Year1 = 2019,
+  Year2 = 2023
+) %>%
+  rowwise() %>%
+  mutate(
+    P_Value = calculate_wilcox_p(ICD_Code, Year1, Year2) 
+  ) %>%
+  ungroup()
+
+ctop_results <- expand.grid(
+  ICD_Code = icd_codes,
+  Year1 = 2019,
+  Year2 = 2021
+) %>%
+  rowwise() %>%
+  mutate(
+    P_Value = calculate_wilcox_p(ICD_Code, Year1, Year2) 
+  ) %>%
+  ungroup()
+
+# Merge 3 dataset
+btoc <- btoc_results %>%
+  select(ICD_Code, P_Value) %>%
+  rename(`2019-2021` = P_Value)
+
+btop <- btop_results %>%
+  select(ICD_Code, P_Value) %>%
+  rename(`2019-2023` = P_Value)
+
+ctop <- ctop_results %>%
+  select(ICD_Code, P_Value) %>%
+  rename(`2021-2023` = P_Value)
+
+# Merge the dataframes by `ICD_Code`
+merged_results <- btoc %>%
+  left_join(btop, by = "ICD_Code") %>%
+  left_join(ctop, by = "ICD_Code")
+
+transposed_results <- merged_results %>%
+  pivot_longer(
+    cols = -ICD_Code, 
+    names_to = "Comparison", 
+    values_to = "P_Value"
+  ) %>%
+  pivot_wider(
+    names_from = ICD_Code, 
+    values_from = P_Value
+  )
+
+transposed_results %>%
+  gt() %>%
+  tab_header(
+    title = "P-Values for Mortality Rate Comparisons Across ICD Chapters",
+    subtitle = "Wilcoxon Test Results for Each Year Comparison"
+  ) %>%
+  fmt_number(
+    columns = -Comparison,  # Format all columns except the first
+    decimals = 8
+  ) %>%
+  cols_label(
+    Comparison = "Year Comparison"
+  ) %>%
+  tab_options(
+    table.font.size = "small"
+  )
+```
+
+1. Chapters Least Affected by the Pandemic  
+These chapters have p-values greater than 0.05 across multiple time periods, indicating no significant changes in mortality rates during or after the pandemic. This suggests that these diseases were minimally impacted, either directly or indirectly, by the pandemic.   
+The chapters least affected by the pandemic include H00–H59 (Diseases of the eye and adnexa), P00–P96 (Certain conditions originating in the perinatal period), and Q00–Q99 (Congenital malformations, deformations, and chromosomal abnormalities).   
+
+2. Chapters with a Rapid Increase During the Pandemic but Significant Decline Post-COVID  
+These chapters show significant changes during the pandemic (2019-2021 or 2021-2023) but a notable decrease in mortality rates post-COVID, indicating that the pandemic's impact on these diseases was short-term.  
+The chapter J00–J99 (Diseases of the respiratory system) represents this condition.  
+
+3. Remaining Chapters  
+Remaining chapters like I00–I99 (Circulatory system diseases) and G00–G99 (Nervous system diseases) saw a sharp increase during the pandemic, followed by a decline post-COVID, but mortality rates remain above pre-pandemic levels, suggesting lingering impacts of the pandemic on these conditions.  

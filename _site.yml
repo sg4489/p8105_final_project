@@ -26,7 +26,7 @@ navbar:
         - text: "Analysis yhc"
           href: analysis_yhc.html
     - text: "Statistical Analysis"
-      href: Statistical analysis.html
+      href: Statistical-analysis.html
     - text: "Project Report"
       href: project-report.html
     - text: "Shiny"

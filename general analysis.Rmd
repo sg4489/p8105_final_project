@@ -1,0 +1,657 @@
+---
+title: "General Analysis"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+The original dataset (10,476 rows and 35 columns) contains weekly counts of death by cause, week and geographical location.
+
+Date Range: Weekly data from 2020 to 2023.
+
+Geographic Scope: Includes state-level data and "United States" as an aggregated entry.
+
+Key Variables:
+
+* Date Variables: Data As Of, Week Ending Date, MMWR Year, MMWR Week.
+* Mortality Data: Includes counts for "All Cause", "Natural Cause", and specific causes like:
+  * Septicemia (A40-A41)* Malignant neoplasms (C00-C97)
+  * Diabetes mellitus (E10-E14)
+  * Alzheimer disease (G30)
+  * Influenza and pneumonia (J09-J18)
+  * Chronic lower respiratory diseases (J40-J47)
+  * COVID-19 (U071, Multiple Cause of Death) and COVID-19 (U071, Underlying Cause of Death).
+  * Flags: Columns starting with flag_indicate potential data quality issues for specific cause counts.
+
+Due to privacy protection, cells with count under 10 has been supressed and shown as blank. We will generate a random whole number between 1-10 for those cells for further analyses.
+
+# Some general questions
+
+-how many people die each year from 2020-2023 (what's the proportion of natural and non-natural causes?)
+  -and, what's the mortality rate of the general population?
+
+-which disease among the listed creates the most health burdens, that is, gives rise to the most deaths?
+
+-correlation between diseases (heatmap?)
+
+```{r message=FALSE}
+library(reshape2)  # If needed
+library(gt)        # If needed
+library(readr)     # If needed
+library(tidyverse) # Includes dplyr, stringr, ggplot2, purrr, etc.
+library(lubridate) # For date/time manipulation
+library(plotly)    # For interactive plots
+library(usmap)     # For US maps
+library(broom)     # For tidying model outputs
+library(kableExtra) # For advanced tables
+```
+
+```{r message=FALSE, warning=FALSE}
+yc_data=read_csv("./data/weekly_deaths_by_state_and_causes.csv") 
+general_data <- yc_data |>
+  janitor::clean_names() |>
+  rename_with(~ str_replace_all(., " ", "_")) |>
+  dplyr::filter(jurisdiction_of_occurrence =="United States") |>
+  rename_with(~ make.unique(str_replace(., "_\\w\\d.*", ""))) |>
+  mutate(month = month(week_ending_date)) |>
+  rename( covid_multiple_cause=covid,
+          covid_underlying_cause=covid.1,
+           symptoms_not_classified=symptoms_signs_and_abnormal_clinical_and_laboratory_findings_not_elsewhere_classified
+          )
+
+
+p_data <- read.delim("./data/Population by States.txt", 
+                     header = TRUE, stringsAsFactors = FALSE) |>
+  janitor::clean_names()
+
+population_summary <- p_data |>
+  dplyr::filter(year_code >= 2020 & year_code <= 2023) |>
+  group_by(year_code)  |> 
+  summarise(Total_Population = sum(population, na.rm = TRUE)) |>
+  rename(mmwr_year=year_code)
+
+
+```
+
+## Trends in the number of deaths across the United States
+```{r message=FALSE,fig.width=8, fig.height=5}
+death_trends_data = general_data |>
+  select(
+    week_ending_date, 
+    all_cause,
+    natural_cause,
+    jurisdiction_of_occurrence, 
+    mmwr_year,
+    septicemia,
+    malignant_neoplasms,
+    diabetes_mellitus,
+    alzheimer_disease,
+    influenza_and_pneumonia,
+    chronic_lower_respiratory_diseases,
+    other_diseases_of_respiratory_system,
+    nephritis_nephrotic_syndrome_and_nephrosis,
+    symptoms_not_classified,
+    diseases_of_heart,
+    cerebrovascular_diseases,
+    covid_multiple_cause,
+    covid_underlying_cause
+  ) |>
+  gather(key = "cause_of_death", value = "death_count", 
+         septicemia,
+         all_cause,
+    natural_cause,
+         malignant_neoplasms,
+         diabetes_mellitus,
+         alzheimer_disease,
+         influenza_and_pneumonia,
+         chronic_lower_respiratory_diseases,
+         other_diseases_of_respiratory_system,
+         nephritis_nephrotic_syndrome_and_nephrosis,
+         symptoms_not_classified,
+         diseases_of_heart,
+         cerebrovascular_diseases,
+         covid_multiple_cause,
+         covid_underlying_cause) |>
+  group_by(week_ending_date, cause_of_death) |>
+  summarize(total_deaths = sum(death_count, na.rm = TRUE)) |>
+  ungroup()
+
+death_trends_data2 = death_trends_data |>
+  mutate(mmwr_year = as.numeric(format(week_ending_date, "%Y"))) |>
+  left_join(population_summary, by = "mmwr_year") |> 
+  mutate(death_rate = total_deaths / Total_Population) |>
+  mutate(death_rate_percent = death_rate * 100)
+
+
+death_trends_plot = plot_ly(
+  data = death_trends_data,
+  x = ~week_ending_date,
+  y = ~total_deaths,
+  color = ~cause_of_death,
+  colors = RColorBrewer::brewer.pal(12, "Set3"),
+  type = 'scatter',
+  mode = 'lines+markers',
+  line = list(shape = 'linear', opacity = 0.6),
+  marker = list(opacity = 0.6)
+) |>
+  layout(
+    title = list(
+      text = "Mortality Trends Over Time for Different Causes of Death",
+      x = 0.5
+    ),
+    xaxis = list(title = "Week Ending Date"),
+    yaxis = list(title = "Total Deaths"),
+    legend = list(title = list(text = "Cause of Death"),
+                  font = list(size = 6))
+  )
+
+death_trends_plot
+
+
+death_trends_plot2 <- plot_ly(
+  data = death_trends_data2,
+  x = ~week_ending_date, 
+  y = ~death_rate_percent, 
+  color = ~cause_of_death, 
+  colors = RColorBrewer::brewer.pal(12, "Set3"), 
+  type = 'scatter',
+  mode = 'lines+markers', 
+  line = list(shape = 'linear', opacity = 0.6), 
+  marker = list(opacity = 0.6) 
+) |>
+  layout(
+    title = "Proportion of Deaths to Population Over Time by Cause of Death", 
+    xaxis = list(title = "Week Ending Date"), 
+    yaxis = list(title = "Deaths as Percentage of Population (%)"), 
+    legend = list(
+      title = list(text = "Cause of Death"),
+      font = list(size = 6)
+    )
+  )
+
+
+death_trends_plot2
+```
+The plots provides a comprehensive view of death trends in terms of both numbers and proportions from 2020 to 2023, revealing several important patterns and insights：
+
+**1.Significant Peaks in Mortality**: The plot highlights multiple significant peaks in the number and rate of both all-cause and natural-cause deaths during the years 2020 to 2022. These peaks are particularly pronounced during the height of the COVID-19 pandemic, suggesting that the global health crisis had a marked effect on overall mortality.
+
+**2.Alignment with COVID-19 Surges**: Interestingly, the observed peaks in both all-cause and natural-cause deaths closely align with surges in COVID-19-related deaths during the same period. This temporal correlation indicates a strong relationship between the rise in COVID-19 deaths and the increase in total and natural-cause mortality, and such correlation is further confirmed in our statistical analysis part.
+
+**3.Impact on Specific Causes of Death**: In addition to the relationship between COVID-19 and general mortality trends, the plot also reveals that deaths from heart disease and malignant cancers consistently rank higher in both number and rate than deaths from other causes, excluding COVID-19. This points to the continued burden of chronic diseases, such as cardiovascular diseases and cancer, which remain major contributors to mortality, even during a pandemic.
+
+
+## Proportion of death plot
+```{r message=FALSE,fig.width=8, fig.height=5}
+death_proportion_data =general_data |> select(
+    week_ending_date, 
+    mmwr_year,
+    covid_multiple_cause,
+    covid_underlying_cause,
+    septicemia,
+    malignant_neoplasms,
+    diabetes_mellitus,
+    alzheimer_disease,
+    influenza_and_pneumonia,
+    chronic_lower_respiratory_diseases,
+    other_diseases_of_respiratory_system,
+    nephritis_nephrotic_syndrome_and_nephrosis,
+    symptoms_not_classified,
+    diseases_of_heart,
+    cerebrovascular_diseases
+  ) |>
+  gather(key = "cause_of_death", value = "death_count", 
+         covid_multiple_cause,
+    covid_underlying_cause,
+         septicemia,
+         malignant_neoplasms,
+         diabetes_mellitus,
+         alzheimer_disease,
+         influenza_and_pneumonia,
+         chronic_lower_respiratory_diseases,
+         other_diseases_of_respiratory_system,
+         nephritis_nephrotic_syndrome_and_nephrosis,
+         symptoms_not_classified,
+         diseases_of_heart,
+         cerebrovascular_diseases
+         ) |>
+  group_by(week_ending_date, mmwr_year, cause_of_death) |>
+  summarize(death_count = sum(death_count, na.rm = TRUE)) |>
+  group_by(week_ending_date, mmwr_year) |>
+  mutate(total_deaths = sum(death_count, na.rm = TRUE)) |>
+  mutate(proportion = death_count / total_deaths) |>
+  arrange(week_ending_date, cause_of_death, desc(proportion))|>
+  ungroup()
+
+proportion_plot <- plot_ly(
+  data = death_proportion_data,
+  x = ~week_ending_date,
+  y = ~proportion,
+  color = ~cause_of_death,
+  colors = RColorBrewer::brewer.pal(12, "Set3"),
+  type = 'bar',
+  hoverinfo = 'x+y+name',  
+  marker = list(opacity = 0.7)  
+) |>
+  layout(
+    title = "Changes in the Proportion of Each Cause of Death in Total Mortality Over Four Years",
+    xaxis = list(
+      title = "Week Ending Date",
+      tickformat = "%Y",  
+      dtick = 31536000000  
+    ),
+    yaxis = list(
+      title = "Proportion of Total Deaths"
+    ),
+    legend = list(
+      orientation = "v",  
+      x = 1.3, 
+      y=1,
+      xanchor = "center",
+       font = list(size = 5)  
+    ),
+    plot_bgcolor = 'rgba(240,240,240,0.9)',  
+    margin = list(t = 50), 
+    showlegend = TRUE,
+    barmode = 'stack'  
+  )
+
+proportion_plot
+
+proportion_plot2 <- plot_ly(
+  data = death_proportion_data,
+  x = ~week_ending_date,
+  y = ~proportion,
+  color = ~cause_of_death,
+  colors = RColorBrewer::brewer.pal(12, "Set3"),
+  type = 'scatter',  
+  mode = 'lines',   
+  line = list(opacity = 0.7, width = 2),  
+  hoverinfo = 'x+y+name' 
+) |>
+  layout(
+    title = "Changes in the Proportion of Each Cause of Death Over Four Years",
+    xaxis = list(
+      title = "Week Ending Date",
+      tickformat = "%Y", 
+      dtick = 31536000000  
+    ),
+    yaxis = list(
+      title = "Proportion of Total Deaths",
+      tickformat = ".1%"  
+    ),
+    legend = list(
+      orientation = "v",  
+      x = 1.3,
+      y = 1,
+      xanchor = "center",
+      font = list(size = 5)  
+    ),
+    margin = list(t = 50), 
+    showlegend = TRUE
+  )
+
+proportion_plot2
+
+```
+The plot shows changes in the proportion of each cause of death in total mortality from 2020 to 2023 and revealed the following key points:
+
+**1.**Among all natural causes of death, excluding COVID-19, the highest proportions are attributed to heart disease and malignant neoplasms.
+
+**2.**Notably, in 2020 and 2021, these two causes exhibited an inverse relationship with COVID-19 deaths.This phenomenon could be explained by evidence of COVID-19 infection, whether virological or clinical, in the days or weeks leading up to death in patients with heart disease or malignant neoplasms.As a result, deaths from heart disease and malignant neoplasms were likely coded as COVID-19-related during certification.
+
+## Pie-chart
+
+```{r}
+pie_data <- death_proportion_data |>
+  dplyr::filter(!cause_of_death %in% c("all_cause", "natural_cause"))
+
+# Function to create a pie chart for each year
+pie_chart <- function(p) {
+  pie_plot <- pie_data |>
+    dplyr::filter(mmwr_year == p) |>
+    plot_ly(
+      labels = ~cause_of_death,
+      values = ~proportion,
+      type = 'pie',
+      textinfo = 'label+percent',
+      showlegend = TRUE
+    ) |>
+    layout(
+      title = paste("Proportion of Death Causes in", p),  # Use 'p' for year in the title
+      showlegend = FALSE
+    )
+  return(pie_plot)
+}
+
+# Create pie charts for 2020 to 2023
+pie_2020 <- pie_chart(2020)
+pie_2021 <- pie_chart(2021)
+pie_2022 <- pie_chart(2022)
+pie_2023 <- pie_chart(2023)
+
+
+htmltools::tags$div(
+  style = "display: flex; justify-content: space-between;",
+  htmltools::tags$div(pie_2020, style = "width: 45%;"),
+  htmltools::tags$div(pie_2021, style = "width: 45%;")
+)
+
+htmltools::tags$div(
+  style = "display: flex; justify-content: space-between;",
+  htmltools::tags$div(pie_2022, style = "width: 45%;"),
+  htmltools::tags$div(pie_2023, style = "width: 45%;")
+)
+```
+
+This pie chart displays the proportion of death causes for each year from 2020 to 2023. In the mortality rates calculated by year, it is evident that even with COVID-19 included, heart disease and malignant neoplasms remain the top two leading causes of death. This highlights the ongoing threat posed by chronic diseases, which continue to be the primary contributors to mortality. The persistence of these conditions as major causes of death calls for sustained efforts in public health, emphasizing the need for preventive care, early detection, and management of chronic illnesses to reduce their impact on society
+
+### Change of proportion plot
+```{r message=FALSE, warning=FALSE,fig.width=8, fig.height=5}
+# death by disease
+death_sum_data <- death_proportion_data |>
+  group_by(mmwr_year, cause_of_death) |>
+  summarise(total_deaths = sum(death_count, na.rm = TRUE)) |>
+  ungroup()
+
+death_proportion_data <- death_sum_data |>
+  group_by(mmwr_year) |>
+  mutate(total_deaths_year = sum(total_deaths, na.rm = TRUE)) |>
+  ungroup() |>
+  mutate(death_proportion = total_deaths / total_deaths_year)  
+
+# death change
+death_change_data <- death_proportion_data |>
+  arrange(cause_of_death, mmwr_year) |>
+  group_by(cause_of_death) |>
+  mutate(
+    lag_proportion = lag(death_proportion),  
+    proportion_change = death_proportion - lag_proportion  
+  ) |>
+  ungroup()
+
+# top 5 in change
+top_changes_data <- death_change_data |>
+  group_by(mmwr_year) |>
+  slice_max(order_by = abs(proportion_change), n = 5) |>
+  ungroup()
+
+
+proportion_plot = plot_ly(
+  data = top_changes_data,
+  x = ~as.factor(mmwr_year),  
+  y = ~proportion_change,  
+  color = ~cause_of_death,  
+  colors = RColorBrewer::brewer.pal(12, "Set3"),
+  type = 'bar', 
+  hoverinfo = 'x+y+name',  
+  marker = list(opacity = 0.7)  
+) %>%
+  layout(
+    title = "Top 5 Causes of Death with the Largest Change in Proportion by Year",
+    xaxis = list(
+      title = "Year",
+      tickmode = "linear",  
+      dtick = 1  
+    ),
+    yaxis = list(
+      title = "Change in Proportion of Total Deaths"
+    ),
+    legend = list(
+      orientation = "v", 
+      x = 1.15, 
+      y = 1,  
+      xanchor = "center",
+      font = list(size = 5)  
+    ),
+    margin = list(t = 50),  
+    showlegend = TRUE,
+    barmode = 'group'  
+  )
+
+proportion_plot
+
+```
+This plot shows the top 5 causes of death with the largest change in proportion by year. It can be observed that the proportion of deaths attributed to COVID-19 increased from 2020 to 2021, then declined in the following two years. In contrast, the proportions of deaths from heart disease and malignant neoplasms decreased from 2020 to 2021, but then rose in the subsequent years. This trend aligns with our findings in the death proportion plot.
+
+# COVID-19 deaths in the US over 2020-2023
+The plot below shows the progression of COVID-19 deaths in the United States over time, split between underlying and multiple cause deaths.
+```{r warning=FALSE,message=FALSE}
+# Prepare the dataset
+data = read_csv("data/weekly_deaths_by_state_and_causes.csv") %>% 
+  rename(
+    `Septicemia` = `Septicemia (A40-A41)`, 
+    `Malignant neoplasms` = `Malignant neoplasms (C00-C97)`, 
+    `Diabetes mellitus` = `Diabetes mellitus (E10-E14)`, 
+    `Alzheimer disease` = `Alzheimer disease (G30)`, 
+    `Influenza and pneumonia` = `Influenza and pneumonia (J09-J18)`, 
+    `Chronic lower respiratory diseases` = `Chronic lower respiratory diseases (J40-J47)`, 
+    `Other respiratory diseases` = `Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)`, 
+    `Kidney Disease` = `Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)`, 
+    `Other Symptoms` = `Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)`, 
+    `Diseases of heart` = `Diseases of heart (I00-I09,I11,I13,I20-I51)`, 
+    `Cerebrovascular diseases` = `Cerebrovascular diseases (I60-I69)`, 
+    `COVID-19 (Multiple)` = `COVID-19 (U071, Multiple Cause of Death)`, 
+    `COVID-19 (Underlying)` = `COVID-19 (U071, Underlying Cause of Death)`
+  ) %>% 
+  janitor::clean_names() %>% 
+  rename(state = jurisdiction_of_occurrence) %>% 
+  mutate(data_as_of = mdy(`data_as_of`),
+         year = year(week_ending_date),
+         month = month(week_ending_date)
+         ) %>%  
+  select(state, year, month, mmwr_week, week_ending_date, all_cause: covid_19_underlying)
+
+data_covid_us = data %>%
+  dplyr::filter(state == "United States") %>% 
+  select(week_ending_date, covid_19_multiple, covid_19_underlying) %>%
+  pivot_longer(cols = c(covid_19_multiple, covid_19_underlying),
+               names_to = "cause_type",
+               values_to = "deaths")
+
+# Create an interactive line chart
+plot = plot_ly(
+  data = data_covid_us,
+  x = ~week_ending_date,
+  y = ~deaths,
+  color = ~cause_type,
+  colors = c("#440154", "#21908C"),
+  type = 'scatter',
+  mode = 'lines'
+) %>%
+  layout(
+    title = "COVID-19 Deaths Over Time (Underlying vs. Multiple Cause)",
+    xaxis = list(title = "Week Ending Date"),
+    yaxis = list(title = "Number of Deaths"),
+     legend = list(
+      title = list(text = "Cause Type"), # Title for the legend
+      orientation = "h",                # Horizontal legend
+      x = 0.5,                          # Center the legend horizontally
+      xanchor = "center",               # Set x-anchor to the center
+      y = -0.2                           # Position the legend above the plot
+    )
+  )
+
+# Show the plot
+plot
+
+
+```
+### Key Findings
+
+Combined with the [CDC Museum COVID-19 Timeline](https://www.cdc.gov/museum/timeline/covid19.html), the plot reveals the following trend:
+
+1. Initial Surge (March 2020 - May 2020)
+
+There’s a sharp increase in both underlying and multiple cause deaths starting in March 2020, which corresponds to the initial outbreak and the declaration of the pandemic. This was likely when COVID-19 began to spread rapidly across the U.S.
+
+The data shows a steep rise in deaths, especially in the multiple cause category, which may indicate that people were dying from COVID-19 along with other pre-existing conditions or complications.
+
+2. Second Peak (Winter 2020 - Early 2021)
+
+A second peak emerges in winter 2020 (Nov-Dec 2020), followed by a sustained high in early 2021. This aligns with the winter surge and the emergence of the Delta variant.
+
+3. Decline After Vaccine Rollout (Mid 2021)
+
+After mid-2021, we see a gradual decline in deaths as vaccines became more widely available and the country adapted to the pandemic. 
+
+4. Fluctuations in 2022-2023
+
+In 2022 and 2023, there are smaller peaks and valleys in the death counts, indicating continued fluctuations in the number of deaths due to COVID-19 as variants like Omicron and others continued to emerge.
+
+The multiple cause deaths remain higher than underlying cause deaths in these later periods, suggesting that COVID-19 continued to be associated with other health conditions, especially in individuals with multiple risk factors.
+
+5. Slow Decline into 2023
+
+The plot shows a gradual reduction in both underlying and multiple cause deaths through 2023, but COVID-19 remains a significant cause of death for some time. This may reflect ongoing issues such as long COVID, healthcare access disparities, or specific high-risk populations.
+
+# Correlation Insights on Disease Mortality: A Heatmap Analysis
+
+This heatmap below represents the correlation between the counts of deaths from various diseases, including COVID-19 (as an underlying cause) and other major causes of death. The darker shades of red signify higher correlations, indicating stronger relationships between the mortality counts of two diseases. 
+```{r warning=FALSE}
+# Subset data for relevant columns
+winter_deaths = data %>% 
+  filter(state == "United States") %>% 
+  mutate(month = month(week_ending_date, label = TRUE), # Extract month name
+         season = case_when(                         # Define seasons
+           month %in% c("Dec", "Jan", "Feb") ~ "Winter",
+           TRUE ~ "Non-Winter"
+         )) %>% 
+  mutate(season = factor(season, levels = c("Winter", "Non-Winter")))
+
+seasonal_summary <- winter_deaths %>%
+  group_by(season) %>%
+  summarize(
+    total_underlying = sum(covid_19_underlying, na.rm = TRUE),
+    total_multiple = sum(covid_19_multiple, na.rm = TRUE))
+
+corr_mat_df = winter_deaths %>% 
+  select(covid_19_underlying, septicemia, malignant_neoplasms, diabetes_mellitus, alzheimer_disease,influenza_and_pneumonia, chronic_lower_respiratory_diseases, other_respiratory_diseases, kidney_disease,
+         diseases_of_heart, cerebrovascular_diseases) # Adjust based on your dataset
+
+# Calculate correlation matrix
+cor_matrix = cor(corr_mat_df, use = "complete.obs")
+
+# Convert correlation matrix to long format
+cor_long = as.data.frame(as.table(cor_matrix))
+
+# Create heatmap
+heatmap = plot_ly(
+  data = cor_long,
+  x = ~Var1,
+  y = ~Var2,
+  z = ~Freq,
+  type = "heatmap",
+  colorscale = "oranges"
+) %>%
+  layout(
+    title = "Correlation Heatmap of COVID-19 and Other Diseases",
+    xaxis = list(title = "Disease"),
+    yaxis = list(title = "Disease"),
+    colorbar = list(title = "Correlation")
+  )
+
+# Show heatmap
+heatmap
+
+```
+
+**High Correlation Between Similar Diseases:**
+Diseases that affect the same physiological system or share similar risk factors tend to exhibit strong correlations:
+
+`Diseases of the heart` and `cerebrovascular diseases` show a strong positive relationship, reflecting the commonality of cardiovascular risk factors such as hypertension and cholesterol.
+`Chronic lower respiratory diseases` and `influenza and pneumonia` are highly correlated, likely due to their shared impact on respiratory health and potential seasonal drivers like flu outbreaks.
+COVID-19 Correlations:
+
+**COVID-19 as an underlying cause of death shows moderate to high correlations with:**
+`Chronic lower respiratory diseases` and `influenza and pneumonia`, likely due to the respiratory complications associated with COVID-19.
+`Diabetes mellitus` and `diseases of the heart`, which are established comorbidities that increase the severity of COVID-19 outcomes.
+
+**Weaker Correlations with Certain Diseases:**
+`Malignant neoplasms` (cancers) exhibit weaker correlations with most other diseases, possibly reflecting distinct mortality patterns and risk factors. This suggests that cancer deaths are less influenced by external infectious diseases like COVID-19 compared to chronic diseases.
+
+**Comorbidity Implications:**
+The clustering of high correlations among cardiovascular, respiratory, and metabolic diseases (e.g., diabetes) highlights the potential for comorbid conditions to compound mortality risks.
+This is particularly evident for COVID-19, where individuals with pre-existing conditions like diabetes or chronic heart and lung diseases face significantly higher risks. See more details [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC8016404/).
+
+## COVID-19 Mortality by State (2021): Choropleth Analysis
+This choropleth map visualizes the mortality rates of COVID-19 across U.S. states in 2021, measured as deaths per 100,000 population. States are shaded according to their mortality rates, with darker shades indicating higher rates. This analysis highlights regional disparities in the impact of the COVID-19 pandemic.
+```{r message=FALSE}
+# read the population data
+population_data = read.table(file = "data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) %>% 
+  as_tibble() %>% 
+  janitor::clean_names() %>% 
+  select(residence_state, year_code, population) %>% 
+  rename(state = residence_state,
+         year = year_code)
+
+```
+```{r message=FALSE}
+# calculate annual covid deaths for each state
+data_covid_states = 
+  data %>% 
+  dplyr::filter(!state %in% c("United States", "Puerto Rico")) %>% 
+  group_by(state, year) %>% 
+  summarize(
+    covid_deaths_total = sum(covid_19_multiple, na.rm = TRUE)
+  )
+
+data_covid_df = data_covid_states %>%
+  left_join(population_data, by = c("year", "state")) %>% 
+  mutate(
+    covid_mortality = covid_deaths_total/population,
+    covid_mortality_per100000 = covid_mortality*100000) 
+
+## convert state name to abbreviations for plotting
+
+# Create a vector with state names and abbreviations
+state_abbreviations = tibble(
+  state_name = state.name, # Full state names
+  state_abbr = state.abb  # Corresponding abbreviations
+)
+
+# Assuming covid_data is your dataset, join it with the state_abbreviations data
+map_data = data_covid_df %>%
+  left_join(state_abbreviations, by = c("state" = "state_name")) %>%  # Join by state name
+  select(state, state_abbr, everything()) %>% 
+  dplyr::filter(!is.na(state_abbr)) 
+
+map_data_2021 = map_data %>% 
+  dplyr::filter(year == 2021)
+
+# Create the choropleth map
+fig = plot_ly(
+  data = map_data_2021,
+  type = "choropleth",
+  locations = ~state_abbr, # State names
+  locationmode = "USA-states", # Use state names in the USA
+  z = ~covid_mortality_per100000, # Color scale based on covid_mortality
+  text = ~paste("State: ", state), # Hover text
+  colorscale = "Oranges",
+  colorbar = list(title = "Mortality Rate per 100k")
+) %>%
+  layout(
+    title = "COVID-19 Mortality by State (2021)", # Adjust the year in the title
+    geo = list(
+      scope = "usa", # Focus on the USA
+      projection = list(type = "albers usa"), # Use Albers USA projection
+      showlakes = TRUE,
+      lakecolor = "rgb(255, 255, 255)" # Color of lakes
+    )
+  )
+
+# Display the map
+fig
+```
+**Geographic Disparities:**
+
+Southern states, including Mississippi, Alabama, and Louisiana, have the highest mortality rates, as indicated by the darkest red shades. These regions may have faced challenges such as lower vaccination rates, higher prevalence of comorbidities, and healthcare access issues.
+
+States in the Midwest and some parts of the Western U.S. also show moderately high mortality rates.
+
+**Lower Mortality in the Northeast and West Coast:**
+
+States like Vermont, Hawaii, and California exhibit lower mortality rates, potentially reflecting higher vaccination coverage, stricter public health measures, and better healthcare infrastructure.
+
+This map provides a stark visual representation of the uneven toll of COVID-19 across the U.S. It highlights the need for region-specific public health strategies and the importance of addressing social determinants of health to reduce the impact of future pandemics.

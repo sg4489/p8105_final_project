@@ -9,11 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="ELisajava" />
 
-<meta name="date" content="2024-11-18" />
 
-<title>analysis_jz</title>
+<title>project-report.knit</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -35,7 +33,6 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
@@ -224,9 +221,6 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
-<style type="text/css">
-.code-folding-btn { margin-bottom: 4px; }
-</style>
 
 
 
@@ -401,136 +395,211 @@ div.tocify {
 
 <div id="header">
 
-<div class="btn-group pull-right float-right">
-<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-</ul>
+
+
+<h1 class="title toc-ignore"><div
+style="margin-top:20px; text-align:center; font-size:30px !important;">
+Analyzing Trends and Patterns in Mortality Data
+</div>
+<div
+style="margin-top:15px; text-align:center; font-size:20px !important;">
+A Study on Causes of Death Across U.S. States from 2020 to 2023
+</div></h1>
+
 </div>
 
 
-
-<h1 class="title toc-ignore">analysis_jz</h1>
-<h4 class="author">ELisajava</h4>
-<h4 class="date">2024-11-18</h4>
-
+<div id="our-team" class="section level3">
+<h3>Our Team</h3>
+<p><em>Yuhao Chang(yc4585), Yingyu Cui(yc4584), Shangzi Gao(sg4489),
+Jiawa Zhang(jz3900), Alice Zhou(az2852)</em></p>
 </div>
-
-
-<div id="load-necessary-libraries" class="section level1">
-<h1>Load necessary libraries</h1>
+<div id="motivation" class="section level3">
+<h3>Motivation</h3>
+<p>This project began with a fundamental question: <em>What are the most
+common ways people die, and how do these vary across time and
+space?</em> To address this, we analyzed 15 major causes of death from
+2020 to 2023, focusing on temporal patterns, seasonal trends, and
+geographic disparities. These causes represent a substantial portion of
+overall mortality and highlight key societal impacts.</p>
+<p>Building on this, we expanded to ICD-10 chapter-based trends from
+2018 to 2023, uncovering broader shifts across disease systems.
+Together, these analyses provide a comprehensive view of evolving
+mortality patterns over six years.</p>
 </div>
-<div id="import-and-tidy-the-data" class="section level1">
-<h1>Import and tidy the data</h1>
-<pre><code>## # A tibble: 6 × 9
-##   State    Year Month Total_Deaths Population Abbreviation Region
-##   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt; 
-## 1 Alabama  2020     1         4304    4921532 AL           South 
-## 2 Alabama  2020     2         5503    4921532 AL           South 
-## 3 Alabama  2020     3         4280    4921532 AL           South 
-## 4 Alabama  2020     4         4579    4921532 AL           South 
-## 5 Alabama  2020     5         5728    4921532 AL           South 
-## 6 Alabama  2020     6         4552    4921532 AL           South 
-## # ℹ 2 more variables: Annual_Mortality_Rate &lt;dbl&gt;, Monthly_Mortality_Rate &lt;dbl&gt;</code></pre>
+<div id="related-work" class="section level3">
+<h3>Related work</h3>
+<p>Our project was inspired by the JAMA article <a
+href="https://jamanetwork.com/journals/jama/fullarticle/2822207">“Leading
+Causes of Death in the US, 2019–2023”</a> which highlights shifts in
+mortality trends, including the impact of COVID-19 and rising deaths
+from unintentional injuries and chronic liver disease.</p>
+<p>Building on this work, we extend the analysis to include ICD-10
+chapter-based trends from 2018–2023, providing a longer temporal
+context. Additionally, our project offers a granular exploration of 15
+major causes of death from 2020–2023, focusing on seasonal, geographic,
+and healthcare-related disparities. These contributions complement and
+deepen the findings of the article, offering a broader and more detailed
+perspective on mortality trends.</p>
 </div>
-<div id="monthly-mortality-rates-by-region-and-state"
-class="section level1">
-<h1>Monthly Mortality Rates by Region and State</h1>
-<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
-</div>
-<div id="death-cause-distribution-by-state-and-year"
-class="section level1">
-<h1>Death Cause Distribution by State and Year</h1>
-<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
-<p><strong>Description</strong></p>
+<div id="initial-questions" class="section level3">
+<h3>Initial questions</h3>
+<p>At the outset, we aimed to answer:</p>
 <ol style="list-style-type: decimal">
-<li>In 2020, Pennsylvania (Northeast), Ohio (Midwest) (highest among
-three other states), West Virginia (South), and New Mexico (West) each
-exhibited significantly higher average monthly mortality rates compared
-to other states in their respective regions. Across all these states,
-heart disease was identified as the leading cause of death, accounting
-for 24.8% in Pennsylvania, 25.7% in Ohio, 28.2% in West Virginia, and
-24.7% in New Mexico.</li>
+<li>What are the leading causes of death in the U.S., and how do these
+vary over time and across states?<br />
+</li>
+<li>Are there identifiable seasonal patterns in common causes of
+death?<br />
+</li>
+<li>How do mortality patterns shift geographically, and what factors
+might drive these differences?</li>
 </ol>
-<p>2.In 2021, Massachusetts (Northeast), Montana (Midwest), Maine
-(South), and Missouri (West) recorded the highest average monthly
-mortality rates in their respective regions. Malignant neoplasms were
-the leading cause of death in Massachusetts (26.7%), while heart disease
-was the largest cause in Montana (29.1%) and Missouri (25.3%). In Maine,
-malignant neoplasms and heart disease were equally prominent, each
-accounting for 29.1% of deaths.</p>
-<ol start="3" style="list-style-type: decimal">
-<li><p>In 2022, West Virginia (Northeast), New Mexico (Midwest), Maine
-(South), and Missouri (West) recorded the highest average monthly
-mortality rates in their respective regions. Heart disease was the
-leading cause of death in all four states, accounting for 26.8% in West
-Virginia, 28.3% in New Mexico, 32.8% in Maine, and 29% in
-Missouri.</p></li>
-<li><p>In 2023, West Virginia (Northeast), Oregon (Midwest), Maine
-(South), and Missouri (West) recorded the highest average monthly
-mortality rates in their respective regions. The leading causes of death
-were diseases of the heart in West Virginia (32.3%) and Missouri (32%),
-malignant neoplasms in Oregon (30.8%), and a combined share of diseases
-of the heart and malignant neoplasms in Maine (35%).</p></li>
-</ol>
-<div id="patterns-observed" class="section level3">
-<h3>Patterns Observed:</h3>
+<p>As the analysis progressed, the scope of our questions expanded:</p>
 <ol style="list-style-type: decimal">
-<li><strong>Recurring States with High Mortality Rates</strong>:
-<ul>
-<li>West Virginia consistently recorded the highest average monthly
-mortality rate in the Northeast region for three consecutive years (2022
-and 2023).</li>
-<li>Maine appeared as the state with the highest mortality rate in the
-South region for three years (2021, 2022, and 2023).</li>
-<li>Missouri consistently had the highest mortality rates in the Western
-region from 2021 to 2023.</li>
-</ul></li>
-<li><strong>Leading Causes of Death</strong>:
-<ul>
-<li><strong>Heart Disease</strong>: Dominated as the leading cause of
-death in most states across years, especially in 2020, 2022, and
-2023.</li>
-<li><strong>Malignant Neoplasms</strong>: Became a significant cause of
-death in specific states (Massachusetts in 2021, Maine in 2021 and 2023,
-and Oregon in 2023).</li>
-</ul></li>
-<li><strong>Northeast and Midwest Variability</strong>:
-<ul>
-<li>The Northeast region saw changes in states with the highest
-mortality rates: Pennsylvania in 2020, Massachusetts in 2021, and West
-Virginia from 2022 onward.</li>
-<li>The Midwest region also showed variability, with Ohio in 2020,
-Montana in 2021, New Mexico in 2022, and Oregon in 2023.</li>
-</ul></li>
-<li><strong>South and West Region Consistency</strong>:
-<ul>
-<li>The South region consistently highlighted Maine as the state with
-the highest mortality rate from 2021 to 2023.</li>
-<li>Missouri remained the Western region’s leader in mortality rates for
-three consecutive years (2021–2023).</li>
-</ul></li>
-<li><strong>Heart Disease vs. Malignant Neoplasms</strong>:
-<ul>
-<li>While heart disease dominated as the leading cause of death in most
-years, malignant neoplasms emerged as a primary or equally significant
-cause in specific years and regions (e.g., Massachusetts in 2021, Oregon
-in 2023, and Maine in multiple years).</li>
-</ul></li>
-<li><strong>Combined Causes</strong>:
-<ul>
-<li>In some states (e.g., Maine in 2021 and 2023), both heart disease
-and malignant neoplasms shared the leading percentage, indicating a
-balanced impact of these two major causes of death.</li>
-</ul></li>
+<li>Were there observable seasonal patterns in specific causes of death,
+and how did these change during the pandemic?<br />
+</li>
+<li>How do temporal trends in mortality align with broader societal and
+environmental events, such as seasonal influenza or climate
+extremes?<br />
+</li>
+<li>How did the COVID-19 pandemic affect non-COVID-19 causes of death,
+such as cardiovascular diseases or chronic respiratory illnesses?<br />
+</li>
+<li>What were the most significant disparities in mortality across
+geographic regions?<br />
+</li>
+<li>Did states with higher healthcare resource availability exhibit
+lower non-COVID-19 excess mortality rates?<br />
+</li>
+<li>Are there systemic differences in mortality outcomes across
+socio-economic strata or regions?</li>
 </ol>
+<p>These questions reflect an evolving understanding of the dataset’s
+potential and informed subsequent analyses.</p>
 </div>
+<div id="data" class="section level3">
+<h3>Data</h3>
+<p>Our primary data sources are the National Center for Health
+Statistics datasets: <a
+href="https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muzy-jte6/about_data">Weekly
+Provisional Counts of Deaths by State and Select Causes, 2020–2023</a>
+and <a
+href="https://wonder.cdc.gov/controller/datarequest/D176">Provisional
+Mortality Statistics, 2018 through Last Week Request</a>. These datasets
+provide comprehensive mortality statistics across states and causes of
+death, coded according to the International Classification of Diseases,
+Tenth Revision (ICD-10).</p>
+<p>The first dataset offers weekly death counts for specific causes
+across states, covering the years 2020–2023. The second dataset allows
+for a broader exploration of mortality trends by ICD-10 chapters and
+other classifications. Together, they form the foundation for our
+analysis of temporal, geographic, and systemic patterns in
+mortality.</p>
 </div>
-<div id="monthly-mortality-rate-by-year-and-region"
-class="section level1">
-<h1>Monthly Mortality Rate by Year and Region</h1>
-<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
+<div id="exploratory-analysis" class="section level3">
+<h3>Exploratory analysis</h3>
+<p>The exploratory analysis began with comprehensive data cleaning to
+ensure consistency and reliability. Column names were standardized, and
+suppressed values (counts &lt;10) were flagged and replaced with random
+integers between 1 and 10 to maintain continuity while ensuring
+transparency. To capture both systemic and granular trends, data from
+2018 to 2023 were used for ICD-10 chapter-level analyses, while analyses
+of 15 major causes of death focused on 2020–2023, providing insight into
+patterns during and after the COVID-19 pandemic.</p>
+<p>Exploratory Data Analysis (EDA) included descriptive statistics
+summarizing mortality data across different states, years, and causes to
+reveal overarching patterns. Visualizations such as line plots and bar
+charts depicted trends in mortality rates over time and across regions,
+highlighting variations and anomalies. Seasonal analysis identified
+fluctuations in mortality corresponding to different times of the year,
+particularly in respiratory diseases, which showed significant peaks
+during winter months. Temporal analyses highlighted a 26.3% increase in
+unintentional injuries from 2019 to 2023, driven largely by drug
+overdoses, and a 15.3% rise in chronic liver disease and cirrhosis,
+which entered the top 10 causes of death in 2021. Conversely, mortality
+rates for chronic lower respiratory diseases, Alzheimer’s disease, and
+influenza/pneumonia declined by 12.5%, 6.9%, and 11.9%,
+respectively.</p>
+<p>Geospatial analyses uncovered substantial regional disparities, with
+Southern states exhibiting higher mortality rates for chronic conditions
+like heart disease and diabetes, reflecting inequities in healthcare
+access. In contrast, states with better healthcare infrastructure
+experienced lower non-COVID excess mortality rates. Time series analyses
+comparing pre-pandemic and pandemic periods demonstrated shifts in
+mortality rankings, with COVID-19 declining from the third leading cause
+of death in 2020 to the 10th in 2023.</p>
+<p>This exploratory phase validated expected patterns, such as seasonal
+peaks in respiratory diseases, while uncovering new concerns, including
+the rising burden of drug overdoses and chronic liver disease. These
+findings laid a strong foundation for deeper investigations into
+systemic trends, temporal shifts, and geographic disparities,
+highlighting critical areas for public health intervention and resource
+allocation.</p>
+</div>
+<div id="additional-analysis" class="section level3">
+<h3>Additional analysis</h3>
+<p>To deepen our understanding of mortality trends, we applied
+statistical learning techniques to investigate relationships and
+patterns in the data. Seasonal differences in COVID-19 deaths were
+analyzed using a Wilcoxon rank-sum test, which revealed significantly
+higher mortality during winter months (p = 0.00485). This finding
+highlights the influence of environmental and health-related factors on
+mortality trends. A correlation heatmap further identified strong
+associations between COVID-19 and pre-existing conditions, such as heart
+disease, diabetes, and respiratory illnesses. These results provided
+critical insights into the compounding effects of COVID-19 on
+individuals with chronic conditions.</p>
+<p>Building on these findings, we employed multivariable linear
+regression to test hypotheses about the interplay between COVID-19 and
+other causes of death. Significant associations were observed between
+COVID-19 and declines in deaths from diabetes, Alzheimer’s, and heart
+disease in 2023 (p &lt; 0.001), suggesting that shifts in these patterns
+were influenced by their connection to the pandemic. Regression models
+also quantified COVID-19’s impact on total and natural deaths, showing
+stronger effects when COVID-19 was considered an underlying cause (p
+&lt; 0.001). These results emphasized COVID-19’s direct and systemic
+influence on mortality rates.</p>
+<p>Finally, mortality trends over time were assessed using Q-Q plots and
+hypothesis testing. Non-parametric methods were justified by deviations
+from normality, and a Wilcoxon test demonstrated significant shifts in
+mortality patterns between 2019 and 2021 (p &lt; 0.001). These analyses
+confirmed the pandemic’s disruptive effects on mortality trends,
+providing a nuanced understanding of both its short-term and long-term
+impacts.</p>
+</div>
+<div id="discussion" class="section level3">
+<h3>Discussion</h3>
+<p>Our project analyzed mortality trends from 2018 to 2023, focusing on
+the interaction between COVID-19 (2020–2023) and other causes of death.
+Using methods like hypothesis testing, regression analysis, and
+visualizations, we observed significant seasonal differences in COVID-19
+mortality, with higher death counts during the winter. Additionally, we
+found strong associations between COVID-19 and chronic conditions such
+as heart disease and diabetes. These results underline the influence of
+environmental and health-related factors on mortality patterns and
+highlight the importance of targeted interventions during high-risk
+periods.</p>
+<p>Our regression models indicated that the decrease in deaths from
+diabetes, Alzheimer’s disease, and heart disease in 2023 was
+significantly linked to their relationship with COVID-19. This suggests
+that the pandemic had indirect effects on other causes of death, likely
+due to shifts in healthcare priorities and resource distribution. By
+examining COVID-19 as both a contributing and underlying cause of death,
+we quantified its broader impact on total and natural mortality rates,
+offering important insights for public health planning.</p>
+<p>While our findings are reliable, there are areas for improvement.
+Sensitivity analyses, such as Bootstrap Analysis, could address
+potential variability introduced by imputing suppressed data by
+resampling the dataset to assess the stability of our results.
+Incorporating socio-economic variables and subgroup analyses could
+provide a deeper understanding of regional and demographic disparities.
+Expanding the timeframe to include data before 2018 could help establish
+longer-term baselines. Despite these limitations, our project offers a
+framework for studying the systemic effects of health crises and
+emphasizes the need for balanced strategies that address both emerging
+diseases and ongoing healthcare challenges.</p>
 </div>
 
 
@@ -568,11 +637,6 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
 
 <script>
 $(document).ready(function ()  {

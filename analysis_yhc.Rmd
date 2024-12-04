@@ -33,8 +33,8 @@ library(tibble)
 ```
 # Import and clean data
 ```{r message=FALSE, warning=FALSE}
-data=read_csv("./data/weekly_deaths_by_state_and_causes.csv") 
-general_data <- data |>
+yc_data=read_csv("./data/weekly_deaths_by_state_and_causes.csv") 
+general_data <- yc_data |>
   janitor::clean_names() |>
   rename_with(~ str_replace_all(., " ", "_")) |>
   filter(jurisdiction_of_occurrence =="United States") |>
@@ -57,7 +57,7 @@ population_summary <- p_data |>
   rename(mmwr_year=year_code)
 ```
 ## Trends in the number of deaths across the United States
-```{r message=FALSE,fig.width=10, fig.height=6}
+```{r message=FALSE,fig.width=8, fig.height=5}
 death_trends_data = general_data |>
   select(
     week_ending_date, 
@@ -155,10 +155,17 @@ death_trends_plot2 <- plot_ly(
 
 death_trends_plot2
 ```
-The plot reveals several significant peaks in the number and rate of all-cause and natural-cause deaths between 2020 and 2022. Interestingly, these peaks align with surges in COVID-related deaths, suggesting a strong correlation between COVID-19 and both total mortality and natural-cause mortality during this period.
+The plots provides a comprehensive view of death trends in terms of both numbers and proportions from 2020 to 2023, revealing several important patterns and insights：
+
+*1.Significant Peaks in Mortality*: The plot highlights multiple significant peaks in the number and rate of both all-cause and natural-cause deaths during the years 2020 to 2022. These peaks are particularly pronounced during the height of the COVID-19 pandemic, suggesting that the global health crisis had a marked effect on overall mortality.
+
+*2.Alignment with COVID-19 Surges*: Interestingly, the observed peaks in both all-cause and natural-cause deaths closely align with surges in COVID-19-related deaths during the same period. This temporal correlation indicates a strong relationship between the rise in COVID-19 deaths and the increase in total and natural-cause mortality, and such correlation is further confirmed in our statistical analysis part.
+
+*3.Impact on Specific Causes of Death*: In addition to the relationship between COVID-19 and general mortality trends, the plot also reveals that deaths from heart disease and malignant cancers consistently rank higher in both number and rate than deaths from other causes, excluding COVID-19. This points to the continued burden of chronic diseases, such as cardiovascular diseases and cancer, which remain major contributors to mortality, even during a pandemic.
+
 
 ## Proportion of death plot
-```{r message=FALSE,fig.width=10, fig.height=6}
+```{r message=FALSE,fig.width=8, fig.height=5}
 death_proportion_data =general_data |> select(
     week_ending_date, 
     mmwr_year,
@@ -308,9 +315,15 @@ proportion_plot3 <- plot_ly(
 
 proportion_plot3
 ```
-The plots above show that among all natural causes of death, excluding COVID-19, the highest proportions are attributed to heart disease and malignant neoplasms. Notably, in 2020 and 2021, these two causes exhibited an inverse relationship with COVID-19 deaths. This phenomenon could be explained by evidence of COVID-19 infection, whether virological or clinical, in the days or weeks leading up to death in patients with heart disease or malignant neoplasms. Such deaths were likely coded as COVID-19 during certification, resulting in an apparent decrease in the reported numbers of deaths from heart disease and malignant neoplasms.
+The plot shows changes in the proportion of each cause of death in total mortality from 2020 to 2023 and revealed the following key points:
+
+1.Among all natural causes of death, excluding COVID-19, the highest proportions are attributed to heart disease and malignant neoplasms.
+
+2.Notably, in 2020 and 2021, these two causes exhibited an inverse relationship with COVID-19 deaths.This phenomenon could be explained by evidence of COVID-19 infection, whether virological or clinical, in the days or weeks leading up to death in patients with heart disease or malignant neoplasms.As a result, deaths from heart disease and malignant neoplasms were likely coded as COVID-19-related during certification.
+
 
 ## Pie-chart
+
 ```{r message=FALSE, warning=FALSE}
 pie_data <- death_proportion_data |>
   filter(!cause_of_death %in% c("all_cause", "natural_cause"))
@@ -363,10 +376,43 @@ server <- function(input, output, session) {
 # Run the Shiny app
 shinyApp(ui = ui, server = server)
 ```
-In the pie chart, it is evident that the leading causes of death are heart disease and malignant neoplasms, followed by COVID-19.
+
+```{r fig.width=8, fig.height=5}
+pie_data <- death_proportion_data %>%
+  filter(!cause_of_death %in% c("all_cause", "natural_cause"))
+
+
+
+# Create pie chart for each year
+ggplot(pie_data, aes(x = "", y = proportion, fill = cause_of_death)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar(theta = "y") +
+  facet_wrap(~ mmwr_year) +
+  labs(title = "Proportion of Death Causes by Year") +
+  scale_fill_brewer(palette = "Set3") + # Use a nice color palette
+  theme_void() +
+  theme(legend.title = element_blank(), legend.position = "right") # C
+
+
+
+ggplot(pie_data, aes(x = "", y = proportion, fill = cause_of_death)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar(theta = "y") +  
+  facet_wrap(~ mmwr_year, ncol = 2) +  
+  theme_minimal() +
+  theme(
+    axis.text = element_blank(), 
+    axis.title = element_blank(), 
+    panel.grid = element_blank(), 
+    legend.title = element_blank() 
+  ) +
+  labs(title = "Proportion of Death Causes by Year")  
+```
+
+This pie chart displays the proportion of death causes for each year from 2020 to 2023. In the mortality rates calculated by year, it is evident that even with COVID-19 included, heart disease and malignant neoplasms remain the top two leading causes of death. This highlights the ongoing threat posed by chronic diseases, which continue to be the primary contributors to mortality. The persistence of these conditions as major causes of death calls for sustained efforts in public health, emphasizing the need for preventive care, early detection, and management of chronic illnesses to reduce their impact on society
 
 ### Change of proportion plot
-```{r message=FALSE, warning=FALSE,fig.width=10, fig.height=6}
+```{r message=FALSE, warning=FALSE,fig.width=8, fig.height=5}
 # death by disease
 death_sum_data <- death_proportion_data |>
   group_by(mmwr_year, cause_of_death) |>
@@ -423,7 +469,6 @@ proportion_plot = plot_ly(
       xanchor = "center",
       font = list(size = 5)  
     ),
-    plot_bgcolor = 'rgba(240,240,240,0.9)',  
     margin = list(t = 50),  
     showlegend = TRUE,
     barmode = 'group'  
@@ -432,5 +477,11 @@ proportion_plot = plot_ly(
 proportion_plot
 
 ```
-It can be observed that for COVID-19, its proportion of total deaths increased from 2020 to 2021 and then declined for the next two consecutive years. In contrast, heart disease and malignant neoplasms showed the opposite trend, with their proportions of total deaths decreasing from 2020 to 2021 and subsequently rising over the following two years.
+This plot shows the top 5 causes of death with the largest change in proportion by year. It can be observed that the proportion of deaths attributed to COVID-19 increased from 2020 to 2021, then declined in the following two years. In contrast, the proportions of deaths from heart disease and malignant neoplasms decreased from 2020 to 2021, but then rose in the subsequent years. This trend aligns with our findings in the death proportion plot.
+
+```{r}
+set.seed(123)
+
+
+```
 
