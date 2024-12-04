@@ -16,7 +16,7 @@ navbar:
     - text: "Exploratory Analysis"
       menu:
         - text: "Analysis yyc"
-          href: analysis_yyc.html
+          href: analysis_yyc_Nov22.html
         - text: "Analysis az"
           href: analysis_az.html
         - text: "Analysis sg"
