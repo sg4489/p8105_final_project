@@ -25,6 +25,8 @@ navbar:
           href: analysis_jz.html
         - text: "Analysis yhc"
           href: analysis_yhc.html
+        - text: "general analysis"
+          href: general-analysis.html
     - text: "Statistical Analysis"
       href: Statistical-analysis.html
     - text: "Project Report"
