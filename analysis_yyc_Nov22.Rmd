@@ -759,4 +759,4 @@ However, we could find the peaks in COVID-19 plot is mainly centralized in winte
 
 Does this mean that the death from Septicemia is more likely to be caused by other diseases, which is more likely to be epidemic in winter, rather than COVID-19?
 
-To answer these question, we need to look at the heatmap and the coefficiency between leading diseases. (add link to Alice's heatmap)
+To answer these question, we need to look at the heatmap and the coefficiency between leading diseases. (add website link to Alice's heatmap)

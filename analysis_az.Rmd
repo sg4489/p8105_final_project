@@ -270,7 +270,7 @@ winter_deaths = data %>%
            month %in% c("Dec", "Jan", "Feb") ~ "Winter",
            TRUE ~ "Non-Winter"
          )) %>% 
-  mutate(season = factor(season))
+  mutate(season = factor(season, levels = c("Winter", "Non-Winter")))
 
 # compute a summary table
 seasonal_summary <- winter_deaths %>%
