@@ -27,11 +27,7 @@ navbar:
     - text: "Shiny"
       menu:
         - text: "Shiny App"
-<<<<<<< HEAD
-          href: .html
-=======
           href: dashboard.html
->>>>>>> 42e55e2473cc2cc65ed7835010a1215445e1c02b
     - icon: "fa-github"
       href: "https://github.com/sg4489/p8105_final_project"
 
