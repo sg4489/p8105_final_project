@@ -261,18 +261,13 @@ Or, is this because of the different climate conditions in different regions?
 Without knowing other underlying factors, we could not give a conclusion. But, we could still try to find some clues from the data we have. Now, we will show you the different distribution of death causes in the four regions by state and year.
 
 ### Death Cause Distribution by State and Year
-JAVA:
-
-
-Besides, as you could notice, there is a peak in the total death rate in April, 2020 in Northeast Census Region. What's more, there are 3 peaks of death rate in winter from 2020 to 2023 in all regions. So, what happened? 
-As we all know, it is COVID-19. 
+JAVA: From the following heatmap, we can observe that the mortality rate in the Northeastern United States was significantly higher in April 2020. Referring to **Chart 3** in the dashboard, we further identify that during this period, several states in the Northeast region, such as New Jersey, Massachusetts, Connecticut, and Pennsylvania, experienced peak mortality rates and had highest rates compared to other states in this region. This highlights the regional variation and severity of mortality during April 2020 in the Eastern states. What's more, there are 3 peaks of death rate in winter from 2020 to 2023 in all regions. So, what happened? 
+As we all know, it is COVID-19. It is possible that states like New Jersey, Massachusetts, Connecticut, and Pennsylvania experienced more severe COVID-19 outbreaks during this period.
 
 Therefore, we could generate one hypothesis:
 The disease is first epidemic in some states in Northeast Census Region. The disease may be then widely spread to other regions in the US. 
 
 To verify this hypothesis, we have searched some data. For the peak in April, 2020, here is a report related to reflect the serious situation in Northeast Region.
-
-JAVA: which state in this region higher mortality rate of COVID-19?
 
 [Here is the report released by CDC](https://stacks.cdc.gov/view/cdc/87279)
 ![Here is a very intuitive map reflecting the extend of seriousness in Northeast Region](data/COVID_202004_map.png)
