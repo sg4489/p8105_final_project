@@ -365,7 +365,7 @@ div.tocify {
   </ul>
 </li>
 <li>
-  <a href="stat_anal.html">Statistical Analysis</a>
+  <a href="Statistical analysis.html">Statistical Analysis</a>
 </li>
 <li>
   <a href="project-report.html">Project Report</a>
@@ -540,9 +540,66 @@ allocation.</p>
 </div>
 <div id="additional-analysis" class="section level3">
 <h3>Additional analysis</h3>
+<p>To deepen our understanding of mortality trends, we applied
+statistical learning techniques to investigate relationships and
+patterns in the data. Seasonal differences in COVID-19 deaths were
+analyzed using a Wilcoxon rank-sum test, which revealed significantly
+higher mortality during winter months (p = 0.00485). This finding
+highlights the influence of environmental and health-related factors on
+mortality trends. A correlation heatmap further identified strong
+associations between COVID-19 and pre-existing conditions, such as heart
+disease, diabetes, and respiratory illnesses. These results provided
+critical insights into the compounding effects of COVID-19 on
+individuals with chronic conditions.</p>
+<p>Building on these findings, we employed multivariable linear
+regression to test hypotheses about the interplay between COVID-19 and
+other causes of death. Significant associations were observed between
+COVID-19 and declines in deaths from diabetes, Alzheimer’s, and heart
+disease in 2023 (p &lt; 0.001), suggesting that shifts in these patterns
+were influenced by their connection to the pandemic. Regression models
+also quantified COVID-19’s impact on total and natural deaths, showing
+stronger effects when COVID-19 was considered an underlying cause (p
+&lt; 0.001). These results emphasized COVID-19’s direct and systemic
+influence on mortality rates.</p>
+<p>Finally, mortality trends over time were assessed using Q-Q plots and
+hypothesis testing. Non-parametric methods were justified by deviations
+from normality, and a Wilcoxon test demonstrated significant shifts in
+mortality patterns between 2019 and 2021 (p &lt; 0.001). These analyses
+confirmed the pandemic’s disruptive effects on mortality trends,
+providing a nuanced understanding of both its short-term and long-term
+impacts.</p>
 </div>
 <div id="discussion" class="section level3">
 <h3>Discussion</h3>
+<p>Our project analyzed mortality trends from 2018 to 2023, focusing on
+the interaction between COVID-19 (2020–2023) and other causes of death.
+Using methods like hypothesis testing, regression analysis, and
+visualizations, we observed significant seasonal differences in COVID-19
+mortality, with higher death counts during the winter. Additionally, we
+found strong associations between COVID-19 and chronic conditions such
+as heart disease and diabetes. These results underline the influence of
+environmental and health-related factors on mortality patterns and
+highlight the importance of targeted interventions during high-risk
+periods.</p>
+<p>Our regression models indicated that the decrease in deaths from
+diabetes, Alzheimer’s disease, and heart disease in 2023 was
+significantly linked to their relationship with COVID-19. This suggests
+that the pandemic had indirect effects on other causes of death, likely
+due to shifts in healthcare priorities and resource distribution. By
+examining COVID-19 as both a contributing and underlying cause of death,
+we quantified its broader impact on total and natural mortality rates,
+offering important insights for public health planning.</p>
+<p>While our findings are reliable, there are areas for improvement.
+Sensitivity analyses, such as Bootstrap Analysis, could address
+potential variability introduced by imputing suppressed data by
+resampling the dataset to assess the stability of our results.
+Incorporating socio-economic variables and subgroup analyses could
+provide a deeper understanding of regional and demographic disparities.
+Expanding the timeframe to include data before 2018 could help establish
+longer-term baselines. Despite these limitations, our project offers a
+framework for studying the systemic effects of health crises and
+emphasizes the need for balanced strategies that address both emerging
+diseases and ongoing healthcare challenges.</p>
 </div>
 
 
