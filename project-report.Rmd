@@ -45,7 +45,7 @@ These questions reflect an evolving understanding of the dataset's potential and
 
 ### Data  
 
-Our primary data sources are the National Center for Health Statistics datasets: [Weekly Provisional Counts of Deaths by State and Select Causes, 2020–2023](https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muzy-jte6/about_data) and [Multiple Cause of Death Data, ICD-10 Provisional](https://wonder.cdc.gov/wonder/help/mcd-provisional.html). These datasets provide comprehensive mortality statistics across states and causes of death, coded according to the International Classification of Diseases, Tenth Revision (ICD-10).
+Our primary data sources are the National Center for Health Statistics datasets: [Weekly Provisional Counts of Deaths by State and Select Causes, 2020–2023](https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muzy-jte6/about_data) and [Provisional Mortality Statistics, 2018 through Last Week Request](https://wonder.cdc.gov/controller/datarequest/D176). These datasets provide comprehensive mortality statistics across states and causes of death, coded according to the International Classification of Diseases, Tenth Revision (ICD-10).
 
 The first dataset offers weekly death counts for specific causes across states, covering the years 2020–2023. The second dataset allows for a broader exploration of mortality trends by ICD-10 chapters and other classifications. Together, they form the foundation for our analysis of temporal, geographic, and systemic patterns in mortality.
 

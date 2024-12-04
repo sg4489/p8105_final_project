@@ -311,11 +311,6 @@ qqline(winter_deaths$covid_19_underlying, col = "red", lwd = 2)
 ```
 since the outcome variable is not normally distributed, we used a Wilcoxon Rank-Sum Test.
 
-```{r}
-wilcox.test(covid_19_underlying ~ season, data = winter_deaths) %>% 
-  tidy() %>% 
-  knitr::kable()
-```
 There is a significant difference between covid deaths in winter and non-winter months. We want to know whether this difference might be affected by other factors like a person's pre-existing conditions and co-morbidity (e.g., diabetes, heart disease, respiratory diseases).
 
 # correlation between leading causes of death
