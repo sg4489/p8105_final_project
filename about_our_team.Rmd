@@ -1,0 +1,22 @@
+---
+title: | 
+  <div style="margin-top:40px; text-align:center; font-size:30px !important;">Our Team</div>
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+Thank you so much for visiting our website! We are a team of first-year MS Biostatistics students at Columbia University’s Mailman School of Public Health. With five diverse undergraduate backgrounds among us, we share a common goal: to make this project a resounding success!  
+
+#### Yuhao Chang
+
+#### Yingyu Cui
+
+#### Shangzi Gao  
+
+[Learn more about Shangzi](https://sg4489.github.io/p8105_hw4_sg4489.github.io/)
+
+#### Jiawa Zhang
+
+#### Alice Zhou
