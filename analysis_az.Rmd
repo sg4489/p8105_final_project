@@ -43,6 +43,7 @@ library(broom)
 library(plotly)
 library(datasets)
 library(usmap)
+library(kableExtra)
 ```
 
 ```{r}
@@ -142,8 +143,6 @@ count_na(subset_df,"Wyoming")
 
 -which disease among the listed creates the most health burdens, that is, gives rise to the most deaths?
 
--correlation between diseases (heatmap?)
-
 # Time Seires Analyses
 How many people died from covid in 2020, 2021, 2022, and 2023?
 ```{r}
@@ -192,9 +191,8 @@ Did the pandemic period affect mortality rates of non-COVID causes like heart di
 Which states had higher mortality rates from specific causes, such as COVID-19 or heart disease, and did these vary over time?
 
 ________
-# Explore the changes in COVID-19 deaths (underlying and multiple) over time.  
-
-How did Covid-19 deaths in the US change over time (as underlying and multiple cause)?
+# COVID-19 deaths in the US over 2020-2023
+The plot below shows the progression of COVID-19 deaths in the United States over time, split between underlying and multiple cause deaths.
 ```{r}
 # Prepare the dataset
 data_covid_us = data %>%
@@ -232,8 +230,9 @@ plot
 
 
 ```
-## Key Findings
-The plot yshows the progression of COVID-19 deaths in the United States over time, split between underlying and multiple cause deaths.
+### Key Findings
+
+Combined with the [CDC Museum COVID-19 Timeline](https://www.cdc.gov/museum/timeline/covid19.html), the plot reveals the following trend:
 
 1. Initial Surge (March 2020 - May 2020)
 
@@ -259,8 +258,7 @@ The multiple cause deaths remain higher than underlying cause deaths in these la
 
 The plot shows a gradual reduction in both underlying and multiple cause deaths through 2023, but COVID-19 remains a significant cause of death for some time. This may reflect ongoing issues such as long COVID, healthcare access disparities, or specific high-risk populations.
 
-Cases seems to accelerate during winter months.
-
+In addition, we observe that COVID deaths seems to accelerate during winter months. The plot below shows a comparison between COVID deaths (underlying) during winter months (Dec, Jan, and Feb) vs other months of the year.
 ```{r}
 # Add a month column to the dataset
 winter_deaths = data %>% 
@@ -270,7 +268,7 @@ winter_deaths = data %>%
            month %in% c("Dec", "Jan", "Feb") ~ "Winter",
            TRUE ~ "Non-Winter"
          )) %>% 
-  mutate(season = factor(season))
+  mutate(season = factor(season, levels = c("Winter", "Non-Winter")))
 
 # compute a summary table
 seasonal_summary <- winter_deaths %>%
@@ -303,17 +301,34 @@ plot = plot_ly(
 plot
 seasonal_summary %>% knitr::kable()
 ```
-
+It seems like deaths in winter is much higher than other seasons combined. We conducted a hypothesis test.
 ```{r}
 #check normality of outcome variable
 qqnorm(winter_deaths$covid_19_underlying, main = "Q-Q Plot for COVID-19 Underlying Deaths")
 qqline(winter_deaths$covid_19_underlying, col = "red", lwd = 2)
 ```
 since the outcome variable is not normally distributed, we used a Wilcoxon Rank-Sum Test.
+```{r}
+covid_season_results <- wilcox.test(covid_19_underlying ~ season, data = winter_deaths) %>%
+  tidy() %>%
+  select(statistic, p.value, alternative) %>%
+  mutate(
+    p.value = ifelse(p.value < 0.001, "<0.001", round(p.value, 3))
+  ) %>%
+  kbl(
+    digits = 2,
+    caption = "Wilcoxon Test Results for COVID-19 Deaths Across Seasons"
+  ) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = TRUE)
+
+covid_season_results
+```
 
 There is a significant difference between covid deaths in winter and non-winter months. We want to know whether this difference might be affected by other factors like a person's pre-existing conditions and co-morbidity (e.g., diabetes, heart disease, respiratory diseases).
 
-# correlation between leading causes of death
+# Correlation Insights on Disease Mortality: A Heatmap Analysis
+
+This heatmap below represents the correlation between the counts of deaths from various diseases, including COVID-19 (as an underlying cause) and other major causes of death. The darker shades of red signify higher correlations, indicating stronger relationships between the mortality counts of two diseases. 
 ```{r}
 # Subset data for relevant columns
 corr_mat_df = winter_deaths %>% 
@@ -346,8 +361,26 @@ heatmap = plot_ly(
 heatmap
 
 ```
-In the time series analysis, we observed interesting pattern for diabetes, Alzheimer, and heart disease. The winter surge for these diseases seems to be lower in 2023 compared to 2021 and 2022. Combining with the heatmap, we hypothesize that the decline is due to those diseases' asscociation with COVID. To verify, we fit an MLR.
 
+**High Correlation Between Similar Diseases:**
+Diseases that affect the same physiological system or share similar risk factors tend to exhibit strong correlations:
+
+`Diseases of the heart` and `cerebrovascular diseases` show a strong positive relationship, reflecting the commonality of cardiovascular risk factors such as hypertension and cholesterol.
+`Chronic lower respiratory diseases` and `influenza and pneumonia` are highly correlated, likely due to their shared impact on respiratory health and potential seasonal drivers like flu outbreaks.
+COVID-19 Correlations:
+
+**COVID-19 as an underlying cause of death shows moderate to high correlations with:**
+`Chronic lower respiratory diseases` and `influenza and pneumonia`, likely due to the respiratory complications associated with COVID-19.
+`Diabetes mellitus` and `diseases of the heart`, which are established comorbidities that increase the severity of COVID-19 outcomes.
+
+**Weaker Correlations with Certain Diseases:**
+`Malignant neoplasms` (cancers) exhibit weaker correlations with most other diseases, possibly reflecting distinct mortality patterns and risk factors. This suggests that cancer deaths are less influenced by external infectious diseases like COVID-19 compared to chronic diseases.
+
+**Comorbidity Implications:**
+The clustering of high correlations among cardiovascular, respiratory, and metabolic diseases (e.g., diabetes) highlights the potential for comorbid conditions to compound mortality risks.
+This is particularly evident for COVID-19, where individuals with pre-existing conditions like diabetes or chronic heart and lung diseases face significantly higher risks. See more details [here](https://pmc.ncbi.nlm.nih.gov/articles/PMC8016404/).
+
+In the time series analysis, we observed interesting pattern for `Diabetes mellitus`, `Alzheimer disease`, and `diseases of the heart`. The winter surge for these diseases seems to be lower in 2023 compared to 2021 and 2022. Combining with the heatmap, we hypothesize that the decline is due to those diseases' asscociation with COVID. To verify, we fit an MLR.
 ```{r}
 # Fit a linear regression model
 model = lm(
@@ -358,11 +391,12 @@ model = lm(
 summary(model) %>% tidy() %>% knitr::kable()
 ```
 
-## How did covid death rate vary across states?
+## COVID-19 Mortality by State (2021): Choropleth Analysis
+This choropleth map visualizes the mortality rates of COVID-19 across U.S. states in 2021, measured as deaths per 100,000 population. States are shaded according to their mortality rates, with darker shades indicating higher rates. This analysis highlights regional disparities in the impact of the COVID-19 pandemic.
 ```{r}
 # read the population data
 population_data = read.table(file = "data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) %>% 
-  as.tibble() %>% 
+  as_tibble() %>% 
   janitor::clean_names() %>% 
   select(residence_state, year_code, population) %>% 
   rename(state = residence_state,
@@ -378,19 +412,13 @@ data_covid_states =
   summarize(
     covid_deaths_total = sum(covid_19_multiple, na.rm = TRUE)
   )
-```
 
-join covid data with population data, calculate covid mortality rate
-```{r}
 data_covid_df = data_covid_states %>%
   left_join(population_data, by = c("year", "state")) %>% 
   mutate(
     covid_mortality = covid_deaths_total/population,
     covid_mortality_per100000 = covid_mortality*100000) 
-```
 
-Now, plot the mortality rate on the map.
-```{r}
 ## convert state name to abbreviations for plotting
 
 # Create a vector with state names and abbreviations
@@ -405,9 +433,6 @@ map_data = data_covid_df %>%
   select(state, state_abbr, everything()) %>% 
   filter(!is.na(state_abbr)) 
 
-```
-
-```{r}
 map_data_2021 = map_data %>% 
   filter(year == 2021)
 
@@ -434,86 +459,15 @@ fig = plot_ly(
 
 # Display the map
 fig
-
 ```
-let's try and add data of different years on this plot.
+**Geographic Disparities:**
 
-update: the plots for each year's data works well, but when combined together the colors are not showing, probably because of scale issues. Alternatively, we can make the plots for each year separately.
-```{r}
-# Assuming map_data is your dataset containing data from 2020-2023
+Southern states, including Mississippi, Alabama, and Louisiana, have the highest mortality rates, as indicated by the darkest red shades. These regions may have faced challenges such as lower vaccination rates, higher prevalence of comorbidities, and healthcare access issues.
 
-# Create a choropleth map with dropdown to select years
-fig = plot_ly(
-  data = map_data,
-  type = "choropleth",
-  locations = ~state_abbr, # Use state abbreviations
-  locationmode = "USA-states", # USA-state mode
-  z = ~covid_mortality, # Color scale based on covid_mortality
-  text = ~paste("State: ", state, "<br>Year: ", year, "<br>Mortality: ", round(covid_mortality, 5)), # Hover text
-  colorscale = "Viridis",
-  colorbar = list(
-    title = "COVID Mortality",
-    tickvals = seq(0, 0.002, length.out = 5),  # Set tickvals based on your range
-    ticktext = seq(0, 0.002, length.out = 5)  # Adjust ticktext for clarity
-  ),
-  zmin = 0,  # Min value for the color scale
-  zmax = 0.002  # Max value for the color scale
-) %>%
-  layout(
-    title = "COVID-19 Mortality by State (2020-2023)",
-    geo = list(
-      scope = "usa",
-      projection = list(type = "albers usa"),
-      showlakes = TRUE,
-      lakecolor = "rgb(255, 255, 255)"
-    ),
-    updatemenus = list(
-      list(
-        buttons = list(
-          list(
-            label = "2020",
-            method = "relayout",
-            args = list("geo.scope", "usa", "visible", TRUE, "z", map_data %>% filter(year == 2020) %>% pull(covid_mortality))
-          ),
-          list(
-            label = "2021",
-            method = "relayout",
-            args = list("geo.scope", "usa", "visible", TRUE, "z", map_data %>% filter(year == 2021) %>% pull(covid_mortality))
-          ),
-          list(
-            label = "2022",
-            method = "relayout",
-            args = list("geo.scope", "usa", "visible", TRUE, "z", map_data %>% filter(year == 2022) %>% pull(covid_mortality))
-          ),
-          list(
-            label = "2023",
-            method = "relayout",
-            args = list("geo.scope", "usa", "visible", TRUE, "z", map_data %>% filter(year == 2023) %>% pull(covid_mortality))
-          )
-        ),
-        direction = "down",
-        showactive = TRUE,
-        x = 1,
-        xanchor = "left",
-        y = 1.15,
-        yanchor = "top"
-      )
-    )
-  )
+States in the Midwest and some parts of the Western U.S. also show moderately high mortality rates.
 
-# Display the map
-fig
+**Lower Mortality in the Northeast and West Coast:**
 
-```
+States like Vermont, Hawaii, and California exhibit lower mortality rates, potentially reflecting higher vaccination coverage, stricter public health measures, and better healthcare infrastructure.
 
-```{r}
-summary(map_data$covid_mortality)
-
-# Check for the range of values
-range(map_data$covid_mortality, na.rm = TRUE)
-
-range(map_data_2021$covid_mortality, na.rm = TRUE)
-```
-
-
-
+This map provides a stark visual representation of the uneven toll of COVID-19 across the U.S. It highlights the need for region-specific public health strategies and the importance of addressing social determinants of health to reduce the impact of future pandemics.
