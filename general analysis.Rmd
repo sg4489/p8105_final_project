@@ -413,7 +413,7 @@ proportion_plot = plot_ly(
 proportion_plot
 
 ```
-This plot shows the top 5 causes of death with the largest change in proportion by year. It can be observed that the proportion of deaths attributed to COVID-19 increased from 2020 to 2021, then declined in the following two years. In contrast, the proportions of deaths from heart disease and malignant neoplasms decreased from 2020 to 2021, but then rose in the subsequent years. This trend aligns with our findings in the death proportion plot.
+This plot shows the top 5 causes of death with the largest change in proportion by year. It can be observed that the proportion of deaths attributed to COVID-19 increased from 2020 to 2021, then declined in the following two years. In contrast, the proportions of deaths from heart disease and malignant neoplasms decreased from 2020 to 2021, but then rose in the subsequent years. This trend aligns with our previous findings in the death proportion plot.
 
 # COVID-19 deaths in the US over 2020-2023
 The plot below shows the progression of COVID-19 deaths in the United States over time, split between underlying and multiple cause deaths.
