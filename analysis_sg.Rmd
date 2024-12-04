@@ -640,7 +640,7 @@ plot_ly(
 ```
 
 ## ICD Chapter-Specific Insights
-Many chapters show an increase in normalized values during 2020-2021, indicating a direct impact of the pandemic on mortality rates. One chapter, however, shows a decline in normalized values starting in 2023. We are curious to explore which chapters experienced significant changes in mortality rates before COVID, during COVID, and post-COVID.  
+Many chapters show an increase in normalized values during 2020-2021, indicating a direct impact of the pandemic on mortality rates. One chapter, however, shows a decline in normalized values starting in 2023. We are curious to explore which chapters experienced significant changes in mortality rates before COVID, during COVID, and post-COVID.   
 
 ```{r}
 icd_codes <- unique(death_by_chapters$icd_code)  # Get all unique ICD chapters
