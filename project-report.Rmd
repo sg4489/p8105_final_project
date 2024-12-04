@@ -1,0 +1,76 @@
+---
+title: | 
+  <div style="margin-top:20px; text-align:center; font-size:30px !important;">Analyzing Trends and Patterns in Mortality Data</div>
+  <div style="margin-top:15px; text-align:center; font-size:20px !important;">A Study on Causes of Death Across U.S. States from 2020 to 2023</div>
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+### Our Team
+
+*Yuhao Chang(yc4585), Yingyu Cui(yc4584), Shangzi Gao(sg4489), Jiawa Zhang(jz3900), Alice Zhou(az2852)*  
+
+### Motivation  
+
+This project began with a fundamental question: *What are the most common ways people die, and how do these vary across time and space?* To address this, we analyzed 15 major causes of death from 2020 to 2023, focusing on temporal patterns, seasonal trends, and geographic disparities. These causes represent a substantial portion of overall mortality and highlight key societal impacts.
+
+Building on this, we expanded to ICD-10 chapter-based trends from 2018 to 2023, uncovering broader shifts across disease systems. Together, these analyses provide a comprehensive view of evolving mortality patterns over six years.
+
+### Related work  
+
+Our project was inspired by the JAMA article ["Leading Causes of Death in the US, 2019–2023"](https://jamanetwork.com/journals/jama/fullarticle/2822207) which highlights shifts in mortality trends, including the impact of COVID-19 and rising deaths from unintentional injuries and chronic liver disease.  
+
+Building on this work, we extend the analysis to include ICD-10 chapter-based trends from 2018–2023, providing a longer temporal context. Additionally, our project offers a granular exploration of 15 major causes of death from 2020–2023, focusing on seasonal, geographic, and healthcare-related disparities. These contributions complement and deepen the findings of the article, offering a broader and more detailed perspective on mortality trends.  
+
+### Initial questions  
+
+At the outset, we aimed to answer:  
+
+1. What are the leading causes of death in the U.S., and how do these vary over time and across states?  
+2. Are there identifiable seasonal patterns in common causes of death?  
+3. How do mortality patterns shift geographically, and what factors might drive these differences?    
+
+As the analysis progressed, the scope of our questions expanded:  
+
+1. Were there observable seasonal patterns in specific causes of death, and how did these change during the pandemic?  
+2. How do temporal trends in mortality align with broader societal and environmental events, such as seasonal influenza or climate extremes?  
+3. How did the COVID-19 pandemic affect non-COVID-19 causes of death, such as cardiovascular diseases or chronic respiratory illnesses?  
+4. What were the most significant disparities in mortality across geographic regions?  
+5. Did states with higher healthcare resource availability exhibit lower non-COVID-19 excess mortality rates?   
+6. Are there systemic differences in mortality outcomes across socio-economic strata or regions?   
+
+These questions reflect an evolving understanding of the dataset's potential and informed subsequent analyses.  
+
+### Data  
+
+Our primary data sources are the National Center for Health Statistics datasets: [Weekly Provisional Counts of Deaths by State and Select Causes, 2020–2023](https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muzy-jte6/about_data) and [Multiple Cause of Death Data, ICD-10 Provisional](https://wonder.cdc.gov/wonder/help/mcd-provisional.html). These datasets provide comprehensive mortality statistics across states and causes of death, coded according to the International Classification of Diseases, Tenth Revision (ICD-10).
+
+The first dataset offers weekly death counts for specific causes across states, covering the years 2020–2023. The second dataset allows for a broader exploration of mortality trends by ICD-10 chapters and other classifications. Together, they form the foundation for our analysis of temporal, geographic, and systemic patterns in mortality.
+
+### Exploratory analysis  
+
+The exploratory analysis began with comprehensive data cleaning to ensure consistency and reliability. Column names were standardized, and suppressed values (counts <10) were flagged and replaced with random integers between 1 and 10 to maintain continuity while ensuring transparency. To capture both systemic and granular trends, data from 2018 to 2023 were used for ICD-10 chapter-level analyses, while analyses of 15 major causes of death focused on 2020–2023, providing insight into patterns during and after the COVID-19 pandemic.  
+
+Exploratory Data Analysis (EDA) included descriptive statistics summarizing mortality data across different states, years, and causes to reveal overarching patterns. Visualizations such as line plots and bar charts depicted trends in mortality rates over time and across regions, highlighting variations and anomalies. Seasonal analysis identified fluctuations in mortality corresponding to different times of the year, particularly in respiratory diseases, which showed significant peaks during winter months. Temporal analyses highlighted a 26.3% increase in unintentional injuries from 2019 to 2023, driven largely by drug overdoses, and a 15.3% rise in chronic liver disease and cirrhosis, which entered the top 10 causes of death in 2021. Conversely, mortality rates for chronic lower respiratory diseases, Alzheimer’s disease, and influenza/pneumonia declined by 12.5%, 6.9%, and 11.9%, respectively.  
+
+Geospatial analyses uncovered substantial regional disparities, with Southern states exhibiting higher mortality rates for chronic conditions like heart disease and diabetes, reflecting inequities in healthcare access. In contrast, states with better healthcare infrastructure experienced lower non-COVID excess mortality rates. Time series analyses comparing pre-pandemic and pandemic periods demonstrated shifts in mortality rankings, with COVID-19 declining from the third leading cause of death in 2020 to the 10th in 2023.  
+
+This exploratory phase validated expected patterns, such as seasonal peaks in respiratory diseases, while uncovering new concerns, including the rising burden of drug overdoses and chronic liver disease. These findings laid a strong foundation for deeper investigations into systemic trends, temporal shifts, and geographic disparities, highlighting critical areas for public health intervention and resource allocation.  
+
+### Additional analysis  
+
+To deepen our understanding of mortality trends, we applied statistical learning techniques to investigate relationships and patterns in the data. Seasonal differences in COVID-19 deaths were analyzed using a Wilcoxon rank-sum test, which revealed significantly higher mortality during winter months (p = 0.00485). This finding highlights the influence of environmental and health-related factors on mortality trends. A correlation heatmap further identified strong associations between COVID-19 and pre-existing conditions, such as heart disease, diabetes, and respiratory illnesses. These results provided critical insights into the compounding effects of COVID-19 on individuals with chronic conditions.  
+
+Building on these findings, we employed multivariable linear regression to test hypotheses about the interplay between COVID-19 and other causes of death. Significant associations were observed between COVID-19 and declines in deaths from diabetes, Alzheimer’s, and heart disease in 2023 (p < 0.001), suggesting that shifts in these patterns were influenced by their connection to the pandemic. Regression models also quantified COVID-19’s impact on total and natural deaths, showing stronger effects when COVID-19 was considered an underlying cause (p < 0.001). These results emphasized COVID-19’s direct and systemic influence on mortality rates.  
+
+Finally, mortality trends over time were assessed using Q-Q plots and hypothesis testing. Non-parametric methods were justified by deviations from normality, and a Wilcoxon test demonstrated significant shifts in mortality patterns between 2019 and 2021 (p < 0.001). These analyses confirmed the pandemic’s disruptive effects on mortality trends, providing a nuanced understanding of both its short-term and long-term impacts.  
+
+### Discussion  
+
+Our project analyzed mortality trends from 2018 to 2023, focusing on the interaction between COVID-19 (2020–2023) and other causes of death. Using methods like hypothesis testing, regression analysis, and visualizations, we observed significant seasonal differences in COVID-19 mortality, with higher death counts during the winter. Additionally, we found strong associations between COVID-19 and chronic conditions such as heart disease and diabetes. These results underline the influence of environmental and health-related factors on mortality patterns and highlight the importance of targeted interventions during high-risk periods.  
+
+Our regression models indicated that the decrease in deaths from diabetes, Alzheimer’s disease, and heart disease in 2023 was significantly linked to their relationship with COVID-19. This suggests that the pandemic had indirect effects on other causes of death, likely due to shifts in healthcare priorities and resource distribution. By examining COVID-19 as both a contributing and underlying cause of death, we quantified its broader impact on total and natural mortality rates, offering important insights for public health planning.  
+
+While our findings are reliable, there are areas for improvement. Sensitivity analyses, such as Bootstrap Analysis, could address potential variability introduced by imputing suppressed data by resampling the dataset to assess the stability of our results. Incorporating socio-economic variables and subgroup analyses could provide a deeper understanding of regional and demographic disparities. Expanding the timeframe to include data before 2018 could help establish longer-term baselines. Despite these limitations, our project offers a framework for studying the systemic effects of health crises and emphasizes the need for balanced strategies that address both emerging diseases and ongoing healthcare challenges.  
