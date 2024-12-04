@@ -25,8 +25,8 @@ library(lubridate)
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Read the datasets
-population_data <- read.table(file = "./data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
-death_data <- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv")
+population_data <- read.table(file = "data/Population by States_shiny.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
+death_data <- read_csv("data/full_weekly_deaths_by_state_and_causes_shiny.csv")
 
 # Clean and process population data
 population_data_clean <- population_data %>%
@@ -215,7 +215,7 @@ Column {data-width=350}
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Load the dataset
-data <- read_csv("./data/weekly_deaths_by_state_and_causes.csv")
+data <- read_csv("data/weekly_deaths_by_state_and_causes_shiny.csv")
 
 # Define UI
 ui <- fluidPage(
@@ -305,7 +305,7 @@ shinyApp(ui = ui, server = server)
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Load the dataset for the second plot
-data1 <- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv")
+data1 <- read_csv("./data/full_weekly_deaths_by_state_and_causes_shiny.csv")
 data2 <- read_csv("./data/Mortality_Rate_with_Region.csv")
 
 # Define UI
