@@ -7,11 +7,16 @@ output:
     toc_float: true
 ---
 
-Thank you so much for visiting our website! We are a team of first-year MS Biostatistics students at Columbia University’s Mailman School of Public Health. With five diverse undergraduate backgrounds among us, we share a common goal: to make this project a resounding success!  
+Thank you so much for visiting our website! We are a team of first-year MS students at Columbia University’s Mailman School of Public Health. With five diverse undergraduate backgrounds among us, we share a common goal: to make this project a resounding success!  
 
 ### Yuhao Chang
 
 ### Yingyu Cui
+
+Hi every one! I am a 1st year MS Epidemiology student at Mailman School of Public Health. I majored in Clinical Medicine in my undergraduate degree. In my free time, I prefer to watch movies and listen to music. I am also a big fan of traveling.
+
+Here is my email address: yc4584@cumc.columbia.edu
+I am looking forward to working with you all!
 
 ### Shangzi Gao  
 
