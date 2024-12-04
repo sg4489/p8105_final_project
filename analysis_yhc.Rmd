@@ -311,6 +311,8 @@ proportion_plot3
 The plots above show that among all natural causes of death, excluding COVID-19, the highest proportions are attributed to heart disease and malignant neoplasms. Notably, in 2020 and 2021, these two causes exhibited an inverse relationship with COVID-19 deaths. This phenomenon could be explained by evidence of COVID-19 infection, whether virological or clinical, in the days or weeks leading up to death in patients with heart disease or malignant neoplasms. Such deaths were likely coded as COVID-19 during certification, resulting in an apparent decrease in the reported numbers of deaths from heart disease and malignant neoplasms.
 
 ## Pie-chart
+
+
 ```{r message=FALSE, warning=FALSE}
 pie_data <- death_proportion_data |>
   filter(!cause_of_death %in% c("all_cause", "natural_cause"))
