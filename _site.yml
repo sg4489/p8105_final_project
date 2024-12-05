@@ -26,8 +26,10 @@ navbar:
       href: project-report.html
     - text: "Shiny"
       menu:
-        - text: "Shiny App"
-          href: "http://127.0.0.1:3789/"  # Shiny 应用链接
+        - text: "Violin Chart"
+          href: https://shangzigao.shinyapps.io/shiny/
+        - text: "Line Chart"
+          href: https://shangzigao.shinyapps.io/shinyy/
     - icon: "fa-github"
       href: "https://github.com/sg4489/p8105_final_project"
 
