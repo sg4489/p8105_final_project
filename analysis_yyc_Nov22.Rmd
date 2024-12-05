@@ -1,7 +1,5 @@
 ---
-title: "analysis_yyc_Nov22"
-author: "Yingyu Cui"
-date: "2024-11-22"
+title: "Temporal and Geographic Analysis"
 output: 
   html_document:
     toc: true
@@ -759,4 +757,4 @@ However, we could find the peaks in COVID-19 plot is mainly centralized in winte
 
 Does this mean that the death from Septicemia is more likely to be caused by other diseases, which is more likely to be epidemic in winter, rather than COVID-19?
 
-To answer these question, we need to look at the heatmap and the coefficiency between leading diseases. (add website link to Alice's heatmap)
+To answer these question, we need to look at the heatmap and the coefficiency between leading diseases. Here is the heatmap. [Correlation Insights on Disease Mortality: A Heatmap Analysis](https://sg4489.github.io/p8105_final_project.github.io/general-analysis.html)
