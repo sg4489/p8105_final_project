@@ -1,6 +1,7 @@
 ---
 title: "Temporal and Geographic Analysis"
 output: 
+  flexdashboard::flex_dashboard:
   html_document:
     toc: true
     toc_float: true
@@ -9,6 +10,7 @@ runtime: shiny
 ---
 
 ```{r setup, warning=FALSE, message=FALSE}
+library(flexdashboard)
 library(tidyverse)
 library(usmap)
 library(plotly)
