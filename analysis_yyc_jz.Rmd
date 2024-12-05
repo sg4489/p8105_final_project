@@ -2,14 +2,15 @@
 title: "Temporal and Geographic Analysis"
 output: 
   flexdashboard::flex_dashboard:
-  html_document:
-    toc: true
-    toc_float: true
-    code_folding: hide
+    orientation: columns
+    vertical_layout: fill
+    source: embed 
+    navbar:
+      - { title: "Home", href: "index.html" }
 runtime: shiny
 ---
 
-```{r setup, warning=FALSE, message=FALSE}
+```{r, setup, echo=FALSE, warning=FALSE, message=FALSE}
 library(flexdashboard)
 library(tidyverse)
 library(usmap)
