@@ -1,0 +1,10 @@
+name: shiny
+title:
+username: shangzigao
+account: shangzigao
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13533991
+bundleId: 9469677
+url: https://shangzigao.shinyapps.io/shiny/
+version: 1
