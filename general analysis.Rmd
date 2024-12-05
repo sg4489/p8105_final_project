@@ -215,40 +215,6 @@ death_proportion_data =general_data |> select(
   arrange(week_ending_date, cause_of_death, desc(proportion))|>
   ungroup()
 
-proportion_plot <- plot_ly(
-  data = death_proportion_data,
-  x = ~week_ending_date,
-  y = ~proportion,
-  color = ~cause_of_death,
-  colors = RColorBrewer::brewer.pal(12, "Set3"),
-  type = 'bar',
-  hoverinfo = 'x+y+name',  
-  marker = list(opacity = 0.7)  
-) |>
-  layout(
-    title = "Changes in the Proportion of Each Cause of Death in Total Mortality Over Four Years",
-    xaxis = list(
-      title = "Week Ending Date",
-      tickformat = "%Y",  
-      dtick = 31536000000  
-    ),
-    yaxis = list(
-      title = "Proportion of Total Deaths"
-    ),
-    legend = list(
-      orientation = "v",  
-      x = 1.3, 
-      y=1,
-      xanchor = "center",
-       font = list(size = 5)  
-    ),
-    plot_bgcolor = 'rgba(240,240,240,0.9)',  
-    margin = list(t = 50), 
-    showlegend = TRUE,
-    barmode = 'stack'  
-  )
-
-proportion_plot
 
 proportion_plot2 <- plot_ly(
   data = death_proportion_data,
