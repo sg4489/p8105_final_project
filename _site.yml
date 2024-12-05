@@ -1,5 +1,6 @@
 name: "project-website"
 output_dir: "."
+
 navbar:
   left:
     - text: "Home"
@@ -10,7 +11,6 @@ navbar:
           href: about_our_team.html
         - text: "Data Source"
           href: about_data_source.html
-  
   right:
     - text: "Exploratory Analysis"
       menu:
@@ -25,9 +25,7 @@ navbar:
     - text: "Project Report"
       href: project-report.html
     - text: "Shiny"
-      menu:
-        - text: "Shiny App"
-          href: https://p8105_final_project.github.io/shiny/
+      href: "https://elisajava.shinyapps.io/shiny_app/"  
     - icon: "fa-github"
       href: "https://github.com/sg4489/p8105_final_project"
 

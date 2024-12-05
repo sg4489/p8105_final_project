@@ -1,4 +1,6 @@
 library(shiny)
+library(dplyr)
+library(plotly)
 
 # UI 定义
 ui <- fluidPage(
@@ -17,12 +19,14 @@ ui <- fluidPage(
 # Server 定义
 server <- function(input, output) {
   output$plot <- renderPlot({
+    # 生成直方图
     hist(rnorm(input$num), 
          main = "Histogram", 
-         xlab = "Values")  # 直方图
+         xlab = "Values")  # 直方图的 x 轴标签
   })
 }
 
 # 启动应用
 shinyApp(ui = ui, server = server)
+
 
