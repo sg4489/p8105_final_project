@@ -46,4 +46,6 @@ Our analysis draws on mortality data from two primary sources:
 
 These datasets provide detailed information on deaths categorized by ICD-10 chapters and specific causes across the United States. Our data preparation included cleaning, standardizing column names, and handling suppressed values (counts <10). Time-series trends, geographic disparities, and correlations with chronic conditions were analyzed to uncover patterns and inform public health strategies.
 
+For more detailed information about data and processing, [here is our repo address](https://github.com/sg4489/p8105_final_project.github.io.git).
+
 ---
