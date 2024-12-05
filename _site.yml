@@ -27,7 +27,7 @@ navbar:
     - text: "Shiny"
       menu:
         - text: "Shiny App"
-          href: https://p8105_final_project.github.io/shiny/
+          href: http://127.0.0.1:3789
     - icon: "fa-github"
       href: "https://github.com/sg4489/p8105_final_project"
 
