@@ -26,10 +26,12 @@ navbar:
       href: project-report.html
     - text: "Shiny"
       menu:
-        - text: "Violin Chart"
+        - text: "Violin Charts"
           href: https://shangzigao.shinyapps.io/shiny/
-        - text: "Line Chart"
+        - text: "Line Charts"
           href: https://shangzigao.shinyapps.io/shinyy/
+        - text: "Pie Charts"
+          href: https://shangzigao.shinyapps.io/shinyyy/
     - icon: "fa-github"
       href: "https://github.com/sg4489/p8105_final_project"
 
