@@ -17,7 +17,7 @@ navbar:
         - text: "General Analysis"
           href: general-analysis.html
         - text: "Temporal and Geographic"
-          href: analysis_yyc_Nov22.html
+          href: analysis_yyc_jz.html
         - text: "Analysis Base on Chapters"
           href: chapter_analysis.html
     - text: "Statistical Analysis"
