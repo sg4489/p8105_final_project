@@ -1,7 +1,5 @@
 ---
-title: "analysis_yyc_jz"
-author: "ELisajava"
-date: "2024-11-22"
+title: "Temporal and Geographic Analysis"
 output: 
   html_document:
     toc: true
@@ -16,6 +14,11 @@ library(usmap)
 library(plotly)
 library(gt)
 library(shiny)
+library(dplyr)
+library(readr)
+library(janitor)  
+library(tidyr)
+library(lubridate)
 
 theme_set(theme_minimal() + theme(legend.position = "bottom"))
 ```
@@ -156,21 +159,15 @@ region_year_trend_tileplot
 
 ```
 
-As we could see, the darker the color, the higher the death rate. From the heatmap, we could see that the death rate in the Mideast Census Region in 2020 and 2021 and the death rate in the South Census Region in 2021 are relatively higher. And the death rate in the West Census Region from 2020 to 2023 is relatively lower.
 
-JAVA: As shown in the figure, we observe that the western and southern regions experienced higher mortality rates in 2021, while the northeastern and midwestern regions had higher mortality rates in 2020. Additionally, over time, mortality rates in all regions generally show a decreasing trend. 
-Next, we will create the *Monthly Mortality Rates by Region and State* chart to explore which states contributed the most to the highest mortality rates in these regions during their peak years (see Chart 1 in dashboard).
+As shown in the figure, we observe that the western and southern regions experienced higher mortality rates in 2021, while the northeastern and midwestern regions had higher mortality rates in 2020. Additionally, over time, mortality rates in all regions generally show a decreasing trend. 
+Next, we will create the *Monthly Mortality Rates by Region and State* chart to explore which states contributed the most to the highest mortality rates in these regions during their peak years.
 
+[Click here to see Monthly Mortality Rates by Region and State](https://shangzigao.shinyapps.io/shiny/)
 
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
-library(dplyr)
-library(readr)
-library(janitor)  
-library(plotly)
-library(shiny)
-library(tidyr)
-library(lubridate)
-```
+In 2020, Pennsylvania (Northeast), and Ohio (Midwest) (highest among  three other states), both exhibited significantly higher average monthly mortality rates compared to other states in their respective regions. 
+In 2021, Maine (South), and Missouri (West) recorded the highest average monthly mortality rates in their respective regions. 
+Next, we will create the *Death Cause Distribution by State and Year* chart to investigate the leading causes of death in the four states with the highest mortality rates.
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Read the datasets and convert to snake_case
@@ -249,125 +246,6 @@ merged_data <- merged_data %>%
 write.csv(merged_data, "./data/mortality_rate_with_region.csv", row.names = FALSE)
 ```
 
-# Chart 1
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
-# Define UI
-ui <- fluidPage(
-  titlePanel("Monthly Mortality Rates by Region and State"),
-  
-  sidebarLayout(
-    sidebarPanel(
-      selectInput("year", "Select Year:", choices = 2020:2023, selected = 2020),
-      checkboxInput("single_region", "Single Region Mode", value = FALSE),
-      checkboxGroupInput(
-        "regions", 
-        "Select Regions:", 
-        choices = c("Northeast", "Midwest", "South", "West"), 
-        selected = c("Northeast")
-      )
-    ),
-    mainPanel(
-      plotlyOutput("mortality_plot", height = "800px", width = "90%")
-    )
-  )
-)
-
-# Define server logic
-server <- function(input, output, session) {
-  
-  # Observer for single region mode
-  observeEvent(input$single_region, {
-    if (input$single_region) {
-      updateCheckboxGroupInput(session, "regions", selected = input$regions[1])
-    }
-  })
-  
-  # Reactive data filtered by year and selected regions
-  filtered_data <- reactive({
-    req(input$regions) # Ensure at least one region is selected
-    merged_data %>%
-      filter(year == input$year, region %in% input$regions)
-  })
-  
-  # Render the plot
-  output$mortality_plot <- renderPlotly({
-    data <- filtered_data()
-    
-    # Dynamically adjust plot height based on the number of selected regions
-    plot_height <- 250 + length(unique(data$region)) * 200
-    
-    # Create individual plots with region name displayed below the plot
-    plots <- lapply(seq_along(unique(data$region)), function(i) {
-      region_name <- unique(data$region)[i]
-      region_data <- data %>% filter(region == region_name)
-      
-      plot_ly(
-        data = region_data,
-        x = ~abbreviation, 
-        y = ~monthly_mortality_rate,
-        type = "violin",
-        box = list(visible = TRUE),
-        points = "all",
-        color = ~abbreviation,
-        legendgroup = region_name,
-        showlegend = FALSE # Hide the legend for each plot
-      ) %>%
-        layout(
-          annotations = list(
-            list(
-              text = paste0(region_name, " Region"), # Display region name below the plot
-              x = 0.5,
-              y = -0.2, # Position below the x-axis
-              xref = "paper",
-              yref = "paper",
-              showarrow = FALSE,
-              font = list(size = 14, color = "black"),
-              xanchor = "center",
-              yanchor = "top"
-            )
-          ),
-          xaxis = list(
-            title = "State",
-            tickangle = 45
-          ),
-          yaxis = list(
-            title = "Monthly Mortality Rate (per 10,000)"
-          )
-        )
-    })
-    
-    # Combine all individual plots into a single subplot
-    plot <- subplot(
-      plots,
-      nrows = ifelse(length(input$regions) > 2, 2, 1), # Dynamically adjust the number of rows
-      shareY = TRUE,
-      titleX = TRUE,
-      titleY = TRUE,
-      margin = 0.1
-    ) %>%
-      layout(
-        title = list(
-          text = paste("Monthly Mortality Rates in", input$year, "by Selected Region(s)"),
-          x = 0.5,
-          y = 0.98,
-          font = list(size = 24)
-        ),
-        height = plot_height, # Dynamically adjust the height
-        width = 800          # Fixed width
-      )
-    
-    plot
-  })
-}
-
-# Run the Shiny app
-shinyApp(ui = ui, server = server)
-```
-In 2020, Pennsylvania (Northeast), and Ohio (Midwest) (highest among  three other states), both exhibited significantly higher average monthly mortality rates compared to other states in their respective regions. 
-In 2021, Maine (South), and Missouri (West) recorded the highest average monthly mortality rates in their respective regions. 
-Next, we will create the *Death Cause Distribution by State and Year* chart to investigate the leading causes of death in the four states with the highest mortality rates (see Chart 2).
-
-# Chart 2
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Load the dataset
 data <- read_csv("./data/filtered_death_data.csv")
@@ -457,7 +335,6 @@ shinyApp(ui = ui, server = server)
 
 In 2020, heart disease was identified as the leading cause of death, accounting for 24.8% in Pennsylvania, 25.7% in Ohio.
 In 2021, heart disease was the largest cause in Missouri (25.3%). In Maine, malignant neoplasms and heart disease were equally prominent, each accounting for 29.1% of deaths.
-
 
 ### Month trend of total death rate
 
@@ -552,137 +429,10 @@ Or, is this because of the different climate conditions in different regions?
 Without knowing other underlying factors, we could not give a conclusion. But, we could still try to find some clues from the data we have. Now, we will show you the different distribution of death causes in the four regions by state and year.
 
 ### Death Cause Distribution by State and Year
-JAVA: From the following heatmap, we can observe that the mortality rate in the Northeastern United States was significantly higher in April 2020. Referring to **Chart 3** in the dashboard, we further identify that during this period, several states in the Northeast region, such as New Jersey, Massachusetts, Connecticut, and Pennsylvania, experienced peak mortality rates and had highest rates compared to other states in this region. This highlights the regional variation and severity of mortality during April 2020 in the Eastern states. What's more, there are 3 peaks of death rate in winter from 2020 to 2023 in all regions. So, what happened? 
-As we all know, it is COVID-19. It is possible that states like New Jersey, Massachusetts, Connecticut, and Pennsylvania experienced more severe COVID-19 outbreaks during this period.
 
-# Chart 3
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
-# Load the dataset for the second plot
-data1 <- read_csv("./data/filtered_death_data.csv")
-data2 <- read_csv("./data/Mortality_Rate_with_Region.csv")
+From the following geospatial heatmap, we can observe that the mortality rate in the Northeastern United States was significantly higher in April 2020. Referring to **Monthly Mortality Rate by Year and Region** in the dashboard, we further identify that during this period, several states in the Northeast region, such as New Jersey, Massachusetts, Connecticut, and Pennsylvania, experienced peak mortality rates and had highest rates compared to other states in this region. This highlights the regional variation and severity of mortality during April 2020 in the Eastern states. What’s more, there are 3 peaks of death rate in winter from 2020 to 2023 in all regions. So, what happened? As we all know, it is COVID-19. It is possible that states like New Jersey, Massachusetts, Connecticut, and Pennsylvania experienced more severe COVID-19 outbreaks during this period.
 
-# Define UI
-ui <- fluidPage(
-  # Second Plot: Monthly Mortality Rate by Year and Region
-  titlePanel("Monthly Mortality Rate by Year and Region"),
-  
-  sidebarLayout(
-    sidebarPanel(
-      selectInput("year2", "Select Year:", choices = unique(data2$year), selected = unique(data2$year)[1]),
-      selectInput("region2", "Select Region:", choices = unique(data2$region), selected = unique(data2$region)[1])
-    ),
-    mainPanel(
-      plotlyOutput("mortalityPlot2", height = "600px")
-    )
-  )
-)
-
-# Define Server Logic
-server <- function(input, output) {
-  # First Plot: Death Cause Distribution by State and Year
-  filtered_data1 <- reactive({
-    req(input$year1, input$state1)
-    data1 %>%
-      filter(year == input$year1, state == input$state1)
-  })
-  
-  death_cause_totals1 <- reactive({
-    req(filtered_data1())
-    
-    cause_columns <- c(
-      "septicemia",
-      "malignant_neoplasms",
-      "diabetes_mellitus",
-      "alzheimer_disease",
-      "influenza_and_pneumonia",
-      "chronic_lower_respiratory_diseases",
-      "other_respiratory_diseases",
-      "kidney_disease",
-      "other_symptoms",
-      "diseases_of_heart",
-      "cerebrovascular_diseases",
-      "covid_19_multiple",
-      "covid_19_underlying"
-    )
-    
-    filtered_data1() %>%
-      summarise(across(all_of(cause_columns), sum, na.rm = TRUE)) %>%
-      pivot_longer(cols = everything(), names_to = "Cause", values_to = "Count") %>%
-      filter(Count > 0)
-  })
-  
-  output$pieChart1 <- renderPlotly({
-    req(death_cause_totals1())
-    
-    plot_ly(
-      death_cause_totals1(),
-      labels = ~Cause,
-      values = ~Count,
-      type = 'pie'
-    ) %>%
-      layout(
-        title = list(
-          text = paste("Death Cause Distribution in", input$state1, "for year", input$year1),
-          x = 0.5
-        ),
-        legend = list(
-          orientation = "h",         # Horizontal layout for the legend
-          x = 0.5,                   # Center the legend horizontally
-          y = -0.3,                  # Move the legend below the plot
-          xanchor = "center",        # Anchor the legend to the center
-          yanchor = "top"            # Position the legend above the x-axis
-        )
-      )
-  })
-  
-  # Second Plot: Monthly Mortality Rate by Year and Region
-  filtered_data2 <- reactive({
-    req(input$year2, input$region2)
-    data2 %>%
-      filter(year == input$year2, region == input$region2)
-  })
-  
-  output$mortalityPlot2 <- renderPlotly({
-    filtered <- filtered_data2()
-    
-    if (nrow(filtered) == 0) {
-      return(plotly_empty() %>%
-               layout(title = "No data available for the selected year and region."))
-    }
-    
-    plot_ly(
-      data = filtered,
-      x = ~month,
-      y = ~monthly_mortality_rate,
-      color = ~state,
-      type = 'scatter',
-      mode = 'lines+markers',
-      line = list(width = 2),
-      text = ~paste("State:", state, "<br>Month:", month, "<br>Rate:", monthly_mortality_rate)
-    ) %>%
-      layout(
-        title = paste("Monthly Mortality Rate in", input$year2, "for", input$region2, "Region"),
-        xaxis = list(
-          title = "Month", 
-          tickvals = 1:12, 
-          ticktext = month.abb  # Use abbreviated month names
-        ),
-        yaxis = list(title = "Monthly Mortality Rate (per 10,000)"),
-        legend = list(
-          orientation = "h",         # Horizontal legend layout
-          x = 0.5,                   # Center the legend horizontally
-          y = -0.2,                  # Position the legend below the plot
-          xanchor = "center",        # Anchor the legend to the center
-          yanchor = "top"            # Position the legend above the x-axis
-        ),
-        margin = list(b = 150)       # Add margin to prevent overlap with the legend
-      )
-  })
-}
-
-# Run the Shiny app
-shinyApp(ui = ui, server = server)
-```
+[Click here to see Monthly Mortality Rate by Year and Region](https://shangzigao.shinyapps.io/shinyy/)
 
 Therefore, we could generate one hypothesis:
 The disease is first epidemic in some states in Northeast Census Region. The disease may be then widely spread to other regions in the US. 
