@@ -8,9 +8,9 @@
 
 
 
-<title>Themed dashboard</title>
+<title>dashboard</title>
 
-<meta property="og:title" content="Themed dashboard" />
+<meta property="og:title" content="dashboard" />
 
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 
@@ -21,18 +21,35 @@
 window.FlexDashboardComponents = [];
 </script>
 
+<script id="flexdashboard-navbar" type="application/json">
+[{"title":"Home","href":"index.html"},{"title":"Source Code","icon":"fa-code","href":"source_embed","align":"right"}]
+</script>
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link href="site_libs/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-5.3.1/bootstrap.bundle.min.js"></script>
-<link href="site_libs/Prompt-0.4.9/font.css" rel="stylesheet" />
-<link href="site_libs/JetBrains_Mono-0.4.9/font.css" rel="stylesheet" />
-<script src="site_libs/bs3compat-0.8.0/transition.js"></script>
-<script src="site_libs/bs3compat-0.8.0/tabs.js"></script>
-<script src="site_libs/bs3compat-0.8.0/bs3compat.js"></script>
-<link href="site_libs/flexdashboard-css-0.6.2/flexdashboard-css.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/value-box-accent-static-0.6.2/theme-cosmo-value-box.css" rel="stylesheet" />
+<link href="site_libs/featherlight-1.3.5/featherlight.min.css" rel="stylesheet" />
+<script src="site_libs/featherlight-1.3.5/featherlight.min.js"></script>
+<link href="site_libs/prism-1.4.1/prism.css" rel="stylesheet" />
+<script src="site_libs/prism-1.4.1/prism.js"></script>
+<link href="site_libs/flexdashboard-css-0.6.2/flexdashboard.min.css" rel="stylesheet" />
+<link href="site_libs/flexdashboard-css-0.6.2/theme-cosmo.css" rel="stylesheet" />
 <style type="text/css">
 /*
   CSS for flexdashboard.js' use of Sly(). The sizing/position of this CSS needs to be
@@ -146,7 +163,7 @@ html, body {
   
 </span>
 <span class="navbar-brand">
-  Themed dashboard
+  dashboard
   <span class="navbar-author">
         </span>
 </span>
@@ -1854,31 +1871,21 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div id="section-column" class="section level2" data-width="650">
-<h2>Column</h2>
-<div id="section-chart-a" class="section level3">
-<h3>Chart A</h3>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<iframe data-deferred-src="app19c232c401edf4dd850edf9ac7bad51e/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
-</div>
-</div>
-<div id="section-column-1" class="section level2" data-width="350">
+<div id="section-column" class="section level2" data-width="350">
 <h2>Column</h2>
 <div id="section-chart-b" class="section level3">
 <h3>Chart B</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<iframe data-deferred-src="appe532fadb7cadca5f24af60b207841e59/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+<iframe data-deferred-src="app74bcaf5901d03b9eeeb891c7728a20f9/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
 </div>
 <div id="section-chart-c" class="section level3">
 <h3>Chart C</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<iframe data-deferred-src="app3afe0f40bbd5fd66a5cf7b8243830acb/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+<iframe data-deferred-src="app2aefb713fd8afe07d2d2510ccc4530ea/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
 </div>
 </div>
 
@@ -1898,6 +1905,335 @@ $(document).ready(function() {
 });
 </script>
 
+<div id="flexdashboard-source-code">
+<pre class="line-numbers"><code class="language-r">---
+title: "dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed 
+    navbar:
+      - { title: "Home", href: "index.html" }
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(RColorBrewer) 
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(dplyr)
+library(readr)
+library(janitor)  
+library(plotly)
+library(shiny)
+library(tidyr)
+library(lubridate)
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# Read the datasets and convert to snake_case
+population_data &lt;- read.table(file = "./data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) %&gt;%
+  clean_names()  # Convert column names to snake_case
+
+death_data &lt;- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv") %&gt;%
+  clean_names()  # Convert column names to snake_case
+
+# Clean and process population data
+population_data_clean &lt;- population_data %&gt;%
+  select(residence_state, year, population) %&gt;%
+  filter(!is.na(population)) %&gt;%
+  mutate(year = as.numeric(gsub(" .*", "", year))) %&gt;%
+  rename(state = residence_state)
+
+# Filter death data to remove specific states
+death_data_filtered &lt;- death_data %&gt;%
+  filter(!state %in% c("United States", "Puerto Rico", "New York City"))  # Remove specific states
+
+# Save the filtered data to a new CSV file
+write.csv(death_data_filtered, "./data/filtered_death_data.csv", row.names = FALSE)
+
+# Continue cleaning and processing the filtered death data
+death_data_clean &lt;- death_data_filtered %&gt;%
+  select(state, year, all_cause, month) %&gt;%
+  group_by(state, year, month) %&gt;%
+  summarise(total_deaths = sum(all_cause, na.rm = TRUE), .groups = "drop")
+
+
+# Merge the datasets
+merged_data &lt;- death_data_clean %&gt;%
+  inner_join(population_data_clean, by = c("state", "year"))
+
+# Add state abbreviations
+state_abbreviations &lt;- data.frame(
+  state = c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida",
+            "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine",
+            "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska",
+            "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota",
+            "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+            "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"),
+  abbreviation = c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS",
+                   "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY",
+                   "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV",
+                   "WI", "WY")
+)
+
+# Merge abbreviations into the dataset
+merged_data &lt;- merged_data %&gt;%
+  left_join(state_abbreviations, by = "state")  # Ensure 'abbreviation' is added
+
+# Define state regions
+state_regions &lt;- data.frame(
+  abbreviation = c("CT", "ME", "MA", "NH", "NJ", "NY", "PA", "RI", "VT", 
+                   "IL", "IN", "IA", "KS", "MI", "MN", "MO", "NE", "ND", "OH", "SD", "WI", 
+                   "AL", "AR", "DE", "DC", "FL", "GA", "KY", "LA", "MD", "MS", "NC", "OK", "SC", "TN", "TX", "VA", "WV", 
+                   "AK", "AZ", "CA", "CO", "HI", "ID", "MT", "NV", "NM", "OR", "UT", "WA", "WY"),
+  region = c(rep("Northeast", 9), 
+             rep("Midwest", 12), 
+             rep("South", 17), 
+             rep("West", 13))
+)
+
+# Merge regions into the dataset
+merged_data &lt;- merged_data %&gt;%
+  left_join(state_regions, by = "abbreviation")  # Join with region data
+
+# Calculate mortality rates
+merged_data &lt;- merged_data %&gt;%
+  mutate(
+    monthly_mortality_rate = (total_deaths / population) * 10000 / 12  # Monthly rate per 10,000
+  )
+
+# Save the updated dataset
+write.csv(merged_data, "./data/mortality_rate_with_region.csv", row.names = FALSE)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# Load the dataset
+data &lt;- read_csv("./data/filtered_death_data.csv")
+
+# Define UI
+ui &lt;- fluidPage(
+  titlePanel("Death Cause Distribution by State and Year"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("year", "Select Year:", choices = unique(data$year)),
+      selectInput("state", "Select State:", choices = unique(data$state))
+    ),
+    
+    mainPanel(
+      plotlyOutput("pie_chart", height = "600px")
+    )
+  )
+)
+
+# Define server logic
+server &lt;- function(input, output, session) {
+  # Reactive data filtered by selected year and state
+  filtered_data &lt;- reactive({
+    req(input$year, input$state)
+    data %&gt;%
+      filter(year == input$year, state == input$state)
+  })
+  
+  # Reactive data for death cause totals
+  death_cause_totals &lt;- reactive({
+    req(filtered_data())
+    
+    # List of specific death causes to include
+    cause_columns &lt;- c(
+      "septicemia",
+      "malignant_neoplasms",
+      "diabetes_mellitus",
+      "alzheimer_disease",
+      "influenza_and_pneumonia",
+      "chronic_lower_respiratory_diseases",
+      "other_respiratory_diseases",
+      "kidney_disease",
+      "other_symptoms",
+      "diseases_of_heart",
+      "cerebrovascular_diseases",
+      "covid_19_multiple",
+      "covid_19_underlying"
+    )
+    
+    # Summarize counts for each cause
+    filtered_data() %&gt;%
+      summarise(across(all_of(cause_columns), sum, na.rm = TRUE)) %&gt;%
+      pivot_longer(cols = everything(), names_to = "cause", values_to = "count") %&gt;%
+      filter(count &gt; 0) # Filter out zero counts for better visualization
+  })
+  
+  # Render the Plotly pie chart
+  output$pie_chart &lt;- renderPlotly({
+    req(death_cause_totals())
+    
+    plot_ly(
+      death_cause_totals(),
+      labels = ~cause,
+      values = ~count,
+      type = 'pie'
+    ) %&gt;%
+      layout(
+        title = list(
+          text = paste("Death Cause Distribution in", input$state, "for Year", input$year),
+          x = 0.5
+        ),
+        legend = list(
+          orientation = "h", # Horizontal legend
+          x = 0.5,           # Center horizontally
+          y = -0.3,          # Move below the chart
+          xanchor = "center" # Align center
+        ),
+        margin = list(t = 50, b = 100) # Add extra margin at the bottom
+      )
+  })
+}
+
+# Run the Shiny app
+shinyApp(ui = ui, server = server)
+```
+
+
+### Chart C
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# Load the dataset for the second plot
+data1 &lt;- read_csv("./data/filtered_death_data.csv")
+data2 &lt;- read_csv("./data/Mortality_Rate_with_Region.csv")
+
+# Define UI
+ui &lt;- fluidPage(
+  # Second Plot: Monthly Mortality Rate by Year and Region
+  titlePanel("Monthly Mortality Rate by Year and Region"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("year2", "Select Year:", choices = unique(data2$year), selected = unique(data2$year)[1]),
+      selectInput("region2", "Select Region:", choices = unique(data2$region), selected = unique(data2$region)[1])
+    ),
+    mainPanel(
+      plotlyOutput("mortalityPlot2", height = "600px")
+    )
+  )
+)
+
+# Define Server Logic
+server &lt;- function(input, output) {
+  # First Plot: Death Cause Distribution by State and Year
+  filtered_data1 &lt;- reactive({
+    req(input$year1, input$state1)
+    data1 %&gt;%
+      filter(year == input$year1, state == input$state1)
+  })
+  
+  death_cause_totals1 &lt;- reactive({
+    req(filtered_data1())
+    
+    cause_columns &lt;- c(
+      "septicemia",
+      "malignant_neoplasms",
+      "diabetes_mellitus",
+      "alzheimer_disease",
+      "influenza_and_pneumonia",
+      "chronic_lower_respiratory_diseases",
+      "other_respiratory_diseases",
+      "kidney_disease",
+      "other_symptoms",
+      "diseases_of_heart",
+      "cerebrovascular_diseases",
+      "covid_19_multiple",
+      "covid_19_underlying"
+    )
+    
+    filtered_data1() %&gt;%
+      summarise(across(all_of(cause_columns), sum, na.rm = TRUE)) %&gt;%
+      pivot_longer(cols = everything(), names_to = "Cause", values_to = "Count") %&gt;%
+      filter(Count &gt; 0)
+  })
+  
+  output$pieChart1 &lt;- renderPlotly({
+    req(death_cause_totals1())
+    
+    plot_ly(
+      death_cause_totals1(),
+      labels = ~Cause,
+      values = ~Count,
+      type = 'pie'
+    ) %&gt;%
+      layout(
+        title = list(
+          text = paste("Death Cause Distribution in", input$state1, "for year", input$year1),
+          x = 0.5
+        ),
+        legend = list(
+          orientation = "h",         # Horizontal layout for the legend
+          x = 0.5,                   # Center the legend horizontally
+          y = -0.3,                  # Move the legend below the plot
+          xanchor = "center",        # Anchor the legend to the center
+          yanchor = "top"            # Position the legend above the x-axis
+        )
+      )
+  })
+  
+  # Second Plot: Monthly Mortality Rate by Year and Region
+  filtered_data2 &lt;- reactive({
+    req(input$year2, input$region2)
+    data2 %&gt;%
+      filter(year == input$year2, region == input$region2)
+  })
+  
+  output$mortalityPlot2 &lt;- renderPlotly({
+    filtered &lt;- filtered_data2()
+    
+    if (nrow(filtered) == 0) {
+      return(plotly_empty() %&gt;%
+               layout(title = "No data available for the selected year and region."))
+    }
+    
+    plot_ly(
+      data = filtered,
+      x = ~month,
+      y = ~monthly_mortality_rate,
+      color = ~state,
+      type = 'scatter',
+      mode = 'lines+markers',
+      line = list(width = 2),
+      text = ~paste("State:", state, "&lt;br&gt;Month:", month, "&lt;br&gt;Rate:", monthly_mortality_rate)
+    ) %&gt;%
+      layout(
+        title = paste("Monthly Mortality Rate in", input$year2, "for", input$region2, "Region"),
+        xaxis = list(
+          title = "Month", 
+          tickvals = 1:12, 
+          ticktext = month.abb  # Use abbreviated month names
+        ),
+        yaxis = list(title = "Monthly Mortality Rate (per 10,000)"),
+        legend = list(
+          orientation = "h",         # Horizontal legend layout
+          x = 0.5,                   # Center the legend horizontally
+          y = -0.2,                  # Position the legend below the plot
+          xanchor = "center",        # Anchor the legend to the center
+          yanchor = "top"            # Position the legend above the x-axis
+        ),
+        margin = list(b = 150)       # Add margin to prevent overlap with the legend
+      )
+  })
+}
+
+# Run the Shiny app
+shinyApp(ui = ui, server = server)
+```
+</code></pre>
+</div>
 <script type="text/javascript">
 $(document).ready(function () {
   FlexDashboard.init({

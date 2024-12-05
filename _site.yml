@@ -25,7 +25,11 @@ navbar:
     - text: "Project Report"
       href: project-report.html
     - text: "Shiny"
-      href: "https://elisajava.shinyapps.io/shiny_app/"  
+      menu:
+        - text: "Chart A"
+          href: dashboard.html
+        - text: "Chart B+C"
+          href: dashboard_.html
     - icon: "fa-github"
       href: "https://github.com/sg4489/p8105_final_project"
 
