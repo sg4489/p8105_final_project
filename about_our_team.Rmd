@@ -30,7 +30,7 @@ I am looking forward to working with you all!
 
 Hi all, I am a first-year Master’s student in Biostatistics at the Mailman School of Public Health, Columbia University. Recently, I earned my Bachelor of Medicine degree, and my research interests focus on applying statistical methods to rare disease studies. In my free time, I enjoy exploring coffee shops, hiking, and discovering new clubs.
 
-[Click here to know more about Jiawa](https://sg4489.github.io/p8105_hw4_sg4489.github.io/)
+[Click here to know more about Jiawa](https://sg4489.github.io/p8105_hw4_sg4489.github.io/).
 This is my email: jz3900@cumc.columbia.edu, please feel free to reach out!
 
 ### Alice Zhou
