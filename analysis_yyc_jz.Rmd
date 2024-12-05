@@ -109,7 +109,7 @@ For detailed information, you could browse this official website.
 
 To begin with, we will show the trend of total deaths rate in the four regions from 2020 to 2023 as a general overview in several plots. 
 
-### Heatmap for year (change into plotly)
+### Heatmap for year
 ```{r attempts, warning=FALSE, message=FALSE}
 region_year_trend_tileplot_data = 
   region_population_df |> 
@@ -219,7 +219,7 @@ plot_month_totaldeath
 ```
 
 
-### Month trend of total death rate (faced versions)
+### Month trend of total death rate
 
 Here are the faced versions of the month trend of total death rate in the four regions from 2020 to 2023 for a more detailed comparison.
 ```{r faced plots}
@@ -375,7 +375,7 @@ For these questions, we will compare the trend of COVID-19 deaths with the trend
 
 Below are the trend of the top causes of death in the four regions from 2020 to 2023. In this part, we could answer this question: what are the difference of the same diseases between the four regions? (Here we only have some diseases, whose trend is obvious and is worthy explaining)
 
-## Month Trend of disease(covid and non-covid) deaths in Regions
+## Month Trend of disease deaths in Regions
 
 ### Septicemia
 ```{r month trend in regions for septicemia, warning=FALSE, message=FALSE}
