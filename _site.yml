@@ -25,21 +25,11 @@ navbar:
     - text: "Project Report"
       href: project-report.html
     - text: "Shiny"
-<<<<<<< HEAD
       menu:
-        - text: "Chart A"
-          href: dashboard.html
-        - text: "Chart B+C"
-          href: dashboard_.html
-=======
-<<<<<<< HEAD
-      menu:
-        - text: "Shiny App"
-          href: http://127.0.0.1:3789
-=======
-      href: "https://elisajava.shinyapps.io/shiny_app/"  
->>>>>>> 436a3726e82c463ead1dbd54b3525c2fc5045e98
->>>>>>> 74c9055a9774d29f567451a4e6bacd3e02718857
+        - text: "Violin Chart"
+          href: https://shangzigao.shinyapps.io/shiny/
+        - text: "Line Chart"
+          href: https://shangzigao.shinyapps.io/shinyy/
     - icon: "fa-github"
       href: "https://github.com/sg4489/p8105_final_project"
 
