@@ -12,11 +12,13 @@ runtime: shiny
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(RColorBrewer) 
 ```
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(dplyr)
 library(readr)
+library(janitor)  
 library(plotly)
 library(shiny)
 library(tidyr)
@@ -24,37 +26,47 @@ library(lubridate)
 ```
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-# Read the datasets
-population_data <- read.table(file = "./data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE)
-death_data <- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv")
+# Read the datasets and convert to snake_case
+population_data <- read.table(file = "./data/Population by States.txt", header = TRUE, sep = "\t", quote = "\"", fill = TRUE) %>%
+  clean_names()  # Convert column names to snake_case
+
+death_data <- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv") %>%
+  clean_names()  # Convert column names to snake_case
 
 # Clean and process population data
 population_data_clean <- population_data %>%
-  select(Residence.State, Year, Population) %>%
-  filter(!is.na(Population)) %>%
-  mutate(Year = as.numeric(gsub(" .*", "", Year))) %>%
-  rename(State = Residence.State)
+  select(residence_state, year, population) %>%
+  filter(!is.na(population)) %>%
+  mutate(year = as.numeric(gsub(" .*", "", year))) %>%
+  rename(state = residence_state)
 
-# Clean and process death data
-death_data_clean <- death_data %>%
-  select(state, year, all_cause, month) %>% 
+# Filter death data to remove specific states
+death_data_filtered <- death_data %>%
+  filter(!state %in% c("United States", "Puerto Rico", "New York City"))  # Remove specific states
+
+# Save the filtered data to a new CSV file
+write.csv(death_data_filtered, "./data/filtered_death_data.csv", row.names = FALSE)
+
+# Continue cleaning and processing the filtered death data
+death_data_clean <- death_data_filtered %>%
+  select(state, year, all_cause, month) %>%
   group_by(state, year, month) %>%
-  summarise(Total_Deaths = sum(all_cause, na.rm = TRUE), .groups = "drop") %>%
-  rename(State = state, Year = year, Month = month)
+  summarise(total_deaths = sum(all_cause, na.rm = TRUE), .groups = "drop")
+
 
 # Merge the datasets
 merged_data <- death_data_clean %>%
-  inner_join(population_data_clean, by = c("State", "Year"))
+  inner_join(population_data_clean, by = c("state", "year"))
 
 # Add state abbreviations
 state_abbreviations <- data.frame(
-  State = c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida",
+  state = c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida",
             "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine",
             "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska",
             "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota",
             "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
             "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"),
-  Abbreviation = c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS",
+  abbreviation = c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS",
                    "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY",
                    "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV",
                    "WI", "WY")
@@ -62,15 +74,15 @@ state_abbreviations <- data.frame(
 
 # Merge abbreviations into the dataset
 merged_data <- merged_data %>%
-  left_join(state_abbreviations, by = "State") # Ensure 'Abbreviation' is added
+  left_join(state_abbreviations, by = "state")  # Ensure 'abbreviation' is added
 
 # Define state regions
 state_regions <- data.frame(
-  Abbreviation = c("CT", "ME", "MA", "NH", "NJ", "NY", "PA", "RI", "VT", 
+  abbreviation = c("CT", "ME", "MA", "NH", "NJ", "NY", "PA", "RI", "VT", 
                    "IL", "IN", "IA", "KS", "MI", "MN", "MO", "NE", "ND", "OH", "SD", "WI", 
                    "AL", "AR", "DE", "DC", "FL", "GA", "KY", "LA", "MD", "MS", "NC", "OK", "SC", "TN", "TX", "VA", "WV", 
                    "AK", "AZ", "CA", "CO", "HI", "ID", "MT", "NV", "NM", "OR", "UT", "WA", "WY"),
-  Region = c(rep("Northeast", 9), 
+  region = c(rep("Northeast", 9), 
              rep("Midwest", 12), 
              rep("South", 17), 
              rep("West", 13))
@@ -78,17 +90,16 @@ state_regions <- data.frame(
 
 # Merge regions into the dataset
 merged_data <- merged_data %>%
-  left_join(state_regions, by = "Abbreviation") # Join with region data
+  left_join(state_regions, by = "abbreviation")  # Join with region data
 
 # Calculate mortality rates
 merged_data <- merged_data %>%
   mutate(
-    Annual_Mortality_Rate = (Total_Deaths / Population) * 1000,  # Annual rate per 1,000
-    Monthly_Mortality_Rate = (Total_Deaths / Population) * 10000 / 12  # Monthly rate per 10,000
+    monthly_mortality_rate = (total_deaths / population) * 10000 / 12  # Monthly rate per 10,000
   )
 
 # Save the updated dataset
-write.csv(merged_data, "./data/Mortality_Rate_with_Region.csv", row.names = FALSE)
+write.csv(merged_data, "./data/mortality_rate_with_region.csv", row.names = FALSE)
 ```
 
 Column {data-width=650}
@@ -104,7 +115,7 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       selectInput("year", "Select Year:", choices = 2020:2023, selected = 2020),
-      checkboxInput("singleRegion", "Single Region Mode", value = FALSE),
+      checkboxInput("single_region", "Single Region Mode", value = FALSE),
       checkboxGroupInput(
         "regions", 
         "Select Regions:", 
@@ -113,15 +124,17 @@ ui <- fluidPage(
       )
     ),
     mainPanel(
-      plotlyOutput("mortalityPlot", height = "800px", width = "90%") # Ensure enough space for plots
+      plotlyOutput("mortality_plot", height = "800px", width = "90%")
     )
   )
 )
 
 # Define server logic
 server <- function(input, output, session) {
-  observeEvent(input$singleRegion, {
-    if (input$singleRegion) {
+  
+  # Observer for single region mode
+  observeEvent(input$single_region, {
+    if (input$single_region) {
       updateCheckboxGroupInput(session, "regions", selected = input$regions[1])
     }
   })
@@ -130,31 +143,31 @@ server <- function(input, output, session) {
   filtered_data <- reactive({
     req(input$regions) # Ensure at least one region is selected
     merged_data %>%
-      filter(Year == input$year, Region %in% input$regions)
+      filter(year == input$year, region %in% input$regions)
   })
   
   # Render the plot
-  output$mortalityPlot <- renderPlotly({
+  output$mortality_plot <- renderPlotly({
     data <- filtered_data()
     
     # Dynamically adjust plot height based on the number of selected regions
-    plot_height <- 250 + length(unique(data$Region)) * 200
+    plot_height <- 250 + length(unique(data$region)) * 200
     
     # Create individual plots with region name displayed below the plot
-    plots <- lapply(seq_along(unique(data$Region)), function(i) {
-      region_name <- unique(data$Region)[i]
-      region_data <- data %>% filter(Region == region_name)
+    plots <- lapply(seq_along(unique(data$region)), function(i) {
+      region_name <- unique(data$region)[i]
+      region_data <- data %>% filter(region == region_name)
       
       plot_ly(
         data = region_data,
-        x = ~Abbreviation, 
-        y = ~Monthly_Mortality_Rate,
+        x = ~abbreviation, 
+        y = ~monthly_mortality_rate,
         type = "violin",
         box = list(visible = TRUE),
         points = "all",
-        color = ~Abbreviation,
+        color = ~abbreviation,
         legendgroup = region_name,
-        showlegend = FALSE
+        showlegend = FALSE # Hide the legend for each plot
       ) %>%
         layout(
           annotations = list(
@@ -204,7 +217,7 @@ server <- function(input, output, session) {
   })
 }
 
-# Run the application
+# Run the Shiny app
 shinyApp(ui = ui, server = server)
 ```
 
@@ -215,7 +228,7 @@ Column {data-width=350}
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Load the dataset
-data <- read_csv("./data/weekly_deaths_by_state_and_causes.csv")
+data <- read_csv("./data/filtered_death_data.csv")
 
 # Define UI
 ui <- fluidPage(
@@ -223,12 +236,12 @@ ui <- fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      selectInput("year", "Select Year:", choices = unique(data$`MMWR Year`)),
-      selectInput("state", "Select State:", choices = unique(data$`Jurisdiction of Occurrence`))
+      selectInput("year", "Select Year:", choices = unique(data$year)),
+      selectInput("state", "Select State:", choices = unique(data$state))
     ),
     
     mainPanel(
-      plotlyOutput("pieChart", height = "600px")
+      plotlyOutput("pie_chart", height = "600px")
     )
   )
 )
@@ -239,7 +252,7 @@ server <- function(input, output, session) {
   filtered_data <- reactive({
     req(input$year, input$state)
     data %>%
-      filter(`MMWR Year` == input$year, `Jurisdiction of Occurrence` == input$state)
+      filter(year == input$year, state == input$state)
   })
   
   # Reactive data for death cause totals
@@ -248,36 +261,36 @@ server <- function(input, output, session) {
     
     # List of specific death causes to include
     cause_columns <- c(
-      "Septicemia (A40-A41)",
-      "Malignant neoplasms (C00-C97)",
-      "Diabetes mellitus (E10-E14)",
-      "Alzheimer disease (G30)",
-      "Influenza and pneumonia (J09-J18)",
-      "Chronic lower respiratory diseases (J40-J47)",
-      "Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)",
-      "Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",
-      "Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)",
-      "Diseases of heart (I00-I09,I11,I13,I20-I51)",
-      "Cerebrovascular diseases (I60-I69)",
-      "COVID-19 (U071, Multiple Cause of Death)",
-      "COVID-19 (U071, Underlying Cause of Death)"
+      "septicemia",
+      "malignant_neoplasms",
+      "diabetes_mellitus",
+      "alzheimer_disease",
+      "influenza_and_pneumonia",
+      "chronic_lower_respiratory_diseases",
+      "other_respiratory_diseases",
+      "kidney_disease",
+      "other_symptoms",
+      "diseases_of_heart",
+      "cerebrovascular_diseases",
+      "covid_19_multiple",
+      "covid_19_underlying"
     )
     
     # Summarize counts for each cause
     filtered_data() %>%
       summarise(across(all_of(cause_columns), sum, na.rm = TRUE)) %>%
-      pivot_longer(cols = everything(), names_to = "Cause", values_to = "Count") %>%
-      filter(Count > 0) # Filter out zero counts for better visualization
+      pivot_longer(cols = everything(), names_to = "cause", values_to = "count") %>%
+      filter(count > 0) # Filter out zero counts for better visualization
   })
   
   # Render the Plotly pie chart
-  output$pieChart <- renderPlotly({
+  output$pie_chart <- renderPlotly({
     req(death_cause_totals())
     
     plot_ly(
       death_cause_totals(),
-      labels = ~Cause,
-      values = ~Count,
+      labels = ~cause,
+      values = ~count,
       type = 'pie'
     ) %>%
       layout(
@@ -305,18 +318,18 @@ shinyApp(ui = ui, server = server)
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Load the dataset for the second plot
-data1 <- read_csv("./data/full_weekly_deaths_by_state_and_causes.csv")
+data1 <- read_csv("./data/filtered_death_data.csv")
 data2 <- read_csv("./data/Mortality_Rate_with_Region.csv")
 
 # Define UI
 ui <- fluidPage(
-# Second Plot: Monthly Mortality Rate by Year and Region
+  # Second Plot: Monthly Mortality Rate by Year and Region
   titlePanel("Monthly Mortality Rate by Year and Region"),
   
   sidebarLayout(
     sidebarPanel(
-      selectInput("year2", "Select Year:", choices = unique(data2$Year), selected = unique(data2$Year)[1]),
-      selectInput("region2", "Select Region:", choices = unique(data2$Region), selected = unique(data2$Region)[1])
+      selectInput("year2", "Select Year:", choices = unique(data2$year), selected = unique(data2$year)[1]),
+      selectInput("region2", "Select Region:", choices = unique(data2$region), selected = unique(data2$region)[1])
     ),
     mainPanel(
       plotlyOutput("mortalityPlot2", height = "600px")
@@ -330,26 +343,26 @@ server <- function(input, output) {
   filtered_data1 <- reactive({
     req(input$year1, input$state1)
     data1 %>%
-      filter(`MMWR Year` == input$year1, `Jurisdiction of Occurrence` == input$state1)
+      filter(year == input$year1, state == input$state1)
   })
   
   death_cause_totals1 <- reactive({
     req(filtered_data1())
     
     cause_columns <- c(
-      "Septicemia (A40-A41)",
-      "Malignant neoplasms (C00-C97)",
-      "Diabetes mellitus (E10-E14)",
-      "Alzheimer disease (G30)",
-      "Influenza and pneumonia (J09-J18)",
-      "Chronic lower respiratory diseases (J40-J47)",
-      "Other diseases of respiratory system (J00-J06,J30-J39,J67,J70-J98)",
-      "Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",
-      "Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)",
-      "Diseases of heart (I00-I09,I11,I13,I20-I51)",
-      "Cerebrovascular diseases (I60-I69)",
-      "COVID-19 (U071, Multiple Cause of Death)",
-      "COVID-19 (U071, Underlying Cause of Death)"
+      "septicemia",
+      "malignant_neoplasms",
+      "diabetes_mellitus",
+      "alzheimer_disease",
+      "influenza_and_pneumonia",
+      "chronic_lower_respiratory_diseases",
+      "other_respiratory_diseases",
+      "kidney_disease",
+      "other_symptoms",
+      "diseases_of_heart",
+      "cerebrovascular_diseases",
+      "covid_19_multiple",
+      "covid_19_underlying"
     )
     
     filtered_data1() %>%
@@ -369,14 +382,15 @@ server <- function(input, output) {
     ) %>%
       layout(
         title = list(
-          text = paste("Death Cause Distribution in", input$state1, "for Year", input$year1),
+          text = paste("Death Cause Distribution in", input$state1, "for year", input$year1),
           x = 0.5
         ),
         legend = list(
-          orientation = "h",
-          x = 0.5,
-          y = -0.3,
-          xanchor = "center"
+          orientation = "h",         # Horizontal layout for the legend
+          x = 0.5,                   # Center the legend horizontally
+          y = -0.3,                  # Move the legend below the plot
+          xanchor = "center",        # Anchor the legend to the center
+          yanchor = "top"            # Position the legend above the x-axis
         )
       )
   })
@@ -385,7 +399,7 @@ server <- function(input, output) {
   filtered_data2 <- reactive({
     req(input$year2, input$region2)
     data2 %>%
-      filter(Year == input$year2, Region == input$region2)
+      filter(year == input$year2, region == input$region2)
   })
   
   output$mortalityPlot2 <- renderPlotly({
@@ -398,19 +412,30 @@ server <- function(input, output) {
     
     plot_ly(
       data = filtered,
-      x = ~Month,
-      y = ~Monthly_Mortality_Rate,
-      color = ~State,
+      x = ~month,
+      y = ~monthly_mortality_rate,
+      color = ~state,
       type = 'scatter',
       mode = 'lines+markers',
       line = list(width = 2),
-      text = ~paste("State:", State, "<br>Month:", Month, "<br>Rate:", Monthly_Mortality_Rate)
+      text = ~paste("State:", state, "<br>Month:", month, "<br>Rate:", monthly_mortality_rate)
     ) %>%
       layout(
         title = paste("Monthly Mortality Rate in", input$year2, "for", input$region2, "Region"),
-        xaxis = list(title = "Month", tickvals = 1:12, ticktext = month.name),
+        xaxis = list(
+          title = "Month", 
+          tickvals = 1:12, 
+          ticktext = month.abb  # Use abbreviated month names
+        ),
         yaxis = list(title = "Monthly Mortality Rate (per 10,000)"),
-        legend = list(title = list(text = "State"))
+        legend = list(
+          orientation = "h",         # Horizontal legend layout
+          x = 0.5,                   # Center the legend horizontally
+          y = -0.2,                  # Position the legend below the plot
+          xanchor = "center",        # Anchor the legend to the center
+          yanchor = "top"            # Position the legend above the x-axis
+        ),
+        margin = list(b = 150)       # Add margin to prevent overlap with the legend
       )
   })
 }
@@ -418,4 +443,3 @@ server <- function(input, output) {
 # Run the Shiny app
 shinyApp(ui = ui, server = server)
 ```
-
