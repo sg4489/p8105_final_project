@@ -1,0 +1,10 @@
+name: shiny_app
+title:
+username: elisajava
+account: elisajava
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13530433
+bundleId: 9468571
+url: https://elisajava.shinyapps.io/shiny_app/
+version: 1
