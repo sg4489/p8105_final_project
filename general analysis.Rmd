@@ -26,15 +26,6 @@ Key Variables:
 
 Due to privacy protection, cells with count under 10 has been supressed and shown as blank. We will generate a random whole number between 1-10 for those cells for further analyses.
 
-# Some general questions
-
--how many people die each year from 2020-2023 (what's the proportion of natural and non-natural causes?)
-  -and, what's the mortality rate of the general population?
-
--which disease among the listed creates the most health burdens, that is, gives rise to the most deaths?
-
--correlation between diseases (heatmap?)
-
 ```{r message=FALSE}
 library(reshape2)  # If needed
 library(gt)        # If needed
