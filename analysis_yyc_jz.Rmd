@@ -169,6 +169,7 @@ In 2020, Pennsylvania (Northeast), and Ohio (Midwest) (highest among  three othe
 In 2021, Maine (South), and Missouri (West) recorded the highest average monthly mortality rates in their respective regions. 
 Next, we will create the *Death Cause Distribution by State and Year* chart to investigate the leading causes of death in the four states with the highest mortality rates.
 
+[Click here to see Death Cause Distribution by State and Year](https://shangzigao.shinyapps.io/shinyyy/)
 
 In 2020, heart disease was identified as the leading cause of death, accounting for 24.8% in Pennsylvania, 25.7% in Ohio.
 In 2021, heart disease was the largest cause in Missouri (25.3%). In Maine, malignant neoplasms and heart disease were equally prominent, each accounting for 29.1% of deaths.
