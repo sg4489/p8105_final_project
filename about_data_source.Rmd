@@ -1,0 +1,50 @@
+---
+title: "Data Source"
+output: 
+  html_document:
+    toc: true
+---
+
+Our project includes two datasets. 
+
+1. <h4>[**Weekly Provisional Counts of Deaths by State and Select Causes, 2020–2023**](https://data.cdc.gov/NCHS/Weekly-Provisional-Counts-of-Deaths-by-State-and-S/muzy-jte6/about_data)</h4>  
+
+This dataset (10,476 rows and 35 columns) provides weekly counts of deaths categorized by cause, week, and geographic location.  
+
+*Date Range*: Weekly data spanning from 2020 to 2023.  
+
+*Geographic Scope*: Includes data at the state level, as well as an aggregated entry for the entire United States.  
+
+*Key Variables*:  
+  * Date Information: Includes variables such as Data As Of, Week Ending Date, MMWR Year, and MMWR Week.  
+  * Mortality Data: Includes counts for "All Cause", "Natural Cause", and specific causes like:   
+      * Specific causes like:  
+      * Septicemia (A40-A41)  
+      * Malignant neoplasms (C00-C97)  
+      * Diabetes mellitus (E10-E14)  
+      * Alzheimer disease (G30)   
+      * Influenza and pneumonia (J09-J18)  
+      * Chronic lower respiratory diseases (J40-J47)  
+      * COVID-19 (U071) as both a multiple and underlying cause of death.  
+      * Flags: Columns with prefixes like flag_ indicate potential data quality issues for specific causes.  
+      
+Privacy Note: To ensure privacy, cells with counts below 10 have been suppressed and appear as blank. For further analysis, we will generate random whole numbers between 1 and 10 to replace these suppressed values.  
+
+2.  <h4>[**Provisional Mortality Statistics, 2018 through Last Week**](https://wonder.cdc.gov/controller/datarequest/D176)</h4>   
+
+This dataset contains provisional mortality data grouped by geographic, temporal, and cause-of-death classifications, providing comprehensive insights into population-level mortality trends. It includes 6087 rows and 13 columns.  
+
+*Date Range*: Annual data from 2018 to 2023.  
+
+*Geographic Scope*:   
+  Census Region (e.g., Northeast).  
+  Residence State (e.g., Connecticut).  
+
+*Key Variables*:  
+    * icd_chapter: Cause of death categorized by ICD chapter (e.g., "Neoplasms," "Certain infectious and parasitic diseases").  
+    * icd_code: ICD codes corresponding to each chapter.  
+    * deaths_count: Total number of deaths for the specific cause and year.  
+    * pop: Population count for the respective state and year.  
+    * year: Year of observation.  
+    
+Privacy Note: No suppressed data is observed, as all counts in the deaths_count variable appear to be above privacy thresholds.  
