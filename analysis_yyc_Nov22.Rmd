@@ -153,11 +153,9 @@ region_year_trend_tileplot
 
 ```
 
-As we could see, the darker the color, the higher the death rate. From the heatmap, we could see that the death rate in the Mideast Census Region in 2020 and 2021 and the death rate in the South Census Region in 2021 are relatively higher. And the death rate in the West Census Region from 2020 to 2023 is relatively lower.
 
-JAVA: changed into a more detailed version
-
-
+As shown in the figure, we observe that the western and southern regions experienced higher mortality rates in 2021, while the northeastern and midwestern regions had higher mortality rates in 2020. Additionally, over time, mortality rates in all regions generally show a decreasing trend. 
+Next, we will create the *Monthly Mortality Rates by Region and State* chart to explore which states contributed the most to the highest mortality rates in these regions during their peak years (see Chart 1 in dashboard).
 
 ### Month trend of total death rate
 
@@ -252,18 +250,13 @@ Or, is this because of the different climate conditions in different regions?
 Without knowing other underlying factors, we could not give a conclusion. But, we could still try to find some clues from the data we have. Now, we will show you the different distribution of death causes in the four regions by state and year.
 
 ### Death Cause Distribution by State and Year
-JAVA:
 
-
-Besides, as you could notice, there is a peak in the total death rate in April, 2020 in Northeast Census Region. What's more, there are 3 peaks of death rate in winter from 2020 to 2023 in all regions. So, what happened? 
-As we all know, it is COVID-19. 
+From the following geospatial heatmap, we can observe that the mortality rate in the Northeastern United States was significantly higher in April 2020. Referring to Chart 3 in the dashboard, we further identify that during this period, several states in the Northeast region, such as New Jersey, Massachusetts, Connecticut, and Pennsylvania, experienced peak mortality rates and had highest rates compared to other states in this region. This highlights the regional variation and severity of mortality during April 2020 in the Eastern states. What’s more, there are 3 peaks of death rate in winter from 2020 to 2023 in all regions. So, what happened? As we all know, it is COVID-19. It is possible that states like New Jersey, Massachusetts, Connecticut, and Pennsylvania experienced more severe COVID-19 outbreaks during this period.
 
 Therefore, we could generate one hypothesis:
 The disease is first epidemic in some states in Northeast Census Region. The disease may be then widely spread to other regions in the US. 
 
 To verify this hypothesis, we have searched some data. For the peak in April, 2020, here is a report related to reflect the serious situation in Northeast Region.
-
-JAVA: which state in this region higher mortality rate of COVID-19?
 
 [Here is the report released by CDC](https://stacks.cdc.gov/view/cdc/87279)
 ![Here is a very intuitive map reflecting the extend of seriousness in Northeast Region](data/COVID_202004_map.png)
