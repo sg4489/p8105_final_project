@@ -1,6 +1,7 @@
 ---
 title: "Temporal and Geographic Analysis"
 output: 
+<<<<<<< HEAD
   html_document:
     toc: true
     toc_float: true
@@ -8,6 +9,18 @@ output:
 runtime: shiny
 ---
 ```{r setup, warning=FALSE, message=FALSE}
+=======
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed 
+    navbar:
+      - { title: "Home", href: "index.html" }
+runtime: shiny
+---
+
+```{r, setup, echo=FALSE, warning=FALSE, message=FALSE}
+>>>>>>> fd2eb615ddbe494c0e23959ba86e8c1d4cd7aae1
 library(flexdashboard)
 library(tidyverse)
 library(usmap)
@@ -330,7 +343,7 @@ server <- function(input, output, session) {
 }
 
 # Run the Shiny app
-shinyApp(ui = ui, server = server)
+shinyApp(ui, server)
 ```
 
 In 2020, heart disease was identified as the leading cause of death, accounting for 24.8% in Pennsylvania, 25.7% in Ohio.
