@@ -32,16 +32,14 @@ This project examines mortality trends in the United States from 2018 to 2023, f
 
 ### Screencast
 
-<div style="text-align: center;">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 ---
 
 ### About the Data
 
-Our analysis draws on mortality data from two primary sources:  
+Our analysis draws on mortality data from two primary sources:
+
 1. The **National Center for Health Statistics: Weekly Provisional Counts of Deaths by State and Select Causes, 2020–2023** ([data.cdc.gov](https://data.cdc.gov/d/muzy-jte6)).  
+
 2. The **Provisional Mortality Statistics, 2018 through Last Week Request** ([wonder.cdc.gov](https://wonder.cdc.gov/controller/datarequest/D176)).
 
 These datasets provide detailed information on deaths categorized by ICD-10 chapters and specific causes across the United States. Our data preparation included cleaning, standardizing column names, and handling suppressed values (counts <10). Time-series trends, geographic disparities, and correlations with chronic conditions were analyzed to uncover patterns and inform public health strategies.
