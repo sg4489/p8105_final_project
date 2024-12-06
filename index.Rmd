@@ -32,7 +32,7 @@ This project examines mortality trends in the United States from 2018 to 2023, f
 
 ### Screencast
 
----
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4qD4HUOJVg0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### About the Data
 
